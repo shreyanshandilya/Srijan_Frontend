@@ -10,7 +10,6 @@ import Nav from "../components/Nav";
 function Landing() {
   return (
     <>
-      {/* <Nav/> */}
       <Hero />
       <Footer />
     </>

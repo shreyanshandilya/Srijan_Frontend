@@ -1,8 +1,9 @@
 import React, { useRef } from "react";
 // import gsap from 'gsap'
-import Nav from "./Nav";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
+import Nav from "./Nav";
+import Countdown from "./asset-components/Countdown";
 
 function Hero() {
   // const sponsor = useRef(null);
@@ -22,7 +23,7 @@ function Hero() {
 
   const textAnimate1 = {
     hidden: {
-      y: "100%",
+      y: "-100%",
       opacity: 0,
       color: "#0f0f0f",
     },
@@ -40,11 +41,11 @@ function Hero() {
   };
   const textAnimate2 = {
     hidden: {
-      x: "-100px",
+      y: "50px",
       opacity: 0,
     },
     show: {
-      x: 0,
+      y: 0,
       opacity: 1,
 
       transition: {
@@ -71,13 +72,13 @@ function Hero() {
           transition={{ duration: 1 }}
           className="w-screen bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply"
         >
-          <Nav />
+            <Nav />
           <motion.div className="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
             <motion.h1
               variants={textAnimate1}
               initial="hidden"
               animate="show"
-              className="mb-4 font-extrabold tracking-tight leading-none uppercase text-[#daecf2] md:text-5xl lg:text-6xl"
+              className="mb-4 text-6xl font-extrabold tracking-tight leading-none uppercase text-white md:text-5xl lg:text-6xl"
             >
               srijan 2024
             </motion.h1>
@@ -85,34 +86,42 @@ function Hero() {
               variants={textAnimate2}
               initial="hidden"
               animate="show"
-              className="mb-8 overflow-x-hidden text-lg font-normal text-[#daecf2] lg:text-xl sm:px-16 lg:px-48"
+              className="mb-8 overflow-x-hidden text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48"
             >
               Get a taste of the flavours all around the world. The biggest
               cultural fest is back!
+            </motion.p>
+            <motion.p
+              variants={textAnimate2}
+              initial="hidden"
+              animate="show"
+              className="h-40 overflow-x-hidden text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48"
+            >
+                <Countdown />
             </motion.p>
             <motion.button
               variants={textAnimate2}
               initial="hidden"
               animate="show"
-              whileHover={{ y: -5 }}
               type="button"
-              className="text-[#040d10] bg-[#90d4e8] focus:ring-4 focus:ring-[#daecf2] font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none"
             >
               <Link
                 to="sponsor"
                 smooth={true}
                 spy={true}
-                offset={-350}
+                offset={100}
                 duration={5000}
               >
-                Coming Soon!
+                <div id="section07" className="relative">
+                <a><span></span><span></span><span></span></a>
+                </div>
               </Link>
             </motion.button>
           </motion.div>
         </motion.div>
       </motion.div>
       <div className="bg-gray-900 grid grid-cols-3 gap-4 max-w-screen"></div>
-      <div className="max-w-screen bg-[#040d10] p-5 grid md:p-10 grid-cols-1 gap-5 lg:gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mx-auto">
+      <div className="max-w-screen p-5 grid md:p-10 grid-cols-1 gap-5 lg:gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mx-auto">
         <div className="bg-transparent break-inside-avoid rounded-lg col-span-1 row-span-1">
           <img
             className=""
@@ -205,17 +214,15 @@ function Hero() {
           />
         </div>
       </div>
-      <motion.div
-        id="sponsor"
-        className="text-8xl font-bold bg-[#daecf2] uppercase flex justify-center items-center py-10"
-      >
-        <span className="text-[#136f8a]">Coming Soon!</span>
+      <motion.div className="text-8xl font-bold bg-transparent bg-clip-text opacity-70 flex justify-center items-center my-10">
+        Coming Soon!
       </motion.div>
-      <div className="max-w-screen p-5 md:p-10 bg-[#072029]">
-        <h1 className="flex text-[#daecf2] font-bold text-6xl justify-center items-center">
+      <div id="sponsor" className="max-w-screen p-5 md:p-10 bg-gray-800">
+        <h1 className="flex text-white font-bold text-6xl justify-center items-center">
+          {" "}
           Past Sponsors
         </h1>
-        <div className="grid grid-cols-2 md:grid-cols-4 flex-wrap gap-x-5 gap-y-10 p-10 rounded-lg backdrop-blur-lg bg-opacity-60">
+        <div className="grid grid-cols-4 flex-wrap gap-x-5 gap-y-10 p-10 rounded-lg backdrop-blur-lg bg-opacity-60">
           <motion.div
             initial={{ y: 20, x: -10 }}
             whileInView={{ x: 0, y: 0 }}
@@ -433,6 +440,12 @@ function Hero() {
               src="https://res.cloudinary.com/dfr1kvie3/image/upload/v1702995311/realme_cgy4n5.png"
               alt=""
             />
+          </div>
+          <div className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-5 bg-no-repeat bg-auto bg-center'>
+            <img className="rounded" src="" alt="" />
+          </div>
+          <div className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-5 bg-no-repeat bg-auto bg-center'>
+            <img className="rounded" src="" alt="" />
           </div>
         </div>
       </div>
