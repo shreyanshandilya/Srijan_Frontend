@@ -215,7 +215,7 @@ function Hero() {
         <h1 className="flex text-[#daecf2] font-bold text-6xl justify-center items-center">
           Past Sponsors
         </h1>
-        <div className="grid grid-cols-4 flex-wrap gap-x-5 gap-y-10 p-10 rounded-lg backdrop-blur-lg bg-opacity-60">
+        <div className="grid grid-cols-2 md:grid-cols-4 flex-wrap gap-x-5 gap-y-10 p-10 rounded-lg backdrop-blur-lg bg-opacity-60">
           <motion.div
             initial={{ y: 20, x: -10 }}
             whileInView={{ x: 0, y: 0 }}
@@ -433,12 +433,6 @@ function Hero() {
               src="https://res.cloudinary.com/dfr1kvie3/image/upload/v1702995311/realme_cgy4n5.png"
               alt=""
             />
-          </div>
-          <div className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-5 bg-no-repeat bg-auto bg-center'>
-            <img className="rounded" src="" alt="" />
-          </div>
-          <div className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-5 bg-no-repeat bg-auto bg-center'>
-            <img className="rounded" src="" alt="" />
           </div>
         </div>
       </div>
