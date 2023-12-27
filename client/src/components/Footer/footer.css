@@ -128,9 +128,9 @@ section {
 .spons-mail a {
   color: lightseagreen;
   text-decoration: none;
-  display: flex;
+
   font-weight: 400;
-  width: 274px;
+
   vertical-align: middle;
   margin: 0;
   flex-wrap: nowrap;
@@ -171,7 +171,7 @@ section {
 /* Footer Right */
 
 .footer-distributed .footer-right {
-  width: 20%;
+  width: 25%;
 }
 
 .footer-distributed .footer-company-about {
