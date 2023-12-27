@@ -1,5 +1,5 @@
 * {
-  font-family: Open Sans;
+  font-family: "Raleway", sans-serif;
 }
 
 section {
@@ -40,11 +40,14 @@ section {
 
 .footer-distributed h3 {
   color: #ffffff;
-  font: normal 36px "Open Sans", cursive;
+  font:
+    normal 36px "Open Sans",
+    cursive;
   margin: 0;
 }
 
 .footer-distributed h3 span {
+  font-family: poppins, cursive;
   color: #008080;
 }
 
@@ -120,7 +123,6 @@ section {
   font-size: 30px;
   font-weight: normal;
   color: white;
-  font-family: open sans;
 }
 
 .spons-mail a {
@@ -128,13 +130,13 @@ section {
   text-decoration: none;
   display: flex;
   font-weight: 400;
+  width: 274px;
   vertical-align: middle;
   margin: 0;
   flex-wrap: nowrap;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  align-content: center;
 }
 .spons-mail i {
   font-size: 17px;
