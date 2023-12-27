@@ -24,7 +24,8 @@ const Footer = () => {
         <p class="footer-company-name">
           Cultural Center
           <br />
-          Biggest socio-cultural fest of eastern India 2nd to 4th February, 2024
+          Biggest socio-cultural fest of eastern India <br /> 2nd to 4th
+          February, 2024
         </p>
       </div>
 
