@@ -5,7 +5,7 @@
 section {
   width: 100%;
   display: inline-block;
-  background: #000000;
+  background: #040d10;
   height: 50vh;
   text-align: center;
   font-size: 22px;
@@ -39,7 +39,7 @@ section {
 /* The company logo */
 
 .footer-distributed h3 {
-  color: #ffffff;
+  color: #daecf2;
   font:
     normal 36px "Open Sans",
     cursive;
@@ -48,13 +48,13 @@ section {
 
 .footer-distributed h3 span {
   font-family: poppins, cursive;
-  color: #008080;
+  color: #40c6ef;
 }
 
 /* Footer links */
 
 .footer-distributed .footer-links {
-  color: #ffffff;
+  color: #daecf2;
   margin: 20px 0 12px;
   padding: 0;
 }
@@ -68,7 +68,7 @@ section {
 }
 
 .footer-distributed .footer-company-name {
-  color: #ffffff;
+  color: #daecf2;
   font-size: 14px;
   font-weight: normal;
   margin: 0;
@@ -82,7 +82,7 @@ section {
 
 .footer-distributed .footer-center i {
   background-color: #33383b;
-  color: #ffffff;
+  color: #daecf2;
   font-size: 25px;
   width: 38px;
   height: 38px;
@@ -100,7 +100,7 @@ section {
 
 .footer-distributed .footer-center p {
   display: inline-block;
-  color: #ffffff;
+  color: #daecf2;
   font-weight: 400;
   vertical-align: middle;
   margin: 0;
@@ -114,7 +114,7 @@ section {
 }
 
 .footer-distributed .footer-center p a {
-  color: lightseagreen;
+  color: #40c6ef;
   text-decoration: none;
 }
 .col-nav {
@@ -122,11 +122,11 @@ section {
   margin-bottom: 20px;
   font-size: 30px;
   font-weight: normal;
-  color: white;
+  color: #daecf2;
 }
 
 .spons-mail a {
-  color: lightseagreen;
+  color: #40c6ef;
   text-decoration: none;
 
   font-weight: 400;
@@ -142,7 +142,7 @@ section {
   font-size: 17px;
   line-height: 38px;
   background-color: #33383b;
-  color: #ffffff;
+  color: #daecf2;
   margin: 10px 0px;
   margin-right: 15px;
   width: 38px;
@@ -159,7 +159,7 @@ section {
   font-weight: 300;
   font-size: 20px;
   left: 0;
-  color: #fff;
+  color: #daecf2;
   display: inline-block;
   padding-right: 5px;
 }
@@ -185,7 +185,7 @@ section {
 
 .footer-distributed .footer-company-about span {
   display: block;
-  color: #ffffff;
+  color: #daecf2;
   font-size: 14px;
   font-weight: bold;
   margin-bottom: 20px;
@@ -206,7 +206,7 @@ section {
   border-radius: 2px;
 
   font-size: 20px;
-  color: #ffffff;
+  color: #daecf2;
   text-align: center;
   line-height: 35px;
 

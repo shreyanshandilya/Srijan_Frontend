@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
+/* * {
     box-sizing: border-box;
   }
   
@@ -16,7 +16,7 @@
   }
   
   body {
-    background: white;
+    background: transparent;
     line-height: 0.75;
   }
   
@@ -26,5 +26,5 @@
   
   canvas + div {
     mix-blend-mode: multiply;
-  }
+  } */
   
