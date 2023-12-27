@@ -1,7 +1,7 @@
 // Footer.js
 import React from "react";
 import "./footer.css";
-import logo from "./logo.png";
+import logo from "./srijan Light (1).png";
 const Footer = () => {
   return (
     <footer class="footer-distributed">
