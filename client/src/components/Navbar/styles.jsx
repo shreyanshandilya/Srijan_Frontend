@@ -22,10 +22,10 @@ const Wrapper = styled(Box)({
   },
   "@media only screen and (max-width: 900px)": {
     ".navbar": {
-      height: "50px",
+      height: "65px",
       lineHeight: "50px",
       backgroundColor: "#000",
-      margin: "1.5rem",
+       
     },
     ".toolbar": {
       flexDirection: "row-reverse",
