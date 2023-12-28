@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import Countdown from "./asset-components/Countdown";
-import Navbar from "./Navbar/Navbar";
+// import Navbar from "./Navbar/Navbar";
 function Hero() {
   // const sponsor = useRef(null);
   const bgAnimate = {

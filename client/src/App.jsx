@@ -1,7 +1,6 @@
 import "./App.css";
 import Landing from "./pages/Landing";
 import Merchandise from "./pages/Merchandise";
-import Nav from './components/Navbar/Navbar'
  
 
 import {
