@@ -1,24 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, useAnimate } from "framer-motion";
-import Nav from '../components/Navbar/navbar'
+import Nav from "../components/Navbar/navbar";
 
 import Footer from "../components/Footer/footer";
 import { Carousel } from "flowbite-react";
 
 function Merchandise() {
-  const [open, setOpen] = useState(false);
+  // const width = window.innerWidth <= 480
   const [scope, animate] = useAnimate();
+  // const [width, setWidth] = useState(window.innerWidth >= 600);
+  // if (width) {
+  //   animate(scope.current, { y: 0, opacity: 1 }, { duration: 1 });
+  //   animate(scope.current, { opacity: 1 });
+  // }
+  // useEffect(() => {
+  //   setWidth(window.innerWidth >= 600);
+  //   console.log(width);
+  // }, [window.innerWidth]);
+  const [open, setOpen] = useState(false);
   const handleClick = () => {
     setOpen(!open);
-    if (open) {
-      animate(scope.current, { x: 10 }, { duration: 1 });
-    }
+    // if (open) {
+    //   animate(scope.current, { x: 10 }, { duration: 1 });
+    // }
     console.log(open);
   };
   return (
     <div className="bg-[#072029] jusitfy-center items-center mt-0 h-full w-full">
       <Nav />
-      <div className="h-[65vh] ">
+      <div className="h-[75vh] ">
         <Carousel>
           <img
             src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967522/fotofreaks_iitism_1675676767_3032118946815236599_5457821429_g7qhtw.jpg"
@@ -39,7 +49,7 @@ function Merchandise() {
         </Carousel>
       </div>
 
-      <div className="py-8 px-4 mx-auto max-w-screen-xl text-center flex justify-center items-center lg:py-16">
+      <div className="py-8 px-4 mx-auto max-w-screen-xl text-center flex flex-col sm:flex-row justify-center items-center lg:py-16">
         <motion.div
           ref={scope}
           initial={{ opacity: 0 }}
@@ -83,7 +93,7 @@ function Merchandise() {
             transition={{ duration: 1 }}
             className="max-w-sm mx-auto rounded-lg bg-[#90d4e8] shadow-xl px-5 py-5 backdrop-blur-lg"
           >
-            <div className="mb-5">
+            <div className="mb-4">
               <label
                 htmlFor="email"
                 className="block mb-2 text-sm font-medium text-[#040d10]"
@@ -98,7 +108,7 @@ function Merchandise() {
                 required
               />
             </div>
-            <div className="mb-5">
+            <div className="mb-4">
               <label
                 htmlFor="password"
                 className="block mb-2 text-sm font-medium text-[#040d10]"
@@ -113,8 +123,41 @@ function Merchandise() {
                 required
               />
             </div>
+            <div className="mb-4">
+              <label
+                htmlFor="phone"
+                className="block mb-2 text-sm font-medium text-[#040d10]"
+              >
+                Phone
+              </label>
+              <input
+                type="number"
+                id="phone"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                placeholder="8224092815"
+                required
+              />
+            </div>
 
-            <div className="max-w-lg mx-auto">
+            <div className="mb-4">
+              <label
+                htmlFor="countries"
+                className="block mb-2 text-sm font-medium text-gray-900"
+              >
+                Select your size
+              </label>
+              <select
+                id="countries"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              >
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+              </select>
+            </div>
+
+            <div className="max-w-lg mx-auto mb-2">
               <label
                 className="block mb-2 text-sm font-medium text-[#040d10]"
                 htmlFor="user_avatar"
