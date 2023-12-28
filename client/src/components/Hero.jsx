@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import Countdown from "./asset-components/Countdown";
+import Navbar from "./Navbar/navbar";
 // import Nav from "../components/Navbar/navbar"
 function Hero() {
   // const sponsor = useRef(null);
@@ -71,7 +72,7 @@ function Hero() {
           transition={{ duration: 1 }}
           className="w-screen h-screen flex justify-center items-center bg-cover bg-center bg-no-repeat bg-[url('assets/bgimage.jpg')] bg-yellow-800 bg-blend-multiply"
         >
-          {/* <Nav /> */}
+          <Navbar />
           <motion.div className="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
             <motion.h1
               variants={textAnimate1}
@@ -96,7 +97,7 @@ function Hero() {
               animate="show"
               className="h-40 overflow-x-hidden text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48"
             >
-                <Countdown />
+              <Countdown />
             </motion.p>
             <motion.button
               variants={textAnimate2}
@@ -112,7 +113,11 @@ function Hero() {
                 duration={5000}
               >
                 <div id="section07" className="relative">
-                <a><span></span><span></span><span></span></a>
+                  <a>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </a>
                 </div>
               </Link>
             </motion.button>
@@ -221,12 +226,12 @@ function Hero() {
           {" "}
           Past Sponsors
         </h1>
-        <div className="grid grid-cols-4 flex-wrap gap-x-5 gap-y-10 p-10 rounded-lg backdrop-blur-lg bg-opacity-60">
+        <div className="grid grid-cols-2 md:grid-cols-4 flex-wrap gap-x-5 gap-y-10 p-10 rounded-lg backdrop-blur-lg bg-opacity-60">
           <motion.div
             initial={{ y: 20, x: -10 }}
             whileInView={{ x: 0, y: 0 }}
             transition={{ duration: 1 }}
-            className="col-span-4 flex justify-center items-center backdrop-blur-lg bg-opacity-60 rounded-lg p-5 bg-no-repeat bg-contain bg-center"
+            className="col-span-full flex justify-center items-center backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-contain bg-center"
           >
             <img
               className="rounded"
@@ -238,7 +243,7 @@ function Hero() {
             initial={{ x: -30 }}
             whileInView={{ x: 0 }}
             transition={{ duration: 0.8 }}
-            className="col-span-2 flex justify-center items-center p-5 backdrop-blur-2xl bg-opacity-60 rounded-lg bg-no-repeat bg-contain bg-center"
+            className="col-span-2 flex justify-center items-center p-3 md:p-5 backdrop-blur-2xl bg-opacity-60 rounded-lg bg-no-repeat bg-contain bg-center"
           >
             <img
               className="rounded"
@@ -250,7 +255,7 @@ function Hero() {
             initial={{ x: 20 }}
             whileInView={{ x: 0 }}
             transition={{ duration: 0.8 }}
-            className='col-span-2 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-5  bg-no-repeat bg-contain bg-center'
+            className="col-span-2 flex justify-center items-center backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5  bg-no-repeat bg-contain bg-center"
           >
             <img
               className="rounded"
@@ -262,7 +267,7 @@ function Hero() {
             initial={{ y: 10 }}
             whileInView={{ y: 0 }}
             transition={{ duration: 1.2 }}
-            className='col-span-2 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-5 bg-no-repeat bg-contain bg-center'
+            className='col-span-2 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-contain bg-center'
           >
             <img
               className="rounded"
@@ -274,7 +279,7 @@ function Hero() {
             initial={{ x: 10 }}
             whileInView={{ x: 0 }}
             transition={{ duration: 1.2 }}
-            className='col-span-2 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-5 bg-no-repeat bg-contain bg-center'
+            className='col-span-2 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-contain bg-center'
           >
             <img
               className="rounded"
@@ -286,7 +291,7 @@ function Hero() {
             initial={{ x: 30 }}
             whileInView={{ x: 0 }}
             transition={{ duration: 1.5 }}
-            className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-5 bg-no-repeat bg-contain bg-center'
+            className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-contain bg-center'
           >
             <img
               className="rounded"
@@ -298,7 +303,7 @@ function Hero() {
             initial={{ y: -40 }}
             whileInView={{ y: 0 }}
             transition={{ duration: 1.1 }}
-            className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-5 bg-no-repeat bg-auto bg-center'
+            className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-auto bg-center'
           >
             <img className="rounded" src="" alt="" />
           </motion.div>
@@ -306,7 +311,7 @@ function Hero() {
             initial={{ x: 30 }}
             whileInView={{ x: 0 }}
             transition={{ duration: 1.8 }}
-            className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-5 bg-no-repeat bg-contain bg-center'
+            className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-contain bg-center'
           >
             <img
               className="rounded"
@@ -318,7 +323,7 @@ function Hero() {
             initial={{ x: -10 }}
             whileInView={{ x: 0 }}
             transition={{ duration: 1.1 }}
-            className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-5 bg-no-repeat bg-contain bg-center'
+            className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-contain bg-center'
           >
             <img
               className="rounded"
@@ -330,7 +335,7 @@ function Hero() {
             initial={{ y: 30 }}
             whileInView={{ y: 0 }}
             transition={{ duration: 1.3 }}
-            className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-5 bg-no-repeat bg-contain bg-center'
+            className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-contain bg-center'
           >
             <img
               className="rounded"
@@ -342,7 +347,7 @@ function Hero() {
             initial={{ x: 30, y: 20 }}
             whileInView={{ x: 0, y: 0 }}
             transition={{ duration: 1.6 }}
-            className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-5 bg-no-repeat bg-contain bg-center'
+            className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-contain bg-center'
           >
             <img
               className="rounded"
@@ -354,7 +359,7 @@ function Hero() {
             initial={{ x: 20, y: -5 }}
             whileInView={{ x: 0, y: 0 }}
             transition={{ duration: 0.8 }}
-            className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-5 bg-no-repeat bg-contain bg-center'
+            className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-contain bg-center'
           >
             <img
               className="rounded"
@@ -366,7 +371,7 @@ function Hero() {
             initial={{ x: 10, y: -5 }}
             whileInView={{ x: 0, y: 0 }}
             transition={{ duration: 1 }}
-            className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-5 bg-no-repeat bg-contain bg-center'
+            className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-contain bg-center'
           >
             <img
               className="rounded"
@@ -374,76 +379,76 @@ function Hero() {
               alt=""
             />
           </motion.div>
-          <div className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-5 bg-no-repeat bg-contain bg-center'>
+          <div className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-contain bg-center'>
             <img
               className="rounded"
               src="https://res.cloudinary.com/dfr1kvie3/image/upload/v1702995311/sail_rzbrgs.png"
               alt=""
             />
           </div>
-          <div className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-5 bg-no-repeat bg-contain bg-center'>
+          <div className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-contain bg-center'>
             <img
               className="rounded"
               src="https://res.cloudinary.com/dfr1kvie3/image/upload/v1702995310/powergrid_ysetpi.png"
               alt=""
             />
           </div>
-          <div className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-5 bg-no-repeat bg-contain bg-center'>
+          <div className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-contain bg-center'>
             <img
               className="rounded"
               src="https://res.cloudinary.com/dfr1kvie3/image/upload/v1702995310/mg_xuoimg.png"
               alt=""
             />
           </div>
-          <div className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-5 bg-no-repeat bg-contain bg-center'>
+          <div className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-contain bg-center'>
             <img
               className="rounded"
               src="https://res.cloudinary.com/dfr1kvie3/image/upload/v1702995310/dehaat_io8otn.png"
               alt=""
             />
           </div>
-          <div className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-5 bg-no-repeat bg-contain bg-center'>
+          <div className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-contain bg-center'>
             <img
               className="rounded"
               src="https://res.cloudinary.com/dfr1kvie3/image/upload/v1703006562/parklane_n7rljx.jpg"
               alt=""
             />
           </div>
-          <div className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-5 bg-no-repeat bg-contain bg-center'>
+          <div className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-contain bg-center'>
             <img
               className="rounded"
               src="https://res.cloudinary.com/dfr1kvie3/image/upload/v1702995310/lazzy_frog_wjwudq.jpg"
               alt=""
             />
           </div>
-          <div className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-5 bg-no-repeat bg-contain bg-center'>
+          <div className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-contain bg-center'>
             <img
               className="rounded"
               src="https://res.cloudinary.com/dfr1kvie3/image/upload/v1703006562/coal_capital_jf6juf.png"
               alt=""
             />
           </div>
-          <div className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-5 bg-no-repeat bg-auto bg-center'>
+          <div className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-auto bg-center'>
             <img className="rounded" src="" alt="" />
           </div>
-          <div className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-5 bg-no-repeat bg-contain bg-center'>
+          <div className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-contain bg-center'>
             <img
               className="rounded"
               src="https://res.cloudinary.com/dfr1kvie3/image/upload/v1702995309/eng_parcel_zdfb7v.png"
               alt=""
             />
           </div>
-          <div className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-5 bg-no-repeat bg-contain bg-center'>
+          <div className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-contain bg-center'>
             <img
               className="rounded"
               src="https://res.cloudinary.com/dfr1kvie3/image/upload/v1702995311/realme_cgy4n5.png"
               alt=""
             />
           </div>
-          <div className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-5 bg-no-repeat bg-auto bg-center'>
+          <div className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-auto bg-center'>
             <img className="rounded" src="" alt="" />
           </div>
-          <div className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-5 bg-no-repeat bg-auto bg-center'>
+          <div className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-auto bg-center'>
             <img className="rounded" src="" alt="" />
           </div>
         </div>
