@@ -69,7 +69,7 @@ function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="w-screen h-screen flex justify-center items-center bg-cover bg-center bg-no-repeat bg-[url('/dist/assets/bgimage.jpg')] bg-yellow-800 bg-blend-multiply"
+          className="w-screen h-screen flex justify-center items-center bg-cover bg-center bg-no-repeat bg-[url('assets/bgimage.jpg')] bg-yellow-800 bg-blend-multiply"
         >
           {/* <Nav /> */}
           <motion.div className="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
