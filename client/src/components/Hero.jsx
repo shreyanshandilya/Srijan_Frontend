@@ -2,9 +2,9 @@ import React, { useRef } from "react";
 // import gsap from 'gsap'
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
-import Nav from "./Nav";
+// import Nav from "./Nav";
 import Countdown from "./asset-components/Countdown";
-
+import Nav from './Navbar/navbar'
 function Hero() {
   // const sponsor = useRef(null);
   const bgAnimate = {

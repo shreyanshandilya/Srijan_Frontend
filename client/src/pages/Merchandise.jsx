@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, useAnimate } from "framer-motion";
-import Nav from "../components/Nav";
+import Nav from '../components/Navbar/navbar'
+
 import Footer from "../components/Footer/footer";
 import { Carousel } from "flowbite-react";
 

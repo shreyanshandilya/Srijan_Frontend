@@ -1,6 +1,9 @@
 import "./App.css";
 import Landing from "./pages/Landing";
 import Merchandise from "./pages/Merchandise";
+import Nav from './components/Navbar/navbar'
+ 
+
 import {
   Route,
   RouterProvider,
@@ -14,8 +17,13 @@ function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
+      
         <Route exact path="/" element={<Landing />} />
         <Route exact path="/merchant" element={<Merchandise />} />
+         
+        
+
+
       </>
     )
   );
