@@ -5,7 +5,7 @@ import Sponsor from "../components/Sponsor";
 // import { gsap } from 'gsap/gsap-core';
 // import Footer from "../components/Footer";
 import Footer from "../components/Footer/footer";
-import Nav from "../components/Navbar/Navbar"
+import Nav from "../components/Navbar/navbar"
 
 function Landing() {
   return (
