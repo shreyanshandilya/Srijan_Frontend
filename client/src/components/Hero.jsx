@@ -2,9 +2,8 @@ import React, { useRef } from "react";
 // import gsap from 'gsap'
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
-// import Nav from "./Nav";
 import Countdown from "./asset-components/Countdown";
-import Nav from './Navbar/navbar'
+import Navbar from "./Navbar/Navbar";
 function Hero() {
   // const sponsor = useRef(null);
   const bgAnimate = {
@@ -64,15 +63,15 @@ function Hero() {
         variants={bgAnimate}
         initial="hidden"
         animate="show"
-        className="max-w-screen flex justify-center items-center"
+        className="max-w-screen h-screen flex justify-center items-center"
       >
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="w-screen bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply"
+          className="w-screen h-screen flex justify-center items-center bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply"
         >
-            <Nav />
+          {/* <Navbar /> */}
           <motion.div className="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
             <motion.h1
               variants={textAnimate1}

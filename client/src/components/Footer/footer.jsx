@@ -4,8 +4,8 @@ import "./footer.css";
 import logo from "./srijan Light (1).png";
 const Footer = () => {
   return (
-    <footer class="footer-distributed">
-      <div class="footer-left">
+    <footer className="footer-distributed">
+      <div className="footer-left">
         <h3>
           <span>
             <img src={logo} width="150px" />
@@ -13,8 +13,8 @@ const Footer = () => {
           2024
         </h3>
 
-        <p class="footer-links">
-          <a href="#" class="link-1">
+        <p className="footer-links">
+          <a href="#" className="link-1">
             Home
           </a>
           {"\t"}
@@ -24,7 +24,7 @@ const Footer = () => {
           {"\t"}
           <a href="#">Contact </a>
         </p>
-        <p class="footer-company-name">
+        <p className="footer-company-name">
           Cultural Center
           <br />
           Biggest socio-cultural fest of eastern India <br /> 2nd to 4th
@@ -32,7 +32,7 @@ const Footer = () => {
         </p>
       </div>
 
-      <div class="footer-center">
+      <div className="footer-center">
         <div>
           <p>
             If you have any questions or need help <br /> feel free to contact
@@ -43,7 +43,7 @@ const Footer = () => {
         <div>
           <p>
             <a href="mailto : srijan@iitism.ac.in">
-              <i class="fa-sharp fa-solid fa-envelope"></i> srijan@iitism.ac.in{" "}
+              <i className="fa-sharp fa-solid fa-envelope"></i> srijan@iitism.ac.in{" "}
             </a>
           </p>
         </div>
@@ -70,16 +70,16 @@ const Footer = () => {
           <div className="col-nav">Connect</div>
         </p>
 
-        <div class="footer-icons">
+        <div className="footer-icons">
           <a href="https://www.facebook.com/ism.srijan">
-            <i class="fa fa-facebook"></i>
+            <i className="fa fa-facebook"></i>
           </a>
 
           <a href="https://www.linkedin.com/company/srijaniitismdhn/">
-            <i class="fa fa-linkedin"></i>
+            <i className="fa fa-linkedin"></i>
           </a>
           <a href="https://www.instagram.com/srijaniitism/">
-            <i class="fa fa-instagram"></i>
+            <i className="fa fa-instagram"></i>
           </a>
         </div>
       </div>
