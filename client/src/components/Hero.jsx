@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import Countdown from "./asset-components/Countdown";
+import logo from "./Footer/srijan Light (1).png";
 // import Nav from "../components/Navbar/navbar"
 function Hero() {
   // const sponsor = useRef(null);
@@ -32,7 +33,7 @@ function Hero() {
       color: "#ffffff",
       transition: {
         ease: "easeInOut",
-        duration: 0.8,
+        duration: 1,
         staggerChildren: 0.4,
         delayChildren: 1,
       },
@@ -72,14 +73,14 @@ function Hero() {
           className="w-screen h-screen flex justify-center items-center bg-cover bg-center bg-no-repeat bg-[url('assets/bgimage.jpg')] bg-yellow-800 bg-blend-multiply"
         >
           {/* <Nav /> */}
-          <motion.div className="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+          <motion.div className="px-4 mx-auto max-w-screen-xl grid grid-row-4 py-24 lg:py-56">
             <motion.h1
               variants={textAnimate1}
               initial="hidden"
               animate="show"
-              className="mb-4 text-6xl font-extrabold tracking-tight leading-none uppercase text-white md:text-5xl lg:text-6xl"
+              className="mb-4 text-6xl flex justify-center font-extrabold tracking-tight leading-none uppercase text-white md:text-5xl lg:text-6xl"
             >
-              srijan 2024
+              <img src={logo} width="250px" />
             </motion.h1>
             <motion.p
               variants={textAnimate2}
@@ -97,6 +98,14 @@ function Hero() {
               className="h-40 overflow-x-hidden text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48"
             >
                 <Countdown />
+            </motion.p>
+            <motion.p
+              variants={textAnimate2}
+              initial="hidden"
+              animate="show"
+              className="h-auto overflow-x-hidden flex justify-center text-lg font-semibold text-gray-300 lg:text-xl sm:px-16 lg:px-48"
+            >
+                On 2nd Feburary 2024
             </motion.p>
             <motion.button
               variants={textAnimate2}

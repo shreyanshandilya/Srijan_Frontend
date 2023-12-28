@@ -50,7 +50,7 @@ const Navbar = () => {
       <div className="d-center">
         <Box sx={{ display: "flex" }} className="d-center">
           <CssBaseline />
-          <AppBar component="nav" className="navbar">
+          <AppBar component="nav" className="navbar p-9">
             <Toolbar className="w-full toolbar">
               <IconButton
                 color="white"
