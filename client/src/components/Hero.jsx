@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import Countdown from "./asset-components/Countdown";
-import Nav from "../components/Navbar/navbar"
+// import Nav from "../components/Navbar/navbar"
 function Hero() {
   // const sponsor = useRef(null);
   const bgAnimate = {
@@ -71,7 +71,7 @@ function Hero() {
           transition={{ duration: 1 }}
           className="w-screen h-screen flex justify-center items-center bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply"
         >
-          <Nav />
+          {/* <Nav /> */}
           <motion.div className="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
             <motion.h1
               variants={textAnimate1}
