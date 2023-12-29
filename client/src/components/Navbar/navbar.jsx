@@ -169,22 +169,38 @@ const Navbar = () => {
                 >
                   {/* <Divider /> */}
                   <List>
-                    <MobileLink url="/events" text="Events" />
-                    <MobileLink
-                      text="Accommodation"
-                      component="a"
-                      href="https://forms.gle/J5f4kswgcTCcmLB78"
-                      target="_blank"
-                      rel="noreferrer"
-                    />
-                    <MobileLink
-                      text="Workshops"
-                      component="a"
-                      href="https://linktr.ee/Concetto_Workshops"
-                      target="_blank"
-                      rel="noreferrer"
-                    />
-                    <ListItem
+                    <Link to="/events">
+                      <MobileLink url="/events" text="Events" />
+                    </Link>
+                    <Link to="/sponsor">
+                      <MobileLink
+                        text="Sponsors"
+                        component="a"
+                        href="https://linktr.ee/Concetto_Workshops"
+                        target="_blank"
+                        rel="noreferrer"
+                      />
+                    </Link>
+                    <Link to="/merchant">
+                      <MobileLink
+                        text="Merchandise"
+                        component="a"
+                        href="https://forms.gle/J5f4kswgcTCcmLB78"
+                        target="_blank"
+                        rel="noreferrer"
+                      />
+                    </Link>
+                    <Link to="/team">
+                      <MobileLink
+                        text="Teams"
+                        component="a"
+                        href="https://forms.gle/J5f4kswgcTCcmLB78"
+                        target="_blank"
+                        rel="noreferrer"
+                      />
+                    </Link>
+
+                    {/* <ListItem
                       disablePadding
                       sx={{ borderBottom: "1px solid white" }}
                     >
@@ -204,10 +220,12 @@ const Navbar = () => {
                           primary="Sponsors"
                         />
                       </ListItemButton>
-                    </ListItem>
+                    </ListItem> */}
                     {/* <MobileLink url="/tshirt" text="Merchandise" /> */}
-                    <MobileLink url="/aboutUs" text="About Us" />
-                    <MobileLink url="/teams" text="Teams" noBorder />
+                    <Link to="/about">
+                      <MobileLink url="/aboutUs" text="About Us" noBorder />
+                    </Link>
+                    {/* <MobileLink url="/teams" text="Teams" noBorder /> */}
                   </List>
                 </Box>
               </StyledDrawer>

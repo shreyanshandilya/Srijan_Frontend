@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import Countdown from "./asset-components/Countdown";
 import logo from "./Footer/srijan Light (1).png";
-import Navbar from "./Navbar/navbar";
+import Nav from "./Navbar/navbar";
 // import Nav from "../components/Navbar/navbar"
 function Hero() {
   // const sponsor = useRef(null);
@@ -61,6 +61,7 @@ function Hero() {
   // }
   return (
     <>
+      <Nav />
       <motion.div
         variants={bgAnimate}
         initial="hidden"
@@ -73,7 +74,6 @@ function Hero() {
           transition={{ duration: 1 }}
           className="w-screen h-screen flex justify-center items-center bg-cover bg-center bg-no-repeat bg-[url('assets/bgimage.jpg')] bg-yellow-800 bg-blend-multiply"
         >
-          <Navbar />
           <motion.div className="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
             <motion.h1
               variants={textAnimate1}
@@ -106,7 +106,7 @@ function Hero() {
               animate="show"
               className="h-auto overflow-x-hidden flex justify-center text-lg font-semibold text-yellow-400 lg:text-xl sm:px-16 lg:px-48"
             >
-                On 2nd Feburary 2024
+              On 2nd Feburary 2024
             </motion.p>
             <motion.button
               variants={textAnimate2}
