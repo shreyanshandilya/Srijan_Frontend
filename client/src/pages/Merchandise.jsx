@@ -1,22 +1,34 @@
 import React, { useState, useEffect } from "react";
 import { motion, useAnimate } from "framer-motion";
 import Nav from "../components/Navbar/navbar";
+import axios from "axios";
 
 import Footer from "../components/Footer/footer";
 import { Carousel } from "flowbite-react";
 
 function Merchandise() {
-  // const width = window.innerWidth <= 480
+  const url = "srijan2024.onrender.com/api/purchase";
+  const [data, setData] = useState({
+    name: "",
+    admissionNumber: "",
+    mobileNumber: "",
+    tshirtSize: "",
+    hostel: "",
+    roomNumber: "",
+  });
+  const [img, setImg] = useState("");
+  const handleChangeInput = (event) => {
+    setData({ ...data, [event.target.name]: [event.target.value] });
+  };
+  const handleImg = (event) => {
+    setImg(event.target.files[0]);
+  };
+  const handleMerchantSubmit = () => {
+    const formData = new FormData();
+    formData.append("image", img);
+    axios.post(url, { data, formData });
+  };
   const [scope, animate] = useAnimate();
-  // const [width, setWidth] = useState(window.innerWidth >= 600);
-  // if (width) {
-  //   animate(scope.current, { y: 0, opacity: 1 }, { duration: 1 });
-  //   animate(scope.current, { opacity: 1 });
-  // }
-  // useEffect(() => {
-  //   setWidth(window.innerWidth >= 600);
-  //   console.log(width);
-  // }, [window.innerWidth]);
   const [open, setOpen] = useState(false);
   const handleClick = () => {
     setOpen(!open);
@@ -26,7 +38,7 @@ function Merchandise() {
     console.log(open);
   };
   return (
-    <div className="bg-[#072029] jusitfy-center items-center mt-0 h-full w-full">
+    <div className="bg-[#090d06] jusitfy-center items-center mt-0 h-full w-full">
       <Nav />
       <div className="h-[75vh] ">
         <Carousel>
@@ -57,14 +69,14 @@ function Merchandise() {
           layout
           transition={{ duration: 1 }}
         >
-          <h1 className="mb-4 text-4xl font-bold tracking-tight leading-none text-[#daecf2] md:text-5xl lg:text-6xl ">
+          <h1 className="mb-4 text-4xl font-bold tracking-tight leading-none text-[#dad3a5] md:text-5xl lg:text-6xl ">
             Merchandise
           </h1>
 
           <div className="flex flex-col space-y-4 my-10 sm:flex-row sm:justify-center sm:space-y-0">
             <motion.div
               whileHover={{ y: -10 }}
-              className="inline-flex justify-center items-center py-3 px-5 text-xl font-medium text-center text-[#040d10] rounded-lg bg-[#90d4e8] hover:drop-shadow-md focus:ring-4 focus:ring-blue-300 cursor-pointer"
+              className="inline-flex justify-center items-center py-3 px-5 text-xl font-medium text-center text-[#090d06] rounded-lg bg-[#dad3a5] hover:drop-shadow-md focus:ring-4 focus:ring-blue-300 cursor-pointer"
               onClick={handleClick}
             >
               {open ? "Close" : "Buy!"}
@@ -91,7 +103,7 @@ function Merchandise() {
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
-            className="max-w-sm mx-auto rounded-lg bg-[#90d4e8] shadow-xl px-5 py-5 backdrop-blur-lg"
+            className="max-w-sm mx-auto rounded-lg bg-[#dad3a5] shadow-xl px-5 py-5 backdrop-blur-lg"
           >
             <div className="mb-4">
               <label
@@ -103,6 +115,7 @@ function Merchandise() {
               <input
                 type="email"
                 id="email"
+                onChange={handleChangeInput}
                 className="bg-gray-50 border border-gray-300 text-[#040d10] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                 placeholder=""
                 required
@@ -110,14 +123,15 @@ function Merchandise() {
             </div>
             <div className="mb-4">
               <label
-                htmlFor="password"
+                htmlFor="admission"
                 className="block mb-2 text-sm font-medium text-[#040d10]"
               >
                 Admission Number
               </label>
               <input
-                type="password"
-                id="password"
+                type="text"
+                id="admission"
+                onChange={handleChangeInput}
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                 placeholder="23je0001"
                 required
@@ -133,10 +147,45 @@ function Merchandise() {
               <input
                 type="number"
                 id="phone"
+                onChange={handleChangeInput}
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                 placeholder="8224092815"
                 required
               />
+            </div>
+            <div className="flex justify-center items-center gap-2 mb-4">
+              <div className="mb-1">
+                <label
+                  htmlFor="hostel"
+                  className="block mb-1 text-sm font-medium text-[#040d10]"
+                >
+                  Hostel
+                </label>
+                <input
+                  type="text"
+                  id="hostel"
+                  onChange={handleChangeInput}
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                  placeholder="Aquamarine"
+                  required
+                />
+              </div>
+              <div className="mb-1">
+                <label
+                  htmlFor="room"
+                  className="block mb-1 text-sm font-medium text-[#040d10]"
+                >
+                  Room
+                </label>
+                <input
+                  type="text"
+                  id="room"
+                  onChange={handleChangeInput}
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                  placeholder="C/04/09"
+                  required
+                />
+              </div>
             </div>
 
             <div className="mb-4">
@@ -148,12 +197,13 @@ function Merchandise() {
               </label>
               <select
                 id="countries"
+                onChange={handleChangeInput}
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
               >
-                <option>S</option>
-                <option>M</option>
-                <option>L</option>
-                <option>XL</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
               </select>
             </div>
 
@@ -165,6 +215,7 @@ function Merchandise() {
                 Upload transaction
               </label>
               <input
+                onChange={handleImg}
                 className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 focus:outline-none"
                 aria-describedby="user_avatar_help"
                 placeholder="Transaction Screenshot"
@@ -181,7 +232,8 @@ function Merchandise() {
 
             <button
               type="submit"
-              className="text-white bg-[#136f8a] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center "
+              onSubmit={handleMerchantSubmit}
+              className="text-[#efede0] bg-[#514c08]/60 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center "
             >
               Submit
             </button>

@@ -88,7 +88,7 @@ function Hero() {
               variants={textAnimate2}
               initial="hidden"
               animate="show"
-              className="mb-8 overflow-x-hidden text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48"
+              className="mb-8 overflow-x-hidden text-lg font-normal text-[#efede0] lg:text-xl sm:px-16 lg:px-48"
             >
               Get a taste of the flavours all around the world. The biggest
               cultural fest is back!
@@ -101,27 +101,44 @@ function Hero() {
             >
               <Countdown />
             </motion.p>
-            <motion.p
+            <motion.span
               variants={textAnimate2}
               initial="hidden"
               animate="show"
-              className="h-auto overflow-x-hidden flex justify-center text-lg font-semibold text-yellow-400 lg:text-xl sm:px-16 lg:px-48"
+              className="h-auto overflow-x-hidden flex justify-center text-lg font-semibold text-[#fbe10e] lg:text-2xl py-4 sm:px-5 bg-opacity-50 backdrop-blur-xl"
             >
               From 2nd - 4th Feburary 2024
-            </motion.p>
+            </motion.span>
             <motion.button
               variants={textAnimate2}
               initial="hidden"
               animate="show"
               className="p-5"
+            >
+              <a
+                href="https://drive.google.com/file/d/1XWCCAvG8_vHOTChQzw3sT0nUJuZRuPog/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-              <a href="https://drive.google.com/file/d/1XWCCAvG8_vHOTChQzw3sT0nUJuZRuPog/view?usp=sharing" >
-              <button type="button" class=" bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-2.5 py-1.25 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 me-2 mb-2 text-orange-500">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-cloud-arrow-down-fill" viewBox="0 0 16 16">
-              <path d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2m2.354 6.854-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708z"/>
-              </svg>
-              <p className="p-3 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.1)]">Srijan Brochure</p>
-              </button>
+                <motion.button
+                  whileHover={{ y: -5 }}
+                  type="button"
+                  className=" bg-opacity-10 backdrop-blur-lg hover:bg-[#dad3a5] font-medium rounded-lg text-sm px-4 py-2 text-center inline-flex items-center  text-[#c9bc57] hover:text-[#090d06] me-2 mb-2"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    fill="currentColor"
+                    className="bi bi-cloud-arrow-down-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2m2.354 6.854-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708z" />
+                  </svg>
+                  <p className="p-3 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.1)]">
+                    Srijan Brochure
+                  </p>
+                </motion.button>
               </a>
             </motion.button>
             <motion.button
@@ -207,7 +224,7 @@ function Hero() {
         </div>
       </div> */}
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mx-5 my-5">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 px-5 py-5 bg-[#17160e]">
         <div className="grid gap-4">
           <div>
             <img
@@ -302,15 +319,15 @@ function Hero() {
         </div>
       </div>
 
-      <motion.div className="text-8xl font-bold bg-transparent bg-clip-text opacity-70 flex justify-center items-center my-10">
+      <motion.div className="text-8xl font-bold bg-[#090d06] flex justify-center items-center py-10 text-[#dad3a5]">
         Coming Soon!
       </motion.div>
-      <div id="sponsor" className="max-w-screen p-5 md:p-10 bg-gray-800">
-        <h1 className="flex text-white font-bold text-6xl justify-center items-center">
+      <div id="sponsor" className="max-w-screen p-5 md:p-10 bg-[#17160e]">
+        <h1 className="flex text-[#efede0] font-bold text-6xl justify-center items-center">
           {" "}
           Past Sponsors
         </h1>
-        <div className="grid grid-cols-2 md:grid-cols-4 flex-wrap gap-x-5 gap-y-10 p-10 rounded-lg backdrop-blur-lg bg-opacity-60">
+        <div className="grid grid-cols-2 md:grid-cols-4 flex-wrap gap-x-5 gap-y-10 p-10 rounded-lg">
           <motion.div
             // initial={{ y: 20, x: -10 }}
             // whileInView={{ x: 0, y: 0 }}
