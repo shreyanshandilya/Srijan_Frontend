@@ -87,7 +87,7 @@ function Hero() {
               variants={textAnimate2}
               initial="hidden"
               animate="show"
-              className="mb-8 overflow-x-hidden text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48"
+              className="mb-8 overflow-x-hidden text-lg font-normal text-[#efede0] lg:text-xl sm:px-16 lg:px-48"
             >
               Get a taste of the flavours all around the world. The biggest
               cultural fest is back!
@@ -100,14 +100,14 @@ function Hero() {
             >
               <Countdown />
             </motion.p>
-            <motion.p
+            <motion.span
               variants={textAnimate2}
               initial="hidden"
               animate="show"
-              className="h-auto overflow-x-hidden flex justify-center text-lg font-semibold text-yellow-400 lg:text-xl sm:px-16 lg:px-48"
+              className="h-auto overflow-x-hidden flex justify-center text-lg font-semibold text-[#c9bc57] lg:text-2xl py-4 sm:px-5 bg-opacity-50 backdrop-blur-xl"
             >
               From 2nd - 4th Feburary 2024
-            </motion.p>
+            </motion.span>
             <motion.button
               variants={textAnimate2}
               initial="hidden"
@@ -191,7 +191,7 @@ function Hero() {
         </div>
       </div> */}
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mx-5 my-5">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 px-5 py-5 bg-[#17160e]">
         <div className="grid gap-4">
           <div>
             <img
@@ -286,15 +286,15 @@ function Hero() {
         </div>
       </div>
 
-      <motion.div className="text-8xl font-bold bg-transparent bg-clip-text opacity-70 flex justify-center items-center my-10">
+      <motion.div className="text-8xl font-bold bg-[#090d06] flex justify-center items-center py-10 text-[#dad3a5]">
         Coming Soon!
       </motion.div>
-      <div id="sponsor" className="max-w-screen p-5 md:p-10 bg-gray-800">
-        <h1 className="flex text-white font-bold text-6xl justify-center items-center">
+      <div id="sponsor" className="max-w-screen p-5 md:p-10 bg-[#17160e]">
+        <h1 className="flex text-[#efede0] font-bold text-6xl justify-center items-center">
           {" "}
           Past Sponsors
         </h1>
-        <div className="grid grid-cols-2 md:grid-cols-4 flex-wrap gap-x-5 gap-y-10 p-10 rounded-lg backdrop-blur-lg bg-opacity-60">
+        <div className="grid grid-cols-2 md:grid-cols-4 flex-wrap gap-x-5 gap-y-10 p-10 rounded-lg">
           <motion.div
             // initial={{ y: 20, x: -10 }}
             // whileInView={{ x: 0, y: 0 }}
