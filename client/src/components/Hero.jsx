@@ -106,7 +106,7 @@ function Hero() {
               animate="show"
               className="h-auto overflow-x-hidden flex justify-center text-lg font-semibold text-yellow-400 lg:text-xl sm:px-16 lg:px-48"
             >
-              2nd - 4th Feburary 2024
+              From 2nd - 4th Feburary 2024
             </motion.p>
             <motion.button
               variants={textAnimate2}

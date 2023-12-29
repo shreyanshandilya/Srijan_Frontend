@@ -10,7 +10,7 @@ const AvatarCard = ({
   insta_url,
 }) => {
   return (
-    <div className="container">
+    <div className="container_">
       <div className="card">
         <div className="lines"></div>
         <div className="imageBox">

@@ -106,7 +106,7 @@ const Navbar = () => {
                     <Link to="/about">
                       <StyledButton name="About Us"></StyledButton>
                     </Link>
-                    <Link to="team">
+                    <Link to="/team">
                       <StyledButton name="Teams"></StyledButton>
                     </Link>
 
@@ -158,6 +158,7 @@ const Navbar = () => {
                     alignItems: "center",
                     flexDirection: "column",
                     justifyContent: "center",
+                    
                   },
                 }}
               >

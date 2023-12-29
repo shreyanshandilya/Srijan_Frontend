@@ -1,7 +1,7 @@
 import "./App.css";
 import Landing from "./pages/Landing";
 import Merchandise from "./pages/Merchandise";
- 
+import Team from './components/Teams/Team'; 
 
 import {
   Route,
@@ -19,6 +19,8 @@ function App() {
       
         <Route exact path="/" element={<Landing />} />
         <Route exact path="/merchant" element={<Merchandise />} />
+        <Route exact path="/team" element={<Team />} />
+
          
         
 

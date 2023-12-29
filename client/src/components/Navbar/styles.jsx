@@ -2,6 +2,11 @@ import styled from "@emotion/styled";
 import { Box } from "@mui/material";
 
 const Wrapper = styled(Box)({
+  "@keyframes changeBoxShadow": {
+    "0%": { boxShadow: "0 0 27px #4d9cb6" },
+    "50%": { boxShadow: "0 0 27px #f4bf12c7" },
+    "100%": { boxShadow: "0 0 27px #558b08" }
+  },
   ".navbar": {
     width: "auto",
     height: "65px",
@@ -9,16 +14,13 @@ const Wrapper = styled(Box)({
     top: "0",
     left: "0",
     right: "0",
+    display: "flex",
     justifyContent: "center",
-    alignSelf: "center",
-     
-    zIndex: "9999",
+    alignItems: "center",
+    zIndex: 9999,
     backgroundColor: "black",
-    boxShadow:" 0 0 10px #b5e95f47",
-     
-    transition: "all 0.3s ease",
     color: "#000",
-     
+    animation: "changeBoxShadow 12s infinite alternate"
   },
   "@media only screen and (max-width: 900px)": {
     ".navbar": {
