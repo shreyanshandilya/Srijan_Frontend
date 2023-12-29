@@ -56,6 +56,7 @@ function Hero() {
       },
     },
   };
+
   // const scrollHandler = (sponsor) => {
   //     window.scrollTo({top:sponsor.current.offsetTop, behavior:"smooth"});
   // }
@@ -74,7 +75,7 @@ function Hero() {
           transition={{ duration: 1 }}
           className="w-screen h-screen flex justify-center items-center bg-cover bg-center bg-no-repeat bg-[url('assets/bgimage.jpg')] bg-yellow-800 bg-blend-multiply"
         >
-          <motion.div className="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+          <motion.div className="px-4 grid grid-row-4 gap-1 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
             <motion.h1
               variants={textAnimate1}
               initial="hidden"
@@ -108,6 +109,21 @@ function Hero() {
             >
               From 2nd - 4th Feburary 2024
             </motion.span>
+            <motion.button
+              variants={textAnimate2}
+              initial="hidden"
+              animate="show"
+              className="p-5"
+              >
+              <a href="https://drive.google.com/file/d/1XWCCAvG8_vHOTChQzw3sT0nUJuZRuPog/view?usp=sharing" >
+              <button type="button" class=" bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-2.5 py-1.25 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 me-2 mb-2 text-orange-500">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-cloud-arrow-down-fill" viewBox="0 0 16 16">
+              <path d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2m2.354 6.854-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5a.5.5 0 0 1 1 0v3.793l1.146-1.147a.5.5 0 0 1 .708.708z"/>
+              </svg>
+              <p className="p-3 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.1)]">Srijan Brochure</p>
+              </button>
+              </a>
+            </motion.button>
             <motion.button
               variants={textAnimate2}
               initial="hidden"
