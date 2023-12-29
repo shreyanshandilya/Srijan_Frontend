@@ -106,7 +106,7 @@ function Hero() {
               animate="show"
               className="h-auto overflow-x-hidden flex justify-center text-lg font-semibold text-yellow-400 lg:text-xl sm:px-16 lg:px-48"
             >
-              On 2nd Feburary 2024
+              2nd - 4th Feburary 2024
             </motion.p>
             <motion.button
               variants={textAnimate2}
@@ -237,9 +237,9 @@ function Hero() {
         </h1>
         <div className="grid grid-cols-2 md:grid-cols-4 flex-wrap gap-x-5 gap-y-10 p-10 rounded-lg backdrop-blur-lg bg-opacity-60">
           <motion.div
-            initial={{ y: 20, x: -10 }}
-            whileInView={{ x: 0, y: 0 }}
-            transition={{ duration: 1 }}
+            // initial={{ y: 20, x: -10 }}
+            // whileInView={{ x: 0, y: 0 }}
+            // transition={{ duration: 1 }}
             className="col-span-full flex justify-center items-center backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-contain bg-center"
           >
             <img
@@ -249,9 +249,9 @@ function Hero() {
             />
           </motion.div>
           <motion.div
-            initial={{ x: -30 }}
-            whileInView={{ x: 0 }}
-            transition={{ duration: 0.8 }}
+            // initial={{ x: -30 }}
+            // whileInView={{ x: 0 }}
+            // transition={{ duration: 0.8 }}
             className="col-span-2 flex justify-center items-center p-3 md:p-5 backdrop-blur-2xl bg-opacity-60 rounded-lg bg-no-repeat bg-contain bg-center"
           >
             <img
@@ -261,9 +261,9 @@ function Hero() {
             />
           </motion.div>
           <motion.div
-            initial={{ x: 20 }}
-            whileInView={{ x: 0 }}
-            transition={{ duration: 0.8 }}
+            // initial={{ x: 20 }}
+            // whileInView={{ x: 0 }}
+            // transition={{ duration: 0.8 }}
             className="col-span-2 flex justify-center items-center backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5  bg-no-repeat bg-contain bg-center"
           >
             <img
@@ -273,9 +273,9 @@ function Hero() {
             />
           </motion.div>
           <motion.div
-            initial={{ y: 10 }}
-            whileInView={{ y: 0 }}
-            transition={{ duration: 1.2 }}
+            // initial={{ y: 10 }}
+            // whileInView={{ y: 0 }}
+            // transition={{ duration: 1.2 }}
             className='col-span-2 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-contain bg-center'
           >
             <img
@@ -285,9 +285,9 @@ function Hero() {
             />
           </motion.div>
           <motion.div
-            initial={{ x: 10 }}
-            whileInView={{ x: 0 }}
-            transition={{ duration: 1.2 }}
+            // initial={{ x: 10 }}
+            // whileInView={{ x: 0 }}
+            // transition={{ duration: 1.2 }}
             className='col-span-2 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-contain bg-center'
           >
             <img
@@ -297,9 +297,9 @@ function Hero() {
             />
           </motion.div>
           <motion.div
-            initial={{ x: 30 }}
-            whileInView={{ x: 0 }}
-            transition={{ duration: 1.5 }}
+            // initial={{ x: 30 }}
+            // whileInView={{ x: 0 }}
+            // transition={{ duration: 1.5 }}
             className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-contain bg-center'
           >
             <img
@@ -309,17 +309,21 @@ function Hero() {
             />
           </motion.div>
           <motion.div
-            initial={{ y: -40 }}
-            whileInView={{ y: 0 }}
-            transition={{ duration: 1.1 }}
+            // initial={{ y: -40 }}
+            // whileInView={{ y: 0 }}
+            // transition={{ duration: 1.1 }}
             className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-auto bg-center'
           >
-            <img className="rounded" src="" alt="" />
+            <img
+              className="rounded"
+              src="https://res.cloudinary.com/dfr1kvie3/image/upload/v1703837517/ncl_hn2fij.png"
+              alt=""
+            />
           </motion.div>
           <motion.div
-            initial={{ x: 30 }}
-            whileInView={{ x: 0 }}
-            transition={{ duration: 1.8 }}
+            // initial={{ x: 30 }}
+            // whileInView={{ x: 0 }}
+            // transition={{ duration: 1.8 }}
             className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-contain bg-center'
           >
             <img
@@ -329,9 +333,9 @@ function Hero() {
             />
           </motion.div>
           <motion.div
-            initial={{ x: -10 }}
-            whileInView={{ x: 0 }}
-            transition={{ duration: 1.1 }}
+            // initial={{ x: -10 }}
+            // whileInView={{ x: 0 }}
+            // transition={{ duration: 1.1 }}
             className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-contain bg-center'
           >
             <img
@@ -341,9 +345,9 @@ function Hero() {
             />
           </motion.div>
           <motion.div
-            initial={{ y: 30 }}
-            whileInView={{ y: 0 }}
-            transition={{ duration: 1.3 }}
+            // initial={{ y: 30 }}
+            // whileInView={{ y: 0 }}
+            // transition={{ duration: 1.3 }}
             className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-contain bg-center'
           >
             <img
@@ -353,9 +357,9 @@ function Hero() {
             />
           </motion.div>
           <motion.div
-            initial={{ x: 30, y: 20 }}
-            whileInView={{ x: 0, y: 0 }}
-            transition={{ duration: 1.6 }}
+            // initial={{ x: 30, y: 20 }}
+            // whileInView={{ x: 0, y: 0 }}
+            // transition={{ duration: 1.6 }}
             className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-contain bg-center'
           >
             <img
@@ -365,9 +369,9 @@ function Hero() {
             />
           </motion.div>
           <motion.div
-            initial={{ x: 20, y: -5 }}
-            whileInView={{ x: 0, y: 0 }}
-            transition={{ duration: 0.8 }}
+            // initial={{ x: 20, y: -5 }}
+            // whileInView={{ x: 0, y: 0 }}
+            // transition={{ duration: 0.8 }}
             className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-contain bg-center'
           >
             <img
@@ -377,9 +381,9 @@ function Hero() {
             />
           </motion.div>
           <motion.div
-            initial={{ x: 10, y: -5 }}
-            whileInView={{ x: 0, y: 0 }}
-            transition={{ duration: 1 }}
+            // initial={{ x: 10, y: -5 }}
+            // whileInView={{ x: 0, y: 0 }}
+            // transition={{ duration: 1 }}
             className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-contain bg-center'
           >
             <img
@@ -437,28 +441,26 @@ function Hero() {
               alt=""
             />
           </div>
-          <div className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-auto bg-center'>
-            <img className="rounded" src="" alt="" />
-          </div>
           <div className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-contain bg-center'>
+            <img
+              className="rounded"
+              src="https://res.cloudinary.com/dfr1kvie3/image/upload/v1703837361/bahamas_qlehol.jpg"
+              alt=""
+            />
+          </div>
+          <div className='col-span-1 md:col-span-2 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-contain bg-center'>
             <img
               className="rounded"
               src="https://res.cloudinary.com/dfr1kvie3/image/upload/v1702995309/eng_parcel_zdfb7v.png"
               alt=""
             />
           </div>
-          <div className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-contain bg-center'>
+          <div className='col-span-1 md:col-span-2 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-contain bg-center'>
             <img
               className="rounded"
               src="https://res.cloudinary.com/dfr1kvie3/image/upload/v1702995311/realme_cgy4n5.png"
               alt=""
             />
-          </div>
-          <div className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-auto bg-center'>
-            <img className="rounded" src="" alt="" />
-          </div>
-          <div className='col-span-1 flex justify-center items-center bg-[url("")] backdrop-blur-lg bg-opacity-60 rounded-lg p-3 md:p-5 bg-no-repeat bg-auto bg-center'>
-            <img className="rounded" src="" alt="" />
           </div>
         </div>
       </div>
