@@ -244,7 +244,7 @@ function Hero() {
           >
             <img
               className="rounded"
-              src="https://res.cloudinary.com/dfr1kvie3/image/upload/v1702995309/central_coalfields_dji3gq.jpg"
+              src="https://res.cloudinary.com/dfr1kvie3/image/upload/v1703859538/ccl_civw5b.jpg"
               alt=""
             />
           </motion.div>
@@ -256,7 +256,7 @@ function Hero() {
           >
             <img
               className="rounded"
-              src="https://res.cloudinary.com/dfr1kvie3/image/upload/v1702995309/adani_fkjiw1.jpg"
+              src="https://res.cloudinary.com/dfr1kvie3/image/upload/v1703859374/adani_wmvuqc.png"
               alt=""
             />
           </motion.div>
