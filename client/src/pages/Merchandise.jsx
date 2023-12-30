@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { motion, useAnimate } from "framer-motion";
 import Nav from "../components/Navbar/navbar";
-import axios from "axios";
-
+// import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Footer from "../components/Footer/footer";
 import { Carousel } from "flowbite-react";
 
 function Merchandise() {
-  const url = "srijan2024.onrender.com/api/purchase";
+  const url = "https://srijan2024.onrender.com/api/purchase";
   const [data, setData] = useState({
     name: "",
     admissionNumber: "",
@@ -18,15 +19,40 @@ function Merchandise() {
   });
   const [img, setImg] = useState("");
   const handleChangeInput = (event) => {
-    setData({ ...data, [event.target.name]: [event.target.value] });
+    setData({ ...data, [event.target.id]: [event.target.value] });
+    // console.log(data);
   };
   const handleImg = (event) => {
     setImg(event.target.files[0]);
   };
-  const handleMerchantSubmit = () => {
+  const handleMerchantSubmit = async (e) => {
+    e.preventDefault();
+    // console.log(data);
     const formData = new FormData();
     formData.append("image", img);
-    axios.post(url, { data, formData });
+    // console.log(img);
+    // console.log(formData);
+    formData.append("name", data.name);
+    formData.append("admissionNumber", data.admissionNumber);
+    formData.append("mobileNumber", data.mobileNumber);
+    formData.append("tshirtSize", data.tshirtSize);
+    formData.append("hostel", data.hostel);
+    formData.append("roomNumber", data.roomNumber);
+    // console.log(data);
+    // for (var pair of formData.entries()) {
+    //   console.log(pair[0] + ", " + pair[1]);
+    // }
+    const response = await toast.promise(
+      fetch(url, {
+        method: "POST",
+        body: formData,
+      }),
+      {
+        pending: "Placing order",
+        success: "Your order has been placed!",
+        error: "Oops!, couldn't place order",
+      }
+    );
   };
   const [scope, animate] = useAnimate();
   const [open, setOpen] = useState(false);
@@ -103,19 +129,21 @@ function Merchandise() {
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
+            onSubmit={(e) => handleMerchantSubmit(e)}
             className="max-w-sm mx-auto rounded-lg bg-[#dad3a5] shadow-xl px-5 py-5 backdrop-blur-lg"
           >
             <div className="mb-4">
               <label
-                htmlFor="email"
+                htmlFor="name"
                 className="block mb-2 text-sm font-medium text-[#040d10]"
               >
                 Name
               </label>
               <input
-                type="email"
-                id="email"
+                type="text"
+                id="name"
                 onChange={handleChangeInput}
+                value={data.name}
                 className="bg-gray-50 border border-gray-300 text-[#040d10] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                 placeholder=""
                 required
@@ -123,15 +151,16 @@ function Merchandise() {
             </div>
             <div className="mb-4">
               <label
-                htmlFor="admission"
+                htmlFor="admissionNumber"
                 className="block mb-2 text-sm font-medium text-[#040d10]"
               >
                 Admission Number
               </label>
               <input
                 type="text"
-                id="admission"
+                id="admissionNumber"
                 onChange={handleChangeInput}
+                value={data.admissionNumber}
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                 placeholder="23je0001"
                 required
@@ -139,15 +168,16 @@ function Merchandise() {
             </div>
             <div className="mb-4">
               <label
-                htmlFor="phone"
+                htmlFor="mobileNumber"
                 className="block mb-2 text-sm font-medium text-[#040d10]"
               >
                 Phone
               </label>
               <input
                 type="number"
-                id="phone"
+                id="mobileNumber"
                 onChange={handleChangeInput}
+                value={data.mobileNumber}
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                 placeholder="8224092815"
                 required
@@ -165,6 +195,7 @@ function Merchandise() {
                   type="text"
                   id="hostel"
                   onChange={handleChangeInput}
+                  value={data.hostel}
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                   placeholder="Aquamarine"
                   required
@@ -172,15 +203,16 @@ function Merchandise() {
               </div>
               <div className="mb-1">
                 <label
-                  htmlFor="room"
+                  htmlFor="roomNumber"
                   className="block mb-1 text-sm font-medium text-[#040d10]"
                 >
                   Room
                 </label>
                 <input
                   type="text"
-                  id="room"
+                  id="roomNumber"
                   onChange={handleChangeInput}
+                  value={data.roomNumber}
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                   placeholder="C/04/09"
                   required
@@ -190,14 +222,15 @@ function Merchandise() {
 
             <div className="mb-4">
               <label
-                htmlFor="countries"
+                htmlFor="tshirtSize"
                 className="block mb-2 text-sm font-medium text-gray-900"
               >
                 Select your size
               </label>
               <select
-                id="countries"
+                id="tshirtSize"
                 onChange={handleChangeInput}
+                value={data.tshirtSize}
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
               >
                 <option value="S">S</option>
@@ -232,13 +265,24 @@ function Merchandise() {
 
             <button
               type="submit"
-              onSubmit={handleMerchantSubmit}
               className="text-[#efede0] bg-[#514c08]/60 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center "
             >
               Submit
             </button>
           </motion.form>
         )}
+        <ToastContainer
+          position="bottom-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
       </div>
       <Footer />
     </div>
