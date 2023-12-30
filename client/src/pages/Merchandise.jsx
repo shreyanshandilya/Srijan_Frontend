@@ -16,6 +16,7 @@ function Merchandise() {
     tshirtSize: "",
     hostel: "",
     roomNumber: "",
+    quantity: "",
   });
   const [img, setImg] = useState("");
   const handleChangeInput = (event) => {
@@ -38,6 +39,7 @@ function Merchandise() {
     formData.append("tshirtSize", data.tshirtSize);
     formData.append("hostel", data.hostel);
     formData.append("roomNumber", data.roomNumber);
+    formData.append("quantity", data.quantity);
     // console.log(data);
     // for (var pair of formData.entries()) {
     //   console.log(pair[0] + ", " + pair[1]);
@@ -144,8 +146,8 @@ function Merchandise() {
                 id="name"
                 onChange={handleChangeInput}
                 value={data.name}
-                className="bg-gray-50 border border-gray-300 text-[#040d10] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                placeholder=""
+                className="bg-gray-50 border border-gray-300 text-[#040d10] text-sm rounded-lg focus:ring-[#0d0c06] focus:border-[#0d0c06] block w-full p-2.5"
+                placeholder="ABC XYZ"
                 required
               />
             </div>
@@ -161,7 +163,7 @@ function Merchandise() {
                 id="admissionNumber"
                 onChange={handleChangeInput}
                 value={data.admissionNumber}
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0d0c06] focus:border-[#0d0c06] block w-full p-2.5"
                 placeholder="23je0001"
                 required
               />
@@ -174,11 +176,11 @@ function Merchandise() {
                 Phone
               </label>
               <input
-                type="number"
+                type="text"
                 id="mobileNumber"
                 onChange={handleChangeInput}
                 value={data.mobileNumber}
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0d0c06] focus:border-[#0d0c06] block w-full p-2.5"
                 placeholder="8224092815"
                 required
               />
@@ -196,7 +198,7 @@ function Merchandise() {
                   id="hostel"
                   onChange={handleChangeInput}
                   value={data.hostel}
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0d0c06] focus:border-[#0d0c06] block w-full p-2.5"
                   placeholder="Aquamarine"
                   required
                 />
@@ -213,11 +215,28 @@ function Merchandise() {
                   id="roomNumber"
                   onChange={handleChangeInput}
                   value={data.roomNumber}
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                  placeholder="C/04/09"
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0d0c06] focus:border-[#0d0c06] block w-full p-2.5"
+                  placeholder="C/06/09"
                   required
                 />
               </div>
+            </div>
+            <div className="mb-4">
+              <label
+                htmlFor="quantity"
+                className="block mb-2 text-sm font-medium text-[#040d10]"
+              >
+                Quantity
+              </label>
+              <input
+                type="number"
+                id="quantity"
+                onChange={handleChangeInput}
+                value={data.quantity}
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0d0c06] focus:border-[#0d0c06] block w-full p-2.5"
+                placeholder="2"
+                required
+              />
             </div>
 
             <div className="mb-4">
@@ -231,7 +250,7 @@ function Merchandise() {
                 id="tshirtSize"
                 onChange={handleChangeInput}
                 value={data.tshirtSize}
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0d0c06] focus:border-[#0d0c06] block w-full p-2.5"
               >
                 <option value="S">S</option>
                 <option value="M">M</option>

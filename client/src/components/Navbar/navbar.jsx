@@ -158,7 +158,6 @@ const Navbar = () => {
                     alignItems: "center",
                     flexDirection: "column",
                     justifyContent: "center",
-                    
                   },
                 }}
               >
@@ -224,7 +223,7 @@ const Navbar = () => {
                     </ListItem> */}
                     {/* <MobileLink url="/tshirt" text="Merchandise" /> */}
                     <Link to="/about">
-                      <MobileLink url="/aboutUs" text="About Us" noBorder />
+                      <MobileLink url="/about" text="About Us" noBorder />
                     </Link>
                     {/* <MobileLink url="/teams" text="Teams" noBorder /> */}
                   </List>
