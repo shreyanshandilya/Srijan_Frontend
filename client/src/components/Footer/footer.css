@@ -54,7 +54,6 @@ section {
 /* Footer links */
 
 .footer-distributed .footer-links {
-  color: #ffffff;
   margin: 20px 0 12px;
   padding: 0;
 }
@@ -82,7 +81,7 @@ section {
 
 .footer-distributed .footer-center i {
   background-color: #33383b;
-  color: #ffffff;
+  color: #dad3a5;
   font-size: 25px;
   width: 38px;
   height: 38px;
@@ -195,7 +194,6 @@ section {
   margin-top: 25px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
 }
 
 .footer-distributed .footer-icons a {
@@ -206,7 +204,7 @@ section {
   border-radius: 2px;
 
   font-size: 20px;
-  color: #ffffff;
+  color: #dad3a5;
   text-align: center;
   line-height: 35px;
 
