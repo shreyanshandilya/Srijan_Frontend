@@ -2,6 +2,7 @@
 import React from "react";
 import "./footer.css";
 import logo from "./srijan Light (1).png";
+import { motion } from "framer-motion";
 const Footer = () => {
   return (
     <footer className="footer-distributed">
@@ -20,7 +21,7 @@ const Footer = () => {
           <button
             whileHover={{ y: -5 }}
             type="button"
-            className=" bg-opacity-10 backdrop-blur-lg hover:bg-[#dad3a5] font-medium rounded-lg text-sm px-3 text-center inline-flex items-center  text-[#c9bc57] hover:text-[#090d06] me-2 mb-2"
+            className="  backdrop-blur-lg bg-[#dad3a5] hover:bg-transparent font-medium rounded-lg text-sm px-3 text-center inline-flex items-center  text-[#090d06] hover:text-[#c9bc57] me-2 my-2"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -96,7 +97,7 @@ const Footer = () => {
         </p>
 
         <div className="footer-icons justify-center md:justify-between">
-          <a href="https://www.facebook.com/ism.srijan" >
+          <a href="https://www.facebook.com/ism.srijan">
             <i className="fa fa-facebook"></i>
           </a>
 
