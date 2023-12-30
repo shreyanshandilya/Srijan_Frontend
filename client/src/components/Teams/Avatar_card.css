@@ -12,7 +12,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #245953;
+  background: #0d0c06;
 
   margin: 59px;
   margin-top: 0px;
@@ -48,9 +48,9 @@
   height: 120px;
   background: linear-gradient(
     transparent,
-    #800080,
-    #e2725b,
-    #800080,
+    #dad3a5,
+    #c9bc57,
+    #fbe10e,
     transparent
   );
   animation: animate 4s linear infinite;
@@ -91,9 +91,9 @@
   transform: translate(-50%, -50%);
   background: linear-gradient(
     transparent,
-    #ff9933,
-    #e2725b,
-    #ff9933,
+    #fbe10e,
+    #efede0,
+    #0d0c06,
     transparent
   );
   animation: animate 4s linear infinite;
@@ -159,7 +159,7 @@
 .card .content .details h2 span {
   font-size: 0.75rem;
   font-weight: 500;
-  color: #e2725b;
+  color: #efede0;
 }
 
 .card .content .details .info {
@@ -198,7 +198,7 @@
   padding: 10px 0;
   border: none;
   outline: none;
-  background: #45f3ff;
+  background: #0d0c06;
   font-size: 1rem;
   font-weight: 500;
   color: #222;
@@ -225,7 +225,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #245953;
+    background: #0d0c06;
 
     margin: auto;
     margin-top: 10px;
@@ -238,7 +238,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #245953;
+    background: #0d0c06;
     margin: auto;
     margin-top: 10px;
     margin-bottom: 0px;

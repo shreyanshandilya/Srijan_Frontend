@@ -1,24 +1,30 @@
 import React from "react";
 import AvatarCard from "./avatar_card";
 import { teams } from "./teams_data.jsx";
-import Nav from '../Navbar/navbar.jsx'
+import Nav from "../Navbar/navbar.jsx";
+import Footer from "../Footer/footer.jsx";
 const Teams = () => {
   return (
     <div>
-    <Nav/>
-    <div
-      className="teams"
-      style={{
-        paddingTop:"130px",
-        display: "flex",
-        flexWrap: "wrap",
-        background: "#245953",
-      }}
-    >
-      {teams.map((person, index) => (
-        <AvatarCard key={index} {...person} />
-      ))}
-    </div> </div>
+      <Nav />
+      <h1 className="flex justify-center items-center pt-20 text-5xl bg-[#0d0c06] text-[#dad3a5] sm:text-7xl">
+        Team
+      </h1>
+      <div
+        className="teams"
+        style={{
+          paddingTop: "130px",
+          display: "flex",
+          flexWrap: "wrap",
+          background: "#0d0c06",
+        }}
+      >
+        {teams.map((person, index) => (
+          <AvatarCard key={index} {...person} />
+        ))}
+      </div>{" "}
+      <Footer />
+    </div>
   );
 };
 
