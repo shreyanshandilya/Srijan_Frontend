@@ -7,13 +7,14 @@ const Teams = () => {
   return (
     <div>
       <Nav />
-      <h1 className="flex justify-center items-center pt-20 text-5xl bg-[#0d0c06] text-[#dad3a5] sm:text-7xl">
+      <h1 className="flex justify-center items-center pt-20 text-5xl bg-[#0d0c06] text-[#dad3a5] sm:text-7xl" style={{fontWeight:"200"}}>
         Team
       </h1>
+      <hr/>
       <div
         className="teams"
         style={{
-          paddingTop: "130px",
+          paddingTop: "80px",
           display: "flex",
           flexWrap: "wrap",
           background: "#0d0c06",

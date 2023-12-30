@@ -221,15 +221,15 @@
 }
 @media screen and (max-width: 1402px) {
   .container_ {
-    min-height: 35vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #0d0c06;
+    min-height: 64vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0d0c06;
 
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 0px;
+  margin:auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
   }
 }
 @media screen and (max-width: 925px) {
