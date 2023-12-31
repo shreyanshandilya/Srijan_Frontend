@@ -7,10 +7,13 @@ const Teams = () => {
   return (
     <div>
       <Nav />
-      <h1 className="flex justify-center items-center pt-20 text-5xl bg-[#0d0c06] text-[#dad3a5] sm:text-7xl" style={{fontWeight:"200"}}>
+      <h1
+        className="flex justify-center items-center pt-20 text-5xl bg-[#0d0c06] text-[#dad3a5] sm:text-7xl"
+        style={{ fontWeight: "200" }}
+      >
         Team
       </h1>
-      <hr/>
+      <hr />
       <div
         className="teams"
         style={{

@@ -43,7 +43,12 @@ function Merchandise() {
     // console.log(data);
     // for (var pair of formData.entries()) {
     //   console.log(pair[0] + ", " + pair[1]);
-    // }
+    // // }
+    // const res = fetch(url, {
+    //   method: "POST",
+    //   body: formData,
+    // });
+    // console.log(res);
     const response = await toast.promise(
       fetch(url, {
         method: "POST",
@@ -250,7 +255,9 @@ function Merchandise() {
                 id="tshirtSize"
                 onChange={handleChangeInput}
                 value={data.tshirtSize}
+                placeholder="M"
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0d0c06] focus:border-[#0d0c06] block w-full p-2.5"
+                required
               >
                 <option value="S">S</option>
                 <option value="M">M</option>
@@ -273,6 +280,7 @@ function Merchandise() {
                 placeholder="Transaction Screenshot"
                 id="user_avatar"
                 type="file"
+                required
               />
               <div
                 className="mt-1 text-xs flex justify-start text-[#040d10]"
