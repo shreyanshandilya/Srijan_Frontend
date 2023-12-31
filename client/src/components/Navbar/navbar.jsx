@@ -7,7 +7,7 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import StyledButton from "./button";
 import CssBaseline from "@mui/material/CssBaseline";
-import srijanlogo from "../Footer/srijan Light (1).png";
+import srijanlogo from "../Footer/srijan Light (3).png";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
