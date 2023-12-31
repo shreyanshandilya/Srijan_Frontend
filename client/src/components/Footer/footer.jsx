@@ -1,7 +1,7 @@
 // Footer.js
 import React from "react";
 import "./footer.css";
-import logo from "./srijan Light (1).png";
+import logo from "./srijan Light (3).png";
 import { motion } from "framer-motion";
 const Footer = () => {
   return (
