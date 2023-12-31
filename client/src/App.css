@@ -51,3 +51,86 @@
     }
   }
   /* ----------- */
+
+  /* Team Page */
+  sectionTeam {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding-top: 100px;
+  }
+
+  .blue {
+    background: #3c31dd;
+  }
+
+  .red {
+    background: #dd3f31;
+  }
+
+  .pink {
+    background: #ff0066;
+    overflow: hidden;
+  }
+
+
+  /* Bubble bg with plain CSS */
+
+  .bubble::after {
+    content: '';
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    background-color: #0f0f10;
+    height: 85%;
+  }
+
+  /* Curved bg with SVG via https://www.shapedivider.app/ */
+
+  .wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .wave svg {
+    position: relative;
+    display: block;
+    width: calc(103% + 1.3px);
+    height: 262px;
+  }
+
+  .wave .shape-fill {
+    fill: black;
+  }
+
+  /* SVG background image via https://haikei.app/ */
+
+  .spacer {
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .layer1 {
+    background-image: url('./components/Teams/layer1.svg');
+  }
+  .layer2 {
+    background-image: url('./components/Teams/layer2.svg');
+  }
+
+  .flip {
+    transform: rotate(180deg);
+  }
+
+/* Team page css end */
