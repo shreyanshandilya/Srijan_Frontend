@@ -94,7 +94,7 @@ const Navbar = () => {
                       justifyContent: "space-around",
                     }}
                   >
-                    <Link to="/events">
+                    <Link to="/admin">
                       <StyledButton name="Events" />
                     </Link>
                     <Link to="/sponsor">
