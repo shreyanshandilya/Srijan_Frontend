@@ -3,18 +3,18 @@ import AvatarCard from "./avatar_card";
 import { teams } from "./teams_data.jsx";
 import Nav from "../Navbar/navbar.jsx";
 import Footer from "../Footer/footer.jsx";
+import { Teampage } from "./Teampage.jsx";
+
 const Teams = () => {
   return (
-    <div>
+    <div className="bg-black">
       <Nav />
-      <h1
-        className="flex justify-center items-center pt-20 text-5xl bg-[#0d0c06] text-[#dad3a5] sm:text-7xl"
-        style={{ fontWeight: "200" }}
-      >
-        Team
+      <h1 className="pt-20 flex justify-center mb-8 text-4xl mt-10 font-bold tracking-tight leading-none text-[#dad3a5] md:text-5xl lg:text-6xl">
+        About Us
       </h1>
       <hr />
-      <div
+      <Teampage />
+      {/* <div
         className="teams"
         style={{
           paddingTop: "80px",
@@ -26,7 +26,7 @@ const Teams = () => {
         {teams.map((person, index) => (
           <AvatarCard key={index} {...person} />
         ))}
-      </div>{" "}
+      </div>{" "} */}
       <Footer />
     </div>
   );
