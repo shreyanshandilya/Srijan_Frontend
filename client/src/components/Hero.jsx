@@ -17,14 +17,14 @@ function Hero() {
       transition: {
         ease: "easeInOut",
         duration: 0.8,
-        delay: 1,
+        delay: 0.3,
       },
     },
   };
 
   const textAnimate1 = {
     hidden: {
-      y: "-100%",
+      y: "50px",
       opacity: 0,
       color: "#0f0f0f",
     },
@@ -287,12 +287,11 @@ function Hero() {
         </div>
       </div>
 
-      <motion.div className="text-8xl font-bold bg-[#090d06] flex justify-center items-center py-10 text-[#dad3a5]">
+      <motion.div className="md:text-8xl text-4xl font-bold bg-[#090d06] flex justify-center items-center py-10 text-[#dad3a5]">
         Coming Soon!
       </motion.div>
       <div id="sponsor" className="max-w-screen p-5 md:p-10 bg-[#17160e]">
-        <h1 className="flex text-[#efede0] font-bold text-6xl justify-center items-center">
-          {" "}
+        <h1 className="flex md:text-6xl text-[#efede0] font-bold text-2xl justify-center items-center">
           Past Sponsors
         </h1>
         <div className="grid grid-cols-2 md:grid-cols-4 flex-wrap gap-x-5 gap-y-10 p-10 rounded-lg">
