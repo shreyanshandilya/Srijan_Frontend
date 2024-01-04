@@ -1,3 +1,5 @@
+import * as React from "react";
+import * as ReactDOM from "react-dom";
 import "./App.css";
 import Landing from "./pages/Landing";
 import Merchandise from "./pages/Merchandise";
@@ -8,23 +10,54 @@ import Profile from "./components/Profile/profile";
 import PurchaseListPage from "./pages/PurcahseListPage";
 import Event from "./pages/Event";
 import {
-  Form,
-  HashRouter,
-  Route,
+  createHashRouter,
   RouterProvider,
-  Routes,
-  createBrowserRouter,
-  createRoutesFromElements,
 } from "react-router-dom";
 
-// import Landing from './pages/Landing';
-
 function App() {
-  // const router = createBrowserRouter(
-  //   createRoutesFromElements(
-    return(
-      <HashRouter exact basename="/">
-        <Routes>
+  const router = createHashRouter([
+    {
+      path: "/",
+      element: <Landing />,
+    },
+    {
+      path: "merchant",
+      element: <Merchandise />,
+    },
+    {
+      path: "event",
+      element: <Event />,
+    },
+    {
+      path: "profile",
+      element: <Frm />,
+    },
+    {
+      path: "team",
+      element: <Team />,
+    },
+    {
+      path: "about",
+      element: <About />,
+    },
+    {
+      path: "admin",
+      element: <PurchaseListPage />,
+    },
+  ]);
+  return (<RouterProvider router={router} />);
+}
+
+export default App
+
+
+
+// ReactDOM.createRoot(document.getElementById("root")).render(
+  
+// );
+
+{/* <>
+        <Routes path="/">
           <Route exact path="/" element={<Landing />} />
           <Route exact path="/merchant" element={<Merchandise />} />
           <Route exact path="/event" element={<Event />} />
@@ -33,11 +66,4 @@ function App() {
           <Route exact path="/about" element={<About />} />
           <Route exact path="/admin" element={<PurchaseListPage />} />
         </Routes>
-      </HashRouter>
-    )
-  //   )
-  // );
-  // return <RouterProvider router={router} />;
-}
-
-export default App;
+      </> */}
