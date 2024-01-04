@@ -4,7 +4,7 @@ import Nav from "../components/Navbar/navbar";
 // import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Footer from "../components/Footer/footer";
+import Footer from "../components/Footer.jsx";
 import { Carousel } from "flowbite-react";
 
 function Merchandise() {

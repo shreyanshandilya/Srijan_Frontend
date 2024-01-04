@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar/navbar";
 import { motion } from "framer-motion";
-import Footer from "../components/Footer/footer";
+import Footer from "../components/Footer";
 
 function Event() {
   return (
