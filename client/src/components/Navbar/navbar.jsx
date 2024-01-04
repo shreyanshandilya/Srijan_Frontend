@@ -94,7 +94,10 @@ const Navbar = () => {
                       justifyContent: "space-around",
                     }}
                   >
-                    <Link to="/admin">
+                    {/* <Link to="/admin">
+                      <StyledButton name="Events" />
+                    </Link> */}
+                    <Link to="/event">
                       <StyledButton name="Events" />
                     </Link>
                     <Link to="/profile">
@@ -169,8 +172,8 @@ const Navbar = () => {
                 >
                   {/* <Divider /> */}
                   <List>
-                    <Link to="/events">
-                      <MobileLink url="/events" text="Events" />
+                    <Link to="/event">
+                      <MobileLink url="/event" text="Events" />
                     </Link>
                     <Link to="/sponsor">
                       <MobileLink
