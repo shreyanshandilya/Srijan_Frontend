@@ -16,8 +16,7 @@ function PurchaseList() {
 
         let responseData = await response.json();
         setListItem(responseData);
-      } catch (error) {
-      }
+      } catch (error) {}
     }
     getListIems();
   }, [isUpdate]);
@@ -41,12 +40,7 @@ function PurchaseList() {
     }
   }
 
-
-  function handleChange(e){
-    setPhoneNumber(e.target.value);
-  };
-
-  async function  handleSubmit(e){
+  async function handleSubmit(e) {
     e.preventDefault();
     let response;
     try {
@@ -65,12 +59,17 @@ function PurchaseList() {
     } catch (error) {
       alert("error");
     }
-  };
+  }
+
+  function handleChange(e) {
+    setPhoneNumber(e.target.value);
+    handleSubmit();
+  }
 
   return (
     <>
       <div className="max-w-md mx-auto mt-4 p-6 bg-white border rounded shadow-md">
-        <form onSubmit={handleSubmit}>
+        <div>
           <div className="mb-4">
             <label
               htmlFor="phone"
@@ -88,13 +87,7 @@ function PurchaseList() {
               className="mt-1 p-2 w-full border rounded-md"
             />
           </div>
-          <button
-            type="submit"
-            className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
-          >
-            Submit
-          </button>
-        </form>
+        </div>
       </div>
 
       <div className="mx-auto grid w-full max-w-7xl items-center space-y-4 px-2 py-10 md:grid-cols-2 md:gap-6 md:space-y-0 lg:grid-cols-4">
