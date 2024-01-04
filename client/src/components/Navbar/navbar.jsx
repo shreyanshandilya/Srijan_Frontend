@@ -97,8 +97,8 @@ const Navbar = () => {
                     <Link to="/admin">
                       <StyledButton name="Events" />
                     </Link>
-                    <Link to="/sponsor">
-                      <StyledButton name="Sponsors" />
+                    <Link to="/profile">
+                      <StyledButton name="Profile" />
                     </Link>
                     <Link to="/merchant">
                       <StyledButton name="Merchandise" />
