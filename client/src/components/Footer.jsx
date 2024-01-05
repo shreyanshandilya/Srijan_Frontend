@@ -49,22 +49,22 @@ function FooterT() {
           <div className="grid grid-cols-2 gap-8 sm:gap-6 text-[#efede0]">
             <div className="flex flex-col justify-start gap-y-3">
               <div>For any queries:</div>
-              <ul className="font-medium flex-col gap-y-6 mx-2">
+              <ul className="font-medium flex-col gap-y-6">
                 <li className="my-4">
                   <a
                     href="https://flowbite.com/"
-                    className="hover:underline text-sm md:text-base text-[#fbe10e] flex items-center justify-start gap-x-4"
+                    className="hover:underline text-xs sm:text-sm md:text-base text-[#fbe10e] flex items-center justify-start gap-x-2 sm:gap-x-4"
                   >
-                    <IoMdMail className="text-[#dad3a5] text-2xl" />
+                    <IoMdMail className="text-[#dad3a5] text-xl sm:text-2xl" />
                     srijan@iitism.ac.in
                   </a>
                 </li>
-                <li className="mb-4 text-xs md:text-sm">
+                <li className="mb-4">
                   <a
                     href="https://flowbite.com/"
-                    className="hover:underline text-sm md:text-base flex items-center justify-start gap-x-4"
+                    className="hover:underline text-xs sm:text-sm md:text-base flex items-center justify-start gap-x-2 sm:gap-x-4"
                   >
-                    <FaMapMarkerAlt className="text-[#dad3a5]  text-5xl md:text-3xl" />
+                    <FaMapMarkerAlt className="text-[#dad3a5] text-5xl sm:text-4xl" />
                     Indian Institute of Technology (ISM) Dhanbad - 826004,
                     Jharkhand, India
                   </a>
