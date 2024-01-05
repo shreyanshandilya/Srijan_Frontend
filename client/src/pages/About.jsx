@@ -11,8 +11,8 @@ function About() {
   return (
     <>
       <Navbar />
-      <div className="bg-[url('https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967623/fotofreaks_iitism_1675510867_3030727283148499964_5457821429_e2sk8e.jpg')] bg-[#0d0c06] jusitfy-center items-center mt-5 h-full w-full backdrop-brightness-50">
-        <div className="py-8 px-4 max-w-screen-xl text-center flex flex-col sm:flex-row justify-center items-center lg:py-16 mx-10">
+      <div className="bg-[url('https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967623/fotofreaks_iitism_1675510867_3030727283148499964_5457821429_e2sk8e.jpg')] bg-cover bg-no-repeat bg-[#0d0c06] jusitfy-center items-center mt-5 h-full w-full backdrop-brightness-50">
+        <div className="py-8 px-2 sm:px-4 max-w-screen-xl text-center flex flex-col sm:flex-row justify-center items-center lg:py-16 mx-4 sm:mx-10">
           <motion.div
             //   ref={scope}
             initial={{ opacity: 0 }}
