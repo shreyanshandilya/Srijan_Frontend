@@ -1,5 +1,14 @@
 export default [
   {
+  name: "Pratham Sharma",
+      position: "Coordinator",
+    team: "Event",
+  linkedin_url: "https://linkedin.com/in/PrathamSharma03",
+  insta_url: "https://instagram.com/prath_am6423",
+  image:"https://res.cloudinary.com/dnmjkab6s/image/upload/v1704472446/WhatsApp_Image_2024-01-05_at_21.48.32_mdzmei.jpg"
+}
+,
+  {
     Column2: "1/4/2024 16:15:48",
     name: "Pamula Sanjay ",
     position: "Co-Coordinator",
@@ -276,6 +285,13 @@ export default [
     insta_url:
       "https://www.instagram.com/vishal_meena_2613?igsh=MWhyOTV2Z2ZncmN5bA==",
   },
+  {
+  name: "Rajat Rathi",
+  linkedin_url: "https://www.linkedin.com/in/rajat-rathi-515220212?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+  insta_url: "https://www.instagram.com/immortal_masked_0018/",
+    image:"https://res.cloudinary.com/dnmjkab6s/image/upload/v1704469245/WhatsApp_Image_2024-01-05_at_19.43.05_gamrmr.jpg"
+},
+
   {
     Column2: "1/4/2024 13:39:49",
     name: "Mohit Meena ",
