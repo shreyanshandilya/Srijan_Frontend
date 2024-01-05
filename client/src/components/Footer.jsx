@@ -62,9 +62,9 @@ function FooterT() {
                 <li className="mb-4 text-xs md:text-sm">
                   <a
                     href="https://flowbite.com/"
-                    className="hover:underline flex items-center justify-start gap-x-4 text-sm md:text-base"
+                    className="hover:underline text-sm md:text-base flex items-center justify-start gap-x-4"
                   >
-                    <FaMapMarkerAlt className="text-[#dad3a5] text-2xl" />
+                    <FaMapMarkerAlt className="text-[#dad3a5]  text-5xl md:text-3xl" />
                     Indian Institute of Technology (ISM) Dhanbad - 826004,
                     Jharkhand, India
                   </a>
