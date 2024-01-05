@@ -113,7 +113,7 @@ export default [
     position: "Co-Head",
     team: "Public Relations ",
     image:
-      "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459691/i5idqgee4o0ruo0temcn.jpg",
+      "https://res.cloudinary.com/dnmjkab6s/image/upload/v1704470869/IMG_20240105_195356_igjjgb.jpg",
     linkedin_url: "https://www.linkedin.com/in/mudavath-ganesh-4935a5242",
     insta_url: "https://www.instagram.com/ganesh__6403?igsh=ODA1NTc5OTg5Nw==",
   },
