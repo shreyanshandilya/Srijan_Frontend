@@ -147,7 +147,7 @@ export default [
     position: "Co-Head",
     team: "Sponsorship ",
     image:
-      "https://res.cloudinary.com/dnmjkab6s/image/upload/v1704462792/IMG_5781_fe5xpj.heic",
+      "https://res.cloudinary.com/dnmjkab6s/image/upload/v1704469047/IMG_5781_kc7asa.jpg",
     linkedin_url:
       "https://www.linkedin.com/in/anaya-kulkarni-72a876227?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     insta_url:
