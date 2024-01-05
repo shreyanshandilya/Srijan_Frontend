@@ -124,7 +124,7 @@ export default [
     "name": "Anaya Kulkarni ",
     "position": "Co-Head",
     "team": "Sponsorship ",
-    "image": "https://res.cloudinary.com/dnmjkab6s/image/upload/v1704469047/IMG_5781_kc7asa.jpg",
+    "image": "https://res.cloudinary.com/dkdratnao/image/upload/v1704475435/IMG_5781_fe5xpj_nuxehn.jpg",
     "linkedin_url": "https://www.linkedin.com/in/anaya-kulkarni-72a876227?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     "insta_url": "https://www.instagram.com/kulkarnianaya?igsh=cnl3aXJ6NmF5eGZh&utm_source=qr"
   },

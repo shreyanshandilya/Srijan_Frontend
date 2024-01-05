@@ -1,5 +1,5 @@
 import AvatarCard from "./avatar_card";
-import teams from  "./Teams_D.jsx";
+import teams from "./Teams_D.jsx";
 
 export const Teampage = () => {
   return (
@@ -42,33 +42,65 @@ export const Teampage = () => {
           Co-Convener
         </h1>
         <div className="md:flex">
-          <div class="max-w-sm border border-gray-200 mb-11 mx-4 rounded-lg shadow bg-[#202731]">
-            <div class="popular-block col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
-              <div class="inner-box bg-[#202731]">
-                <div class="image-box w-[280px] h-[450px]">
-                  <div className="flex justify-center p-5">
-                    <img
-                      class="rounded-[100%]"
-                      width={"200px"}
-                      height={"200px"}
-                      src="https://res.cloudinary.com/dkdratnao/image/upload/v1704404941/Co-convenor_xoepnr.png"
-                      alt=""
-                    />
+          <div className="grid grid-cols-2">
+            <div class="max-w-sm border border-gray-200 mb-11 mx-4 rounded-lg shadow bg-[#202731]">
+              <div class="popular-block col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                <div class="inner-box bg-[#202731]">
+                  <div class="image-box w-[280px] h-[450px]">
+                    <div className="flex justify-center p-5">
+                      <img
+                        class="rounded-[100%]"
+                        width={"200px"}
+                        height={"200px"}
+                        src="https://res.cloudinary.com/dkdratnao/image/upload/v1704404941/Co-convenor_xoepnr.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="p-5">
+                      <a>
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#dad3a5] dark:text-white">
+                          Prof. Arijit Baral
+                        </h5>
+                      </a>
+                      <p class="mb-3 font-semibold text-[#69644e] dark:text-gray-400">
+                        Dept of Electrical Engineering
+                      </p>
+                    </div>
                   </div>
-                  <div class="p-5">
-                    <a>
-                      <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#dad3a5] dark:text-white">
-                        Prof. Arijit Baral
-                      </h5>
-                    </a>
-                    <p class="mb-3 font-semibold text-[#69644e] dark:text-gray-400">
-                      Dept of Electrical Engineering
-                    </p>
+                </div>
+              </div>
+            </div>
+            <div class="max-w-sm border border-gray-200 mx-4 mb-11 rounded-lg shadow bg-[#202731]">
+              <div class="popular-block col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                <div class="inner-box bg-[#202731]">
+                  <div class="image-box w-[280px] h-[450px]">
+                    <div className="flex justify-center p-5">
+                      <img
+                        class="rounded-[100%]"
+                        width={"200px"}
+                        height={"200px"}
+                        src="https://res.cloudinary.com/dkdratnao/image/upload/v1704403824/Co-convenor2_qp0smn.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="p-5">
+                      <a>
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#dad3a5] dark:text-white">
+                          Prof. Suresh K Yatirajula
+                        </h5>
+                      </a>
+                      <p class="mb-3 font-semibold text-[#69644e] dark:text-gray-400">
+                        Dept of Chemical Engineering
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        <div>
+          <h1 className="pt-20 flex justify-center mb-8 text-2xl mt-10 font-bold tracking-tight leading-none text-[#202731] md:text-4xl">Treasurer</h1>
           <div class="max-w-sm border border-gray-200 mx-4 mb-11 rounded-lg shadow bg-[#202731]">
             <div class="popular-block col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
               <div class="inner-box bg-[#202731]">
@@ -78,18 +110,18 @@ export const Teampage = () => {
                       class="rounded-[100%]"
                       width={"200px"}
                       height={"200px"}
-                      src="https://res.cloudinary.com/dkdratnao/image/upload/v1704403824/Co-convenor2_qp0smn.png"
+                      src="https://res.cloudinary.com/dkdratnao/image/upload/v1704473056/madhulika_gupta_ye3xav.jpg"
                       alt=""
                     />
                   </div>
                   <div class="p-5">
                     <a>
                       <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#dad3a5] dark:text-white">
-                        Prof. Suresh K Yatirajula
+                        Prof. Madhulika Gupta
                       </h5>
                     </a>
                     <p class="mb-3 font-semibold text-[#69644e] dark:text-gray-400">
-                      Dept of Chemical Engineering
+                      Dept of Chemistry and Chemical Biology
                     </p>
                   </div>
                 </div>
@@ -97,6 +129,7 @@ export const Teampage = () => {
             </div>
           </div>
         </div>
+
         <div className="wave">
           <svg
             data-name="Layer 1"
@@ -147,10 +180,15 @@ export const Teampage = () => {
                     <p>
                       <br />
                       <br />
-                      <a className="m-4" href="https://www.instagram.com/hharsha_s/">
+                      <a
+                        className="m-4"
+                        href="https://www.instagram.com/hharsha_s/"
+                      >
                         @instagram
                       </a>
-                      <a href="https://www.linkedin.com/in/harsh-singh-69523a193/">@linkedin</a>
+                      <a href="https://www.linkedin.com/in/harsh-singh-69523a193/">
+                        @linkedin
+                      </a>
                     </p>
                   </div>
                 </div>
@@ -166,10 +204,15 @@ export const Teampage = () => {
                     <p className="">
                       <br />
                       <br />
-                      <a className="m-4" href="https://www.instagram.com/inhumane_bloke/">
+                      <a
+                        className="m-4"
+                        href="https://www.instagram.com/inhumane_bloke/"
+                      >
                         @instagram
                       </a>
-                      <a href="https://www.linkedin.com/in/ratul-saha-047066254/">@linkedin</a>
+                      <a href="https://www.linkedin.com/in/ratul-saha-047066254/">
+                        @linkedin
+                      </a>
                     </p>
                   </div>
                 </div>
@@ -185,10 +228,15 @@ export const Teampage = () => {
                     <p className="">
                       <br />
                       <br />
-                      <a className="m-4" href="https://www.instagram.com/mysticalmanav?igsh=OGQ5ZDc2ODk2ZA==">
+                      <a
+                        className="m-4"
+                        href="https://www.instagram.com/mysticalmanav?igsh=OGQ5ZDc2ODk2ZA=="
+                      >
                         @instagram
                       </a>
-                      <a href="https://www.linkedin.com/in/manav-sharma-263092250?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">@linkedin</a>
+                      <a href="https://www.linkedin.com/in/manav-sharma-263092250?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+                        @linkedin
+                      </a>
                     </p>
                   </div>
                 </div>
@@ -204,10 +252,15 @@ export const Teampage = () => {
                     <p className="">
                       <br />
                       <br />
-                      <a className="m-4" href="https://www.instagram.com/siddharth_aggarwal25?igsh=MXNxdmcxc245dzNmag==">
+                      <a
+                        className="m-4"
+                        href="https://www.instagram.com/siddharth_aggarwal25?igsh=MXNxdmcxc245dzNmag=="
+                      >
                         @instagram
                       </a>
-                      <a href="https://www.linkedin.com/in/siddharth-aggarwal-474aa4255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">@linkedin</a>
+                      <a href="https://www.linkedin.com/in/siddharth-aggarwal-474aa4255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+                        @linkedin
+                      </a>
                     </p>
                   </div>
                 </div>
@@ -224,10 +277,15 @@ export const Teampage = () => {
                       <p className="">
                         <br />
                         <br />
-                        <a className="m-4" href="https://www.instagram.com/prakhar_227?igsh=MWF1Z2N5cHVld3gxMw==">
+                        <a
+                          className="m-4"
+                          href="https://www.instagram.com/prakhar_227?igsh=MWF1Z2N5cHVld3gxMw=="
+                        >
                           @instagram
                         </a>
-                        <a href="https://www.linkedin.com/in/prakhar-srivastava-556651255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">@linkedin</a>
+                        <a href="https://www.linkedin.com/in/prakhar-srivastava-556651255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+                          @linkedin
+                        </a>
                       </p>
                     </div>
                   </div>
