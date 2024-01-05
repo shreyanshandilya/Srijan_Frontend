@@ -20,6 +20,48 @@ export default [
     insta_url: "https://www.instagram.com/spxwee?igsh=ZGNjOWZkYTE3MQ==",
   },
   {
+    Column2: "1/4/2024 22:38:55",
+    name: "Shreyansh Shandilya",
+    position: "Head",
+    team: "Tech Team",
+    image:
+      "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459654/kfhmcusseoticy0eqk6p.jpg",
+    linkedin_url: "https://www.linkedin.com/in/shreyansh-shandilya-5a8b1b246/",
+    insta_url: "https://srijan-iitism.com/",
+  },
+  {
+    Column2: "1/4/2024 17:35:02",
+    name: "Vishal Shrivastava ",
+    position: "Head",
+    team: "Tech Team",
+    image:
+      "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459707/y4m858v6qvqlzeb6lq9g.jpg",
+    linkedin_url:
+      "https://www.linkedin.com/in/vishal-shrivastava-aa93a1239?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    insta_url: "https://www.instagram.com/vishal_781?igsh=YTQwZjQ0NmI0OA==",
+  },
+  {
+    Column2: "1/4/2024 22:42:33",
+    name: "Vibhanshu Sharma",
+    position: "Co-Head",
+    image:
+      "https://res.cloudinary.com/dvlxqrbjm/image/upload/v1695845215/jasbnuqh6i7w1mvj9oue.jpg",
+    team: "Tech Team",
+    linkedin_url: "https://www.linkedin.com/in/vibhanshu03/",
+    insta_url: "https://www.instagram.com/iam_vibhanshu/",
+  },
+  {
+    Column2: "1/4/2024 19:09:40",
+    name: "Devineni Sri Venkatraya Chowdary",
+    position: "Co-Head",
+    team: "Tech Team",
+    image:
+      "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459767/t5cg5avpfrktzxz4bttp.jpg",
+    linkedin_url:
+      "https://www.linkedin.com/in/devineni-sri-venkatraya-chowdary-084349236?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    insta_url: "https://www.instagram.com/dsvrc?igsh=Z2w0a2FxcDIxamRi",
+  },
+  {
     Column2: "1/4/2024 22:24:02",
     name: "Harsh Mishra",
     position: "Head",
@@ -61,48 +103,6 @@ export default [
       "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459808/m5cj0iw4fxiz5vjsxfmy.jpg",
     linkedin_url: "https://www.linkedin.com/in/prakalpthakur/",
     insta_url: "https://www.instagram.com/_.prakalp._?igsh=ODA1NTc5OTg5Nw==",
-  },
-  {
-    Column2: "1/4/2024 22:38:55",
-    name: "Shreyansh Shandilya",
-    position: "Head",
-    team: "Tech Team",
-    image:
-      "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459654/kfhmcusseoticy0eqk6p.jpg",
-    linkedin_url: "https://www.linkedin.com/in/shreyansh-shandilya-5a8b1b246/",
-    insta_url: "https://srijan-iitism.com/",
-  },
-  {
-    Column2: "1/4/2024 17:35:02",
-    name: "Vishal Shrivastava ",
-    position: "Head",
-    team: "Tech Team",
-    image:
-      "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459707/y4m858v6qvqlzeb6lq9g.jpg",
-    linkedin_url:
-      "https://www.linkedin.com/in/vishal-shrivastava-aa93a1239?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    insta_url: "https://www.instagram.com/vishal_781?igsh=YTQwZjQ0NmI0OA==",
-  },
-  {
-    Column2: "1/4/2024 22:42:33",
-    name: "Vibhanshu Sharma",
-    position: "Co-Head",
-    image:
-      "https://res.cloudinary.com/dvlxqrbjm/image/upload/v1695845215/jasbnuqh6i7w1mvj9oue.jpg",
-    team: "Tech Team",
-    linkedin_url: "https://www.linkedin.com/in/vibhanshu03/",
-    insta_url: "https://www.instagram.com/iam_vibhanshu/",
-  },
-  {
-    Column2: "1/4/2024 19:09:40",
-    name: "Devineni Sri Venkatraya Chowdary",
-    position: "Co-Head",
-    team: "Tech Team",
-    image:
-      "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459767/t5cg5avpfrktzxz4bttp.jpg",
-    linkedin_url:
-      "https://www.linkedin.com/in/devineni-sri-venkatraya-chowdary-084349236?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    insta_url: "https://www.instagram.com/dsvrc?igsh=Z2w0a2FxcDIxamRi",
   },
   {
     Column2: "1/4/2024 22:58:30",
