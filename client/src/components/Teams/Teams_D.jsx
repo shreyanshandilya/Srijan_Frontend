@@ -168,7 +168,7 @@ export default [
     position: "Co-Head",
     team: "Sponsorship ",
     image:
-      "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459662/wgwbybws0aslppt4q0l5.heic",
+      "https://res.cloudinary.com/dnmjkab6s/image/upload/v1704472944/Screenshot_2023-11-27-01-12-55-03_965bbf4d18d205f782c6b8409c5773a4_1_n6r6jh.jpg",
     linkedin_url: "https://www.linkedin.com/in/tahanish-vallepalli-613652224",
     insta_url: "https://www.instagram.com/tahanish_0304",
   },
