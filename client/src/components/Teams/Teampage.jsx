@@ -42,13 +42,15 @@ export const Teampage = () => {
           Co-Convener
         </h1>
         <div className="md:flex">
-          <div class="max-w-sm border border-gray-200 mb-11 rounded-lg shadow bg-[#202731]">
+          <div class="max-w-sm border border-gray-200 mb-11 mx-4 rounded-lg shadow bg-[#202731]">
             <div class="popular-block col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
               <div class="inner-box bg-[#202731]">
-                <div class="image-box w-[280px]">
+                <div class="image-box w-[280px] h-[450px]">
                   <div className="flex justify-center p-5">
                     <img
                       class="rounded-[100%]"
+                      width={"200px"}
+                      height={"200px"}
                       src="https://res.cloudinary.com/dkdratnao/image/upload/v1704404941/Co-convenor_xoepnr.png"
                       alt=""
                     />
@@ -67,13 +69,15 @@ export const Teampage = () => {
               </div>
             </div>
           </div>
-          <div class="max-w-sm border border-gray-200 mb-11 rounded-lg shadow bg-[#202731]">
+          <div class="max-w-sm border border-gray-200 mx-4 mb-11 rounded-lg shadow bg-[#202731]">
             <div class="popular-block col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
               <div class="inner-box bg-[#202731]">
-                <div class="image-box w-[280px]">
+                <div class="image-box w-[280px] h-[450px]">
                   <div className="flex justify-center p-5">
                     <img
                       class="rounded-[100%]"
+                      width={"200px"}
+                      height={"200px"}
                       src="https://res.cloudinary.com/dkdratnao/image/upload/v1704403824/Co-convenor2_qp0smn.png"
                       alt=""
                     />

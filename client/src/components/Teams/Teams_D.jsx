@@ -202,7 +202,7 @@ export default [
     "image": "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459671/h56xhieqb4071v6z9c1j.jpg",
     "linkedin_url": "https://www.linkedin.com/in/sarfaraz-hameed-7b96b1288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     "insta_url": "https://www.instagram.com/alizulfiqaar_sword/?igsh=ZTJ0MDNmb2djZG5i&utm_source=qr"
-  }
+  },
   {
     "Column2": "1/4/2024 10:23:21",
     "name": "Mudavath Ganesh",
@@ -350,7 +350,7 @@ export default [
     "linkedin_url": "https://www.linkedin.com/in/amit-singh-yadav-a02a08218?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     "insta_url": "https://www.instagram.com/vkamit_?igsh=MWhid2NqejdrdzA2dA=="
   },
-     {
+    {
     "Column2": "1/4/2024 22:43:30",
     "name": "Kantale Sujeeth",
     "position": "Co-Head",
