@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 // import gsap from 'gsap'
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Link, Element } from "react-scroll";
 import Countdown from "./asset-components/Countdown";
 import logo from "./Footer/srijan Light (3).png";
@@ -8,6 +8,11 @@ import Nav from "./Navbar/navbar";
 // import Nav from "../components/Navbar/navbar"
 function Hero() {
   const sponsor = useRef(null);
+  const container = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: [""],
+  });
   const scrollSponsor = () => {};
   const bgAnimate = {
     hidden: {

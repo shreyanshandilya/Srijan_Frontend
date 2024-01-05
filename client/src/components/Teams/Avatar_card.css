@@ -48,9 +48,9 @@
   height: 120px;
   background: linear-gradient(
     transparent,
-    #dad3a5,
+    /* #dad3a5,
     #c9bc57,
-    #fbe10e,
+    #fbe10e, */
     transparent
   );
   animation: animate 4s linear infinite;
