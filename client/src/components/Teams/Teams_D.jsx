@@ -331,6 +331,16 @@ export default [
     insta_url: "https://www.instagram.com/megh2409/",
   },
   {
+    Column2: "1/4/2024 22:28:29",
+    name: "Pranjal Pandey",
+    position: "Co-Head",
+    team: "Documentation Team",
+    image:
+      "https://res.cloudinary.com/dkdratnao/image/upload/v1704479925/pranjalpandeyksi_jartve.jpg",
+    linkedin_url: "https://www.linkedin.com/in/pranjal-pandey-90b051256",
+    insta_url: "https://www.instagram.com/_.pran_jal_?igsh=MTJkaTZ3cmQ5d3Roeg==",
+  },
+  {
     Column2: "1/4/2024 19:49:16",
     name: "Karthik Sharma",
     position: "Head",
