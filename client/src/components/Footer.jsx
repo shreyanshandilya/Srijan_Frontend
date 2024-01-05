@@ -110,7 +110,7 @@ function FooterT() {
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between text-[#dad3a5]">
-          <div className="flex mt-4 sm:justify-center sm:mt-0 text-3xl gap-x-5">
+          <div className="flex mt-4 justify-around sm:mt-0 text-3xl gap-x-5">
             <a
               href="https://www.facebook.com/ism.srijan"
               className=" hover:text-[#c9bc57]"
