@@ -10,13 +10,13 @@ import { Link } from "react-router-dom";
 function FooterT() {
   return (
     <footer className="bg-black">
-      <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-        <div className="md:flex md:justify-between">
-          <div className="mb-6 md:mb-0">
-            <a href="/" className="flex items-center">
+      <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8 flex-col justify-center">
+        <div className="md:flex md:justify-between justify-center">
+          <div className="mb-6 md:mb-0 flex-col justify-center items-center">
+            <a href="/" className="flex items-center justify-center">
               <img src={srijanlogo} className="md:h-20 h-[50px] me-3" alt="#" />
             </a>
-            <div className="text-[#efede0] font-medium text-sm md:text-base md:text-wrap text-balance py-5 pr-10">
+            <div className="text-[#efede0] font-medium text-sm md:text-base py-5 px-10 md:pr-10 flex justify-center items-center text-center">
               Biggest socio-cultural fest of Eastern India 2nd to 4th February,
               2024
             </div>
@@ -24,6 +24,7 @@ function FooterT() {
               href="https://drive.google.com/file/d/1XWCCAvG8_vHOTChQzw3sT0nUJuZRuPog/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
+              className="flex justify-center items-center"
             >
               <button
                 whileHover={{ y: -5 }}
@@ -46,44 +47,45 @@ function FooterT() {
               </button>
             </a>
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:gap-6 text-[#efede0]">
-            <div className="flex flex-col justify-start gap-y-3">
-              <div>For any queries:</div>
-              <ul className="font-medium flex-col gap-y-6">
-                <li className="my-4">
-                  <a
-                    href="https://flowbite.com/"
-                    className="hover:underline text-xs sm:text-sm md:text-base text-[#fbe10e] flex items-center justify-start gap-x-2 sm:gap-x-4"
-                  >
-                    <IoMdMail className="text-[#dad3a5] text-xl sm:text-2xl" />
-                    srijan@iitism.ac.in
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a
-                    href="https://flowbite.com/"
-                    className="hover:underline text-xs sm:text-sm md:text-base flex items-center justify-start gap-x-2 sm:gap-x-4"
-                  >
-                    <FaMapMarkerAlt className="text-[#dad3a5] text-5xl sm:text-4xl" />
-                    Indian Institute of Technology (ISM) Dhanbad - 826004,
-                    Jharkhand, India
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="flex jusify-center items-center">
-              <ul className="font-medium">
-                <li className="mb-4">
-                  <Link to="/" className="hover:underline">
-                    Home
-                  </Link>
-                </li>
-                <li className="mb-4">
-                  <Link to="/event" className="hover:underline">
-                    Events
-                  </Link>
-                </li>
-                {/* <li className="mb-4">
+          <div className="flex justify-center items-center">
+            <div className="grid grid-cols-2 gap-8 sm:gap-6 text-[#efede0]">
+              <div className=" flex-col justify-center gap-y-3">
+                <div>For any queries:</div>
+                <ul className="font-medium flex-col gap-y-6">
+                  <li className="my-4">
+                    <a
+                      href="https://flowbite.com/"
+                      className="hover:underline text-xs sm:text-sm md:text-base text-[#fbe10e] flex items-center justify-start gap-x-2 sm:gap-x-4"
+                    >
+                      <IoMdMail className="text-[#dad3a5] text-xl sm:text-2xl" />
+                      srijan@iitism.ac.in
+                    </a>
+                  </li>
+                  <li className="mb-4">
+                    <a
+                      href="https://flowbite.com/"
+                      className="hover:underline text-xs sm:text-sm md:text-base flex items-center justify-start gap-x-2 sm:gap-x-4"
+                    >
+                      <FaMapMarkerAlt className="text-[#dad3a5] text-5xl sm:text-4xl" />
+                      Indian Institute of Technology (ISM) Dhanbad - 826004,
+                      Jharkhand, India
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div className="flex justify-center items-center">
+                <ul className="font-medium">
+                  <li className="mb-4">
+                    <Link to="/" className="hover:underline">
+                      Home
+                    </Link>
+                  </li>
+                  <li className="mb-4">
+                    <Link to="/event" className="hover:underline">
+                      Events
+                    </Link>
+                  </li>
+                  {/* <li className="mb-4">
                   <Link
                     to="/merchant"
                     className="hover:underline"
@@ -91,17 +93,18 @@ function FooterT() {
                     Merchandise
                   </Link>
                 </li> */}
-                <li className="mb-4">
-                  <Link to="/about" className="hover:underline">
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/team" className="hover:underline">
-                    Team
-                  </Link>
-                </li>
-              </ul>
+                  <li className="mb-4">
+                    <Link to="/about" className="hover:underline">
+                      About Us
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/team" className="hover:underline">
+                      Team
+                    </Link>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
