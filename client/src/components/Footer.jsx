@@ -5,6 +5,7 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function FooterT() {
   return (
@@ -73,41 +74,32 @@ function FooterT() {
             <div className="flex jusify-center items-center">
               <ul className="font-medium">
                 <li className="mb-4">
-                  <a href="https://flowbite.com/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a
-                    href="https://tailwindcss.com/"
-                    className="hover:underline"
-                  >
+                  <Link to="/event" className="hover:underline">
                     Events
-                  </a>
+                  </Link>
                 </li>
-                <li className="mb-4">
-                  <a
-                    href="https://tailwindcss.com/"
+                {/* <li className="mb-4">
+                  <Link
+                    to="/merchant"
                     className="hover:underline"
                   >
                     Merchandise
-                  </a>
-                </li>
+                  </Link>
+                </li> */}
                 <li className="mb-4">
-                  <a
-                    href="https://tailwindcss.com/"
-                    className="hover:underline"
-                  >
-                    Teams
-                  </a>
+                  <Link to="/about" className="hover:underline">
+                    About Us
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="https://tailwindcss.com/"
-                    className="hover:underline"
-                  >
-                    Contact
-                  </a>
+                  <Link to="/team" className="hover:underline">
+                    Team
+                  </Link>
                 </li>
               </ul>
             </div>

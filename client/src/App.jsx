@@ -12,9 +12,15 @@ import Event from "./pages/Event";
 import {
   createHashRouter,
   RouterProvider,
+  useLocation,
 } from "react-router-dom";
+import { animateScroll as scroll } from "react-scroll";
 
 function App() {
+  // const path = useLocation();
+  // React.useEffect(() => {
+  //   scroll.scrollToTop({ duration: 1000 });
+  // }, [path.pathname]);
   const router = createHashRouter([
     {
       path: "/",
@@ -45,18 +51,17 @@ function App() {
       element: <PurchaseListPage />,
     },
   ]);
-  return (<RouterProvider router={router} />);
+  return <RouterProvider router={router} />;
 }
 
-export default App
-
-
+export default App;
 
 // ReactDOM.createRoot(document.getElementById("root")).render(
-  
+
 // );
 
-{/* <>
+{
+  /* <>
         <Routes path="/">
           <Route exact path="/" element={<Landing />} />
           <Route exact path="/merchant" element={<Merchandise />} />
@@ -66,4 +71,5 @@ export default App
           <Route exact path="/about" element={<About />} />
           <Route exact path="/admin" element={<PurchaseListPage />} />
         </Routes>
-      </> */}
+      </> */
+}
