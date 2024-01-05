@@ -99,7 +99,7 @@ const ProfilePage = ({ data }) => {
           <Typography style={styles.value} variant="h5" gutterBottom>
             {approved?"Approoved":"Pending"}
           </Typography>
-          {/* Include other details as needed */}
+          {/* Include other details as needed */}         
         </Paper>
       </ThemeProvider>
     </div>

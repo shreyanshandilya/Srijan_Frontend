@@ -20,6 +20,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Link, Outlet } from "react-router-dom";
+import { Link as ScrollRouter } from "react-scroll";
 
 import Wrapper from "./styles";
 
@@ -43,6 +44,7 @@ const Navbar = () => {
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
+
 
   return (
     <>
@@ -100,12 +102,20 @@ const Navbar = () => {
                     <Link to="/event">
                       <StyledButton name="Events" />
                     </Link>
-                    <Link to="/profile">
+                    {/* <Link to="/profile">
                       <StyledButton name="Profile" />
                     </Link>
                     <Link to="/merchant">
                       <StyledButton name="Merchandise" />
-                    </Link>
+                    </Link> */}
+                    <ScrollRouter
+                      to="sponsor"
+                      spy={true}
+                      smooth={true}
+                      duration={3000}
+                    >
+                      <StyledButton name="Sponsor"></StyledButton>
+                    </ScrollRouter>
                     <Link to="/about">
                       <StyledButton name="About Us"></StyledButton>
                     </Link>
@@ -136,6 +146,22 @@ const Navbar = () => {
                     ></IconButton>
                   </Box>
                 </Box>
+                <Link to="/profile">
+                <div class="relative w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600" >
+                  <svg
+                    class="absolute w-12 h-12 text-gray-400 -left-1"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </div>
+                </Link>
               </Toolbar>
             </AppBar>
             <nav>
@@ -184,7 +210,7 @@ const Navbar = () => {
                         rel="noreferrer"
                       />
                     </Link>
-                    <Link to="/merchant">
+                    {/* <Link to="/merchant">
                       <MobileLink
                         text="Merchandise"
                         component="a"
@@ -192,7 +218,7 @@ const Navbar = () => {
                         target="_blank"
                         rel="noreferrer"
                       />
-                    </Link>
+                    </Link> */}
                     <Link to="/team">
                       <MobileLink
                         text="Teams"
