@@ -34,10 +34,10 @@ function App() {
       path: "event",
       element: <Event />,
     },
-    {
-      path: "profile",
-      element: <Frm />,
-    },
+    // {
+    //   path: "profile",
+    //   element: <Frm />,
+    // },
     {
       path: "team",
       element: <Team />,
@@ -46,10 +46,10 @@ function App() {
       path: "about",
       element: <About />,
     },
-    {
-      path: "admin",
-      element: <PurchaseListPage />,
-    },
+    // {
+    //   path: "admin",
+    //   element: <PurchaseListPage />,
+    // },
   ]);
   return <RouterProvider router={router} />;
 }
