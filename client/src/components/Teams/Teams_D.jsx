@@ -202,7 +202,7 @@ export default [
     position: "Co-Head",
     team: "Finance Team ",
     image:
-      "https://drive.google.com/file/d/1WwYI_26myX9wzzg94bQmbb68H1VWhfaG/view?usp=drivesdk",
+      "https://res.cloudinary.com/dnmjkab6s/image/upload/v1704469729/Photo_from_Vaibhav_Kashyap_u1uoia.jpg",
     linkedin_url: "https://www.linkedin.com/in/vaibhav-kashyap-7baa9a228",
     insta_url: "https://www.instagram.com/vaibhavksp/",
   },
