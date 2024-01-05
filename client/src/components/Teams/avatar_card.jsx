@@ -14,7 +14,7 @@ const AvatarCard = ({
       <div className="card">
         <div className="lines"></div>
         <div className="imageBox">
-          <img src={image} alt="avatar" className="object-contain" />
+          <img src={image} alt="avatar" className="object-cover" />
         </div>
         <div className="content">
           <div className="details">
