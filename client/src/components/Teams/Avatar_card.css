@@ -234,7 +234,7 @@
 }
 @media screen and (max-width: 925px) {
   .container_ {
-    min-height: 55vh;
+    min-height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -42,7 +42,7 @@ export const Teampage = () => {
           Co-Convener
         </h1>
         <div className="md:flex">
-          <div className="grid grid-cols-2">
+          <div className="grid md:grid-cols-2 grid-cols-1">
             <div class="max-w-sm border border-gray-200 mb-11 mx-4 rounded-lg shadow bg-[#202731]">
               <div class="popular-block col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
                 <div class="inner-box bg-[#202731]">
