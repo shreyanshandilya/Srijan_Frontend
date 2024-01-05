@@ -268,7 +268,7 @@ export default [
     position: "Co-Head",
     team: "Operation and logistics ",
     image:
-      "https://drive.google.com/drive/folders/1njOsa-ojhlZAGYj1KBLhbc1d89xb9dx4",
+      "https://res.cloudinary.com/dnmjkab6s/image/upload/v1704473801/Screenshot_2023-11-27-01-12-55-03_965bbf4d18d205f782c6b8409c5773a4_1_wzsbvk.jpg",
     linkedin_url: "https://in.linkedin.com/in/saurabh-singh-9a5a73228",
     insta_url: "saurabhsinghrajput1541",
   },
@@ -361,7 +361,7 @@ export default [
       "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459825/fbwwlx51tlxmt6s6ungs.jpg",
     linkedin_url: "https://www.linkedin.com/in/kantale-sujeeth-3b6935235/",
     insta_url:
-      "https://instagram.com/https://www.instagram.com/sujeeth_kantale/",
+      "https://www.instagram.com/sujeeth_kantale?igsh=MXY5cWoyZ3Bld2p4NA%3D%3D&utm_source=qr",
   },
 
   {
