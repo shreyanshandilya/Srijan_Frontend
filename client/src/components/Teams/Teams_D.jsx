@@ -20,48 +20,6 @@ export default [
     insta_url: "https://www.instagram.com/spxwee?igsh=ZGNjOWZkYTE3MQ==",
   },
   {
-    Column2: "1/4/2024 22:38:55",
-    name: "Shreyansh Shandilya",
-    position: "Head",
-    team: "Tech Team",
-    image:
-      "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459654/kfhmcusseoticy0eqk6p.jpg",
-    linkedin_url: "https://www.linkedin.com/in/shreyansh-shandilya-5a8b1b246/",
-    insta_url: "https://srijan-iitism.com/",
-  },
-  {
-    Column2: "1/4/2024 17:35:02",
-    name: "Vishal Shrivastava ",
-    position: "Head",
-    team: "Tech Team",
-    image:
-      "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459707/y4m858v6qvqlzeb6lq9g.jpg",
-    linkedin_url:
-      "https://www.linkedin.com/in/vishal-shrivastava-aa93a1239?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    insta_url: "https://www.instagram.com/vishal_781?igsh=YTQwZjQ0NmI0OA==",
-  },
-  {
-    Column2: "1/4/2024 22:42:33",
-    name: "Vibhanshu Sharma",
-    position: "Co-Head",
-    image:
-      "https://res.cloudinary.com/dvlxqrbjm/image/upload/v1695845215/jasbnuqh6i7w1mvj9oue.jpg",
-    team: "Tech Team",
-    linkedin_url: "https://www.linkedin.com/in/vibhanshu03/",
-    insta_url: "https://www.instagram.com/iam_vibhanshu/",
-  },
-  {
-    Column2: "1/4/2024 19:09:40",
-    name: "Devineni Sri Venkatraya Chowdary",
-    position: "Co-Head",
-    team: "Tech Team",
-    image:
-      "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459767/t5cg5avpfrktzxz4bttp.jpg",
-    linkedin_url:
-      "https://www.linkedin.com/in/devineni-sri-venkatraya-chowdary-084349236?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    insta_url: "https://www.instagram.com/dsvrc?igsh=Z2w0a2FxcDIxamRi",
-  },
-  {
     Column2: "1/4/2024 22:24:02",
     name: "Harsh Mishra",
     position: "Head",
@@ -127,6 +85,103 @@ export default [
     insta_url: "https://www.instagram.com/ganesh__6403?igsh=ODA1NTc5OTg5Nw==",
   },
   {
+    Column2: "1/4/2024 22:38:55",
+    name: "Shreyansh Shandilya",
+    position: "Head",
+    team: "Tech Team",
+    image:
+      "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459654/kfhmcusseoticy0eqk6p.jpg",
+    linkedin_url: "https://www.linkedin.com/in/shreyansh-shandilya-5a8b1b246/",
+    insta_url: "https://srijan-iitism.com/",
+  },
+  {
+    Column2: "1/4/2024 17:35:02",
+    name: "Vishal Shrivastava ",
+    position: "Head",
+    team: "Tech Team",
+    image:
+      "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459707/y4m858v6qvqlzeb6lq9g.jpg",
+    linkedin_url:
+      "https://www.linkedin.com/in/vishal-shrivastava-aa93a1239?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    insta_url: "https://www.instagram.com/vishal_781?igsh=YTQwZjQ0NmI0OA==",
+  },
+  {
+    Column2: "1/4/2024 22:42:33",
+    name: "Vibhanshu Sharma",
+    position: "Co-Head",
+    image:
+      "https://res.cloudinary.com/dvlxqrbjm/image/upload/v1695845215/jasbnuqh6i7w1mvj9oue.jpg",
+    team: "Tech Team",
+    linkedin_url: "https://www.linkedin.com/in/vibhanshu03/",
+    insta_url: "https://www.instagram.com/iam_vibhanshu/",
+  },
+  {
+    Column2: "1/4/2024 19:09:40",
+    name: "Devineni Sri Venkatraya Chowdary",
+    position: "Co-Head",
+    team: "Tech Team",
+    image:
+      "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459767/t5cg5avpfrktzxz4bttp.jpg",
+    linkedin_url:
+      "https://www.linkedin.com/in/devineni-sri-venkatraya-chowdary-084349236?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    insta_url: "https://www.instagram.com/dsvrc?igsh=Z2w0a2FxcDIxamRi",
+  },
+  
+  {
+    Column2: "1/4/2024 22:32:02",
+    name: "Jeet Rathod ",
+    position: "Head",
+    team: "Design Team",
+    image:
+      "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459691/wp4exfiyqvzo3steamfx.jpg",
+    linkedin_url: "https://www.linkedin.com/in/jeet-rathod-7994b3228",
+    insta_url:
+      "https://www.instagram.com/jeet.rathod_?utm_source=qr&igsh=ZGNsMDl2NnhmcnFj",
+  },
+  {
+    Column2: "1/4/2024 17:36:41",
+    name: "Amit Singh Yadav ",
+    position: "Co-Head",
+    team: "Design Team",
+    image:
+      "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459776/azywisbz77fp1707g0xt.jpg",
+    linkedin_url:
+      "https://www.linkedin.com/in/amit-singh-yadav-a02a08218?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    insta_url: "https://www.instagram.com/vkamit_?igsh=MWhid2NqejdrdzA2dA==",
+  },
+  {
+    Column2: "1/4/2024 22:43:30",
+    name: "Kantale Sujeeth",
+    position: "Co-Head",
+    team: "Design Team",
+    image:
+      "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459825/fbwwlx51tlxmt6s6ungs.jpg",
+    linkedin_url: "https://www.linkedin.com/in/kantale-sujeeth-3b6935235/",
+    insta_url:
+      "https://www.instagram.com/sujeeth_kantale?igsh=MXY5cWoyZ3Bld2p4NA%3D%3D&utm_source=qr",
+  },
+  {
+    Column2: "1/3/2024 23:55:14",
+    name: "Kanishk Krishnan",
+    position: "Head",
+    team: "Content Team",
+    image:
+      "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459742/pt3strut06eo6ulcfxul.jpg",
+    linkedin_url: "https://www.linkedin.com/in/kanishk-krishnan-22b325228/",
+    insta_url: "https://www.instagram.com/kanishk.krishnan/",
+  },
+
+  {
+    Column2: "1/4/2024 17:57:57",
+    name: "Spriha Ghosh",
+    position: "Co-Head",
+    team: "Content Team",
+    image:
+      "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459693/e0lythzwxq8x2mmnp2wr.jpg",
+    linkedin_url: "https://www.linkedin.com/in/spriha-ghosh-0136121b4",
+    insta_url: "https://www.instagram.com/spriiihaaa?igsh=MXUwZ21iaXk0bmtrZg==",
+  },
+  {
     Column2: "1/4/2024 22:25:25",
     name: "Satvik Asthana",
     position: "Head",
@@ -183,84 +238,6 @@ export default [
       "https://www.linkedin.com/in/jayesh-soni-548a66226?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     insta_url:
       "https://www.instagram.com/jayeshsonig?igsh=MTM4dHU1emgwZjU2Zw==",
-  },
-  {
-    Column2: "1/4/2024 19:49:16",
-    name: "KARTHIK SHARNA",
-    position: "Head",
-    team: "Finance Team",
-    image:
-      "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459761/b5kenmnx5jxhlbq4aayk.jpg",
-    linkedin_url:
-      "https://www.linkedin.com/in/madugula-karthik-sharma-2a389425a/",
-    insta_url:
-      "https://www.instagram.com/karthik_sharma._?igsh=MXc2eHo1MG83eXI0Mg==",
-  },
-  {
-    Column2: "1/4/2024 19:28:14",
-    name: "Vaibhav Kashyap ",
-    position: "Co-Head",
-    team: "Finance Team",
-    image:
-      "https://res.cloudinary.com/dnmjkab6s/image/upload/v1704469729/Photo_from_Vaibhav_Kashyap_u1uoia.jpg",
-    linkedin_url: "https://www.linkedin.com/in/vaibhav-kashyap-7baa9a228",
-    insta_url: "https://www.instagram.com/vaibhavksp/",
-  },
-  {
-    Column2: "1/5/2024 0:44:24",
-    name: "Ashvery kumar saini ",
-    position: "Head",
-    team: "Media and Publicity Team",
-    image:
-      "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459831/mrilvlnpdtvrpx2bgkdt.jpg",
-    linkedin_url:
-      "https://www.linkedin.com/in/ashvery-kumar-saini-85270922a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    insta_url:
-      "https://www.instagram.com/aksaini5221?igsh=MWZoaTFvNHFzOW5vMA==",
-  },
-  {
-    Column2: "1/4/2024 16:32:31",
-    name: "Sanapala Aishwarya ",
-    position: "Co-Head",
-    team: "Media and Publicity Team",
-    image:
-      "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459707/ss2z906wyp74hkdqyj55.jpg",
-    linkedin_url: "https://www.linkedin.com/in/sanapala-aishwarya-208994225/",
-    insta_url: "https://www.instagram.com/aishwarya_sanapala/",
-  },
-  {
-    Column2: "1/5/2024 0:44:24",
-    name: "Jally Abhi Varun ",
-    position: "Co-Head",
-    team: "Media and Publicity Team",
-    image:
-      "https://res.cloudinary.com/dkdratnao/image/upload/v1704464091/IMG-20220814-WA0034_pofom3.jpg",
-    linkedin_url:
-      "https://www.linkedin.com/in/jally-abhi-varun-92a563253/",
-    insta_url:
-      "https://www.instagram.com/abhi_varun___/",
-  },
-  {
-    Column2: "1/4/2024 20:27:32",
-    name: "Manav Modi",
-    position: "Head",
-    team: "Marketing Team",
-    image:
-      "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459677/wgvzyacbdolgdvz3jyzy.jpg",
-    linkedin_url:
-      "https://www.linkedin.com/in/manav-modi-b92902227?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    insta_url: "https://www.instagram.com/manav_modi17?igsh=d2RpcmhydXVyanJm",
-  },
-  {
-    Column2: "1/3/2024 23:11:18",
-    name: "Amrut Mohan Das",
-    position: "Co-Head",
-    team: "Marketing Team",
-    image:
-      "https://res.cloudinary.com/dnmjkab6s/image/upload/v1704463249/IMG_20231206_230107_iitixe.jpg",
-    linkedin_url:
-      "https://www.linkedin.com/in/amrut-mohan-das-626246181?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    insta_url: "https://www.instagram.com/one_a_m_d_?igsh=bWFpNXM3cmN6a3Vp",
   },
   {
     Column2: "1/4/2024 16:35:07",
@@ -330,7 +307,6 @@ export default [
     insta_url:
       "https://www.instagram.com/15_lakshya?igsh=amxpb2cwcHZkcHE1&utm_source=qr",
   },
-
   {
     Column2: "1/4/2024 15:51:45",
     name: "Bochu Nithin ",
@@ -343,61 +319,7 @@ export default [
     insta_url:
       "https://www.instagram.com/_itz_nithin?igsh=MWIzeHE3YTRsYWYzcA==",
   },
-  {
-    Column2: "1/4/2024 22:32:02",
-    name: "Jeet Rathod ",
-    position: "Head",
-    team: "Design Team",
-    image:
-      "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459691/wp4exfiyqvzo3steamfx.jpg",
-    linkedin_url: "https://www.linkedin.com/in/jeet-rathod-7994b3228",
-    insta_url:
-      "https://www.instagram.com/jeet.rathod_?utm_source=qr&igsh=ZGNsMDl2NnhmcnFj",
-  },
-  {
-    Column2: "1/4/2024 17:36:41",
-    name: "Amit Singh Yadav ",
-    position: "Co-Head",
-    team: "Design Team",
-    image:
-      "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459776/azywisbz77fp1707g0xt.jpg",
-    linkedin_url:
-      "https://www.linkedin.com/in/amit-singh-yadav-a02a08218?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    insta_url: "https://www.instagram.com/vkamit_?igsh=MWhid2NqejdrdzA2dA==",
-  },
-  {
-    Column2: "1/4/2024 22:43:30",
-    name: "Kantale Sujeeth",
-    position: "Co-Head",
-    team: "Design Team",
-    image:
-      "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459825/fbwwlx51tlxmt6s6ungs.jpg",
-    linkedin_url: "https://www.linkedin.com/in/kantale-sujeeth-3b6935235/",
-    insta_url:
-      "https://www.instagram.com/sujeeth_kantale?igsh=MXY5cWoyZ3Bld2p4NA%3D%3D&utm_source=qr",
-  },
-
-  {
-    Column2: "1/3/2024 23:55:14",
-    name: "Kanishk Krishnan",
-    position: "Head",
-    team: "Content Team",
-    image:
-      "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459742/pt3strut06eo6ulcfxul.jpg",
-    linkedin_url: "https://www.linkedin.com/in/kanishk-krishnan-22b325228/",
-    insta_url: "https://www.instagram.com/kanishk.krishnan/",
-  },
-
-  {
-    Column2: "1/4/2024 17:57:57",
-    name: "Spriha Ghosh",
-    position: "Co-Head",
-    team: "Content Team",
-    image:
-      "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459693/e0lythzwxq8x2mmnp2wr.jpg",
-    linkedin_url: "https://www.linkedin.com/in/spriha-ghosh-0136121b4",
-    insta_url: "https://www.instagram.com/spriiihaaa?igsh=MXUwZ21iaXk0bmtrZg==",
-  },
+  
   {
     Column2: "1/4/2024 22:28:29",
     name: "Megh Gupta",
@@ -408,7 +330,62 @@ export default [
     linkedin_url: "https://www.linkedin.com/in/megh-gupta-95a97b228/",
     insta_url: "https://www.instagram.com/megh2409/",
   },
-
+  {
+    Column2: "1/4/2024 19:49:16",
+    name: "Karthik Sharma",
+    position: "Head",
+    team: "Finance Team",
+    image:
+      "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459761/b5kenmnx5jxhlbq4aayk.jpg",
+    linkedin_url:
+      "https://www.linkedin.com/in/madugula-karthik-sharma-2a389425a/",
+    insta_url:
+      "https://www.instagram.com/karthik_sharma._?igsh=MXc2eHo1MG83eXI0Mg==",
+  },
+  {
+    Column2: "1/4/2024 19:28:14",
+    name: "Vaibhav Kashyap ",
+    position: "Co-Head",
+    team: "Finance Team",
+    image:
+      "https://res.cloudinary.com/dnmjkab6s/image/upload/v1704469729/Photo_from_Vaibhav_Kashyap_u1uoia.jpg",
+    linkedin_url: "https://www.linkedin.com/in/vaibhav-kashyap-7baa9a228",
+    insta_url: "https://www.instagram.com/vaibhavksp/",
+  },
+  {
+    Column2: "1/5/2024 0:44:24",
+    name: "Ashvery kumar saini ",
+    position: "Head",
+    team: "Media and Publicity Team",
+    image:
+      "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459831/mrilvlnpdtvrpx2bgkdt.jpg",
+    linkedin_url:
+      "https://www.linkedin.com/in/ashvery-kumar-saini-85270922a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    insta_url:
+      "https://www.instagram.com/aksaini5221?igsh=MWZoaTFvNHFzOW5vMA==",
+  },
+  {
+    Column2: "1/4/2024 16:32:31",
+    name: "Sanapala Aishwarya ",
+    position: "Co-Head",
+    team: "Media and Publicity Team",
+    image:
+      "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459707/ss2z906wyp74hkdqyj55.jpg",
+    linkedin_url: "https://www.linkedin.com/in/sanapala-aishwarya-208994225/",
+    insta_url: "https://www.instagram.com/aishwarya_sanapala/",
+  },
+  {
+    Column2: "1/5/2024 0:44:24",
+    name: "Jally Abhi Varun ",
+    position: "Co-Head",
+    team: "Media and Publicity Team",
+    image:
+      "https://res.cloudinary.com/dkdratnao/image/upload/v1704464091/IMG-20220814-WA0034_pofom3.jpg",
+    linkedin_url:
+      "https://www.linkedin.com/in/jally-abhi-varun-92a563253/",
+    insta_url:
+      "https://www.instagram.com/abhi_varun___/",
+  },
   {
     Column2: "1/3/2024 23:59:52",
     name: "Bendi Bhargav",
@@ -453,5 +430,27 @@ export default [
     linkedin_url: "http://linkedin.com/in/vaishnavi-titare-b484b0226",
     insta_url:
       "https://www.instagram.com/vaishnavititare?igsh=MXd6OGRpZncwZXUzaA%3D%3D&utm_source=qr",
+  },
+  {
+    Column2: "1/4/2024 20:27:32",
+    name: "Manav Modi",
+    position: "Head",
+    team: "Marketing Team",
+    image:
+      "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459677/wgvzyacbdolgdvz3jyzy.jpg",
+    linkedin_url:
+      "https://www.linkedin.com/in/manav-modi-b92902227?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    insta_url: "https://www.instagram.com/manav_modi17?igsh=d2RpcmhydXVyanJm",
+  },
+  {
+    Column2: "1/3/2024 23:11:18",
+    name: "Amrut Mohan Das",
+    position: "Co-Head",
+    team: "Marketing Team",
+    image:
+      "https://res.cloudinary.com/dnmjkab6s/image/upload/v1704463249/IMG_20231206_230107_iitixe.jpg",
+    linkedin_url:
+      "https://www.linkedin.com/in/amrut-mohan-das-626246181?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    insta_url: "https://www.instagram.com/one_a_m_d_?igsh=bWFpNXM3cmN6a3Vp",
   },
 ];
