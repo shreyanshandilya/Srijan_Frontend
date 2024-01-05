@@ -45,6 +45,9 @@ const Navbar = () => {
     setMobileOpen((prevState) => !prevState);
   };
 
+  const scrollDown =()=>{
+    handleDrawerToggle();
+  }
 
   return (
     <>
@@ -201,7 +204,11 @@ const Navbar = () => {
                     <Link to="/event">
                       <MobileLink url="/event" text="Events" />
                     </Link>
-                    <Link to="/sponsor">
+                    <ScrollRouter to="sponsor" spy={true}
+                      smooth={true}
+                      duration={3000}
+                      onClick={scrollDown}
+                      >
                       <MobileLink
                         text="Sponsors"
                         component="a"
@@ -209,7 +216,7 @@ const Navbar = () => {
                         target="_blank"
                         rel="noreferrer"
                       />
-                    </Link>
+                    </ScrollRouter>
                     {/* <Link to="/merchant">
                       <MobileLink
                         text="Merchandise"

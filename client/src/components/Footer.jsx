@@ -54,7 +54,7 @@ function FooterT() {
                 <ul className="font-medium flex-col gap-y-6">
                   <li className="my-4">
                     <a
-                      href="https://flowbite.com/"
+                      href="mailto:srijan@iitism.ac.in"
                       className="hover:underline text-xs sm:text-sm md:text-base text-[#fbe10e] flex items-center justify-start gap-x-2 sm:gap-x-4"
                     >
                       <IoMdMail className="text-[#dad3a5] text-xl sm:text-2xl" />
