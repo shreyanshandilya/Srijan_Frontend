@@ -20,6 +20,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Link, Outlet } from "react-router-dom";
+import { Link as ScrollRouter } from "react-scroll";
 
 import Wrapper from "./styles";
 
@@ -100,12 +101,20 @@ const Navbar = () => {
                     <Link to="/event">
                       <StyledButton name="Events" />
                     </Link>
-                    <Link to="/profile">
+                    {/* <Link to="/profile">
                       <StyledButton name="Profile" />
                     </Link>
                     <Link to="/merchant">
                       <StyledButton name="Merchandise" />
-                    </Link>
+                    </Link> */}
+                    <ScrollRouter
+                      to="sponsor"
+                      spy={true}
+                      smooth={true}
+                      duration={3000}
+                    >
+                      <StyledButton name="Sponsor"></StyledButton>
+                    </ScrollRouter>
                     <Link to="/about">
                       <StyledButton name="About Us"></StyledButton>
                     </Link>
@@ -184,7 +193,7 @@ const Navbar = () => {
                         rel="noreferrer"
                       />
                     </Link>
-                    <Link to="/merchant">
+                    {/* <Link to="/merchant">
                       <MobileLink
                         text="Merchandise"
                         component="a"
@@ -192,7 +201,7 @@ const Navbar = () => {
                         target="_blank"
                         rel="noreferrer"
                       />
-                    </Link>
+                    </Link> */}
                     <Link to="/team">
                       <MobileLink
                         text="Teams"

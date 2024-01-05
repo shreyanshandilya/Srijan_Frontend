@@ -6,8 +6,12 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Footer from "../components/Footer.jsx";
 import { Carousel } from "flowbite-react";
+import { animateScroll as scroll } from "react-scroll";
 
 function Merchandise() {
+  useEffect(() => {
+    scroll.scrollToTop({ duration: 1000 });
+  }, []);
   const url = "https://srijan2024.onrender.com/api/purchase";
   const [data, setData] = useState({
     name: "",
