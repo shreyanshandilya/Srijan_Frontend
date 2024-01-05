@@ -23,7 +23,7 @@ function About() {
             <h1 className="mb-8 text-4xl mt-10 font-bold tracking-tight leading-none text-[#dad3a5] md:text-5xl lg:text-6xl">
               About Us
             </h1>
-            <p className="text-[#efede0] text-base md:text-lg lg:text-xl backdrop-blur-xl bg-opacity-30 py-10">
+            <p className="text-[#efede0] text-base md:text-lg lg:text-xl backdrop-blur-xl bg-opacity-30 py-10 text-justify md:text-center">
               Established in 1926, the Indian Institute of Technology (Indian
               School of Mines) Dhanbad, erstwhile Indian School of Mines
               Dhanbad, stands as a prestigious engineering and research
