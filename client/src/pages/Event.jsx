@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../components/Navbar/navbar";
 import { motion } from "framer-motion";
 import Footer from "../components/Footer";
+import { animateScroll as scroll } from "react-scroll";
 
 function Event() {
+  useEffect(() => {
+    scroll.scrollToTop({ duration: 1000 });
+  }, []);
   return (
     <>
       <Navbar />
