@@ -1,13 +1,12 @@
 export default [
   {
-  name: "Pratham Sharma",
-      position: "Coordinator",
-    team: "",
-  linkedin_url: "https://linkedin.com/in/PrathamSharma03",
-  insta_url: "https://instagram.com/prath_am6423",
-  image:"https://res.cloudinary.com/dnmjkab6s/image/upload/v1704472446/WhatsApp_Image_2024-01-05_at_21.48.32_mdzmei.jpg"
-}
-,
+    name: "Pratham Sharma",
+    position: "Coordinator",
+    linkedin_url: "https://linkedin.com/in/PrathamSharma03",
+    insta_url: "https://instagram.com/prath_am6423",
+    image:
+      "https://res.cloudinary.com/dnmjkab6s/image/upload/v1704472446/WhatsApp_Image_2024-01-05_at_21.48.32_mdzmei.jpg",
+  },
   {
     Column2: "1/4/2024 16:15:48",
     name: "Pamula Sanjay ",
@@ -108,7 +107,7 @@ export default [
     Column2: "1/4/2024 22:58:30",
     name: "Sarfaraz Hameed ",
     position: "Head",
-    team: "Public Relations",
+    team: "Public Relations Team",
     image:
       "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459671/h56xhieqb4071v6z9c1j.jpg",
     linkedin_url:
@@ -120,7 +119,7 @@ export default [
     Column2: "1/4/2024 10:23:21",
     name: "Mudavath Ganesh",
     position: "Co-Head",
-    team: "Public Relations ",
+    team: "Public Relations Team",
     image:
       "https://res.cloudinary.com/dnmjkab6s/image/upload/v1704470869/IMG_20240105_195356_igjjgb.jpg",
     linkedin_url: "https://www.linkedin.com/in/mudavath-ganesh-4935a5242",
@@ -130,7 +129,7 @@ export default [
     Column2: "1/4/2024 22:25:25",
     name: "Satvik Asthana",
     position: "Head",
-    team: "Sponsorship",
+    team: "Sponsorship Team",
     image:
       "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459682/ckmkwqco7vb0bb4tdee9.jpg",
     linkedin_url: "https://www.linkedin.com/in/satvik-asthana-work/",
@@ -141,7 +140,7 @@ export default [
     Column2: "1/4/2024 0:49:50",
     name: "Tankala kiran narayana",
     position: "Co-Head",
-    team: "Sponsorship",
+    team: "Sponsorship Team",
     image:
       "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459797/myuakqnlssouqywctekz.jpg",
     linkedin_url:
@@ -154,7 +153,7 @@ export default [
     Column2: "1/4/2024 14:21:30",
     name: "Anaya Kulkarni ",
     position: "Co-Head",
-    team: "Sponsorship ",
+    team: "Sponsorship Team",
     image:
       "https://res.cloudinary.com/dnmjkab6s/image/upload/v1704469047/IMG_5781_kc7asa.jpg",
     linkedin_url:
@@ -166,7 +165,7 @@ export default [
     Column2: "1/4/2024 15:46:50",
     name: "Tahanish Vallepalli ",
     position: "Co-Head",
-    team: "Sponsorship ",
+    team: "Sponsorship Team",
     image:
       "https://res.cloudinary.com/dnmjkab6s/image/upload/v1704473801/Screenshot_2023-11-27-01-12-55-03_965bbf4d18d205f782c6b8409c5773a4_1_wzsbvk.jpg",
     linkedin_url: "https://www.linkedin.com/in/tahanish-vallepalli-613652224",
@@ -176,7 +175,7 @@ export default [
     Column2: "1/4/2024 16:03:26",
     name: "Jayesh Soni ",
     position: "Co-Head",
-    team: "Sponsorship",
+    team: "Sponsorship Team",
     image:
       "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459750/q7ulokvbzfvhh0awjse1.jpg",
     linkedin_url:
@@ -200,7 +199,7 @@ export default [
     Column2: "1/4/2024 19:28:14",
     name: "Vaibhav Kashyap ",
     position: "Co-Head",
-    team: "Finance Team ",
+    team: "Finance Team",
     image:
       "https://res.cloudinary.com/dnmjkab6s/image/upload/v1704469729/Photo_from_Vaibhav_Kashyap_u1uoia.jpg",
     linkedin_url: "https://www.linkedin.com/in/vaibhav-kashyap-7baa9a228",
@@ -210,7 +209,7 @@ export default [
     Column2: "1/5/2024 0:44:24",
     name: "Ashvery kumar saini ",
     position: "Head",
-    team: "Media and publicity Team ",
+    team: "Media and Publicity Team",
     image:
       "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459831/mrilvlnpdtvrpx2bgkdt.jpg",
     linkedin_url:
@@ -243,7 +242,7 @@ export default [
     Column2: "1/3/2024 23:11:18",
     name: "Amrut Mohan Das",
     position: "Co-Head",
-    team: "Marketing Team ",
+    team: "Marketing Team",
     image:
       "https://res.cloudinary.com/dnmjkab6s/image/upload/v1704463249/IMG_20231206_230107_iitixe.jpg",
     linkedin_url:
@@ -252,9 +251,9 @@ export default [
   },
   {
     Column2: "1/4/2024 16:35:07",
-    name: "L Anilkumar ",
+    name: "L Anilkumar",
     position: "Head",
-    team: "Operations and Logistics ",
+    team: "Operations and Logistics Team",
     image:
       "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459670/j9wa7ac8trepbiccndz6.jpg",
     linkedin_url:
@@ -266,7 +265,7 @@ export default [
     Column2: "1/4/2024 22:42:33",
     name: "Saurabh kumar Singh ",
     position: "Co-Head",
-    team: "Operation and Logistics ",
+    team: "Operation and Logistics Team",
     image:
       "https://res.cloudinary.com/dkdratnao/image/upload/v1704476247/Saurabh_gjy3wj.jpg",
     linkedin_url: "https://in.linkedin.com/in/saurabh-singh-9a5a73228",
@@ -277,7 +276,7 @@ export default [
     Column2: "1/4/2024 18:34:08",
     name: "vishal Meena ",
     position: "Co-Head",
-    team: "Operations and Logistics",
+    team: "Operations and Logistics Team",
     image:
       "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459775/szwusctzjgwytizfxigc.jpg",
     linkedin_url:
