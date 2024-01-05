@@ -10,13 +10,13 @@ import { Link } from "react-router-dom";
 function FooterT() {
   return (
     <footer className="bg-black">
-      <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-        <div className="md:flex md:justify-between">
-          <div className="mb-6 md:mb-0">
-            <a href="/" className="flex items-center">
+      <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8 flex-col justify-center">
+        <div className="md:flex md:justify-between justify-center">
+          <div className="mb-6 md:mb-0 flex-col justify-center items-center">
+            <a href="/" className="flex items-center justify-center">
               <img src={srijanlogo} className="md:h-20 h-[50px] me-3" alt="#" />
             </a>
-            <div className="text-[#efede0] font-medium text-sm md:text-base md:text-wrap text-balance py-5 pr-10">
+            <div className="text-[#efede0] font-medium text-sm md:text-base py-5 px-10 md:pr-10 flex justify-center items-center text-center">
               Biggest socio-cultural fest of Eastern India 2nd to 4th February,
               2024
             </div>
@@ -24,6 +24,7 @@ function FooterT() {
               href="https://drive.google.com/file/d/1XWCCAvG8_vHOTChQzw3sT0nUJuZRuPog/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
+              className="flex justify-center items-center"
             >
               <button
                 whileHover={{ y: -5 }}
