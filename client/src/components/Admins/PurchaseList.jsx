@@ -41,16 +41,17 @@ function PurchaseList() {
   }
 
   async function handleSubmit(e) {
-    e.preventDefault();
     let response;
+    if(!e.target.value){
+      
+    }
     try {
       response = await fetch(
-        `https://srijan2024.onrender.com/api/getOrder/${phoneNumber}`,
+        `http://localhost:2000/api/getOrder/get/${e.target.value}`,
         {
           method: "POST",
         }
       );
-
       if (!response.ok) {
         throw new Error("Error occured try again later");
       }
@@ -63,7 +64,7 @@ function PurchaseList() {
 
   function handleChange(e) {
     setPhoneNumber(e.target.value);
-    handleSubmit();
+    handleSubmit(e);
   }
 
   return (
