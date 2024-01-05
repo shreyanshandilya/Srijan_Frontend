@@ -182,8 +182,8 @@ h2 {
 .team {
 	padding: 2em 0 2em 2.5em;
 	margin: 0;
-  display: grid;
-  grid-template-columns: 2;
+  /* display: grid;
+  grid-template-columns: 2; */
 }
 
 .member {

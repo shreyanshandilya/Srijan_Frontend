@@ -130,7 +130,7 @@ export const Teampage = () => {
           </h1>
           <div class="typebody">
             <div class="content">
-              <div className="team gird grid-cols-2 grid-rows-3">
+              <div className="team grid md:grid-cols-2 grid-cols-1">
                 <div class="member co-frontend">
                   <div class="thumb ">
                     <img
@@ -207,7 +207,7 @@ export const Teampage = () => {
                     </p>
                   </div>
                 </div>
-                <div className="col-span-2 flex justify-center">
+                <div className="md:col-span-2 flex justify-center">
                   <div class="member co-backend">
                     <div class="thumb">
                       <img
