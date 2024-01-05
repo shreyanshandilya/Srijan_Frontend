@@ -176,7 +176,7 @@ export default [
     Column2: "1/4/2024 16:03:26",
     name: "Jayesh Soni ",
     position: "Co-Head",
-    team: "Sponsorship team",
+    team: "Sponsorship",
     image:
       "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459750/q7ulokvbzfvhh0awjse1.jpg",
     linkedin_url:
@@ -290,7 +290,9 @@ export default [
   linkedin_url: "https://www.linkedin.com/in/rajat-rathi-515220212?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   insta_url: "https://www.instagram.com/immortal_masked_0018/",
     image:"https://res.cloudinary.com/dnmjkab6s/image/upload/v1704469245/WhatsApp_Image_2024-01-05_at_19.43.05_gamrmr.jpg"
-},
+},position: "Head",
+    team: "Safety & Security Team",
+  
 
   {
     Column2: "1/4/2024 13:39:49",
