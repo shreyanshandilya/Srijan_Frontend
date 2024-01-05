@@ -125,7 +125,7 @@ export const Teampage = () => {
 
       <sectionTeam className="pink">
         <div className="blob-content">
-          <h1 className="drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.3)] flex justify-center mb-8 text-2xl font-bold tracking-tight leading-none text-[#dad3a5] md:text-2xl lg:text-2xl">
+          <h1 className="drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.3)] flex justify-center mb-8 text-2xl font-bold tracking-tight leading-none text-[#dad3a5] md:text-4xl">
             Developers
           </h1>
           <div class="typebody">

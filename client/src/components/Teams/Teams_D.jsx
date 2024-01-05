@@ -76,7 +76,7 @@ export default [
     "name": "Anaya Kulkarni ",
     "position": "Co-Head",
     "team": "Sponsorship ",
-    "image": "https://res.cloudinary.com/dnmjkab6s/image/upload/v1704462792/IMG_5781_fe5xpj.heic",
+    "image": "https://res.cloudinary.com/dkdratnao/image/upload/v1704465188/WhatsApp_Image_2024-01-05_at_19.47.01_ldsud0.jpg",
     "linkedin_url": "https://www.linkedin.com/in/anaya-kulkarni-72a876227?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     "insta_url": "https://www.instagram.com/kulkarnianaya?igsh=cnl3aXJ6NmF5eGZh&utm_source=qr"
   },
@@ -85,7 +85,7 @@ export default [
     "name": "Tahanish Vallepalli ",
     "position": "Co-Head",
     "team": "Sponsorship ",
-    "image": "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459662/wgwbybws0aslppt4q0l5.heic",
+    "image": "",
     "linkedin_url": "https://www.linkedin.com/in/tahanish-vallepalli-613652224",
     "insta_url": "https://www.instagram.com/tahanish_0304"
   },
