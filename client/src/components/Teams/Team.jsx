@@ -1,6 +1,6 @@
 import React from "react";
 import AvatarCard from "./avatar_card";
-import { teams } from "./teams_data.jsx";
+// import teams from "./Teams_D.jsx";
 import Nav from "../Navbar/navbar.jsx";
 import Footer from "../Footer.jsx";
 import { Teampage } from "./Teampage.jsx";

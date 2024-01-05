@@ -22,8 +22,8 @@
 .card {
   position: relative;
   width: 350px;
-  height: 190px;
-  background: #333;
+  height: 225px;
+  background: rgb(32 39 49 / var(--tw-bg-opacity));
   transition: 0.5s;
 }
 
@@ -68,8 +68,8 @@
   top: -50px;
   left: 50%;
   transform: translateX(-50%);
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   background: #000;
   transition: 0.5s;
   z-index: 10;
@@ -151,7 +151,7 @@
 
 .card .content .details h2 {
   font-size: 1.2rem;
-
+  margin-top: 15px;
   color: rgba(251,225,14,255);
   line-height: 1.2rem;
 }
@@ -225,7 +225,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #0d0c06;
+  background: rgb(32 39 49 / var(--tw-bg-opacity));
 
   margin:auto;
   margin-top: 0px;
@@ -234,11 +234,11 @@
 }
 @media screen and (max-width: 925px) {
   .container_ {
-    min-height: 35vh;
+    min-height: 55vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #0d0c06;
+    background: rgb(32 39 49 / var(--tw-bg-opacity));
     margin: auto;
     margin-top: 10px;
     margin-bottom: 0px;
