@@ -4,7 +4,7 @@ export default [
     "name": "Amrut Mohan Das",
     "position": "Co-Head",
     "team": "Marketing ",
-    "image": "https://drive.google.com/file/d/1B__L5oyIRyKscPBPVqXVHPeHU9_paUUm/view?usp=drivesdk",
+    "image": "https://res.cloudinary.com/dnmjkab6s/image/upload/v1704463249/IMG_20231206_230107_iitixe.jpg",
     "linkedin_url": "https://www.linkedin.com/in/amrut-mohan-das-626246181?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     "insta_url": "https://www.instagram.com/one_a_m_d_?igsh=bWFpNXM3cmN6a3Vp"
   },
