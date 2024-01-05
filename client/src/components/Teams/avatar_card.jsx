@@ -21,9 +21,7 @@ const AvatarCard = ({
             <h2>
               {name} <br />{" "}
               <span>
-                {position} {" ("}
-                {team}
-                {")"}
+                {position} {((team!="")?(`(${team})`):(""))}
               </span>
             </h2>
             <div className="info">

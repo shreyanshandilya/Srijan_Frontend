@@ -2,6 +2,7 @@ export default [
   {
     name: "Pratham Sharma",
     position: "Coordinator",
+    team: "",
     linkedin_url: "https://linkedin.com/in/PrathamSharma03",
     insta_url: "https://instagram.com/prath_am6423",
     image:
@@ -226,6 +227,18 @@ export default [
       "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459707/ss2z906wyp74hkdqyj55.jpg",
     linkedin_url: "https://www.linkedin.com/in/sanapala-aishwarya-208994225/",
     insta_url: "https://www.instagram.com/aishwarya_sanapala/",
+  },
+  {
+    Column2: "1/5/2024 0:44:24",
+    name: "Jally Abhi Varun ",
+    position: "Co-Head",
+    team: "Media and Publicity Team",
+    image:
+      "https://res.cloudinary.com/dkdratnao/image/upload/v1704464091/IMG-20220814-WA0034_pofom3.jpg",
+    linkedin_url:
+      "https://www.linkedin.com/in/jally-abhi-varun-92a563253/",
+    insta_url:
+      "https://www.instagram.com/abhi_varun___/",
   },
   {
     Column2: "1/4/2024 20:27:32",
