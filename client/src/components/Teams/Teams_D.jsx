@@ -1,12 +1,84 @@
 export default [
   {
+    "Column2": "1/4/2024 16:15:48",
+    "name": "Pamula Sanjay ",
+    "position": "Co-Coordinator",
+    "team": "Co-coordinator",
+    "image": "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459676/vzrahnvppk5wfzas1wmf.jpg",
+    "linkedin_url": "https://www.linkedin.com/in/pamula-sanjay-905b79232?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "insta_url": "https://www.instagram.com/spxwee?igsh=ZGNjOWZkYTE3MQ=="
+  },
+   {
+    "Column2": "1/4/2024 20:27:32",
+    "name": "Manav Modi",
+    "position": "Head",
+    "team": "Marketing Team",
+    "image": "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459677/wgvzyacbdolgdvz3jyzy.jpg",
+    "linkedin_url": "https://www.linkedin.com/in/manav-modi-b92902227?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "insta_url": "https://www.instagram.com/manav_modi17?igsh=d2RpcmhydXVyanJm"
+  },
+  {
     "Column2": "1/3/2024 23:11:18",
     "name": "Amrut Mohan Das",
     "position": "Co-Head",
-    "team": "Marketing ",
+    "team": "Marketing team ",
     "image": "https://res.cloudinary.com/dnmjkab6s/image/upload/v1704463249/IMG_20231206_230107_iitixe.jpg",
     "linkedin_url": "https://www.linkedin.com/in/amrut-mohan-das-626246181?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     "insta_url": "https://www.instagram.com/one_a_m_d_?igsh=bWFpNXM3cmN6a3Vp"
+  },
+  {
+    "Column2": "1/4/2024 17:35:02",
+    "name": "Vishal Shrivastava ",
+    "position": "Head",
+    "team": "Tech Team (App)",
+    "image": "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459707/y4m858v6qvqlzeb6lq9g.jpg",
+    "linkedin_url": "https://www.linkedin.com/in/vishal-shrivastava-aa93a1239?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "insta_url": "https://www.instagram.com/vishal_781?igsh=YTQwZjQ0NmI0OA=="
+  },
+  {
+    "Column2": "1/4/2024 19:09:40",
+    "name": "Devineni Sri Venkatraya Chowdary",
+    "position": "Co-Head",
+    "team": "Technical",
+    "image": "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459767/t5cg5avpfrktzxz4bttp.jpg",
+    "linkedin_url": "https://www.linkedin.com/in/devineni-sri-venkatraya-chowdary-084349236?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "insta_url": "https://www.instagram.com/dsvrc?igsh=Z2w0a2FxcDIxamRi"
+  },
+  {
+    "Column2": "1/4/2024 22:38:55",
+    "name": "Shreyansh Shandilya",
+    "position": "Head",
+    "team": "Technical Team",
+    "image": "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459654/kfhmcusseoticy0eqk6p.jpg",
+    "linkedin_url": "https://www.linkedin.com/in/shreyansh-shandilya-5a8b1b246/",
+    "insta_url": "https://srijan-iitism.com/"
+  },
+   {
+    "Column2": "1/4/2024 22:42:33",
+    "name": "Vibhanshu Sharma",
+    "position": "Co-Head",
+    "image": "https://res.cloudinary.com/dvlxqrbjm/image/upload/v1695845215/jasbnuqh6i7w1mvj9oue.jpg",
+    "team": "Tech Team",
+    "linkedin_url": "https://www.linkedin.com/in/vibhanshu03/",
+    "insta_url": "https://www.instagram.com/iam_vibhanshu/"
+  },
+    {
+    "Column2": "1/4/2024 22:25:25",
+    "name": "Satvik Asthana",
+    "position": "Head",
+    "team": "Sponsorship",
+    "image": "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459682/ckmkwqco7vb0bb4tdee9.jpg",
+    "linkedin_url": "https://www.linkedin.com/in/satvik-asthana-work/",
+    "insta_url": "https://www.instagram.com/satvik_asthana26?igsh=MWpmcWloOGo0bG1lYg=="
+  },
+   {
+    "Column2": "1/4/2024 0:49:50",
+    "name": "Tankala kiran narayana",
+    "position": "Co-Head",
+    "team": "Sponsorship",
+    "image": "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459797/myuakqnlssouqywctekz.jpg",
+    "linkedin_url": "https://www.linkedin.com/in/tankalanarayana?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "insta_url": "https://www.instagram.com/kiran_tankala__7?igsh=Y203NWdwMThhb3R0"
   },
   {
     "Column2": "1/3/2024 23:13:53",
@@ -16,6 +88,33 @@ export default [
     "image": "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459681/sceuc2ullaptfqbqh7cx.jpg",
     "linkedin_url": "https://www.linkedin.com/in/lakshya-garg-903999227?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     "insta_url": "https://www.instagram.com/15_lakshya?igsh=amxpb2cwcHZkcHE1&utm_source=qr"
+  },
+   {
+    "Column2": "1/4/2024 14:21:30",
+    "name": "Anaya Kulkarni ",
+    "position": "Co-Head",
+    "team": "Sponsorship ",
+    "image": "https://res.cloudinary.com/dnmjkab6s/image/upload/v1704462792/IMG_5781_fe5xpj.heic",
+    "linkedin_url": "https://www.linkedin.com/in/anaya-kulkarni-72a876227?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    "insta_url": "https://www.instagram.com/kulkarnianaya?igsh=cnl3aXJ6NmF5eGZh&utm_source=qr"
+  },
+  {
+    "Column2": "1/4/2024 15:46:50",
+    "name": "Tahanish Vallepalli ",
+    "position": "Co-Head",
+    "team": "Sponsorship ",
+    "image": "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459662/wgwbybws0aslppt4q0l5.heic",
+    "linkedin_url": "https://www.linkedin.com/in/tahanish-vallepalli-613652224",
+    "insta_url": "https://www.instagram.com/tahanish_0304"
+  },
+   {
+    "Column2": "1/4/2024 16:03:26",
+    "name": "Jayesh Soni ",
+    "position": "Co-Head",
+    "team": "Sponsorship team",
+    "image": "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459750/q7ulokvbzfvhh0awjse1.jpg",
+    "linkedin_url": "https://www.linkedin.com/in/jayesh-soni-548a66226?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "insta_url": "https://www.instagram.com/jayeshsonig?igsh=MTM4dHU1emgwZjU2Zw=="
   },
   {
     "Column2": "1/3/2024 23:55:14",
@@ -44,15 +143,7 @@ export default [
     "linkedin_url": "https://www.linkedin.com/in/bhargav-bendi-08a34a237?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     "insta_url": "https://www.instagram.com/bhargav_bendi?igsh=dXRkemlvNnE1c2lq"
   },
-  {
-    "Column2": "1/4/2024 0:49:50",
-    "name": "Tankala kiran narayana",
-    "position": "Co-Head",
-    "team": "Sponsorship",
-    "image": "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459797/myuakqnlssouqywctekz.jpg",
-    "linkedin_url": "https://www.linkedin.com/in/tankalanarayana?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    "insta_url": "https://www.instagram.com/kiran_tankala__7?igsh=Y203NWdwMThhb3R0"
-  },
+ 
   {
     "Column2": "1/4/2024 10:23:21",
     "name": "Mudavath Ganesh",
@@ -71,24 +162,7 @@ export default [
     "linkedin_url": "https://www.linhttps://www.linkedin.com/in/mohit-meena-b63a1a228?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     "insta_url": "https://www.instagram.com/mohitmeena826?igsh=NGVhN2U2NjQ0Yg=="
   },
-  {
-    "Column2": "1/4/2024 14:21:30",
-    "name": "Anaya Kulkarni ",
-    "position": "Co-Head",
-    "team": "Sponsorship ",
-    "image": "https://res.cloudinary.com/dnmjkab6s/image/upload/v1704462792/IMG_5781_fe5xpj.heic",
-    "linkedin_url": "https://www.linkedin.com/in/anaya-kulkarni-72a876227?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-    "insta_url": "https://www.instagram.com/kulkarnianaya?igsh=cnl3aXJ6NmF5eGZh&utm_source=qr"
-  },
-  {
-    "Column2": "1/4/2024 15:46:50",
-    "name": "Tahanish Vallepalli ",
-    "position": "Co-Head",
-    "team": "Sponsorship ",
-    "image": "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459662/wgwbybws0aslppt4q0l5.heic",
-    "linkedin_url": "https://www.linkedin.com/in/tahanish-vallepalli-613652224",
-    "insta_url": "https://www.instagram.com/tahanish_0304"
-  },
+ 
   {
     "Column2": "1/4/2024 15:51:45",
     "name": "Bochu Nithin ",
@@ -107,15 +181,7 @@ export default [
     "linkedin_url": "https://www.linkedin.com/in/pintu-m-098005233",
     "insta_url": "https://www.instagram.com/pintu_meena_2603?igsh=cmttZDRtazQ4Y3Q3"
   },
-  {
-    "Column2": "1/4/2024 16:03:26",
-    "name": "Jayesh Soni ",
-    "position": "Co-Head",
-    "team": "Sponsorship team",
-    "image": "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459750/q7ulokvbzfvhh0awjse1.jpg",
-    "linkedin_url": "https://www.linkedin.com/in/jayesh-soni-548a66226?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    "insta_url": "https://www.instagram.com/jayeshsonig?igsh=MTM4dHU1emgwZjU2Zw=="
-  },
+ 
   {
     "Column2": "1/4/2024 16:12:39",
     "name": "Abhinav Pratham",
@@ -125,15 +191,7 @@ export default [
     "linkedin_url": "https://www.linkedin.com/in/abhinavpratham",
     "insta_url": "."
   },
-  {
-    "Column2": "1/4/2024 16:15:48",
-    "name": "Pamula Sanjay ",
-    "position": "Co-Coordinator",
-    "team": "Co-coordinator",
-    "image": "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459676/vzrahnvppk5wfzas1wmf.jpg",
-    "linkedin_url": "https://www.linkedin.com/in/pamula-sanjay-905b79232?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    "insta_url": "https://www.instagram.com/spxwee?igsh=ZGNjOWZkYTE3MQ=="
-  },
+  
   {
     "Column2": "1/4/2024 16:32:31",
     "name": "Sanapala Aishwarya ",
@@ -161,15 +219,7 @@ export default [
     "linkedin_url": "http://linkedin.com/in/vaishnavi-titare-b484b0226",
     "insta_url": "https://www.instagram.com/vaishnavititare?igsh=MXd6OGRpZncwZXUzaA%3D%3D&utm_source=qr"
   },
-  {
-    "Column2": "1/4/2024 17:35:02",
-    "name": "Vishal Shrivastava ",
-    "position": "Head",
-    "team": "Tech Team (App)",
-    "image": "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459707/y4m858v6qvqlzeb6lq9g.jpg",
-    "linkedin_url": "https://www.linkedin.com/in/vishal-shrivastava-aa93a1239?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    "insta_url": "https://www.instagram.com/vishal_781?igsh=YTQwZjQ0NmI0OA=="
-  },
+  
   {
     "Column2": "1/4/2024 17:36:41",
     "name": "Amit Singh Yadav ",
@@ -206,15 +256,7 @@ export default [
     "linkedin_url": "https://www.linkedin.com/in/mythili-balachandran-a7a341263/",
     "insta_url": "https://www.instagram.com/myth.lili/"
   },
-  {
-    "Column2": "1/4/2024 19:09:40",
-    "name": "Devineni Sri Venkatraya Chowdary",
-    "position": "Co-Head",
-    "team": "Technical",
-    "image": "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459767/t5cg5avpfrktzxz4bttp.jpg",
-    "linkedin_url": "https://www.linkedin.com/in/devineni-sri-venkatraya-chowdary-084349236?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    "insta_url": "https://www.instagram.com/dsvrc?igsh=Z2w0a2FxcDIxamRi"
-  },
+  
   {
     "Column2": "1/4/2024 19:28:14",
     "name": "Vaibhav Kashyap ",
@@ -233,15 +275,7 @@ export default [
     "linkedin_url": "https://www.linkedin.com/in/madugula-karthik-sharma-2a389425a/",
     "insta_url": "https://www.instagram.com/karthik_sharma._?igsh=MXc2eHo1MG83eXI0Mg=="
   },
-  {
-    "Column2": "1/4/2024 20:27:32",
-    "name": "Manav Modi",
-    "position": "Head",
-    "team": "Marketing Team",
-    "image": "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459677/wgvzyacbdolgdvz3jyzy.jpg",
-    "linkedin_url": "https://www.linkedin.com/in/manav-modi-b92902227?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    "insta_url": "https://www.instagram.com/manav_modi17?igsh=d2RpcmhydXVyanJm"
-  },
+ 
   {
     "Column2": "1/4/2024 22:24:02",
     "name": "Harsh Mishra",
@@ -251,15 +285,7 @@ export default [
     "linkedin_url": "www.linkedin.com/in/harsh-mishra-9b1399235",
     "insta_url": "https://www.instagram.com/harshmishra3105/"
   },
-  {
-    "Column2": "1/4/2024 22:25:25",
-    "name": "Satvik Asthana",
-    "position": "Head",
-    "team": "Sponsorship",
-    "image": "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459682/ckmkwqco7vb0bb4tdee9.jpg",
-    "linkedin_url": "https://www.linkedin.com/in/satvik-asthana-work/",
-    "insta_url": "https://www.instagram.com/satvik_asthana26?igsh=MWpmcWloOGo0bG1lYg=="
-  },
+
   {
     "Column2": "1/4/2024 22:28:29",
     "name": "Megh Gupta",
@@ -278,24 +304,8 @@ export default [
     "linkedin_url": "https://www.linkedin.com/in/jeet-rathod-7994b3228",
     "insta_url": "https://www.instagram.com/jeet.rathod_?utm_source=qr&igsh=ZGNsMDl2NnhmcnFj"
   },
-  {
-    "Column2": "1/4/2024 22:38:55",
-    "name": "Shreyansh Shandilya",
-    "position": "Head",
-    "team": "Technical Team",
-    "image": "http://res.cloudinary.com/dnmjkab6s/image/upload/v1704459654/kfhmcusseoticy0eqk6p.jpg",
-    "linkedin_url": "https://www.linkedin.com/in/shreyansh-shandilya-5a8b1b246/",
-    "insta_url": "https://srijan-iitism.com/"
-  },
-  {
-    "Column2": "1/4/2024 22:42:33",
-    "name": "Vibhanshu Sharma",
-    "position": "Co-Head",
-    "image": "https://res.cloudinary.com/dvlxqrbjm/image/upload/v1695845215/jasbnuqh6i7w1mvj9oue.jpg",
-    "team": "Tech Team",
-    "linkedin_url": "https://www.linkedin.com/in/vibhanshu03/",
-    "insta_url": "https://www.instagram.com/iam_vibhanshu/"
-  },
+  
+ 
   {
     "Column2": "1/4/2024 22:42:33",
     "name": "Saurabh kumar Singh ",
