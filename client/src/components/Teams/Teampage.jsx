@@ -56,7 +56,7 @@ export const Teampage = () => {
                   <div class="p-5">
                     <a>
                       <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#dad3a5] dark:text-white">
-                      Prof. Arijit Baral
+                        Prof. Arijit Baral
                       </h5>
                     </a>
                     <p class="mb-3 font-semibold text-[#69644e] dark:text-gray-400">
@@ -81,11 +81,11 @@ export const Teampage = () => {
                   <div class="p-5">
                     <a>
                       <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#dad3a5] dark:text-white">
-                      Prof. Suresh K Yatirajula
+                        Prof. Suresh K Yatirajula
                       </h5>
                     </a>
                     <p class="mb-3 font-semibold text-[#69644e] dark:text-gray-400">
-                    Dept of Chemical Engineering
+                      Dept of Chemical Engineering
                     </p>
                   </div>
                 </div>
@@ -128,7 +128,109 @@ export const Teampage = () => {
           <h1 className="drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.3)] flex justify-center mb-8 text-2xl font-bold tracking-tight leading-none text-[#dad3a5] md:text-2xl lg:text-2xl">
             Developers
           </h1>
-          <p>Photos</p>
+          <div class="typebody">
+            <div class="content">
+              <div className="team gird grid-cols-2 grid-rows-3">
+                <div class="member co-frontend">
+                  <div class="thumb ">
+                    <img
+                      className="object-cover"
+                      src="https://res.cloudinary.com/dkdratnao/image/upload/v1704435839/harshphoto_kzyxkq.jpg"
+                    />
+                  </div>
+                  <div class="description">
+                    <h3>Harsh Singh</h3>
+                    <p>
+                      <br />
+                      <br />
+                      <a className="m-4" href="https://www.instagram.com/hharsha_s/">
+                        @instagram
+                      </a>
+                      <a href="https://www.linkedin.com/in/harsh-singh-69523a193/">@linkedin</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="member co-frontend">
+                  <div class="thumb">
+                    <img
+                      className="object-cover"
+                      src="https://res.cloudinary.com/dkdratnao/image/upload/v1704435839/ratul_bhpxc1.jpg"
+                    />
+                  </div>
+                  <div class="description">
+                    <h3>Ratul Saha</h3>
+                    <p className="">
+                      <br />
+                      <br />
+                      <a className="m-4" href="https://www.instagram.com/inhumane_bloke/">
+                        @instagram
+                      </a>
+                      <a href="https://www.linkedin.com/in/ratul-saha-047066254/">@linkedin</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="member co-frontend ">
+                  <div class="thumb">
+                    <img
+                      className="object-cover"
+                      src="https://res.cloudinary.com/dkdratnao/image/upload/v1704435839/manav_if1tvj.jpg"
+                    />
+                  </div>
+                  <div class="description">
+                    <h3>Manav Sharma</h3>
+                    <p className="">
+                      <br />
+                      <br />
+                      <a className="m-4" href="https://www.instagram.com/mysticalmanav?igsh=OGQ5ZDc2ODk2ZA==">
+                        @instagram
+                      </a>
+                      <a href="https://www.linkedin.com/in/manav-sharma-263092250?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">@linkedin</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="member co-backend">
+                  <div class="thumb">
+                    <img
+                      className="object-cover"
+                      src="https://res.cloudinary.com/dkdratnao/image/upload/v1704435839/siddhart_opbrxo.jpg"
+                    />
+                  </div>
+                  <div class="description">
+                    <h3>Siddharth Aggarwal </h3>
+                    <p className="">
+                      <br />
+                      <br />
+                      <a className="m-4" href="https://www.instagram.com/siddharth_aggarwal25?igsh=MXNxdmcxc245dzNmag==">
+                        @instagram
+                      </a>
+                      <a href="https://www.linkedin.com/in/siddharth-aggarwal-474aa4255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">@linkedin</a>
+                    </p>
+                  </div>
+                </div>
+                <div className="col-span-2 flex justify-center">
+                  <div class="member co-backend">
+                    <div class="thumb">
+                      <img
+                        className="object-cover"
+                        src="https://res.cloudinary.com/dkdratnao/image/upload/v1704435839/prakkharSri_yxwzbx.jpg"
+                      />
+                    </div>
+                    <div class="description">
+                      <h3>Prakhar Srivastava</h3>
+                      <p className="">
+                        <br />
+                        <br />
+                        <a className="m-4" href="https://www.instagram.com/prakhar_227?igsh=MWF1Z2N5cHVld3gxMw==">
+                          @instagram
+                        </a>
+                        <a href="https://www.linkedin.com/in/prakhar-srivastava-556651255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">@linkedin</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </sectionTeam>
 
