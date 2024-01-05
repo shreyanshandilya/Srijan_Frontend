@@ -1,7 +1,7 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import "./Avatar_card.css"; // Import the CSS file
-
-const AvatarCard = ({
+import axios from 'axios'
+const AvatarCard =  ({
   name,
   position,
   image,
@@ -9,6 +9,7 @@ const AvatarCard = ({
   linkedin_url,
   insta_url,
 }) => {
+  
   return (
     <div className="container_">
       <div className="card">

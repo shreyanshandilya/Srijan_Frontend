@@ -1,5 +1,5 @@
 import AvatarCard from "./avatar_card";
-import { teams } from "./teams_data.jsx";
+import teams from  "./Teams_D.jsx";
 
 export const Teampage = () => {
   return (
