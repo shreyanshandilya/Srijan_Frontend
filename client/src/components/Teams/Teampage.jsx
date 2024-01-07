@@ -169,7 +169,7 @@ export const Teampage = () => {
             <div class="content">
               <div className="team grid md:grid-cols-2 grid-cols-1">
                 <div class="member co-frontend">
-                  <div class="thumb ">
+                  <div class="thumb my-3 ">
                     <img
                       className="object-cover"
                       src="https://res.cloudinary.com/dkdratnao/image/upload/v1704435839/harshphoto_kzyxkq.jpg"
@@ -193,7 +193,7 @@ export const Teampage = () => {
                   </div>
                 </div>
                 <div class="member co-frontend">
-                  <div class="thumb">
+                  <div class="thumb my-3">
                     <img
                       className="object-cover"
                       src="https://res.cloudinary.com/dkdratnao/image/upload/v1704435839/ratul_bhpxc1.jpg"
@@ -217,7 +217,7 @@ export const Teampage = () => {
                   </div>
                 </div>
                 <div class="member co-frontend ">
-                  <div class="thumb">
+                  <div class="thumb my-3">
                     <img
                       className="object-cover"
                       src="https://res.cloudinary.com/dkdratnao/image/upload/v1704435839/manav_if1tvj.jpg"
@@ -241,7 +241,7 @@ export const Teampage = () => {
                   </div>
                 </div>
                 <div class="member co-backend">
-                  <div class="thumb">
+                  <div class="thumb my-3">
                     <img
                       className="object-cover"
                       src="https://res.cloudinary.com/dkdratnao/image/upload/v1704435839/siddhart_opbrxo.jpg"
@@ -266,7 +266,7 @@ export const Teampage = () => {
                 </div>
                 <div className="md:col-span-2 flex justify-center">
                   <div class="member co-backend">
-                    <div class="thumb">
+                    <div class="thumb my-3">
                       <img
                         className="object-cover"
                         src="https://res.cloudinary.com/dkdratnao/image/upload/v1704435839/prakkharSri_yxwzbx.jpg"

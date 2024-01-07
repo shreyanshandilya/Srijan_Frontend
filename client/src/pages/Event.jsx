@@ -10,7 +10,7 @@ function Event() {
     scroll.scrollToTop({ duration: 1000 });
   }, []);
   return (
-    <div div className="bg-black">
+    <div className="bg-black h-screen overflow-y-hidden">
       <Navbar />
       <motion.div
         initial={{ opacity: 0 }}

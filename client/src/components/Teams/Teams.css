@@ -342,7 +342,6 @@ h3 {
 	transform: rotate(-3deg);
 }
 .description p a {
-	display: inline-block;
 	margin-right: 15px;
 	background: var(--dark);
 	color: var(--yellow);
