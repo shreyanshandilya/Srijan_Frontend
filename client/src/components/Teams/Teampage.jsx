@@ -162,11 +162,12 @@ export const Teampage = () => {
 
       <sectionTeam className="pink">
         <div className="blob-content">
-          <h1 className="drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.3)] flex justify-center mb-8 text-2xl font-bold tracking-tight leading-none text-[#dad3a5] md:text-4xl">
+          <h1 className="underline drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.3)] flex justify-center mb-8 text-4xl font-bold tracking-tight leading-none text-[#dad3a5] md:text-6xl">
             Developers
           </h1>
           <div class="typebody">
             <div class="content">
+              <div className="drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.3)] flex justify-center mb-8 text-2xl font-bold tracking-tight leading-none text-[#dad3a5] md:text-4xl">Web</div>
               <div className="team grid md:grid-cols-2 grid-cols-1">
                 <div class="member co-frontend">
                   <div class="thumb my-3 ">
@@ -284,6 +285,83 @@ export const Teampage = () => {
                           @instagram
                         </a>
                         <a href="https://www.linkedin.com/in/prakhar-srivastava-556651255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+                          @linkedin
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.3)] flex justify-center mb-8 text-2xl font-bold tracking-tight leading-none text-[#dad3a5] md:text-4xl">App</div>
+              <div className="team grid md:grid-cols-2 grid-cols-1">
+                <div class="member co-android">
+                  <div class="thumb my-3">
+                    <img
+                      className="object-cover"
+                      src="https://res.cloudinary.com/dfr1kvie3/image/upload/v1704466893/20231127_154325_ngppjb.jpg"
+                    />
+                  </div>
+                  <div class="description">
+                    <h3>Pratyush Kumar Chaturvedi</h3>
+                    <p className="">
+                      <br />
+                      <br />
+                      <a
+                        className="m-4"
+                        href="https://www.instagram.com/pratyush1_0.0_1/"
+                      >
+                        @instagram
+                      </a>
+                      <a href="https://www.linkedin.com/in/pratyush-kumar-chaturvedi-086958256/">
+                        @linkedin
+                      </a>
+                    </p>
+                  </div>
+                </div>
+                <div class="member co-android">
+                  <div class="thumb my-3">
+                    <img
+                      className="object-cover"
+                      src="https://res.cloudinary.com/dfr1kvie3/image/upload/v1704466879/profile_1_n9i3nq.jpg"
+                    />
+                  </div>
+                  <div class="description">
+                    <h3>Saurik Saha </h3>
+                    <p className="">
+                      <br />
+                      <br />
+                      <a
+                        className="m-4"
+                        href="https://www.instagram.com/sauriksaha/"
+                      >
+                        @instagram
+                      </a>
+                      <a href="https://www.linkedin.com/in/saurik-saha">
+                        @linkedin
+                      </a>
+                    </p>
+                  </div>
+                </div>
+                <div className="md:col-span-2 flex justify-center">
+                  <div class="member co-android">
+                    <div class="thumb my-3">
+                      <img
+                        className="object-cover"
+                        src="https://res.cloudinary.com/dfr1kvie3/image/upload/v1704467857/IMG20230505063912_nc3riv.jpg"
+                      />
+                    </div>
+                    <div class="description">
+                      <h3>Siddharth Gorai</h3>
+                      <p className="">
+                        <br />
+                        <br />
+                        <a
+                          className="m-4"
+                          href="https://www.instagram.com/siddharthgorai?igsh=MTV0bGd5OXg3c2tudA=="
+                        >
+                          @instagram
+                        </a>
+                        <a href="https://www.linkedin.com/in/siddharth-gorai-ab01a7254?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
                           @linkedin
                         </a>
                       </p>

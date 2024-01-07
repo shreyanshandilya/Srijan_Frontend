@@ -330,6 +330,25 @@ h3 {
 	color: var(--dark);
 	font-weight: bold;
 }
+.co-android:after {
+	content: "ANDROID";
+	font-size: 0.75em;
+	position: absolute;
+	top: -1.5em;
+	background: var(--yellow);
+	right: 4em;
+	transform: rotate(3deg);
+	padding: 0.35em 0.75em 0.5em;
+	border-radius: 0.25em;
+	color: var(--dark);
+	font-weight: bold;
+}
+
+.co-android:nth-of-type(even):after {
+	right: inherit;
+	left: 4em;
+	transform: rotate(-3deg);
+}
 
 .co-frontend:nth-of-type(even):after {
 	right: inherit;
