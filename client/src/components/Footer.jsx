@@ -20,7 +20,7 @@ function FooterT() {
               Biggest socio-cultural fest of Eastern India 2nd to 4th February,
               2024
             </div>
-            <a
+            {/* <a
               href="https://drive.google.com/file/d/1XWCCAvG8_vHOTChQzw3sT0nUJuZRuPog/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
@@ -45,7 +45,7 @@ function FooterT() {
                   Sponsorship Brochure
                 </p>
               </button>
-            </a>
+            </a> */}
           </div>
           <div className="flex justify-center items-center">
             <div className="grid grid-cols-2 gap-8 sm:gap-6 text-[#efede0]">
@@ -85,14 +85,14 @@ function FooterT() {
                       Events
                     </Link>
                   </li>
-                  {/* <li className="mb-4">
+                  <li className="mb-4">
                   <Link
                     to="/merchant"
                     className="hover:underline"
                   >
                     Merchandise
                   </Link>
-                </li> */}
+                </li>
                   <li className="mb-4">
                     <Link to="/about" className="hover:underline">
                       About Us

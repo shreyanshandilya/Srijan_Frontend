@@ -7,6 +7,7 @@ import Typography from "@mui/material/Typography";
 import Nav from "../Navbar/navbar";
 import { motion } from "framer-motion";
 import ProfilePage from "./profile";
+import FooterT from "../Footer";
 const InputDefault = styled(TextField)(({ theme }) => ({
   "& .MuiOutlinedInput-root": {
     "& fieldset": {
@@ -245,6 +246,7 @@ const Dashboard = () => {
           </motion.button>
         </motion.form>
       </div>
+      <FooterT/>
     </Fragment>
   );
 };

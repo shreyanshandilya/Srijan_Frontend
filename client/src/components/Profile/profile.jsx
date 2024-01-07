@@ -5,6 +5,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Nav from "../Navbar/navbar";
 import "./profile.css";
 import shirt from "./shirt.jpg"
+import FooterT from "../Footer";
 const theme = createTheme({
   palette: {
     primary: {
@@ -109,7 +110,7 @@ const ProfilePage = ({ data }) => {
                 Verification:
               </Typography>
               <Typography style={styles.value} variant="h5" gutterBottom>
-                {approved ? "Approoved" : "Pending"}
+                {approved ? "Approved" : "Pending"}
               </Typography>
             </div>
             {/* Include other details as needed */}
