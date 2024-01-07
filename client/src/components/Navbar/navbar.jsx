@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import styled from "@emotion/styled";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MobileLink from "./Mobile_Link";
 
 import AppBar from "@mui/material/AppBar";
@@ -38,6 +38,10 @@ const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const window = document.body;
+  // const mobileView = window.length >= 600;
+  // useEffect(() => {
+  //   console.log(mobileView);
+  // }, [window.length]);
 
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -108,9 +112,9 @@ const Navbar = () => {
                     <Link to="/merchant">
                       <StyledButton name="Merchandise" />
                     </Link>
-                    <Link to="/profile">
+                    {/* <Link to="/profile">
                       <StyledButton name="Profile" />
-                    </Link>
+                    </Link> */}
 
                     {/* <ScrollRouter
                       to="sponsor"
@@ -150,22 +154,24 @@ const Navbar = () => {
                     ></IconButton>
                   </Box>
                 </Box>
-                {/* <Link to="/profile">
-                <div class="relative w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600" >
-                  <svg
-                    class="absolute w-12 h-12 text-gray-400 -left-1"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
+                <div className="sm:block hidden">
+                  <Link to="/profile">
+                    <div className="relative w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
+                      <svg
+                        className="absolute w-12 h-12 text-[#0d0c06] -left-1"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </div>
+                  </Link>
                 </div>
-                </Link> */}
               </Toolbar>
             </AppBar>
             <nav>

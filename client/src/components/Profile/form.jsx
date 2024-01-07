@@ -8,6 +8,8 @@ import Nav from "../Navbar/navbar";
 import { motion } from "framer-motion";
 import ProfilePage from "./profile";
 import FooterT from "../Footer";
+import { Link } from "react-router-dom";
+// import { motion } from "framer-motion";
 const InputDefault = styled(TextField)(({ theme }) => ({
   "& .MuiOutlinedInput-root": {
     "& fieldset": {
@@ -71,6 +73,9 @@ const Dashboard = () => {
   const handlePhoneNumberChange = (event) => {
     setPhoneNumber(event.target.value);
   };
+  const listItemChange = () => {
+    setListItem([]);
+  };
 
   const clearLocalStorage = () => {
     localStorage.setItem("email", "");
@@ -106,19 +111,41 @@ const Dashboard = () => {
   }
 
   return listItem.length ? (
-    <div
-      style={{
-        display: "flex",
-        minHeight: "100vh",
-        alignItems: "center",
-        overflowY: "hidden",
-      }}
-      className="bg-[#040d10]"
-    >
-      <Nav />
-      {listItem.map((item) => (
-        <ProfilePage data={item} />
-      ))}
+    <div className="bg-[#040d10]">
+      <div
+        style={{
+          display: "flex",
+          minHeight: "100vh",
+          alignItems: "center",
+          overflowY: "hidden",
+        }}
+        className="bg-[#040d10]"
+      >
+        <Nav />
+        {listItem.map((item) => (
+          <ProfilePage data={item} />
+        ))}
+      </div>
+      {/* <Link to="/profile"> */}
+      <a
+        // href="/profile"
+        // target="_blank"
+        // rel="noopener noreferrer"
+        className="flex justify-center items-center bg-[#040d10] mb-10"
+      >
+        <motion.button
+          type="button"
+          whileHover={{ scale: 1.1, y: -5 }}
+          onClick={listItemChange}
+          className="  backdrop-blur-lg bg-[#dad3a5] hover:bg-transparent font-medium rounded-lg text-sm px-3 text-center inline-flex items-center  text-[#090d06] hover:text-[#c9bc57] me-2 my-2"
+        >
+          <p className="p-3 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.1)]">
+            Check another Order!
+          </p>
+        </motion.button>
+      </a>
+      <FooterT />
+      {/* </Link> */}
     </div>
   ) : (
     <Fragment>
@@ -246,7 +273,7 @@ const Dashboard = () => {
           </motion.button>
         </motion.form>
       </div>
-      <FooterT/>
+      <FooterT />
     </Fragment>
   );
 };
