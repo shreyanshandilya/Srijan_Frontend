@@ -15,7 +15,7 @@ function Merchandise() {
   const url = "https://srijan2024.onrender.com/api/purchase";
   const [data, setData] = useState({
     name: "",
-    admissionNumber: "",
+    email: "",
     mobileNumber: "",
     tshirtSize: "",
     hostel: "",
@@ -38,7 +38,7 @@ function Merchandise() {
     // console.log(img);
     // console.log(formData);
     formData.append("name", data.name);
-    formData.append("admissionNumber", data.admissionNumber);
+    formData.append("email", data.email);
     formData.append("mobileNumber", data.mobileNumber);
     formData.append("tshirtSize", data.tshirtSize);
     formData.append("hostel", data.hostel);
@@ -162,18 +162,18 @@ function Merchandise() {
             </div>
             <div className="mb-4">
               <label
-                htmlFor="admissionNumber"
+                htmlFor="email"
                 className="block mb-2 text-sm font-medium text-[#040d10]"
               >
-                Admission Number
+                Email
               </label>
               <input
                 type="text"
-                id="admissionNumber"
+                id="email"
                 onChange={handleChangeInput}
-                value={data.admissionNumber}
+                value={data.email}
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0d0c06] focus:border-[#0d0c06] block w-full p-2.5"
-                placeholder="23je0001"
+                placeholder="abc@gmail.com"
                 required
               />
             </div>

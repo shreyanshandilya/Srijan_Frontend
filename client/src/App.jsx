@@ -34,10 +34,10 @@ function App() {
       path: "event",
       element: <Event />,
     },
-    // {
-    //   path: "profile",
-    //   element: <Frm />,
-    // },
+    {
+      path: "profile",
+      element: <Frm />,
+    },
     {
       path: "team",
       element: <Team />,
