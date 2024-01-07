@@ -4,8 +4,9 @@ import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Nav from "../Navbar/navbar";
 import "./profile.css";
-import shirt from "./shirt.jpg"
+import shirt from "./shirt.jpg";
 import FooterT from "../Footer";
+
 const theme = createTheme({
   palette: {
     primary: {
@@ -22,7 +23,7 @@ const styles = {
   mainContainer: {
     background: " ", // Gradient background
     // Ensure the container takes the full height
-    padding: theme.spacing(3),
+    padding: theme.spacing(1),
     backdropFilter: "blur(10px)", // Blurriness effect
   },
   root: {
@@ -34,8 +35,8 @@ const styles = {
     maxWidth: 500,
     minWidth: 500,
     margin: "auto",
-    marginTop: theme.spacing(10),
-    marginBottom: theme.spacing(7), // Increased margin
+    marginTop: theme.spacing(4),
+    marginBottom: theme.spacing(4), // Increased margin
   },
   title: {
     fontSize: "1rem", // Smaller font size for titles
@@ -63,8 +64,8 @@ const ProfilePage = ({ data }) => {
   } = data;
 
   return (
-    <div className="bg-[url('./shirt.jpg')] p-10">
-      <div style={styles.mainContainer} class="floating max-w-screen-sm ">
+    <div className="bg-[url('./shirt.jpg')] px-5">
+      <div style={styles.mainContainer} className="floating max-w-screen-sm">
         <ThemeProvider theme={theme}>
           <Paper style={styles.root} elevation={3}>
             <Typography
