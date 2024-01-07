@@ -105,20 +105,21 @@ const Navbar = () => {
                     <Link to="/event">
                       <StyledButton name="Events" />
                     </Link>
-                    {/* <Link to="/profile">
-                      <StyledButton name="Profile" />
-                    </Link> */}
                     <Link to="/merchant">
                       <StyledButton name="Merchandise" />
                     </Link>
-                    <ScrollRouter
+                    <Link to="/profile">
+                      <StyledButton name="Profile" />
+                    </Link>
+
+                    {/* <ScrollRouter
                       to="sponsor"
                       spy={true}
                       smooth={true}
                       duration={3000}
                     >
                       <StyledButton name="Sponsor"></StyledButton>
-                    </ScrollRouter>
+                    </ScrollRouter> */}
                     <Link to="/about">
                       <StyledButton name="About Us"></StyledButton>
                     </Link>
@@ -207,7 +208,7 @@ const Navbar = () => {
                     <Link to="/merchant">
                       <MobileLink url="/merchant" text="Merchandise" />
                     </Link>
-                    <ScrollRouter
+                    {/* <ScrollRouter
                       to="sponsor"
                       spy={true}
                       smooth={true}
@@ -221,8 +222,8 @@ const Navbar = () => {
                         target="_blank"
                         rel="noreferrer"
                       />
-                    </ScrollRouter>
-                    {/* <Link to="/merchant">
+                    </ScrollRouter> */}
+                    <Link to="/merchant">
                       <MobileLink
                         text="Merchandise"
                         component="a"
@@ -230,10 +231,19 @@ const Navbar = () => {
                         target="_blank"
                         rel="noreferrer"
                       />
-                    </Link> */}
+                    </Link>
                     <Link to="/team">
                       <MobileLink
                         text="Teams"
+                        component="a"
+                        href="https://forms.gle/J5f4kswgcTCcmLB78"
+                        target="_blank"
+                        rel="noreferrer"
+                      />
+                    </Link>
+                    <Link to="/profile">
+                      <MobileLink
+                        text="Profile"
                         component="a"
                         href="https://forms.gle/J5f4kswgcTCcmLB78"
                         target="_blank"
