@@ -94,6 +94,7 @@ function PurchaseList() {
       <div className="mx-auto grid w-full max-w-7xl items-center space-y-4 px-2 py-10 md:grid-cols-2 md:gap-6 md:space-y-0 lg:grid-cols-4">
         {listItem &&
           listItem.map((item) => (
+            <>
             <div key={item._id} className="rounded-md border">
               <img
                 src={item.imageURL}
@@ -149,6 +150,10 @@ function PurchaseList() {
                 )}
               </div>
             </div>
+            
+
+            
+            </>
           ))}
       </div>
     </>
