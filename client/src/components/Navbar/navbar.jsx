@@ -223,7 +223,7 @@ const Navbar = () => {
                         rel="noreferrer"
                       />
                     </ScrollRouter> */}
-                    <Link to="/merchant">
+                    {/* <Link to="/merchant">
                       <MobileLink
                         text="Merchandise"
                         component="a"
@@ -231,7 +231,7 @@ const Navbar = () => {
                         target="_blank"
                         rel="noreferrer"
                       />
-                    </Link>
+                    </Link> */}
                     <Link to="/team">
                       <MobileLink
                         text="Teams"
