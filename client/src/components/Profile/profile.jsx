@@ -55,6 +55,7 @@ const ProfilePage = ({ data }) => {
     mobileNumber,
     name,
     approved,
+    quantity,
     createdAt,
     updatedAt,
     imageURL,
@@ -71,7 +72,7 @@ const ProfilePage = ({ data }) => {
               className="bg-[#0D0C06] backdrop-blur-md bg-opacity-60 rounded-md text-center py-2"
               gutterBottom
             >
-              {admissionNumber}
+              {admissionNumber} : {name}
             </Typography>
             <div className="grid grid-cols-2">
               <Typography style={styles.title} variant="subtitle2" gutterBottom>
@@ -91,6 +92,12 @@ const ProfilePage = ({ data }) => {
               </Typography>
               <Typography style={styles.value} variant="h5" gutterBottom>
                 {tshirtSize}
+              </Typography>
+              <Typography style={styles.title} variant="subtitle2" gutterBottom>
+                Quantity:
+              </Typography>
+              <Typography style={styles.value} variant="h5" gutterBottom>
+                {quantity}
               </Typography>
               <Typography style={styles.title} variant="subtitle2" gutterBottom>
                 Mobile Number:
