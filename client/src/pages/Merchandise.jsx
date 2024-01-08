@@ -25,8 +25,8 @@ function Merchandise() {
     outsider:false
   });
   const [img, setImg] = useState("");
-  const [alert, setAlert] = useState(false);
-  const [outside, setOutside] = useState(true);
+   
+  const [outside, setOutside] = useState(false);
   const handleChangeInput = (event) => {
     setData({ ...data, [event.target.id]: [event.target.value] });
     // console.log(data);
@@ -62,8 +62,8 @@ function Merchandise() {
   const [scope, animate] = useAnimate();
   const [open, setOpen] = useState(false);
   const handleClick = () => {
-    setAlert(true);
-
+    
+    
     setOpen(!open);
      
     // if (open) {
@@ -73,7 +73,7 @@ function Merchandise() {
   };
   return (
     <div className="bg-[#090d06] jusitfy-center items-center mt-0 h-full w-full">
-       {alert?<AlertDialog setOutside={setOutside}/>:""}
+        
       <Nav />
       <div className="h-[75vh] ">
         <Carousel>
@@ -185,6 +185,7 @@ function Merchandise() {
               <input
                 type="text"
                 id="mobileNumber"
+                maxLength="10"
                 onChange={handleChangeInput}
                 value={data.mobileNumber}
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0d0c06] focus:border-[#0d0c06] block w-full p-2.5"
@@ -234,7 +235,7 @@ function Merchandise() {
                 Address
               </label>
               <input
-                type="number"
+                type="string"
                 id="address"
                 onChange={handleChangeInput}
                 value={data.address}
@@ -260,11 +261,11 @@ function Merchandise() {
                 onChange={handleChangeInput}
                 value={data.quantity}
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0d0c06] focus:border-[#0d0c06] block w-full p-2.5"
-                placeholder="2"
+                placeholder="Eg. 1, 2, 3..."
                 required
               />
             </div>
-
+         
             <div className="mb-4">
               <label
                 htmlFor="tshirtSize"
@@ -286,7 +287,59 @@ function Merchandise() {
                 <option value="XL">XL</option>
               </select>
             </div>
-
+              {/* <div className="mb-1">
+                <label
+                  htmlFor="hostel"
+                  className="block mb-1 text-sm font-medium text-[#040d10]"
+                >
+                  Hostel
+                </label>
+                <input
+                  type="text"
+                  id="hostel"
+                  onChange={handleChangeInput}
+                  value={data.hostel}
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0d0c06] focus:border-[#0d0c06] block w-full p-2.5"
+                  placeholder="Aquamarine"
+                  required
+                />
+              </div>
+              <div className="mb-1">
+                <label
+                  htmlFor="roomNumber"
+                  className="block mb-1 text-sm font-medium text-[#040d10]"
+                >
+                  Room
+                </label>
+                <input
+                  type="text"
+                  id="roomNumber"
+                  onChange={handleChangeInput}
+                  value={data.roomNumber}
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0d0c06] focus:border-[#0d0c06] block w-full p-2.5"
+                  placeholder="C/06/09"
+                  required
+                />
+              </div> */}
+             <div className="flex mb-4" style={{alignItems: "flex-start"}}>
+            
+               
+              <input
+                type="checkbox"
+                onClick={()=>{
+                  setOutside(!outside);
+                }}
+                style={{margin:"4px",color: "#020508",backgroundColor:"#020508"}}
+                
+                
+                
+              /> <label
+                
+              className="block mb-2 text-sm font-medium text-[#040d10]"
+            >
+              Want delivery outside the campus ?(delivery charge Rs 50 will be applicable on outside delivery)
+            </label>
+            </div>
             <div className="max-w-lg mx-auto mb-2">
               <label
                 className="block mb-2 text-sm font-medium text-[#040d10]"
@@ -309,7 +362,7 @@ function Merchandise() {
               >
                 Screenshot of your payment
               </div>
-              <div>{outside?"Price 1":"Price 2"}</div>
+              <div>Payable Amount: {outside?"Rs 449":"Rs 399"}</div>
             </div>
 
             <button

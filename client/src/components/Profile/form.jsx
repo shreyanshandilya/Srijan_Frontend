@@ -143,7 +143,7 @@ const Dashboard = () => {
           paddingTop:"100px",
           paddingLeft:"10px"
         }}
-        className="flex items-center bg-[#1f3433]"
+        className="flex bg-[#1f3433]"
       >
         <motion.button
           type="button"
@@ -162,7 +162,7 @@ const Dashboard = () => {
     justifyContent: "center",
           display: "flex",
           minHeight: "100vh",
-          marginTop:"50px",
+         
           overflowY: "hidden",
         }}
         className="bg-[#1f3433]"

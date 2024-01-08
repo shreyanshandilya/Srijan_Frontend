@@ -26,19 +26,20 @@ const styles = {
     backgroundPositionY: "-17px",
     padding: theme.spacing(1),
     backdropFilter: "blur(10px)", // Blurriness effect
+    marginLeft:0
   },
   root: {
-    padding: theme.spacing(3),
-    backgroundImage: `url(${shirt})`,
+    padding: theme.spacing(5),
+     backgroundColor:"#b3bbc226",
     backgroundPositionY: "-17px",
     backgroundSize: `100%`,
     color: theme.palette.text.primary,
     borderRadius: 10,
-    maxWidth: 500,
-    minWidth: 500,
+    maxWidth: 800,
+   
+     
     margin: "auto",
-    marginTop: theme.spacing(4),
-    marginBottom: theme.spacing(4), // Increased margin
+    
   },
   title: {
     fontSize: "1rem", // Smaller font size for titles
@@ -69,19 +70,19 @@ const ProfilePage = ({ data }) => {
   } = data;
 
   return (
-    <div className="bg-[url('./shirt.jpg')] px-5">
+    <div className="bg-[url('./shirt.jpg')]">
       <div style={styles.mainContainer} className="floating max-w-screen-sm">
         <ThemeProvider theme={theme}>
-          <Paper style={styles.root} elevation={3} >
+          <Paper style={styles.root} elevation={3}   >
             <Typography
               style={styles.head}
               variant="h5"
-              className="mx-5 bg-[#0D0C06] backdrop-blur-md bg-opacity-60 rounded-md text-center py-2"
+              className="mb-3 bg-[#0D0C06] backdrop-blur-md bg-opacity-60 rounded-md text-center py-2"
               gutterBottom
             >
               {name} 
             </Typography>
-            <div className="grid grid-cols-2">
+            <div className=" " >
             <Typography style={styles.title} variant="subtitle2" gutterBottom>
                 Email:
               </Typography>
