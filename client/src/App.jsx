@@ -15,7 +15,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
-
+ 
 function App() {
   // const path = useLocation();
   // React.useEffect(() => {
@@ -46,10 +46,10 @@ function App() {
       path: "about",
       element: <About />,
     },
-    // {
-    //   path: "admin",
-    //   element: <PurchaseListPage />,
-    // },
+    {
+      path: "admin",
+      element: <PurchaseListPage />,
+    },
   ]);
   return <RouterProvider router={router} />;
 }

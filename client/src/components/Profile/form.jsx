@@ -1,6 +1,8 @@
 import React, { useState, Fragment, useNavigate, useEffect } from "react";
 import { styled } from "@mui/joy/styles";
 import TextField from "@mui/material/TextField";
+import { ToastContainer, toast } from "react-toastify";
+
 import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
@@ -44,6 +46,7 @@ const Dashboard = () => {
   const [Email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const storedEmail = localStorage.getItem("email");
@@ -87,39 +90,82 @@ const Dashboard = () => {
 
   async function onSubmit(e) {
     e.preventDefault();
+    if(loading) return;
+    setLoading(true);
+
     let response;
     try {
-      response = await fetch(
-        `https://srijan2024.onrender.com/api/getOrder/${phoneNumber}`,
+      const response = await toast.promise(
+        fetch(
+          `https://srijan2024.onrender.com/api/getOrder/${phoneNumber}/${Email}`,
+          {
+            method: "POST",
+          }),
         {
-          method: "POST",
+          pending: "Finding order",
+          
+          error: "Oops!, couldn't find order",
         }
       );
+       if(response.status!=200){
+        toast.error("Invalid Credentials !", {
+          position: toast.POSITION.BOTTOM_RIGHT,
+        });
+       }
+      
 
-      if (!response.ok) {
-        throw new Error("Error occurred. Please try again later.");
-      }
+       
 
       let responseData = await response.json();
       setIsLoggedIn(true);
       console.log(responseData);
+      
+
       setListItem(responseData);
+    setLoading(false);
+
     } catch (error) {
       console.error(error);
-      alert("An error occurred. Please try again later.");
+      toast.error("Invalid Credentials !", {
+        position: toast.POSITION.BOTTOM_RIGHT,
+      });
+      // alert("An error occurred. Please try again later.");
     }
   }
 
   return listItem.length ? (
-    <div className="bg-[#040d10]">
+    <div className="bg-[#1f3433]">
+       <a
+        // href="/profile"
+        // target="_blank"
+        // rel="noopener noreferrer"
+        style={{
+          paddingTop:"100px",
+          paddingLeft:"10px"
+        }}
+        className="flex items-center bg-[#1f3433]"
+      >
+        <motion.button
+          type="button"
+          
+          onClick={listItemChange}
+          className="  backdrop-blur-lg bg-[#dad3a5] hover:bg-[antiquewhite] font-medium rounded-lg text-sm px-3 text-center inline-flex items-cente text-[#090d06]  me-2 my-2"
+        >
+          <p className="p-3 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.1)]">
+            Check another Order!
+          </p>
+        </motion.button>
+      </a>
       <div
         style={{
+           
+    justifyContent: "center",
           display: "flex",
           minHeight: "100vh",
-          alignItems: "center",
+          marginTop:"50px",
           overflowY: "hidden",
         }}
-        className="bg-[#040d10]"
+        className="bg-[#1f3433]"
       >
         <Nav />
         {listItem.map((item) => (
@@ -127,29 +173,13 @@ const Dashboard = () => {
         ))}
       </div>
       {/* <Link to="/profile"> */}
-      <a
-        // href="/profile"
-        // target="_blank"
-        // rel="noopener noreferrer"
-        className="flex justify-center items-center bg-[#040d10] mb-10"
-      >
-        <motion.button
-          type="button"
-          whileHover={{ scale: 1.1, y: -5 }}
-          onClick={listItemChange}
-          className="  backdrop-blur-lg bg-[#dad3a5] hover:bg-transparent font-medium rounded-lg text-sm px-3 text-center inline-flex items-center  text-[#090d06] hover:text-[#c9bc57] me-2 my-2"
-        >
-          <p className="p-3 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.1)]">
-            Check another Order!
-          </p>
-        </motion.button>
-      </a>
+     
       <FooterT />
       {/* </Link> */}
     </div>
   ) : (
     <Fragment>
-      <div style={{ background: "black", height: "100vh" }}>
+      <div style={{ background: "#1f3433", height: "100vh" }}>
         <Nav />
         <Container
           style={{
@@ -269,9 +299,21 @@ const Dashboard = () => {
             type="submit"
             className="text-[#efede0] bg-[#514c08]/60 hover:bg-[#efede0] hover:text-[#514c08] focus:ring-2 focus:outline-none focus:ring-[#514c08] font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center "
           >
-            Submit
+            {loading?"Loading...":"Submit"}
           </motion.button>
         </motion.form>
+        <ToastContainer
+          position="bottom-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
       </div>
       <FooterT />
     </Fragment>

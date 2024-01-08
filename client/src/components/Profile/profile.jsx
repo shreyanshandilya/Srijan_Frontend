@@ -23,12 +23,14 @@ const styles = {
   mainContainer: {
     background: " ", // Gradient background
     // Ensure the container takes the full height
+    backgroundPositionY: "-17px",
     padding: theme.spacing(1),
     backdropFilter: "blur(10px)", // Blurriness effect
   },
   root: {
     padding: theme.spacing(3),
     backgroundImage: `url(${shirt})`,
+    backgroundPositionY: "-17px",
     backgroundSize: `100%`,
     color: theme.palette.text.primary,
     borderRadius: 10,
@@ -46,16 +48,19 @@ const styles = {
   value: {
     fontSize: "1.2rem", // Larger font size for values
   },
+  head:{
+    fontSize: "1.2rem", // Larger font size for values
+    marignX:"50px"
+  }
 };
 
 const ProfilePage = ({ data }) => {
   const {
     admissionNumber,
-    hostel,
-    roomNumber,
+    address,
     tshirtSize,
     mobileNumber,
-    name,
+    name,email,
     approved,
     quantity,
     createdAt,
@@ -67,28 +72,30 @@ const ProfilePage = ({ data }) => {
     <div className="bg-[url('./shirt.jpg')] px-5">
       <div style={styles.mainContainer} className="floating max-w-screen-sm">
         <ThemeProvider theme={theme}>
-          <Paper style={styles.root} elevation={3}>
+          <Paper style={styles.root} elevation={3} >
             <Typography
-              style={styles.value}
+              style={styles.head}
               variant="h5"
-              className="bg-[#0D0C06] backdrop-blur-md bg-opacity-60 rounded-md text-center py-2"
+              className="mx-5 bg-[#0D0C06] backdrop-blur-md bg-opacity-60 rounded-md text-center py-2"
               gutterBottom
             >
-              {admissionNumber} : {name}
+              {name} 
             </Typography>
             <div className="grid grid-cols-2">
-              <Typography style={styles.title} variant="subtitle2" gutterBottom>
-                Hostel:
+            <Typography style={styles.title} variant="subtitle2" gutterBottom>
+                Email:
               </Typography>
               <Typography style={styles.value} variant="h5" gutterBottom>
-                {hostel}
+                {email}
               </Typography>
+               
               <Typography style={styles.title} variant="subtitle2" gutterBottom>
-                Room Number:
+                Address:
               </Typography>
               <Typography style={styles.value} variant="h5" gutterBottom>
-                {roomNumber}
+                {address}
               </Typography>
+               
               <Typography style={styles.title} variant="subtitle2" gutterBottom>
                 T-shirt Size:
               </Typography>

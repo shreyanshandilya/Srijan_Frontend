@@ -7,6 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Footer from "../components/Footer.jsx";
 import { Carousel } from "flowbite-react";
 import { animateScroll as scroll } from "react-scroll";
+import AlertDialog from "./Alert.jsx";
 
 function Merchandise() {
   useEffect(() => {
@@ -18,11 +19,14 @@ function Merchandise() {
     email: "",
     mobileNumber: "",
     tshirtSize: "",
-    hostel: "",
-    roomNumber: "",
+     
+    address: "",
     quantity: "",
+    outsider:false
   });
   const [img, setImg] = useState("");
+  const [alert, setAlert] = useState(false);
+  const [outside, setOutside] = useState(true);
   const handleChangeInput = (event) => {
     setData({ ...data, [event.target.id]: [event.target.value] });
     // console.log(data);
@@ -34,25 +38,15 @@ function Merchandise() {
     e.preventDefault();
     // console.log(data);
     const formData = new FormData();
-    formData.append("image", img);
-    // console.log(img);
-    // console.log(formData);
+    formData.append("image", img); 
     formData.append("name", data.name);
     formData.append("email", data.email);
     formData.append("mobileNumber", data.mobileNumber);
     formData.append("tshirtSize", data.tshirtSize);
-    formData.append("hostel", data.hostel);
-    formData.append("roomNumber", data.roomNumber);
+    formData.append("address", data.address);
     formData.append("quantity", data.quantity);
-    // console.log(data);
-    // for (var pair of formData.entries()) {
-    //   console.log(pair[0] + ", " + pair[1]);
-    // // }
-    // const res = fetch(url, {
-    //   method: "POST",
-    //   body: formData,
-    // });
-    // console.log(res);
+    formData.append("outsider",outside);
+     
     const response = await toast.promise(
       fetch(url, {
         method: "POST",
@@ -68,7 +62,10 @@ function Merchandise() {
   const [scope, animate] = useAnimate();
   const [open, setOpen] = useState(false);
   const handleClick = () => {
+    setAlert(true);
+
     setOpen(!open);
+     
     // if (open) {
     //   animate(scope.current, { x: 10 }, { duration: 1 });
     // }
@@ -76,6 +73,7 @@ function Merchandise() {
   };
   return (
     <div className="bg-[#090d06] jusitfy-center items-center mt-0 h-full w-full">
+       {alert?<AlertDialog setOutside={setOutside}/>:""}
       <Nav />
       <div className="h-[75vh] ">
         <Carousel>
@@ -194,8 +192,8 @@ function Merchandise() {
                 required
               />
             </div>
-            <div className="flex justify-center items-center gap-2 mb-4">
-              <div className="mb-1">
+            <div className="justify-center items-center mb-4">
+              {/* <div className="mb-1">
                 <label
                   htmlFor="hostel"
                   className="block mb-1 text-sm font-medium text-[#040d10]"
@@ -228,7 +226,26 @@ function Merchandise() {
                   placeholder="C/06/09"
                   required
                 />
-              </div>
+              </div> */}
+               <label
+                htmlFor="address"
+                className="block mb-2 text-sm font-medium text-[#040d10]"
+              >
+                Address
+              </label>
+              <input
+                type="number"
+                id="address"
+                onChange={handleChangeInput}
+                value={data.address}
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0d0c06] focus:border-[#0d0c06] block w-full p-2.5"
+                placeholder="Jhon doe
+                ,123 Main Street
+                Mumbai,
+                Maharashtra
+                400001"
+                required
+              />
             </div>
             <div className="mb-4">
               <label
@@ -292,6 +309,7 @@ function Merchandise() {
               >
                 Screenshot of your payment
               </div>
+              <div>{outside?"Price 1":"Price 2"}</div>
             </div>
 
             <button

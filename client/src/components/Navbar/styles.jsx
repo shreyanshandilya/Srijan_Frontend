@@ -4,7 +4,7 @@ import { Box } from "@mui/material";
 const Wrapper = styled(Box)({
   "@keyframes changeBoxShadow": {
     "0%": { boxShadow: "0 0 27px #4d9cb6" },
-    "50%": { boxShadow: "0 0 27px #f4bf12c7" },
+    "50%": { boxShadow: "0 0 27px #e1cd8ba8" },
     "100%": { boxShadow: "0 0 27px #558b08" }
   },
   ".navbar": {
