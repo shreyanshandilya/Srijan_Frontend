@@ -6,7 +6,7 @@ import Nav from "../Navbar/navbar";
 import "./profile.css";
 import shirt from "./shirt.jpg";
 import FooterT from "../Footer";
-
+ 
 const theme = createTheme({
   palette: {
     primary: {
@@ -36,9 +36,11 @@ const styles = {
     color: theme.palette.text.primary,
     borderRadius: 10,
     maxWidth: 800,
+     
    
      
     margin: "auto",
+ 
     
   },
   title: {
@@ -70,7 +72,7 @@ const ProfilePage = ({ data }) => {
   } = data;
 
   return (
-    <div className="bg-[url('./shirt.jpg')]">
+    <div className="bg-[url('./shirt.jpg')]" style={{marginTop:"15px",marginBottom:"15px"}}>
       <div style={styles.mainContainer} className="floating max-w-screen-sm">
         <ThemeProvider theme={theme}>
           <Paper style={styles.root} elevation={3}   >

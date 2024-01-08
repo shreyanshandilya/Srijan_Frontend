@@ -158,12 +158,15 @@ const Dashboard = () => {
       </a>
       <div
         style={{
-           
-    justifyContent: "center",
+          justifyContent: "center",
           display: "flex",
           minHeight: "100vh",
-         
           overflowY: "hidden",
+          flexDirection: "column",
+          aligContent: "flex-start",
+          
+          alignItems: "center"
+         
         }}
         className="bg-[#1f3433]"
       >

@@ -54,10 +54,20 @@ function Merchandise() {
       }),
       {
         pending: "Placing order",
-        success: "Your order has been placed!",
+        
         error: "Oops!, couldn't place order",
+        
       }
     );
+    if(response.status!=200){
+      toast.error(" Oops!, couldn't place order", {
+        position: toast.POSITION.BOTTOM_RIGHT,
+      });}
+    if(response.status==200){
+      toast.success("Your order has been placed!", {
+        position: toast.POSITION.BOTTOM_RIGHT,
+      });}
+
   };
   const [scope, animate] = useAnimate();
   const [open, setOpen] = useState(false);
