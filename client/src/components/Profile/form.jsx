@@ -155,7 +155,7 @@ const Dashboard = () => {
           className="  backdrop-blur-lg bg-[#dad3a5] hover:bg-[antiquewhite] font-medium rounded-lg text-sm px-3 text-center inline-flex items-cente text-[#090d06]  me-2 my-2"
         >
           <p className="p-3 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.1)]">
-            Check another Order!
+            Logout
           </p>
         </motion.button>
       </a>
