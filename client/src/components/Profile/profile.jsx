@@ -36,7 +36,8 @@ const styles = {
     color: theme.palette.text.primary,
     borderRadius: 10,
     maxWidth: 800,
-     
+    minWidth:380,
+    overflowX:"hidden",
    
      
     margin: "auto",

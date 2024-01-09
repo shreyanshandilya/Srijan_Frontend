@@ -110,7 +110,10 @@ const Dashboard = () => {
        if(response.status!=200){
         toast.error("Invalid Credentials !", {
           position: toast.POSITION.BOTTOM_RIGHT,
-        });
+
+        }); 
+        setLoading(false);
+
        }
       
 
@@ -161,7 +164,7 @@ const Dashboard = () => {
           justifyContent: "center",
           display: "flex",
           minHeight: "100vh",
-          overflowY: "hidden",
+          overflowX: "hidden",
           flexDirection: "column",
           aligContent: "flex-start",
           
