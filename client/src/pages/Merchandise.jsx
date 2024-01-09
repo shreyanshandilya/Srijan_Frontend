@@ -347,7 +347,7 @@ function Merchandise() {
                 
               className="block mb-2 text-sm font-medium text-[#040d10]"
             >
-              Want delivery outside the campus ?(delivery charge Rs 50 will be applicable on outside delivery)
+             Delivery outside IIT ISM (Rs. 50 delivery charges)
             </label>
             </div>
             <div className="max-w-lg mx-auto mb-2">
@@ -372,7 +372,8 @@ function Merchandise() {
               >
                 Screenshot of your payment
               </div>
-              <div>Payable Amount: {outside?"Rs 449":"Rs 399"}</div>
+                        <div>Payable Amount: {outside?399*(data.quantity) : 399*(data.quantity)}</div>
+
             </div>
 
             <button
