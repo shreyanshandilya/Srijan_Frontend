@@ -250,11 +250,7 @@ function Merchandise() {
                 onChange={handleChangeInput}
                 value={data.address}
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0d0c06] focus:border-[#0d0c06] block w-full p-2.5"
-                placeholder="Jhon doe
-                ,123 Main Street
-                Mumbai,
-                Maharashtra
-                400001"
+                placeholder="Jhon doe ,123 Main Street ,Mumbai ,Maharashtra 400001"
                 required
               />
             </div>
