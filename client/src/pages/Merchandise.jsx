@@ -372,7 +372,7 @@ function Merchandise() {
               >
                 Screenshot of your payment
               </div>
-                        <div>Payable Amount: {outside?399*(data.quantity) : 399*(data.quantity)}</div>
+                        <div>Payable Amount: {outside?399*(data.quantity)+50 : 399*(data.quantity)}</div>
 
             </div>
 
