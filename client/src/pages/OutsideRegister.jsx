@@ -9,8 +9,11 @@ export const OutsideRegister = (props) => {
   const [college, setCollege] = useState("");
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(email);
+    e.preventDefault(); 
+    var domain = email.substr(email.length - 12); //iitism.ac.in
+    if(domain!= "iitism.ac.in"){
+        
+    }
   };
 
   return (
