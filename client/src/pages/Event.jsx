@@ -67,7 +67,7 @@ function Event() {
     // console.log(deptEvents);
   };
   return (
-    <div className="bg-black h-auto">
+    <div className="bg-black min-h-screen">
       <Navbar />
       <motion.div
         initial={{ opacity: 0 }}
@@ -77,7 +77,7 @@ function Event() {
       >
         Events
       </motion.div>
-      <div className="flex justify-around items-center mb-10">
+      <div className="flex justify-center gap-11 items-center mb-10">
         <button
           onClick={handleAllEvents}
           className="text-[#efede0] bg-[#514c08]/60 hover:bg-[#efede0] hover:text-[#514c08] focus:ring-2 focus:outline-none focus:ring-[#514c08] font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center "
