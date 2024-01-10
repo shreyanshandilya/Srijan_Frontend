@@ -8,41 +8,59 @@ import { duration } from "@mui/material";
 import { useParams } from "react-router-dom";
 
 function EventDetails(props) {
-  const id = useParams();
+  const { id } = useParams();
   console.log(id);
   const Eventurl = `https://srijan2024.onrender.com/api/showEvents/${id}`;
   const [details, setDetails] = useState([]);
+  //   const [img, setImg] = useState(null);
+  //   const [name, setName] = useState(null);
+  //   const [org, setOrg] = useState(null);
+  //   const [general, setGeneral] = useState(null);
+  //   const [img, setImg] = useState(null);
   const fetchAllEvents = useCallback(async () => {
     // const res = await fetch(allEvents);
     const res = await axios.get(Eventurl);
-    console.log(res);
-    // .then((res) => {
-    //   allEvents = res.data;
-    //   clubEvents = allEvents.filter((event) => {
-    //     return event.type == 1;
-    //   });
-    //   deptEvents = allEvents.filter((event) => {
-    //     return event.type == 2;
-    //   });
-    // });
-    // console.log(allEvents);
+    console.log(res.data);
+    setDetails(res.data[0]);
   }, [Eventurl]);
   useEffect(() => {
     // scroll.scrollToTop({ duration: 1000 });
     fetchAllEvents();
+    // const rules = [];
+    // details.rules.forEach((rule) => {
+    //   rules.push(<div>{rule}</div>);
+    // });
+    // const stages = [];
+    // details.stages.forEach((stage) => {
+    //   //   console.log(details.contacts);
+    //   stages.push(<div>{stage.description}</div>);
+    // });
+    // const contacts = [];
+    // details.contacts.forEach((contact) => {
+    //   //   console.log(contact);
+    //   contacts.push(
+    //     <div className="flex-col">
+    //       <div>{contact.name}</div>
+    //       <div>{contact.phoneNumber}</div>
+    //     </div>
+    //   );
+    // });
   }, [fetchAllEvents]);
+
   return (
     <>
       <div className="bg-[#0d0c06] max-w-screen pt-[100px]">
         <Navbar />
-        <div></div>
+        <div>
+          <img src={details.posterWeb} alt="" />
+        </div>
         <div className="text-center text-7xl text-[#dad3a5]">
           {" "}
-          Chemical Coders
+          {details.name}
         </div>
         <div className="text-center text-4xl text-[#dad3a5]">
           {" "}
-          Organised by Chemical
+          Organised by {details.organizer}
         </div>
         <Accordion collapseAll className="px-10 py-5 border-none">
           <Accordion.Panel>
@@ -50,94 +68,59 @@ function EventDetails(props) {
               General Information
             </Accordion.Title>
             <Accordion.Content>
-              <p className="mb-2 text-[#efede0]">
-                Flowbite is an open-source library of interactive components
-                built on top of Tailwind CSS including buttons, dropdowns,
-                modals, navbars, and more.
-              </p>
+              <p className="mb-2 text-[#efede0]">{details.descriptionEvent}</p>
             </Accordion.Content>
           </Accordion.Panel>
           <Accordion.Panel>
-            <Accordion.Title>Problem Statement aand Rules</Accordion.Title>
-            <Accordion.Content>
-              <p className="mb-2 text-gray-500 dark:text-gray-400">
-                Flowbite is first conceptualized and designed using the Figma
-                software so everything you see in the library has a design
-                equivalent in our Figma file.
-              </p>
-              <p className="text-gray-500 dark:text-gray-400">
-                Check out the
-                <a
-                  href="https://flowbite.com/figma/"
-                  className="text-cyan-600 hover:underline dark:text-cyan-500"
-                >
-                  Figma design system
-                </a>
-                based on the utility classes from Tailwind CSS and components
-                from Flowbite.
-              </p>
-            </Accordion.Content>
-          </Accordion.Panel>
-          <Accordion.Panel>
-            <Accordion.Title>Problem Statement aand Rules</Accordion.Title>
-            <Accordion.Content>
-              <p className="mb-2 text-gray-500 dark:text-gray-400">
-                Flowbite is first conceptualized and designed using the Figma
-                software so everything you see in the library has a design
-                equivalent in our Figma file.
-              </p>
-              <p className="text-gray-500 dark:text-gray-400">
-                Check out the
-                <a
-                  href="https://flowbite.com/figma/"
-                  className="text-cyan-600 hover:underline dark:text-cyan-500"
-                >
-                  Figma design system
-                </a>
-                based on the utility classes from Tailwind CSS and components
-                from Flowbite.
-              </p>
-            </Accordion.Content>
-          </Accordion.Panel>
-          <Accordion.Panel>
-            <Accordion.Title>
-              What are the differences between Flowbite and Tailwind UI?
+            <Accordion.Title className="text-xl text-[#efede0] bg-[#0d0c06] hover:bg-[#dad3a5] hover:text-[#0d0c06] focus:text-[#0d0c06] focus:bg-[#dad3a5] focus:ring-2 focus:ring-[#c9bc57]">
+              Rules
             </Accordion.Title>
             <Accordion.Content>
-              <p className="mb-2 text-gray-500 dark:text-gray-400">
-                The main difference is that the core components from Flowbite
-                are open source under the MIT license, whereas Tailwind UI is a
-                paid product. Another difference is that Flowbite relies on
-                smaller and standalone components, whereas Tailwind UI offers
-                sections of pages.
+              <p className="mb-2 text-[#efede0]">
+                {details.rules &&
+                  details.rules.map((rule, index) => {
+                    return <p key={index}> {rule}</p>;
+                  })}
               </p>
-              <p className="mb-2 text-gray-500 dark:text-gray-400">
-                However, we actually recommend using both Flowbite, Flowbite
-                Pro, and even Tailwind UI as there is no technical reason
-                stopping you from using the best of two worlds.
+            </Accordion.Content>
+          </Accordion.Panel>
+          <Accordion.Panel>
+            <Accordion.Title className="text-xl text-[#efede0] bg-[#0d0c06] hover:bg-[#dad3a5] hover:text-[#0d0c06] focus:text-[#0d0c06] focus:bg-[#dad3a5] focus:ring-2 focus:ring-[#c9bc57]">
+              Stages
+            </Accordion.Title>
+            <Accordion.Content>
+              <p className="mb-2 text-[#efede0]">
+                {details.stages &&
+                  details.stages.map((stage, index) => {
+                    return <p key={index}> {stage.description}</p>;
+                  })}
               </p>
-              <p className="mb-2 text-gray-500 dark:text-gray-400">
-                Learn more about these technologies:
+            </Accordion.Content>
+          </Accordion.Panel>
+          <Accordion.Panel>
+            <Accordion.Title className="text-xl text-[#efede0] bg-[#0d0c06] hover:bg-[#dad3a5] hover:text-[#0d0c06] focus:text-[#0d0c06] focus:bg-[#dad3a5] focus:ring-2 focus:ring-[#c9bc57]">
+              Coordinators
+            </Accordion.Title>
+            <Accordion.Content>
+              <p className="mb-2 text-[#efede0] flex justify-around items-center">
+                {details.contacts &&
+                  details.contacts.map((contact, index) => {
+                    return (
+                      <div className="flex-col" key={index}>
+                        <div>{contact.name}</div>
+                        <div>{contact.phoneNumber}</div>{" "}
+                      </div>
+                    );
+                  })}
               </p>
-              <ul className="list-disc pl-5 text-gray-500 dark:text-gray-400">
-                <li>
-                  <a
-                    href="https://flowbite.com/pro/"
-                    className="text-cyan-600 hover:underline dark:text-cyan-500"
-                  >
-                    Flowbite Pro
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://tailwindui.com/"
-                    rel="nofollow"
-                    className="text-cyan-600 hover:underline dark:text-cyan-500"
-                  >
-                    Tailwind UI
-                  </a>
-                </li>
-              </ul>
+            </Accordion.Content>
+          </Accordion.Panel>
+          <Accordion.Panel>
+            <Accordion.Title className="text-xl text-[#efede0] bg-[#0d0c06] hover:bg-[#dad3a5] hover:text-[#0d0c06] focus:text-[#0d0c06] focus:bg-[#dad3a5] focus:ring-2 focus:ring-[#c9bc57]">
+              Prizes
+            </Accordion.Title>
+            <Accordion.Content>
+              <p className="mb-2 text-[#efede0]">{details.prizes}</p>
             </Accordion.Content>
           </Accordion.Panel>
         </Accordion>
