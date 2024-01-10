@@ -21,7 +21,7 @@ function Event() {
     fetchAllEvents();
   }, []);
   return (
-    <div className="bg-black">
+    <div className="bg-black h-auto">
       <Navbar />
       <motion.div
         initial={{ opacity: 0 }}
