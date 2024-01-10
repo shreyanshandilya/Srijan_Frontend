@@ -6,8 +6,16 @@ import { motion } from "framer-motion";
 import axios from "axios";
 import { duration } from "@mui/material";
 import { useParams } from "react-router-dom";
+import { animateScroll as scroll } from "react-scroll";
+
 
 function EventDetails(props) {
+
+  useEffect(() => {
+    scroll.scrollToTop({ duration: 1000 });
+  }, []);
+
+
   const { id } = useParams();
   console.log(id);
   const Eventurl = `https://srijan2024.onrender.com/api/showEvents/${id}`;
