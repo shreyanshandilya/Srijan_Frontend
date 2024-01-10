@@ -2,6 +2,7 @@ import React from "react";
 import "./Events.css";
 import { motion } from "framer-motion";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 const EventsList = ({ name, posterWeb, organizer, prizes, _id }) => {
   return (
     <>
@@ -30,27 +31,29 @@ const EventsList = ({ name, posterWeb, organizer, prizes, _id }) => {
           <p className="mb-3 font-normal text-sm my-5 text-[#efede0] ">
             Venue: TBD
           </p>
-          <a
-            href={`http://localhost:5174/#/event/event-details/${_id}`}
-            className="inline-flex items-center px-3 py-2 text-sm text-[#17160e] font-medium text-center bg-[#dad3a5] rounded-lg  focus:ring-2 focus:outline-nonehover:shadow focus:ring-[#17160e]"
-          >
-            View More
-            <svg
-              className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 14 10"
+          <Link to={`/event/event-details/${_id}`}>
+            <a
+              // href={`https://srijanweb.onrender.com/#/event/event-details/${_id}`}
+              className="inline-flex items-center px-3 py-2 text-sm text-[#17160e] font-medium text-center bg-[#dad3a5] rounded-lg  focus:ring-2 focus:outline-nonehover:shadow focus:ring-[#17160e]"
             >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M1 5h12m0 0L9 1m4 4L9 9"
-              />
-            </svg>
-          </a>
+              View More
+              <svg
+                className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </a>
+          </Link>
         </div>
       </motion.div>
     </>
