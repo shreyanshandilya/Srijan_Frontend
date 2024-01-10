@@ -8,6 +8,7 @@ import About from "./pages/About";
 import Frm from "./components/Profile/form";
 import Profile from "./components/Profile/profile";
 import PurchaseListPage from "./pages/PurcahseListPage";
+import EventDetails from "./pages/EventDetails";
 import Event from "./pages/Event";
 import {
   createHashRouter,
@@ -15,7 +16,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
- 
+
 function App() {
   // const path = useLocation();
   // React.useEffect(() => {
@@ -33,6 +34,10 @@ function App() {
     {
       path: "event",
       element: <Event />,
+    },
+    {
+      path: "/event/event-details/:id",
+      element: <EventDetails />,
     },
     {
       path: "profile",

@@ -1,41 +1,42 @@
 import React from "react";
 import "./Events.css";
-import imagge from "../assets/bgimage.jpg";
-const EventsList = ({
-  name,
-  position,
-  image,
-  team,
-  linkedin_url,
-  insta_url,
-}) => {
+import { motion } from "framer-motion";
+import { useParams } from "react-router-dom";
+const EventsList = ({ name, posterWeb, organizer, prizes, _id }) => {
   return (
     <>
-      <div class="max-w-sm bg-white border mx-auto border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-        <a href="#">
+      <motion.div
+        whileHover={{ scale: 1.08 }}
+        className="max-w-sm bg-[#17160e] hover:bg-[#544f29]  mx-auto rounded-lg shadow"
+      >
+        <div className="">
           <img
-            class="rounded-t-lg"
-            src={imagge}
+            className="rounded-t-lg h-[40vh] object-cover"
+            src={posterWeb}
             alt=""
           />
-        </a>
-        <div class="p-5">
-          <a href="#">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              {name}
-            </h5>
-          </a>
-          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-            Here are the biggest enterprise technology acquisitions of 2021 so
-            far, in reverse chronological order.
+        </div>
+        <div className="p-5">
+          <h5 className="mb-2 font-bold tracking-tight text-center text-xl text-[#dad3a5]">
+            {name}
+          </h5>
+          <p className="mb-3 font-normal text-sm my-5 text-[#efede0]">
+            Organized by:{" "}
+            <span className="text-md font-semibold"> {organizer}</span>
+          </p>
+          <p className="mb-3 font-normal text-sm my-5 text-[#efede0] ">
+            Prize: <span className="text-md font-semibold">{prizes}</span>
+          </p>
+          <p className="mb-3 font-normal text-sm my-5 text-[#efede0] ">
+            Venue: TBD
           </p>
           <a
-            href="#"
-            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            href={`http://localhost:5174/#/event/event-details/${_id}`}
+            className="inline-flex items-center px-3 py-2 text-sm text-[#17160e] font-medium text-center bg-[#dad3a5] rounded-lg  focus:ring-2 focus:outline-nonehover:shadow focus:ring-[#17160e]"
           >
-            Read more
+            View More
             <svg
-              class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+              className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -51,7 +52,7 @@ const EventsList = ({
             </svg>
           </a>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

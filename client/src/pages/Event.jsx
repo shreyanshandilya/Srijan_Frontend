@@ -73,11 +73,11 @@ function Event() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className=" flex justify-center h-[50vh] items-center  text-4xl md:text-6xl font-bold text-[#efede0] gradient"
+        className=" flex justify-center h-[40vh] items-center  text-4xl md:text-6xl font-bold text-[#efede0] gradient"
       >
         Events
       </motion.div>
-      <div className="flex justify-around items-center">
+      <div className="flex justify-around items-center mb-10">
         <button
           onClick={handleAllEvents}
           className="text-[#efede0] bg-[#514c08]/60 hover:bg-[#efede0] hover:text-[#514c08] focus:ring-2 focus:outline-none focus:ring-[#514c08] font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center "
