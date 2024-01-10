@@ -14,7 +14,7 @@ export const Register = () => {
   return (
     <>
       <Navbar />
-      <div className="flex justify-center mt-2 items-center h-screen">
+      <div className="flex justify-center mt-2 items-center h-auto p-20">
         {currentForm === "OutsideSignup" ? (
           <OutsideRegister onFormSwitch={toggleForm} />
         ) : (
