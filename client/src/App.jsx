@@ -18,6 +18,7 @@ import {
 import { animateScroll as scroll } from "react-scroll";
 import { EventRegister } from "./pages/EventRegister";
 import Login from "./components/Login";
+import { Register } from "./pages/Register";
 
 function App() {
   // const path = useLocation();
@@ -63,7 +64,7 @@ function App() {
     },
     {
       path: "register",
-      element: <Register />,
+      element: <Register/>,
     },
     {
       path: "/event/event-details/eventRegister/:id",
