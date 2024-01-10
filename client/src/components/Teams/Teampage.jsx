@@ -154,7 +154,7 @@ export const Teampage = () => {
             {teams.map((person, index) => (
               <AvatarCard key={index} {...person} />
             ))}
-          </div>{" "}
+          </div>
         </div>
       </div>
 
