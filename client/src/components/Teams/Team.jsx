@@ -1,12 +1,18 @@
 import React from "react";
 import AvatarCard from "./avatar_card";
 // import teams from "./Teams_D.jsx";
+import { useEffect } from "react";
 import Nav from "../Navbar/navbar.jsx";
 import Footer from "../Footer.jsx";
 import { Teampage } from "./Teampage.jsx";
 import "./Teams.css";
+import { animateScroll as scroll } from "react-scroll";
+
 
 const Teams = () => {
+  useEffect(() => {
+    scroll.scrollToTop({ duration: 1500 });
+  }, []);
   return (
     <div className="bg-black">
       <Nav />

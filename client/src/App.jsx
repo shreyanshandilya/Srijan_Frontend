@@ -16,6 +16,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
+import { EventRegister } from "./pages/EventRegister";
 
 function App() {
   // const path = useLocation();
@@ -54,6 +55,10 @@ function App() {
     {
       path: "admin",
       element: <PurchaseListPage />,
+    },
+    {
+      path: "/event/event-details/eventRegister/:id",
+      element: <EventRegister />,
     },
   ]);
   return <RouterProvider router={router} />;
