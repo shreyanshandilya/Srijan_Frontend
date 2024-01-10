@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import { animateScroll as scroll } from "react-scroll";
 import "../Events/Events.css";
 import axios from "axios";
+import EventCard from "../Events/EventsCard";
 
 function Event() {
   const allEvents = "https://srijan2024.onrender.com/api/showAllEvents";
@@ -20,7 +21,7 @@ function Event() {
     fetchAllEvents();
   }, []);
   return (
-    <div className="bg-black h-screen overflow-y-hidden">
+    <div className="bg-black">
       <Navbar />
       <motion.div
         initial={{ opacity: 0 }}
@@ -28,8 +29,9 @@ function Event() {
         transition={{ duration: 1 }}
         className=" flex justify-center h-[50vh] items-center  text-4xl md:text-6xl font-bold text-[#efede0] gradient"
       >
-        Coming Soon
+        Events
       </motion.div>
+      <EventCard />
       <Footer />
     </div>
   );
