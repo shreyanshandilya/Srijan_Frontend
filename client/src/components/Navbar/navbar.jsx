@@ -91,7 +91,7 @@ const Navbar = () => {
                     sx={{ color: "#fff", marginRight: "100px" }}
                   >
                     <Button component={Link} to="/">
-                      <img src={"https://res.cloudinary.com/dkdratnao/image/upload/v1705007015/userimg_amsxd6.png"} width="130px" alt="Srijan"></img>
+                      <img src={srijanlogo} width="130px" alt="Srijan"></img>
                     </Button>
                   </Typography>
 
@@ -170,7 +170,7 @@ const Navbar = () => {
                         <span class="sr-only">Open user menu</span>
                         <img
                           class="w-11 h-11 rounded-full"
-                          src="../src/assets/userimg.png"
+                          src="https://res.cloudinary.com/dkdratnao/image/upload/v1705007015/userimg_amsxd6.png"
                           alt="user photo"
                         />
                       </button>
