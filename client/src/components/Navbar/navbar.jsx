@@ -91,7 +91,7 @@ const Navbar = () => {
                     sx={{ color: "#fff", marginRight: "100px" }}
                   >
                     <Button component={Link} to="/">
-                      <img src={srijanlogo} width="130px" alt="Srijan"></img>
+                      <img src={"https://res.cloudinary.com/dkdratnao/image/upload/v1705007015/userimg_amsxd6.png"} width="130px" alt="Srijan"></img>
                     </Button>
                   </Typography>
 
