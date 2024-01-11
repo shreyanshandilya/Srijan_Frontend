@@ -169,17 +169,19 @@ const Navbar = () => {
                       >
                         <span class="sr-only">Open user menu</span>
                         <img
-                          class="w-8 h-8 rounded-full"
-                          src="../src/assets/svgUser.png"
+                          class="w-11 h-11 rounded-full"
+                          src="../src/assets/userimg.png"
                           alt="user photo"
                         />
                       </button>
                     )}
                   >
-                    <Dropdown.Item>Dashboard</Dropdown.Item>
-                    <Dropdown.Item>Settings</Dropdown.Item>
-                    <Dropdown.Item>Earnings</Dropdown.Item>
-                    <Dropdown.Item>Sign out</Dropdown.Item>
+                    <Dropdown.Item className="h-full w-full">
+                      <Link to={"/register"}>Register</Link>
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                      <Link to={"/login"}>Login</Link>
+                    </Dropdown.Item>
                   </Dropdown>
                 </div>
               </Toolbar>

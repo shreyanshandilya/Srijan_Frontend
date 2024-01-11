@@ -32,7 +32,7 @@ export const CollegeRegister = (props) => {
   }
 
   return (
-    <div className="p-6 rounded-lg">
+    <div className="rounded-lg w-screen h-screen">
       <motion.div
         initial={{ x: -10, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
@@ -42,7 +42,7 @@ export const CollegeRegister = (props) => {
         College Signup
       </motion.div>
 
-      <motion.div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center w-[75vw]">
+      <motion.div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center w-full px-40 h-full">
         <motion.div
           initial={{ x: 20, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
