@@ -9,21 +9,22 @@ export const CollegeRegister = (props) => {
   const [phno, setPhno] = useState("");
 
   const handleSubmit = async () => {
-    // e.preventDefault();
-    // console.log(email);
-    const body = new FormData();
-    body.append("Email", email);
-    body.append("Name", name);
-    body.append("PhoneNumber", phno);
-    body.append("IsISM", false);
-    body.append("Password", pass);
-
-    await fetch("https://srijan2024.onrender.com/api/signup", {
+    const body = {
+      Email: email,
+      Name: name,
+      PhoneNumber: phno,
+      IsISM: false,
+      Password: pass,
+    };
+    const response = await fetch("https://srijan2024.onrender.com/api/signup", {
       method: "post",
-      body: body,
-    }).catch((err) => {
-      console.log(err);
+      headers: {
+        "Content-Type": "application/json", // Set the content type to JSON
+      },
+      body: JSON.stringify(body),
     });
+    const abcd = await response.json();
+    console.log(abcd);
   };
 
   const submitBtn = async (e)=>{
