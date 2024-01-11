@@ -8,10 +8,28 @@ export const CollegeRegister = (props) => {
   const [re_pass, setRe_pass] = useState("");
   const [phno, setPhno] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(email);
+  const handleSubmit = async () => {
+    // e.preventDefault();
+    // console.log(email);
+    const body = new FormData();
+    body.append("Email", email);
+    body.append("Name", name);
+    body.append("PhoneNumber", phno);
+    body.append("IsISM", false);
+    body.append("Password", pass);
+
+    await fetch("https://srijan2024.onrender.com/api/signup", {
+      method: "post",
+      body: body,
+    }).catch((err) => {
+      console.log(err);
+    });
   };
+
+  const submitBtn = async (e)=>{
+    e.preventDefault();
+    await handleSubmit();
+  }
 
   return (
     <div className="p-6 rounded-lg">
@@ -38,7 +56,7 @@ export const CollegeRegister = (props) => {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
-          onSubmit={(e) => onSubmit(e)}
+          onSubmit={submitBtn}
           className="max-w-sm mt-5 mx-auto rounded-lg bg-[#dad3a5] flex-col justify-center shadow-xl px-5 py-5 backdrop-blur-lg"
         >
           <div className="mb-4">

@@ -19,6 +19,7 @@ import { animateScroll as scroll } from "react-scroll";
 import { EventRegister } from "./pages/EventRegister";
 import Login from "./components/Login";
 import { Register } from "./pages/Register";
+import { PackSelectionPage } from "./pages/PackSelectionPage";
 
 function App() {
   // const path = useLocation();
@@ -61,6 +62,10 @@ function App() {
     {
       path: "admin",
       element: <PurchaseListPage />,
+    },
+    {
+      path: "packselection",
+      element: <PackSelectionPage/>,
     },
     {
       path: "register",

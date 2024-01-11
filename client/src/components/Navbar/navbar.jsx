@@ -22,6 +22,8 @@ import Button from "@mui/material/Button";
 import { Link, Outlet } from "react-router-dom";
 import { Link as ScrollRouter } from "react-scroll";
 
+import { Dropdown } from "flowbite-react";
+
 import Wrapper from "./styles";
 
 const StyledDrawer = styled(Drawer)({
@@ -155,22 +157,30 @@ const Navbar = () => {
                   </Box>
                 </Box>
                 <div className="sm:block hidden">
-                  <Link to="/profile">
-                    <div className="relative w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
-                      <svg
-                        className="absolute w-12 h-12 text-[#0d0c06] -left-1"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
+                  <Dropdown
+                    label=""
+                    dismissOnClick={false}
+                    renderTrigger={() => (
+                      <button
+                        id="dropdownUserAvatarButton"
+                        data-dropdown-toggle="dropdownAvatar"
+                        class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                        type="button"
                       >
-                        <path
-                          fill-rule="evenodd"
-                          d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                          clip-rule="evenodd"
-                        ></path>
-                      </svg>
-                    </div>
-                  </Link>
+                        <span class="sr-only">Open user menu</span>
+                        <img
+                          class="w-8 h-8 rounded-full"
+                          src="../src/assets/svgUser.png"
+                          alt="user photo"
+                        />
+                      </button>
+                    )}
+                  >
+                    <Dropdown.Item>Dashboard</Dropdown.Item>
+                    <Dropdown.Item>Settings</Dropdown.Item>
+                    <Dropdown.Item>Earnings</Dropdown.Item>
+                    <Dropdown.Item>Sign out</Dropdown.Item>
+                  </Dropdown>
                 </div>
               </Toolbar>
             </AppBar>
