@@ -34,12 +34,13 @@ function Login() {
     });
     const abcd = await response.json();
     console.log(abcd);
-    if (abcd.status) {
-      toast.success(abcd.message, {
+    localStorage["token"] = abcd.Token;
+    if (abcd.Token) {
+      toast.success("Login Successful !!!", {
         position: toast.POSITION.BOTTOM_RIGHT,
       });
     } else {
-      toast.error(abcd.message, {
+      toast.error("Login credential failed", {
         position: toast.POSITION.BOTTOM_RIGHT,
       });
     }

@@ -20,6 +20,7 @@ import { EventRegister } from "./pages/EventRegister";
 import Login from "./components/Login";
 import { Register } from "./pages/Register";
 import { PackSelectionPage } from "./pages/PackSelectionPage";
+import Merchandise2 from "./pages/Merchandise2";
 
 function App() {
   // const path = useLocation();

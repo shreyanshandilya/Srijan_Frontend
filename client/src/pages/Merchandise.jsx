@@ -10,22 +10,19 @@ import { animateScroll as scroll } from "react-scroll";
 import AlertDialog from "./Alert.jsx";
 
 function Merchandise() {
-  const [data, setData] = useState({
-    name: "",
-    email: "",
-    mobileNumber: "",
+  const [beta, setData] = useState({
+    // name: "",
+    // email: "",
+    // mobileNumber: "",
+    // token: "",
+    // outsider: false,
     tshirtSize: "",
-    token: "",
-
     address: "",
     quantity: "",
-    outsider: false,
   });
   useEffect(() => {
     scroll.scrollToTop({ duration: 1000 });
-    setToken(`bearer ${localStorage["token"]}`);
   }, []);
-  const url = "https://srijan2024.onrender.com/api/purchase";
 
   const [img, setImg] = useState("");
   const [token, setToken] = useState("");
@@ -34,62 +31,49 @@ function Merchandise() {
 
   const [outside, setOutside] = useState(false);
   const handleChangeInput = (event) => {
-    setData({ ...data, [event.target.id]: [event.target.value] });
+    setData({ ...beta, [event.target.id]: [event.target.value] });
     // console.log(data);
   };
   const handleImg = (event) => {
     setImg(event.target.files[0]);
   };
+
   const handleMerchantSubmit = async (e) => {
     e.preventDefault();
-    // console.log(data);
-    const formData = new FormData();
-    formData.append("image", img);
-    // formData.append("name", data.name);
-    // formData.append("email", data.email);
-    // formData.append("mobileNumber", data.mobileNumber);
-    formData.append("tshirtSize", data.tshirtSize);
-    formData.append("address", data.address);
-    formData.append("quantity", data.quantity);
-    // formData.append("token", token);
-    // formData.append("outsider", outside);
-    const body = {
-      image: img,
-      tshirtSize: data.tshirtSize,
-      address: data.address,
-      quantity: data.quantity,
-      // token: token,
-    };
-    console.log(body);
-    console.log(token);
 
-    const response = await toast.promise(
-      fetch(url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: token, // Set the content type to JSON
-        },
-        body: JSON.stringify(body),
-      }),
-      {
-        pending: "Placing order",
+    const body = new FormData();
+    body.append("file", img);
+    body.append("upload_preset", "windsanctuary");
 
-        error: "Oops!, couldn't place order",
-      }
-    );
-    console.log(response);
-    if (response.status != 200) {
-      toast.error(" Oops!, couldn't place order", {
-        position: toast.POSITION.BOTTOM_RIGHT,
+    await fetch("https://api.cloudinary.com/v1_1/dkdratnao/image/upload", {
+      method: "post",
+      body: body,
+    })
+      .then((res) => res.json())
+      .then(async (body) => {
+        const data = {
+          imageURL: body.secure_url,
+          tshirtSize: beta.tshirtSize,
+          address: beta.address,
+          quantity: beta.quantity,
+          // token: token,
+        };
+        await fetch("http://srijan2024.onrender.com/api/purchase", {
+          method: "post",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiI2NWEwZjYxMzliY2FjMzZkYmQ2MzhkNDgiLCJpYXQiOjE3MDUwNzUyMDEsImV4cCI6MTcwNzY2NzIwMX0.6Gd3tCgEj80vGSWqnlffWEiWs8DT9fPzlYLrN8zFDIc",
+          },
+          body: data,
+        })
+          .then((res) => {console.log(res)})
+          .catch((err) => {console.log(err)});
+      })
+      .catch((err) => {
+        console.log(err);
       });
-    }
-    if (response.status == 200) {
-      toast.success("Your order has been placed!", {
-        position: toast.POSITION.BOTTOM_RIGHT,
-      });
-    }
   };
+
   const [scope, animate] = useAnimate();
   const [open, setOpen] = useState(false);
   const handleClick = () => {
@@ -266,7 +250,7 @@ function Merchandise() {
                 type="string"
                 id="address"
                 onChange={handleChangeInput}
-                value={data.address}
+                value={beta.address}
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0d0c06] focus:border-[#0d0c06] block w-full p-2.5"
                 placeholder="Jhon doe ,123 Main Street ,Mumbai ,Maharashtra 400001"
                 required
@@ -283,7 +267,7 @@ function Merchandise() {
                 type="number"
                 id="quantity"
                 onChange={handleChangeInput}
-                value={data.quantity}
+                value={beta.quantity}
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0d0c06] focus:border-[#0d0c06] block w-full p-2.5"
                 placeholder="Eg. 1, 2, 3..."
                 required
@@ -300,7 +284,7 @@ function Merchandise() {
               <select
                 id="tshirtSize"
                 onChange={handleChangeInput}
-                value={data.tshirtSize}
+                value={beta.tshirtSize}
                 placeholder="M"
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0d0c06] focus:border-[#0d0c06] block w-full p-2.5"
                 required
@@ -370,7 +354,7 @@ function Merchandise() {
               </div>
               <div className="mt-4">
                 Payable Amount:{" "}
-                {outside ? 399 * data.quantity + 50 : 399 * data.quantity}
+                {outside ? 399 * beta.quantity + 50 : 399 * beta.quantity}
               </div>
             </div>
             <div className="flex mb-4" style={{ alignItems: "flex-start" }}>
