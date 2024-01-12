@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { ToastContainer, toast } from "react-toastify";
 
-
 export const CollegeRegister = (props) => {
   const [email, setEmail] = useState("");
   const [email2, setEmail2] = useState("");
@@ -30,9 +29,16 @@ export const CollegeRegister = (props) => {
       body: JSON.stringify(body),
     });
     const abcd = await response.json();
-    toast.success(abcd.message, {
-      position: toast.POSITION.BOTTOM_RIGHT,
-    });
+    if (abcd.status) {
+      toast.success(abcd.message, {
+        position: toast.POSITION.BOTTOM_RIGHT,
+      });
+    } else {
+      toast.error(abcd.message, {
+        position: toast.POSITION.BOTTOM_RIGHT,
+      });
+    }
+
     if (abcd.status === "success") setShowOtpBox(true), setEmail2(abcd.Email);
     console.log(abcd);
   };
@@ -43,27 +49,33 @@ export const CollegeRegister = (props) => {
       Email: email2,
       otp: otpInput,
     };
-    try{const response = await fetch(
-      "https://srijan2024.onrender.com/api/signup/verify",
-      {
-        method: "post",
-        headers: {
-          "Content-Type": "application/json", // Set the content type to JSON
-        },
-        body: JSON.stringify(body),
+    try {
+      const response = await fetch(
+        "https://srijan2024.onrender.com/api/signup/verify",
+        {
+          method: "post",
+          headers: {
+            "Content-Type": "application/json", // Set the content type to JSON
+          },
+          body: JSON.stringify(body),
+        }
+      );
+      const abcd = await response.json();
+      console.log(abcd);
+      setShowOtpBox(false);
+      localStorage["token"] = abcd.token;
+      if (abcd.token) {
+        toast.success(abcd.message, {
+          position: toast.POSITION.BOTTOM_RIGHT,
+        });
+      } else {
+        toast.error(abcd.message, {
+          position: toast.POSITION.BOTTOM_RIGHT,
+        });
       }
-    );
-    const abcd = await response.json();
-    console.log(abcd);
-    setShowOtpBox(false);
-    localStorage["token"]=abcd.token;   
-    toast.success(abcd.message, {
-      position: toast.POSITION.BOTTOM_RIGHT,
-    });}
-    catch(error){
+    } catch (error) {
       console.log(error);
     }
-   
   };
 
   const submitBtn = async (e) => {
@@ -72,7 +84,7 @@ export const CollegeRegister = (props) => {
   };
 
   return (
-    <div className="rounded-lg w-screen h-screen">
+    <div className="rounded-lg max-w-screen h-screen">
       <motion.div
         initial={{ x: -10, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
@@ -82,16 +94,16 @@ export const CollegeRegister = (props) => {
         College Signup
       </motion.div>
 
-      <motion.div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center w-auto px-40 h-auto">
-        <motion.div
+      <motion.div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center w-auto max-w-screen h-auto">
+        <motion.button
           initial={{ x: 20, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
-          className="cursor-pointer py-4 w-[240px] flex justify-center bg-[#544b08] focus:border-2 focues:border-[#efede0] text-[#efede0] rounded-lg px-4"
+          className="cursor-pointer py-4 w-[220px] flex justify-center bg-[#544b08] focus:border-2 focues:border-[#efede0] text-[#efede0] rounded-lg px-4"
           onClick={() => props.onFormSwitch("OutsideSignup")}
         >
           Go to Outside college
-        </motion.div>
+        </motion.button>
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -162,8 +174,8 @@ export const CollegeRegister = (props) => {
                 </label>
                 <input
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0d0c06] focus:border-[#0d0c06] block w-full p-2.5"
-                  value={pass}
-                  onChange={(e) => setPass(e.target.value)}
+                  value={re_pass}
+                  onChange={(e) => setRe_pass(e.target.value)}
                   type="password"
                   placeholder="Password"
                   id="password"
@@ -238,17 +250,16 @@ export const CollegeRegister = (props) => {
         </motion.div>
       </motion.div>
       <ToastContainer
-           
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="dark"
-        />
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </div>
   );
 };

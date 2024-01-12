@@ -10,22 +10,28 @@ import { animateScroll as scroll } from "react-scroll";
 import AlertDialog from "./Alert.jsx";
 
 function Merchandise() {
-  useEffect(() => {
-    scroll.scrollToTop({ duration: 1000 });
-  }, []);
-  const url = "https://srijan2024.onrender.com/api/purchase";
   const [data, setData] = useState({
     name: "",
     email: "",
     mobileNumber: "",
     tshirtSize: "",
-     
+    token: "",
+
     address: "",
     quantity: "",
-    outsider:false
+    outsider: false,
   });
+  useEffect(() => {
+    scroll.scrollToTop({ duration: 1000 });
+    setToken(`bearer ${localStorage["token"]}`);
+  }, []);
+  const url = "https://srijan2024.onrender.com/api/purchase";
+
   const [img, setImg] = useState("");
-   
+  const [token, setToken] = useState("");
+
+  // const token = localStorage["token"];
+
   const [outside, setOutside] = useState(false);
   const handleChangeInput = (event) => {
     setData({ ...data, [event.target.id]: [event.target.value] });
@@ -38,44 +44,57 @@ function Merchandise() {
     e.preventDefault();
     // console.log(data);
     const formData = new FormData();
-    formData.append("image", img); 
-    formData.append("name", data.name);
-    formData.append("email", data.email);
-    formData.append("mobileNumber", data.mobileNumber);
+    formData.append("image", img);
+    // formData.append("name", data.name);
+    // formData.append("email", data.email);
+    // formData.append("mobileNumber", data.mobileNumber);
     formData.append("tshirtSize", data.tshirtSize);
     formData.append("address", data.address);
     formData.append("quantity", data.quantity);
-    formData.append("outsider",outside);
-     
+    // formData.append("token", token);
+    // formData.append("outsider", outside);
+    const body = {
+      image: img,
+      tshirtSize: data.tshirtSize,
+      address: data.address,
+      quantity: data.quantity,
+      // token: token,
+    };
+    console.log(body);
+    console.log(token);
+
     const response = await toast.promise(
       fetch(url, {
         method: "POST",
-        body: formData,
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: token, // Set the content type to JSON
+        },
+        body: JSON.stringify(body),
       }),
       {
         pending: "Placing order",
-        
+
         error: "Oops!, couldn't place order",
-        
       }
     );
-    if(response.status!=200){
+    console.log(response);
+    if (response.status != 200) {
       toast.error(" Oops!, couldn't place order", {
         position: toast.POSITION.BOTTOM_RIGHT,
-      });}
-    if(response.status==200){
+      });
+    }
+    if (response.status == 200) {
       toast.success("Your order has been placed!", {
         position: toast.POSITION.BOTTOM_RIGHT,
-      });}
-
+      });
+    }
   };
   const [scope, animate] = useAnimate();
   const [open, setOpen] = useState(false);
   const handleClick = () => {
-    
-    
     setOpen(!open);
-     
+
     // if (open) {
     //   animate(scope.current, { x: 10 }, { duration: 1 });
     // }
@@ -83,7 +102,6 @@ function Merchandise() {
   };
   return (
     <div className="bg-[#090d06] jusitfy-center items-center mt-0 h-full w-full">
-        
       <Nav />
       <div className="h-[75vh] ">
         <Carousel>
@@ -148,10 +166,10 @@ function Merchandise() {
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
-            onSubmit={(e) => handleMerchantSubmit(e)}
+            onSubmit={handleMerchantSubmit}
             className="max-w-sm mx-auto rounded-lg bg-[#dad3a5] shadow-xl px-5 py-5 backdrop-blur-lg"
           >
-            <div className="mb-4">
+            {/* <div className="mb-4">
               <label
                 htmlFor="name"
                 className="block mb-2 text-sm font-medium text-[#040d10]"
@@ -202,7 +220,7 @@ function Merchandise() {
                 placeholder="8224092815"
                 required
               />
-            </div>
+            </div> */}
             <div className="justify-center items-center mb-4">
               {/* <div className="mb-1">
                 <label
@@ -238,7 +256,7 @@ function Merchandise() {
                   required
                 />
               </div> */}
-               <label
+              <label
                 htmlFor="address"
                 className="block mb-2 text-sm font-medium text-[#040d10]"
               >
@@ -271,7 +289,7 @@ function Merchandise() {
                 required
               />
             </div>
-         
+
             <div className="mb-4">
               <label
                 htmlFor="tshirtSize"
@@ -293,7 +311,7 @@ function Merchandise() {
                 <option value="XL">XL</option>
               </select>
             </div>
-              {/* <div className="mb-1">
+            {/* <div className="mb-1">
                 <label
                   htmlFor="hostel"
                   className="block mb-1 text-sm font-medium text-[#040d10]"
@@ -327,25 +345,7 @@ function Merchandise() {
                   required
                 />
               </div> */}
-             <div className="flex mb-4" style={{alignItems: "flex-start"}}>
-            
-               
-              <input
-                type="checkbox"
-                onClick={()=>{
-                  setOutside(!outside);
-                }}
-                style={{margin:"4px",color: "#020508",backgroundColor:"#020508"}}
-                
-                
-                
-              /> <label
-                
-              className="block mb-2 text-sm font-medium text-[#040d10]"
-            >
-             Delivery outside IIT ISM (Rs. 50 delivery charges)
-            </label>
-            </div>
+
             <div className="max-w-lg mx-auto mb-2">
               <label
                 className="block mb-2 text-sm font-medium text-[#040d10]"
@@ -368,8 +368,26 @@ function Merchandise() {
               >
                 Screenshot of your payment
               </div>
-                        <div>Payable Amount: {outside?399*(data.quantity)+50 : 399*(data.quantity)}</div>
-
+              <div className="mt-4">
+                Payable Amount:{" "}
+                {outside ? 399 * data.quantity + 50 : 399 * data.quantity}
+              </div>
+            </div>
+            <div className="flex mb-4" style={{ alignItems: "flex-start" }}>
+              <div
+                // type="checkbox"
+                // onClick={() => {
+                //   setOutside(!outside);
+                // }}
+                style={{
+                  margin: "4px",
+                  color: "#020508",
+                  backgroundColor: "#020508",
+                }}
+              />{" "}
+              <label className="block mb-2 text-sm font-medium text-[#040d10]">
+                Delivery outside IIT ISM (Rs. 50 delivery charges)
+              </label>
             </div>
 
             <button
@@ -381,7 +399,6 @@ function Merchandise() {
           </motion.form>
         )}
         <ToastContainer
-          position="bottom-right"
           autoClose={5000}
           hideProgressBar={false}
           newestOnTop={false}
@@ -393,7 +410,6 @@ function Merchandise() {
           theme="dark"
         />
       </div>
-      <Footer />
     </div>
   );
 }
