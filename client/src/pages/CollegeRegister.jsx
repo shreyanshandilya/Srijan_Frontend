@@ -19,7 +19,7 @@ export const CollegeRegister = (props) => {
       Email: email,
       Name: name,
       PhoneNumber: phno,
-      IsISM: false,
+      IsISM: true,
       Password: pass,
     };
     const response = await fetch("https://srijan2024.onrender.com/api/signup", {
@@ -56,6 +56,7 @@ export const CollegeRegister = (props) => {
     const abcd = await response.json();
     console.log(abcd);
     setShowOtpBox(false);
+    localStorage["token"]=abcd.token;   
     toast.success(abcd.message, {
       position: toast.POSITION.BOTTOM_RIGHT,
     });}

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { ToastContainer, toast } from "react-toastify";
 
-
 export const OutsideRegister = (props) => {
   const [email, setEmail] = useState("");
   const [email2, setEmail2] = useState("");
@@ -10,6 +9,7 @@ export const OutsideRegister = (props) => {
   const [name, setName] = useState("");
   const [re_pass, setRe_pass] = useState("");
   const [phno, setPhno] = useState("");
+  const [showToast, setToast] = useState("");
   const [showOtpBox, setShowOtpBox] = useState(false);
   const [otpInput, setOtpInput] = React.useState("");
 
@@ -42,28 +42,27 @@ export const OutsideRegister = (props) => {
       Email: email2,
       otp: otpInput,
     };
-    try{const response = await fetch(
-      "https://srijan2024.onrender.com/api/signup/verify",
-      {
-        method: "post",
-        headers: {
-          "Content-Type": "application/json", // Set the content type to JSON
-        },
-        body: JSON.stringify(body),
-      }
-    );
-    const abcd = await response.json();
-    console.log(abcd);
-    if(abcd.status === "Success"){
+    try {
+      const response = await fetch(
+        "https://srijan2024.onrender.com/api/signup/verify",
+        {
+          method: "post",
+          headers: {
+            "Content-Type": "application/json", // Set the content type to JSON
+          },
+          body: JSON.stringify(body),
+        }
+      );
+      const abcd = await response.json();
+      console.log(abcd);
       setShowOtpBox(false);
-    }
-    toast.success(abcd.message, {
-      position: toast.POSITION.BOTTOM_RIGHT,
-    });}
-    catch(error){
+      localStorage["token"]=abcd.token;
+      toast.success(abcd.message, {
+        position: toast.POSITION.BOTTOM_RIGHT,
+      });
+    } catch (error) {
       console.log(error);
     }
-   
   };
 
   const submitBtn = async (e) => {
@@ -79,7 +78,7 @@ export const OutsideRegister = (props) => {
         transition={{ duration: 0.6 }}
         className="text-center p-4 text-[#dad3a5] font-semibold text-4xl"
       >
-        College Signup
+        Outside Signup
       </motion.div>
 
       <motion.div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center w-auto px-40 h-auto">
@@ -88,9 +87,9 @@ export const OutsideRegister = (props) => {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
           className="cursor-pointer py-4 w-[240px] flex justify-center bg-[#544b08] focus:border-2 focues:border-[#efede0] text-[#efede0] rounded-lg px-4"
-          onClick={() => props.onFormSwitch("OutsideSignup")}
+          onClick={() => props.onFormSwitch("CollegeSignup")}
         >
-          Go to Outside college
+          Go to college signup
         </motion.div>
         <motion.div
           initial={{ y: 20, opacity: 0 }}
@@ -238,17 +237,16 @@ export const OutsideRegister = (props) => {
         </motion.div>
       </motion.div>
       <ToastContainer
-           
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="dark"
-        />
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </div>
   );
 };
