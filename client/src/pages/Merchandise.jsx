@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import { motion, useAnimate } from "framer-motion";
 import Nav from "../components/Navbar/navbar";
 // import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Footer from "../components/Footer.jsx";
 import { Carousel } from "flowbite-react";
 import { animateScroll as scroll } from "react-scroll";
+import { ToastContainer, toast } from "react-toastify";
 import AlertDialog from "./Alert.jsx";
 
 function Merchandise() {
@@ -69,14 +69,23 @@ function Merchandise() {
           body: JSON.stringify(data),
         })
           .then(res => {
-            console.log(res)
+            console.log(res);
+              toast.success("Login Successful !!!", {
+                position: toast.POSITION.BOTTOM_RIGHT,
+              });
           })
           .catch(err => {
             console.log(err)
+            toast.error("Login credential failed", {
+              position: toast.POSITION.BOTTOM_RIGHT,
+            });
           });
       })
       .catch((err) => {
         console.log(err);
+        toast.error("Probelem in uploading image", {
+          position: toast.POSITION.BOTTOM_RIGHT,
+        });
       });
   };
 
