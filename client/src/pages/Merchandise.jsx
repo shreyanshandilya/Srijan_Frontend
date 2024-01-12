@@ -49,25 +49,31 @@ function Merchandise() {
       method: "post",
       body: body,
     })
-      .then((res) => res.json())
+      .then(res => res.json())
       .then(async (body) => {
         const data = {
           imageURL: body.secure_url,
-          tshirtSize: beta.tshirtSize,
-          address: beta.address,
-          quantity: beta.quantity,
+          tshirtSize: beta.tshirtSize[0],
+          address: beta.address[0],
+          quantity: beta.quantity[0],
           // token: token,
         };
-        await fetch("http://srijan2024.onrender.com/api/purchase", {
-          method: "post",
+        console.log(data);
+        await fetch("https://srijan2024.onrender.com/api/purchase", {
+          method: "POST",
+          mode: "cors",
           headers: {
             "Content-Type": "application/json",
-            "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiI2NWEwZjYxMzliY2FjMzZkYmQ2MzhkNDgiLCJpYXQiOjE3MDUwNzUyMDEsImV4cCI6MTcwNzY2NzIwMX0.6Gd3tCgEj80vGSWqnlffWEiWs8DT9fPzlYLrN8zFDIc",
+            "Authorization": `Bearer ${localStorage["token"]}`,
           },
-          body: data,
+          body: JSON.stringify(data),
         })
-          .then((res) => {console.log(res)})
-          .catch((err) => {console.log(err)});
+          .then(res => {
+            console.log(res)
+          })
+          .catch(err => {
+            console.log(err)
+          });
       })
       .catch((err) => {
         console.log(err);
