@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Navbar from "./Navbar/navbar";
 import { ToastContainer, toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
-  
+  const navigate = useNavigate();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   // const handleEmailChange = (event) => {
@@ -37,6 +39,9 @@ function Login() {
       toast.success("Login Successful !!!", {
         position: toast.POSITION.BOTTOM_RIGHT,
       });
+      setTimeout(() => {
+        navigate("/merchant");
+      }, 1000);
     } else {
       toast.error("Login credential failed", {
         position: toast.POSITION.BOTTOM_RIGHT,

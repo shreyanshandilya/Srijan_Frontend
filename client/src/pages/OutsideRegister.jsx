@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { ToastContainer, toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 export const OutsideRegister = (props) => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [email2, setEmail2] = useState("");
   const [pass, setPass] = useState("");
@@ -60,6 +62,9 @@ export const OutsideRegister = (props) => {
       toast.success(abcd.message, {
         position: toast.POSITION.BOTTOM_RIGHT,
       });
+      setTimeout(() => {
+        navigate("/merchant");
+      }, 1000);
     } catch (error) {
       console.log(error);
     }
