@@ -1,34 +1,10 @@
-body,
-ol,
-ul,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-th,
-td,
-dl,
-dd,
-form,
-fieldset,
-legend,
-input,
-textarea,
-i,
-select {
-    margin: 0;
-    padding: 0;
-}
 
 
 body {
-    height: 100%;
+    /* height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     background-color: #17160E;
 }
 
