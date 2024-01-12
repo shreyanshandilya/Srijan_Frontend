@@ -161,17 +161,18 @@ const Navbar = () => {
                     label=""
                     dismissOnClick={false}
                     renderTrigger={() => (
+                      
                       <button
-                        id="dropdownUserAvatarButton"
-                        data-dropdown-toggle="dropdownAvatar"
-                        type="button"
-                      >
-                        <span class="sr-only">Open user menu</span>
-                        <i
-                          class="fa-solid fa-user"
-                          style={{ color: "white", fontSize: "25px" }}
-                        ></i>  
-                      </button>
+                      id="dropdownUserAvatarButton"
+                      data-dropdown-toggle="dropdownAvatar"
+                      type="button"
+                    >
+                      <span class="sr-only">Open user menu</span>
+                      {localStorage.getItem('token')!=null?<i
+                        class="fa-solid fa-user"
+                        style={{ color: "white", fontSize: "25px" }}
+                      ></i>:<div style={{color:"white"}} >Login/Register</div>}
+                    </button>
                     )}
                   >
                     {localStorage.getItem("token") == null ? (
