@@ -35,9 +35,6 @@ export const CollegeRegister = (props) => {
       toast.success(abcd.message, {
         position: toast.POSITION.BOTTOM_RIGHT,
       });
-      setTimeout(() => {
-        navigate("/merchant");
-      }, 1000);
     } else {
       toast.error(abcd.message, {
         position: toast.POSITION.BOTTOM_RIGHT,
@@ -73,6 +70,9 @@ export const CollegeRegister = (props) => {
         toast.success(abcd.message, {
           position: toast.POSITION.BOTTOM_RIGHT,
         });
+        setTimeout(() => {
+          navigate("/merchant");
+        }, 1000);
       } else {
         toast.error(abcd.message, {
           position: toast.POSITION.BOTTOM_RIGHT,
