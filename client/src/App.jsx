@@ -45,7 +45,7 @@ function App() {
       element: <EventDetails />,
     },
     {
-      path: "profile",
+      path: "/profile",
       element: <Frm />,
     },
     {
