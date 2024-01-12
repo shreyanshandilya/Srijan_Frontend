@@ -156,7 +156,7 @@ const Navbar = () => {
                     ></IconButton>
                   </Box>
                 </Box>
-                <div className="sm:block hidden">
+                <div className="sm:block">
                   <Dropdown
                     label=""
                     dismissOnClick={false}
@@ -164,24 +164,38 @@ const Navbar = () => {
                       <button
                         id="dropdownUserAvatarButton"
                         data-dropdown-toggle="dropdownAvatar"
-                        class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
                         type="button"
                       >
                         <span class="sr-only">Open user menu</span>
-                        <img
-                          class="w-11 h-11 rounded-full"
-                          src="https://res.cloudinary.com/dkdratnao/image/upload/v1705007015/userimg_amsxd6.png"
-                          alt="user photo"
-                        />
+                        <i
+                          class="fa-solid fa-user"
+                          style={{ color: "white", fontSize: "25px" }}
+                        ></i>  
                       </button>
                     )}
                   >
-                    <Dropdown.Item className="h-full w-full">
-                      <Link to={"/register"}>Register</Link>
-                    </Dropdown.Item>
-                    <Dropdown.Item>
-                      <Link to={"/login"}>Login</Link>
-                    </Dropdown.Item>
+                    {localStorage.getItem("token") == null ? (
+                      <div>
+                        <Dropdown.Item className="h-full w-full">
+                          <Link to={"/register"}>Register</Link>
+                        </Dropdown.Item>
+                        <Dropdown.Item>
+                          <Link to={"/login"}>Login</Link>
+                        </Dropdown.Item>
+                      </div>
+                    ) : (
+                      <div>
+                        <Dropdown.Item className="h-full w-full">
+                          <Link to={"/"}>{localStorage.getItem("email")}</Link>
+                        </Dropdown.Item>
+                        <Dropdown.Item className="h-full w-full">
+                          <Link to="/profile">Profile</Link>
+                        </Dropdown.Item>
+                        <Dropdown.Item>
+                          <Link onClick={()=>{localStorage.clear()}}> <i class="fa-solid fa-right-from-bracket"  ></i>{' '}Logout</Link>
+                        </Dropdown.Item>
+                      </div> 
+                    )}
                   </Dropdown>
                 </div>
               </Toolbar>

@@ -4,10 +4,7 @@ import Navbar from "./Navbar/navbar";
 import { ToastContainer, toast } from "react-toastify";
 
 function Login() {
-  // const [data, setData] = useState({
-  //   email: "",
-  //   password: "",
-  // });
+  
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   // const handleEmailChange = (event) => {
@@ -35,6 +32,7 @@ function Login() {
     const abcd = await response.json();
     console.log(abcd);
     localStorage["token"] = abcd.Token;
+    localStorage["email"] = Email;
     if (abcd.Token) {
       toast.success("Login Successful !!!", {
         position: toast.POSITION.BOTTOM_RIGHT,
