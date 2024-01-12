@@ -55,6 +55,7 @@ export const CollegeRegister = (props) => {
     );
     const abcd = await response.json();
     console.log(abcd);
+    setShowOtpBox(false);
     toast.success(abcd.message, {
       position: toast.POSITION.BOTTOM_RIGHT,
     });}
@@ -235,6 +236,18 @@ export const CollegeRegister = (props) => {
           )}
         </motion.div>
       </motion.div>
+      <ToastContainer
+           
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
     </div>
   );
 };
