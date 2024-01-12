@@ -73,8 +73,11 @@ export const CollegeRegister = (props) => {
         toast.success(abcd.message, {
           position: toast.POSITION.BOTTOM_RIGHT,
         });
+<<<<<<< HEAD
         setShowOtpBox(false);
         localStorage["showOtp"] = false;
+=======
+>>>>>>> 98678edc7b8a686058ed91eb2ef9edbd3ad96a6e
         setTimeout(() => {
           navigate("/merchant");
         }, 1000);
