@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { ToastContainer, toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 export const CollegeRegister = (props) => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [email2, setEmail2] = useState("");
   const [pass, setPass] = useState("");
@@ -33,6 +35,9 @@ export const CollegeRegister = (props) => {
       toast.success(abcd.message, {
         position: toast.POSITION.BOTTOM_RIGHT,
       });
+      setTimeout(() => {
+        navigate("/merchant");
+      }, 1000);
     } else {
       toast.error(abcd.message, {
         position: toast.POSITION.BOTTOM_RIGHT,
