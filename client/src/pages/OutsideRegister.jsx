@@ -56,7 +56,7 @@ export const OutsideRegister = (props) => {
       const abcd = await response.json();
       console.log(abcd);
       setShowOtpBox(false);
-      localStorage["token"]=abcd.token;
+      localStorage["token"] = abcd.token;
       toast.success(abcd.message, {
         position: toast.POSITION.BOTTOM_RIGHT,
       });
@@ -71,7 +71,7 @@ export const OutsideRegister = (props) => {
   };
 
   return (
-    <div className="rounded-lg w-screen h-screen">
+    <div className="rounded-lg max-w-screen h-screen">
       <motion.div
         initial={{ x: -10, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
@@ -161,8 +161,8 @@ export const OutsideRegister = (props) => {
                 </label>
                 <input
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0d0c06] focus:border-[#0d0c06] block w-full p-2.5"
-                  value={pass}
-                  onChange={(e) => setPass(e.target.value)}
+                  value={re_pass}
+                  onChange={(e) => setRe_pass(e.target.value)}
                   type="password"
                   placeholder="Password"
                   id="password"

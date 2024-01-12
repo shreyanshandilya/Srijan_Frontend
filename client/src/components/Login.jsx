@@ -1,20 +1,49 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Navbar from "./Navbar/navbar";
+import { ToastContainer, toast } from "react-toastify";
 
 function Login() {
-  const [data, setData] = useState({
-    email: "",
-    password: "",
-  });
-  const handleEmailChange = (event) => {
-    setData({ ...data, [event.target.id]: event.target.value });
-  };
+  // const [data, setData] = useState({
+  //   email: "",
+  //   password: "",
+  // });
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  // const handleEmailChange = (event) => {
+  //   // setData({ ...data, [event.target.id]: event.target.value });
 
-  const handlePasswordChange = (event) => {
-    setData(event.target.value);
+  // };
+
+  // const handlePasswordChange = (event) => {
+  //   setData(event.target.value);
+  // };
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const data = {
+      Email: email,
+      Password: password,
+    };
+    console.log(data);
+    const response = await fetch("https://srijan2024.onrender.com/api/login", {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json", // Set the content type to JSON
+      },
+      body: JSON.stringify(data),
+    });
+    const abcd = await response.json();
+    console.log(abcd);
+    if (abcd.status) {
+      toast.success(abcd.message, {
+        position: toast.POSITION.BOTTOM_RIGHT,
+      });
+    } else {
+      toast.error(abcd.message, {
+        position: toast.POSITION.BOTTOM_RIGHT,
+      });
+    }
   };
-  const onSubmit = (event) => {};
   return (
     <>
       <Navbar />
@@ -31,7 +60,7 @@ function Login() {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
-          onSubmit={(e) => onSubmit(e)}
+          onSubmit={handleSubmit}
           className="max-w-sm mt-[40px] mx-auto rounded-lg bg-[#dad3a5] flex-col justify-center shadow-xl px-5 py-5 backdrop-blur-lg"
         >
           <div className="mb-4">
@@ -48,8 +77,8 @@ function Login() {
               placeholder="xyz@gmail.com"
               label="Email"
               name="email"
-              value={data.email}
-              onChange={handleEmailChange}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
@@ -67,8 +96,8 @@ function Login() {
               placeholder="Password"
               label="Password"
               name="password"
-              value={data.password}
-              onChange={handlePasswordChange}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               required
             />
           </div>
@@ -81,6 +110,17 @@ function Login() {
             Submit
           </motion.button>
         </motion.form>
+        <ToastContainer
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
       </div>
     </>
   );
