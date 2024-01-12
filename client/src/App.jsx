@@ -41,13 +41,17 @@ function App() {
       element: <Event />,
     },
     {
+      path: "profile",
+      element: <Profile />,
+    },
+    {
       path: "/event/event-details/:id",
       element: <EventDetails />,
     },
-    {
-      path: "/profile",
-      element: <Frm />,
-    },
+    // {
+    //   path: "/profile",
+    //   element: <Frm />,
+    // },
     {
       path: "team",
       element: <Team />,

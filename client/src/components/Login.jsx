@@ -34,7 +34,7 @@ function Login() {
     const abcd = await response.json();
     console.log(abcd);
     localStorage["token"] = abcd.Token;
-    localStorage["email"] = Email;
+    // localStorage["email"] = data.Email;
     if (abcd.Token) {
       toast.success("Login Successful !!!", {
         position: toast.POSITION.BOTTOM_RIGHT,
