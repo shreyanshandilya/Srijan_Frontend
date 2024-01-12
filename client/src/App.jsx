@@ -6,7 +6,7 @@ import Merchandise from "./pages/Merchandise";
 import Team from "./components/Teams/Team";
 import About from "./pages/About";
 import Frm from "./components/Profile/form";
-import Profile from "./components/Profile/profile";
+// import Profile from "./components/Profile/profile";
 import PurchaseListPage from "./pages/PurcahseListPage";
 import EventDetails from "./pages/EventDetails";
 import Event from "./pages/Event";
@@ -21,6 +21,7 @@ import Login from "./components/Login";
 import { Register } from "./pages/Register";
 import { PackSelectionPage } from "./pages/PackSelectionPage";
 import Merchandise2 from "./pages/Merchandise2";
+import Profile from "./pages/Profile";
 
 function App() {
   // const path = useLocation();
@@ -41,7 +42,7 @@ function App() {
       element: <Event />,
     },
     {
-      path: "profile",
+      path: "your_profile",
       element: <Profile />,
     },
     {
@@ -70,11 +71,11 @@ function App() {
     },
     {
       path: "packselection",
-      element: <PackSelectionPage/>,
+      element: <PackSelectionPage />,
     },
     {
       path: "register",
-      element: <Register/>,
+      element: <Register />,
     },
     {
       path: "/event/event-details/eventRegister/:id",
