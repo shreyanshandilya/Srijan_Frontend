@@ -23,13 +23,22 @@ export const CollegeRegister = (props) => {
       IsISM: true,
       Password: pass,
     };
-    const response = await fetch("https://srijan2024.onrender.com/api/signup", {
+    const response = await toast.promise(
+      fetch("https://srijan2024.onrender.com/api/signup", {
       method: "post",
       headers: {
         "Content-Type": "application/json", // Set the content type to JSON
       },
       body: JSON.stringify(body),
-    });
+    }),
+       {
+         position: toast.POSITION.BOTTOM_RIGHT,
+         pending: 'Loading',
+         
+         error: 'User already exist or invalid credentials'
+       })
+      
+     
     const abcd = await response.json();
     if (abcd.status) {
       toast.success(abcd.message, {
@@ -52,16 +61,23 @@ export const CollegeRegister = (props) => {
       otp: otpInput,
     };
     try {
-      const response = await fetch(
-        "https://srijan2024.onrender.com/api/signup/verify",
-        {
-          method: "post",
-          headers: {
-            "Content-Type": "application/json", // Set the content type to JSON
-          },
-          body: JSON.stringify(body),
-        }
-      );
+      const response = await toast.promise(
+        fetch(
+          "https://srijan2024.onrender.com/api/signup/verify",
+          {
+            method: "post",
+            headers: {
+              "Content-Type": "application/json", // Set the content type to JSON
+            },
+            body: JSON.stringify(body),
+          }),
+         {
+           position: toast.POSITION.BOTTOM_RIGHT,
+           pending: 'Loading',
+           success: 'User Created',
+           error: 'Invalid or expired OTP'
+         })
+        
       const abcd = await response.json();
       console.log(abcd);
       setShowOtpBox(false);
@@ -99,7 +115,7 @@ export const CollegeRegister = (props) => {
         College Signup
       </motion.div>
 
-      <motion.div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center w-auto max-w-screen h-auto">
+      <motion.div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center w-auto max-w-screen px-40 h-auto">
         <motion.button
           initial={{ x: 20, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -255,6 +271,7 @@ export const CollegeRegister = (props) => {
         </motion.div>
       </motion.div>
       <ToastContainer
+      position="bottom-right"
         autoClose={5000}
         hideProgressBar={false}
         newestOnTop={false}

@@ -111,9 +111,9 @@ const Navbar = () => {
                     <Link to="/event">
                       <StyledButton name="Events" />
                     </Link>
-                    <Link to="/merchant">
+                    {localStorage.getItem("token") == null|| localStorage.getItem("token") == undefined?"":<Link to="/merchant">
                       <StyledButton name="Merchandise" />
-                    </Link>
+                    </Link>}
                     {/* <Link to="/profile">
                       <StyledButton name="Profile" />
                     </Link> */}
@@ -168,14 +168,14 @@ const Navbar = () => {
                       type="button"
                     >
                       <span class="sr-only">Open user menu</span>
-                      {localStorage.getItem('token')!=null?<i
+                      {localStorage.getItem("token") != null|| localStorage.getItem("token") != undefined?<i
                         class="fa-solid fa-user"
                         style={{ color: "white", fontSize: "25px" }}
                       ></i>:<div style={{color:"white"}} >Login/Register</div>}
                     </button>
                     )}
                   >
-                    {localStorage.getItem("token") == null ? (
+                    {localStorage.getItem("token") == null|| localStorage.getItem("token") == undefined? (
                       <div>
                         <Dropdown.Item className="h-full w-full">
                           <Link to={"/register"}>Register</Link>
@@ -238,9 +238,9 @@ const Navbar = () => {
                     <Link to="/event">
                       <MobileLink url="/event" text="Events" />
                     </Link>
-                    <Link to="/merchant">
+                    {localStorage.getItem("token") == null|| localStorage.getItem("token") == undefined?"": <Link to="/merchant">
                       <MobileLink url="/merchant" text="Merchandise" />
-                    </Link>
+                    </Link>}
                     {/* <ScrollRouter
                       to="sponsor"
                       spy={true}

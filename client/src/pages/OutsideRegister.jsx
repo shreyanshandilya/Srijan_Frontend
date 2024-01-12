@@ -23,21 +23,36 @@ export const OutsideRegister = (props) => {
       IsISM: false,
       Password: pass,
     };
-    const response = await fetch("https://srijan2024.onrender.com/api/signup", {
+    const response = await toast.promise(
+      fetch("https://srijan2024.onrender.com/api/signup", {
       method: "post",
       headers: {
         "Content-Type": "application/json", // Set the content type to JSON
       },
       body: JSON.stringify(body),
-    });
+    }),
+       {
+         position: toast.POSITION.BOTTOM_RIGHT,
+         pending: 'Loading',
+          
+         error: 'User already exist or invalid credentials'
+       })
+      
+     
     const abcd = await response.json();
-    toast.success(abcd.message, {
-      position: toast.POSITION.BOTTOM_RIGHT,
-    });
+    if (abcd.status) {
+      toast.success(abcd.message, {
+        position: toast.POSITION.BOTTOM_RIGHT,
+      });
+    } else {
+      toast.error(abcd.message, {
+        position: toast.POSITION.BOTTOM_RIGHT,
+      });
+    }
+
     if (abcd.status === "success") setShowOtpBox(true), setEmail2(abcd.Email);
     console.log(abcd);
   };
-
   const otpRequest = async (e) => {
     e.preventDefault();
     const body = {
@@ -45,30 +60,45 @@ export const OutsideRegister = (props) => {
       otp: otpInput,
     };
     try {
-      const response = await fetch(
-        "https://srijan2024.onrender.com/api/signup/verify",
-        {
-          method: "post",
-          headers: {
-            "Content-Type": "application/json", // Set the content type to JSON
-          },
-          body: JSON.stringify(body),
-        }
-      );
+      const response = await toast.promise(
+        fetch(
+          "https://srijan2024.onrender.com/api/signup/verify",
+          {
+            method: "post",
+            headers: {
+              "Content-Type": "application/json", // Set the content type to JSON
+            },
+            body: JSON.stringify(body),
+          }),
+         {
+           position: toast.POSITION.BOTTOM_RIGHT,
+           pending: 'Loading',
+           success: 'User Created',
+           error: 'Invalid or expired OTP'
+         })
+        
       const abcd = await response.json();
       console.log(abcd);
       setShowOtpBox(false);
       localStorage["token"] = abcd.token;
-      toast.success(abcd.message, {
-        position: toast.POSITION.BOTTOM_RIGHT,
-      });
-      setTimeout(() => {
-        navigate("/merchant");
-      }, 1000);
+      localStorage["email"] = abcd.user.Email;
+      if (abcd.token) {
+        toast.success(abcd.message, {
+          position: toast.POSITION.BOTTOM_RIGHT,
+        });
+        setTimeout(() => {
+          navigate("/merchant");
+        }, 1000);
+      } else {
+        toast.error(abcd.message, {
+          position: toast.POSITION.BOTTOM_RIGHT,
+        });
+      }
     } catch (error) {
       console.log(error);
     }
   };
+
 
   const submitBtn = async (e) => {
     e.preventDefault();
@@ -242,6 +272,7 @@ export const OutsideRegister = (props) => {
         </motion.div>
       </motion.div>
       <ToastContainer
+      position="bottom-right"
         autoClose={5000}
         hideProgressBar={false}
         newestOnTop={false}

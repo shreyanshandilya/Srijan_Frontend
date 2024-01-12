@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, useAnimate } from "framer-motion";
 import Nav from "../components/Navbar/navbar";
+import { useNavigate } from "react-router-dom";
 // import axios from "axios";
 import "react-toastify/dist/ReactToastify.css";
 import Footer from "../components/Footer.jsx";
@@ -10,6 +11,12 @@ import { ToastContainer, toast } from "react-toastify";
 import AlertDialog from "./Alert.jsx";
 
 function Merchandise() {
+  const navigate=useNavigate();
+  useEffect(()=>{
+    if(localStorage.getItem("token") == null|| localStorage.getItem("token") == undefined){
+      navigate("/");
+    }
+  },[localStorage.getItem("token")])
   const [beta, setData] = useState({
     // name: "",
     // email: "",
@@ -23,7 +30,7 @@ function Merchandise() {
   useEffect(() => {
     scroll.scrollToTop({ duration: 1000 });
   }, []);
-
+  const [loading,setLoading]  =useState(false);
   const [img, setImg] = useState("");
   const [token, setToken] = useState("");
 
@@ -40,12 +47,15 @@ function Merchandise() {
 
   const handleMerchantSubmit = async (e) => {
     e.preventDefault();
-
+    if(loading){
+      return;
+    }
+    setLoading(true);
     const body = new FormData();
     body.append("file", img);
     body.append("upload_preset", "windsanctuary");
 
-    await fetch("https://api.cloudinary.com/v1_1/dkdratnao/image/upload", {
+    await  fetch("https://api.cloudinary.com/v1_1/dkdratnao/image/upload", {
       method: "post",
       body: body,
     })
@@ -59,34 +69,33 @@ function Merchandise() {
           // token: token,
         };
         console.log(data);
-        await fetch("https://srijan2024.onrender.com/api/purchase", {
-          method: "POST",
-          mode: "cors",
-          headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${localStorage["token"]}`,
-          },
-          body: JSON.stringify(data),
-        })
-          .then(res => {
-            console.log(res);
-              toast.success("Login Successful !!!", {
-                position: toast.POSITION.BOTTOM_RIGHT,
-              });
+        const response = await toast.promise(
+         fetch("https://srijan2024.onrender.com/api/purchase", {
+            method: "POST",
+            mode: "cors",
+            headers: {
+              "Content-Type": "application/json",
+              "Authorization": `Bearer ${localStorage["token"]}`,
+            },
+            body: JSON.stringify(data),
+          }),
+          {
+            position: toast.POSITION.BOTTOM_RIGHT,
+            pending: 'Promise is pending',
+            success: 'Promise resolved',
+            error: 'Promise rejected'
           })
-          .catch(err => {
-            console.log(err)
-            toast.error("Login credential failed", {
-              position: toast.POSITION.BOTTOM_RIGHT,
-            });
-          });
-      })
+        })
+      
+       
       .catch((err) => {
         console.log(err);
         toast.error("Probelem in uploading image", {
           position: toast.POSITION.BOTTOM_RIGHT,
         });
       });
+      setLoading(false);
+
   };
 
   const [scope, animate] = useAnimate();
@@ -393,11 +402,12 @@ function Merchandise() {
               type="submit"
               className="text-[#efede0] bg-[#514c08]/60 hover:bg-[#efede0] hover:text-[#514c08] focus:ring-2 focus:outline-none focus:ring-[#514c08] font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center "
             >
-              Submit
+           {loading?"Loading...":"Submit"} 
             </button>
           </motion.form>
         )}
         <ToastContainer
+        // position="Bottom_Right"
           autoClose={5000}
           hideProgressBar={false}
           newestOnTop={false}
