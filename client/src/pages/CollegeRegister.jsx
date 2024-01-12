@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ToastContainer, toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
@@ -35,16 +35,17 @@ export const CollegeRegister = (props) => {
       toast.success(abcd.message, {
         position: toast.POSITION.BOTTOM_RIGHT,
       });
-      setTimeout(() => {
-        navigate("/merchant");
-      }, 1000);
     } else {
       toast.error(abcd.message, {
         position: toast.POSITION.BOTTOM_RIGHT,
       });
     }
 
-    if (abcd.status === "success") setShowOtpBox(true), setEmail2(abcd.Email);
+    if (abcd.status === "success") {
+      setShowOtpBox(true);
+      localStorage["showOtp"] = "true";
+      setEmail2(abcd.Email);
+    }
     console.log(abcd);
   };
 
@@ -67,12 +68,16 @@ export const CollegeRegister = (props) => {
       );
       const abcd = await response.json();
       console.log(abcd);
-      setShowOtpBox(false);
       localStorage["token"] = abcd.token;
       if (abcd.token) {
         toast.success(abcd.message, {
           position: toast.POSITION.BOTTOM_RIGHT,
         });
+        setShowOtpBox(false);
+        localStorage["showOtp"] = false;
+        setTimeout(() => {
+          navigate("/merchant");
+        }, 1000);
       } else {
         toast.error(abcd.message, {
           position: toast.POSITION.BOTTOM_RIGHT,

@@ -6,7 +6,7 @@ import Merchandise from "./pages/Merchandise";
 import Team from "./components/Teams/Team";
 import About from "./pages/About";
 import Frm from "./components/Profile/form";
-import Profile from "./components/Profile/profile";
+import { Profile } from "./pages/Profile";
 import PurchaseListPage from "./pages/PurcahseListPage";
 import EventDetails from "./pages/EventDetails";
 import Event from "./pages/Event";
