@@ -117,6 +117,72 @@ function Merchandise() {
     // }
     console.log(open);
   };
+
+  const amount = netPrice*100 ;
+  const currency = "INR";
+  const receiptId = "siddharthAggarwal";
+
+  const paymentHandler = async (e) => {
+    const response = await fetch("http://srijan2024.onrender.com/api/order", {
+      method: "POST",
+      body: JSON.stringify({
+        amount,
+        currency,
+        receipt: receiptId,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage["token"]}`,
+      }, 
+    });
+    const order = await response.json();
+    console.log(order);
+
+    var options = {
+      key: "rzp_live_hCIa25zbx0icRX",
+      amount,
+      currency,
+      name: "Srijan",
+      description: "Merchandise Payment",
+      image: ""  ,// add srih=jan image 
+      order_id: order.id,
+      handler: async function (response) {
+        const body = {
+          ...response,
+        };
+
+        const validateRes = await fetch(
+          "http://srijan2024.onrender.com/api/order/validate",
+          {
+            method: "POST",
+            body: JSON.stringify(body),
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${localStorage["token"]}`,
+            },
+          }
+        );
+      },
+      notes: {
+        address: "Razorpay Corporate Office",
+      },
+      theme: {
+        color: "#3399cc",
+      },
+    };
+    let rzp1 = new Razorpay(options);
+    rzp1.on("payment.failed", function (response) {
+      alert(response.error);
+    });
+    rzp1.open();
+    e.preventDefault();
+  };
+
+
+
+
+
+
   return (
     <div className="bg-[#090d06] jusitfy-center items-center mt-0 h-full w-full">
       <Nav />

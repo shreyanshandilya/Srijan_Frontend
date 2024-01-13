@@ -24,6 +24,64 @@ function Merchandise2() {
     });
   }
 
+  const amount = netPrice ;
+  const currency = "INR";
+  const receiptId = "qwsaq1";
+
+  const paymentHandler = async (e) => {
+    const response = await fetch("http://srijan2024.onrender.com/order", {
+      method: "POST",
+      body: JSON.stringify({
+        amount,
+        currency,
+        receipt: receiptId,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      }, 
+    });
+    const order = await response.json();
+    console.log(order);
+
+    var options = {
+      key: "rzp_live_hCIa25zbx0icRX",
+      amount,
+      currency,
+      name: "SneakHead",
+      description: "Order P",
+      image: "https://example.com/your_logo",
+      order_id: order.id,
+      handler: async function (response) {
+        const body = {
+          ...response,
+        };
+
+        const validateRes = await fetch(
+          "http://localhost:5000/order/validate",
+          {
+            method: "POST",
+            body: JSON.stringify(body),
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+      },
+      notes: {
+        address: "Razorpay Corporate Office",
+      },
+      theme: {
+        color: "#3399cc",
+      },
+    };
+    let rzp1 = new Razorpay(options);
+    rzp1.on("payment.failed", function (response) {
+      alert(response.error);
+    });
+    rzp1.open();
+    e.preventDefault();
+  };
+
   async function handleSubmit(e) {
     e.preventDefault();
     console.log(formData, img);
@@ -56,7 +114,7 @@ function Merchandise2() {
   }
 
   return (
-    <form className="mt-8" method="POST" onSubmit={handleSubmit}>
+    <form className="mt-8" method="POST" onSubmit={paymentHandler}>
       <div className="space-y-5">
         <div>
           <label
