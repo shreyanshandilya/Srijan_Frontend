@@ -5,27 +5,38 @@ import { FaPhone } from "react-icons/fa6";
 import Navbar from "../components/Navbar/navbar";
 import { useNavigate } from "react-router-dom";
 import image from "../assets/BgProfile.jpg";
+import { ToastContainer, toast } from "react-toastify";
 
 function Profile() {
 
   const navigate=useNavigate();
+  const [loading,setLoading] = useState(false);
   useEffect(()=>{
     if(localStorage.getItem("token") == null|| localStorage.getItem("token") == undefined){
       navigate("/register");
     }
   },[localStorage.getItem("token")])
-
+   
   const [details, setDetails] = useState([]);
   const url = "https://srijan2024.onrender.com/api/getUser";
   const fetchUser = useCallback(async () => {
-    await fetch(url, {
-      method: "GET",
-      mode: "cors",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${localStorage["token"]}`,
-      },
-    })
+    const response = await toast.promise(
+      fetch(url, {
+        method: "GET",
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${localStorage["token"]}`,
+        },
+      }),
+       {
+         position: toast.POSITION.BOTTOM_RIGHT,
+         pending: 'Loading Profile',
+        
+         error: 'Something wrong occured'
+       })
+    
+     
       .then(async (res) => {
         const data = await res.json();
         console.log(data);
@@ -39,6 +50,7 @@ function Profile() {
     fetchUser();
   }, [fetchUser]);
   return (
+    
     <>
       <div
         className="bg-[#17160e]"
@@ -138,6 +150,19 @@ function Profile() {
             </div>
           </div>
         </div>
+        <ToastContainer
+
+position="bottom-right"
+  autoClose={5000}
+  hideProgressBar={false}
+  newestOnTop={false}
+  closeOnClick
+  rtl={false}
+  pauseOnFocusLoss
+  draggable
+  pauseOnHover
+  theme="dark"
+/>
       </div>
     </>
   );

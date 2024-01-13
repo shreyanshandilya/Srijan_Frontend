@@ -23,6 +23,9 @@ export const CollegeRegister = (props) => {
       IsISM: true,
       Password: pass,
     };
+    if(pass!=re_pass){  toast.error("Confirm password does not match with the orignal one.", {
+      position: toast.POSITION.BOTTOM_RIGHT,
+    }); return;}
     const response = await toast.promise(
       fetch("https://srijan2024.onrender.com/api/signup", {
         method: "post",
