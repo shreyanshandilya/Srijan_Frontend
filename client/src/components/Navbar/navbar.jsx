@@ -111,9 +111,14 @@ const Navbar = () => {
                     <Link to="/event">
                       <StyledButton name="Events" />
                     </Link>
-                    {localStorage.getItem("token") == null|| localStorage.getItem("token") == undefined?"":<Link to="/merchant">
-                      <StyledButton name="Merchandise" />
-                    </Link>}
+                    {localStorage.getItem("token") == null ||
+                    localStorage.getItem("token") == undefined ? (
+                      ""
+                    ) : (
+                      <Link to="/merchant">
+                        <StyledButton name="Merchandise" />
+                      </Link>
+                    )}
                     {/* <Link to="/profile">
                       <StyledButton name="Profile" />
                     </Link> */}
@@ -161,21 +166,26 @@ const Navbar = () => {
                     label=""
                     dismissOnClick={false}
                     renderTrigger={() => (
-                      
                       <button
-                      id="dropdownUserAvatarButton"
-                      data-dropdown-toggle="dropdownAvatar"
-                      type="button"
-                    >
-                      <span class="sr-only">Open user menu</span>
-                      {localStorage.getItem("token") != null|| localStorage.getItem("token") != undefined?<i
-                        class="fa-solid fa-user"
-                        style={{ color: "white", fontSize: "25px" }}
-                      ></i>:<div style={{color:"white"}} >Login/Register</div>}
-                    </button>
+                        id="dropdownUserAvatarButton"
+                        data-dropdown-toggle="dropdownAvatar"
+                        type="button"
+                      >
+                        <span class="sr-only">Open user menu</span>
+                        {localStorage.getItem("token") != null ||
+                        localStorage.getItem("token") != undefined ? (
+                          <i
+                            class="fa-solid fa-user"
+                            style={{ color: "white", fontSize: "25px" }}
+                          ></i>
+                        ) : (
+                          <div style={{ color: "white" }}>Login/Register</div>
+                        )}
+                      </button>
                     )}
                   >
-                    {localStorage.getItem("token") == null|| localStorage.getItem("token") == undefined? (
+                    {localStorage.getItem("token") == null ||
+                    localStorage.getItem("token") == undefined ? (
                       <div>
                         <Dropdown.Item className="h-full w-full">
                           <Link to={"/register"}>Register</Link>
@@ -190,12 +200,20 @@ const Navbar = () => {
                           <Link to={"/"}>{localStorage.getItem("email")}</Link>
                         </Dropdown.Item>
                         <Dropdown.Item className="h-full w-full">
-                          <Link to="/profile">Profile</Link>
+                          <Link to={"/profile"}>Profile</Link>
                         </Dropdown.Item>
                         <Dropdown.Item>
-                          <Link onClick={()=>{localStorage.clear()}}> <i class="fa-solid fa-right-from-bracket"  ></i>{' '}Logout</Link>
+                          <Link
+                            onClick={() => {
+                              localStorage.clear();
+                            }}
+                          >
+                            {" "}
+                            <i class="fa-solid fa-right-from-bracket"></i>{" "}
+                            Logout
+                          </Link>
                         </Dropdown.Item>
-                      </div> 
+                      </div>
                     )}
                   </Dropdown>
                 </div>
@@ -238,9 +256,14 @@ const Navbar = () => {
                     <Link to="/event">
                       <MobileLink url="/event" text="Events" />
                     </Link>
-                    {localStorage.getItem("token") == null|| localStorage.getItem("token") == undefined?"": <Link to="/merchant">
-                      <MobileLink url="/merchant" text="Merchandise" />
-                    </Link>}
+                    {localStorage.getItem("token") == null ||
+                    localStorage.getItem("token") == undefined ? (
+                      ""
+                    ) : (
+                      <Link to="/merchant">
+                        <MobileLink url="/merchant" text="Merchandise" />
+                      </Link>
+                    )}
                     {/* <ScrollRouter
                       to="sponsor"
                       spy={true}
