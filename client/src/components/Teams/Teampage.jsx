@@ -173,7 +173,7 @@ export const Teampage = () => {
                   <div class="thumb my-3 ">
                     <img
                       className="object-cover"
-                      src="https://res.cloudinary.com/dkdratnao/image/upload/v1704435839/harshphoto_kzyxkq.jpg"
+                      src="https://res.cloudinary.com/dkdratnao/image/upload/v1705143321/me_bykddm.jpg"
                     />
                   </div>
                   <div class="description">
