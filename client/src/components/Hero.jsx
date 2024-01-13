@@ -98,15 +98,6 @@ function Hero() {
                 animate="show"
                 className="mb-5 overflow-x-hidden text-base font-normal text-[#efede0] lg:text-lg sm:px-16 lg:px-48"
               >
-                Did someone say Eastern India’s Biggest Cultural Fest?
-                <br /> We heard SRIJAN
-              </motion.p>
-              <motion.p
-                variants={textAnimate2}
-                initial="hidden"
-                animate="show"
-                className="mb-5 overflow-x-hidden text-base font-normal text-[#efede0] lg:text-lg sm:px-16 lg:px-48"
-              >
                 An intersection of cultures and communities <br />
                 The Socio-Cultural Fest of IIT (ISM) Dhanbad is back!
               </motion.p>
