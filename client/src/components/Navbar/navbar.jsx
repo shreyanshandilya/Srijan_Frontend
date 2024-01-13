@@ -119,9 +119,6 @@ const Navbar = () => {
                         <StyledButton name="Merchandise" />
                       </Link>
                     )}
-                    {/* <Link to="/profile">
-                      <StyledButton name="Profile" />
-                    </Link> */}
 
                     {/* <ScrollRouter
                       to="sponsor"
@@ -285,13 +282,6 @@ const Navbar = () => {
                             text={localStorage.getItem("email")}
                           />
                         </Link>
-
-                        {/* <Link to={"/profile"}>
-                      <MobileLink url="/profile" text= "Profile" />
-
-                    
-                    </Link>
-                  */}
                       </div>
                     )}
 
@@ -317,7 +307,7 @@ const Navbar = () => {
                     {localStorage.getItem("token") == null ||
                     localStorage.getItem("token") == undefined ? (
                       ""
-                    ) : (
+                    ) : (<>
                       <Link to={"/merchant"}>
                         <MobileLink
                           text="Merchandise"
@@ -327,23 +317,20 @@ const Navbar = () => {
                           rel="noreferrer"
                         />
                       </Link>
-                    )}
-                    
-                   
-                    {localStorage.getItem("token") == null ||
-                    localStorage.getItem("token") == undefined ? (
-                      ""
-                    ) : (
                       <Link to={"/profile"}>
                       <MobileLink
                         text="Profile"
                         component="a"
-                        href="https://forms.gle/J5f4kswgcTCcmLB78"
+                        url="/profile"
                         target="_blank"
                         rel="noreferrer"
                       />
                     </Link>
+                    </>
                     )}
+                    
+                   
+                    
                      <Link to={"/team"}>
                       <MobileLink
                         text="Teams"

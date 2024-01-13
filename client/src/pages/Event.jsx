@@ -38,7 +38,7 @@ function Event() {
     setDeptEvents(deptEvents);
     setEvents(res.data);
   }, [allEventsUrl]);
-  console.log(events);
+  // console.log(events);
 
   // console.log(allEvents);
   // console.log(localStorage.geItem("clubEvents"));
@@ -69,7 +69,7 @@ function Event() {
   return (
     <div className="bg-black min-h-screen">
       <Navbar />
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -97,7 +97,11 @@ function Event() {
           Department
         </button>
       </div>
-      <EventCard event={events} />
+      <EventCard event={events} /> */}
+
+      <h1 className="py-48 h-96 gradient flex justify-center text-4xl font-bold tracking-tight leading-none text-[#dad3a5] md:text-5xl lg:text-6xl">
+        Coming Soon
+      </h1>
       <Footer />
     </div>
   );
