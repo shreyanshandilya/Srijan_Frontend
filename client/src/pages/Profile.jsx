@@ -36,19 +36,19 @@ function Profile() {
         style={{ backgroundImage: "url(" + image + ")" }}
       >
         <Navbar />
-        <div className="p-16">
-          <div className="p-8 bg-[#dad3a5]/70 backdrop-blur-xl rounded-lg shadow mt-24">
-            <div className="mt-20 text-center border-b border-[#0d0c06] pb-12">
-              <h1 className="text-6xl font-semibold text-[#0d0c06]">
+        <div className="min-h-screen p-5 sm:p-10 md:p-16">
+          <div className="p-4 md:p-8 bg-[#dad3a5]/70 backdrop-blur-xl rounded-lg shadow mt-24">
+            <div className="mt-20 text-center border-b border-[#0d0c06] pb-12 px-4">
+              <h1 className="text-4xl md:text-6xl font-semibold text-[#0d0c06]">
                 {details.Name}{" "}
                 {/* <span className="font-light text-gray-500">{details.Email}</span> */}
               </h1>
-              <p className="font-light text-[#0d0c06] mt-5 flex justify-center items-center gap-x-2 text-xl italic">
-                <IoMdMail className="text-2xl" />
+              <p className="font-light text-[#0d0c06] mt-5 flex justify-center items-center gap-x-2 sm:text-base md:text-xl italic text-wrap">
+                <IoMdMail className=" text-base md:text-2xl" />
                 {details.Email}
               </p>
-              <p className="font-light text-[#0d0c06] my-5 flex justify-center items-center gap-x-2 text-xl">
-                <FaPhone className="text-xl" />
+              <p className="font-light text-[#0d0c06] my-5 px-2 flex justify-center items-center gap-x-2 sm:text-base md:text-xl">
+                <FaPhone className="text-base md:text-2xl" />
                 {details.PhoneNumber}
               </p>
               <Link to="/">
@@ -87,7 +87,7 @@ function Profile() {
                         <div className="max-w-sm p-6 bg-[#3c3708] backdrop-blur-xl bg-opacity-70 rounded-lg shadow">
                           <a href="#">
                             <h5 className="mb-2 text-2xl font-bold flex justify-center tracking-tight text-[#dad3a5]">
-                              {`Order${index + 1}`}
+                              {`Merchandise ${index + 1}`}
                             </h5>
                           </a>
                           <p className="mb-3 font-normal text-[#efede0]">
