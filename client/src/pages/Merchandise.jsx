@@ -9,9 +9,11 @@ import { Carousel } from "flowbite-react";
 import { animateScroll as scroll } from "react-scroll";
 import { ToastContainer, toast } from "react-toastify";
 import AlertDialog from "./Alert.jsx";
+import useRazorpay from "react-razorpay";
 
 function Merchandise() {
   const navigate = useNavigate();
+  const [Razorpay] = useRazorpay();
 
   const [beta, setData] = useState({
     // name: "",
