@@ -122,7 +122,7 @@ export const CollegeRegister = (props) => {
           initial={{ x: 20, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
-          className="cursor-pointer py-4 mx-auto w-[220px] flex justify-center bg-[#544b08] focus:border-2 focues:border-[#efede0] text-[#efede0] rounded-lg px-4"
+          className="cursor-pointer py-4 mx-auto w-[220px] flex justify-center bg-[#544b08] focus:border-2 focus:border-[#efede0] text-[#efede0] rounded-lg px-4"
           onClick={() => props.onFormSwitch("OutsideSignup")}
         >
           Go to Outside college

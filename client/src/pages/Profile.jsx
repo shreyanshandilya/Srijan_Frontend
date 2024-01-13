@@ -3,8 +3,17 @@ import { Link } from "react-router-dom";
 import { IoMdMail } from "react-icons/io";
 import { FaPhone } from "react-icons/fa6";
 import Navbar from "../components/Navbar/navbar";
+import { useNavigate } from "react-router-dom";
 
 function Profile() {
+
+  const navigate=useNavigate();
+  useEffect(()=>{
+    if(localStorage.getItem("token") == null|| localStorage.getItem("token") == undefined){
+      navigate("/register");
+    }
+  },[localStorage.getItem("token")])
+
   const [details, setDetails] = useState([]);
   const url = "https://srijan2024.onrender.com/api/getUser";
   const fetchUser = useCallback(async () => {
