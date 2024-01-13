@@ -325,16 +325,12 @@ const Navbar = () => {
                     </Link>
                     )}
                     
-                    <Link to={"/team"}>
-                      <MobileLink
-                        text="Teams"
-                        component="a"
-                        href="https://forms.gle/J5f4kswgcTCcmLB78"
-                        target="_blank"
-                        rel="noreferrer"
-                      />
-                    </Link>
-                    <Link to={"/profile"}>
+                   
+                    {localStorage.getItem("token") == null ||
+                    localStorage.getItem("token") == undefined ? (
+                      ""
+                    ) : (
+                      <Link to={"/profile"}>
                       <MobileLink
                         text="Profile"
                         component="a"
@@ -343,6 +339,17 @@ const Navbar = () => {
                         rel="noreferrer"
                       />
                     </Link>
+                    )}
+                     <Link to={"/team"}>
+                      <MobileLink
+                        text="Teams"
+                        component="a"
+                        href="https://forms.gle/J5f4kswgcTCcmLB78"
+                        target="_blank"
+                        rel="noreferrer"
+                      />
+                    </Link>
+                    
 
                     {/* <ListItem
                       disablePadding

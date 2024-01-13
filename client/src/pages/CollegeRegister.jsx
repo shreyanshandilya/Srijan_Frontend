@@ -84,6 +84,7 @@ export const CollegeRegister = (props) => {
       const abcd = await response.json();
       console.log(abcd);
       localStorage["token"] = abcd.token;
+      localStorage["email"] = abcd.user.email;
       if (abcd.token) {
         toast.success(abcd.message, {
           position: toast.POSITION.BOTTOM_RIGHT,
