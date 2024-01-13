@@ -11,8 +11,8 @@ import { ToastContainer, toast } from "react-toastify";
 import AlertDialog from "./Alert.jsx";
 
 function Merchandise() {
-  const navigate=useNavigate();
-  
+  const navigate = useNavigate();
+
   const [beta, setData] = useState({
     // name: "",
     // email: "",
@@ -26,7 +26,7 @@ function Merchandise() {
   useEffect(() => {
     scroll.scrollToTop({ duration: 1000 });
   }, []);
-  const [loading,setLoading]  =useState(false);
+  const [loading, setLoading] = useState(false);
   const [img, setImg] = useState("");
   const [token, setToken] = useState("");
 
@@ -43,16 +43,19 @@ function Merchandise() {
 
   const handleMerchantSubmit = async (e) => {
     e.preventDefault();
-    if(loading){
+    if (loading) {
       return;
     }
-    if(localStorage.getItem("token") == null|| localStorage.getItem("token") == undefined){
+    if (
+      localStorage.getItem("token") == null ||
+      localStorage.getItem("token") == undefined
+    ) {
       toast.warning("Register or Sign-in to order merchandise", {
         position: toast.POSITION.BOTTOM_RIGHT,
       });
-      setTimeout(()=>{
+      setTimeout(() => {
         navigate("/register");
-      },3000)
+      }, 3000);
       return;
     }
     setLoading(true);
@@ -60,11 +63,11 @@ function Merchandise() {
     body.append("file", img);
     body.append("upload_preset", "windsanctuary");
 
-    await  fetch("https://api.cloudinary.com/v1_1/dkdratnao/image/upload", {
+    await fetch("https://api.cloudinary.com/v1_1/dkdratnao/image/upload", {
       method: "post",
       body: body,
     })
-      .then(res => res.json())
+      .then((res) => res.json())
       .then(async (body) => {
         const data = {
           imageURL: body.secure_url,
@@ -75,35 +78,33 @@ function Merchandise() {
         };
         console.log(data);
         const response = await toast.promise(
-         fetch("https://srijan2024.onrender.com/api/purchase", {
+          fetch("https://srijan2024.onrender.com/api/purchase", {
             method: "POST",
             mode: "cors",
             headers: {
               "Content-Type": "application/json",
-              "Authorization": `Bearer ${localStorage["token"]}`,
+              Authorization: `Bearer ${localStorage["token"]}`,
             },
             body: JSON.stringify(data),
           }),
           {
             position: toast.POSITION.BOTTOM_RIGHT,
-            pending: 'Placing Order',
-            success: 'Order Placed',
-            error: 'Order failed to process please try again'
-          })
-        })
-         
-       
+            pending: "Placing Order",
+            success: "Order Placed",
+            error: "Order failed to process please try again",
+          }
+        );
+      })
+
       .catch((err) => {
         console.log(err);
         toast.error("Probelem in uploading image", {
           position: toast.POSITION.BOTTOM_RIGHT,
         });
       });
-      
-      setLoading(false);
-     setData({tshirtSize: "",
-      address: "",
-      quantity: ""})
+
+    setLoading(false);
+    setData({ tshirtSize: "", address: "", quantity: "" });
   };
 
   const [scope, animate] = useAnimate();
@@ -153,28 +154,57 @@ function Merchandise() {
           </h1>
 
           <div className="flex flex-col space-y-4 my-10 sm:flex-row sm:justify-center sm:space-y-0">
-            <motion.div
-              whileHover={{ y: -10 }}
-              className="inline-flex justify-center items-center py-3 px-5 text-xl font-medium text-center text-[#090d06] rounded-lg bg-[#dad3a5] hover:drop-shadow-md focus:ring-4 focus:ring-blue-300 cursor-pointer"
-              onClick={handleClick}
-            >
-              {open ? "Close" : "Buy!"}
-              <svg
-                className="w-3.5 h-3.5 ms-2 rtl:rotate-180"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 14 10"
+            {localStorage.getItem("token") == null ||
+            localStorage.getItem("token") == undefined ? (
+              <div>
+                <h1 className="mb-4 text-2xl font-semibold tracking-tight leading-none text-[#dad3a5] md:text-3xl lg:text-4xl ">
+                  Kindly register or login to buy merchandise.
+                </h1>
+                <div className="flex justify-center items-center gap-x-6">
+                  <motion.div
+                    whileHover={{ y: -10 }}
+                    className="inline-flex justify-center items-center py-3 px-5 text-xl font-medium text-center text-[#090d06] rounded-lg bg-[#dad3a5] hover:drop-shadow-md focus:ring-4 focus:ring-blue-300 cursor-pointer"
+                    onClick={() => {
+                      navigate("/register");
+                    }}
+                  >
+                    Register
+                  </motion.div>
+                  <motion.div
+                    whileHover={{ y: -10 }}
+                    className="inline-flex justify-center items-center py-3 px-5 text-xl font-medium text-center text-[#090d06] rounded-lg bg-[#dad3a5] hover:drop-shadow-md focus:ring-4 focus:ring-blue-300 cursor-pointer"
+                    onClick={() => {
+                      navigate("/login");
+                    }}
+                  >
+                    Log In
+                  </motion.div>
+                </div>
+              </div>
+            ) : (
+              <motion.div
+                whileHover={{ y: -10 }}
+                className="inline-flex justify-center items-center py-3 px-5 text-xl font-medium text-center text-[#090d06] rounded-lg bg-[#dad3a5] hover:drop-shadow-md focus:ring-4 focus:ring-blue-300 cursor-pointer"
+                onClick={handleClick}
               >
-                <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M1 5h12m0 0L9 1m4 4L9 9"
-                />
-              </svg>
-            </motion.div>
+                {open ? "Close" : "Buy!"}
+                <svg
+                  className="w-3.5 h-3.5 ms-2 rtl:rotate-180"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 14 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M1 5h12m0 0L9 1m4 4L9 9"
+                  />
+                </svg>
+              </motion.div>
+            )}
           </div>
         </motion.div>
         {open && (
@@ -411,13 +441,12 @@ function Merchandise() {
               type="submit"
               className="text-[#efede0] bg-[#514c08]/60 hover:bg-[#efede0] hover:text-[#514c08] focus:ring-2 focus:outline-none focus:ring-[#514c08] font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center "
             >
-           {loading?"Placing Order":"Submit"} 
+              {loading ? "Placing Order" : "Submit"}
             </button>
           </motion.form>
         )}
         <ToastContainer
-
-        position="bottom-right"
+          position="bottom-right"
           autoClose={5000}
           hideProgressBar={false}
           newestOnTop={false}
