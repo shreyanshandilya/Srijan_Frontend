@@ -12,11 +12,7 @@ import AlertDialog from "./Alert.jsx";
 
 function Merchandise() {
   const navigate=useNavigate();
-  useEffect(()=>{
-    if(localStorage.getItem("token") == null|| localStorage.getItem("token") == undefined){
-      navigate("/");
-    }
-  },[localStorage.getItem("token")])
+  
   const [beta, setData] = useState({
     // name: "",
     // email: "",
@@ -48,6 +44,15 @@ function Merchandise() {
   const handleMerchantSubmit = async (e) => {
     e.preventDefault();
     if(loading){
+      return;
+    }
+    if(localStorage.getItem("token") == null|| localStorage.getItem("token") == undefined){
+      toast.warning("Register or Sign-in to order merchandise", {
+        position: toast.POSITION.BOTTOM_RIGHT,
+      });
+      setTimeout(()=>{
+        navigate("/register");
+      },3000)
       return;
     }
     setLoading(true);
@@ -293,6 +298,7 @@ function Merchandise() {
               <input
                 type="number"
                 id="quantity"
+                min="0"
                 onChange={handleChangeInput}
                 value={beta.quantity}
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0d0c06] focus:border-[#0d0c06] block w-full p-2.5"

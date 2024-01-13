@@ -111,14 +111,11 @@ const Navbar = () => {
                     <Link to="/event">
                       <StyledButton name="Events" />
                     </Link>
-                    {localStorage.getItem("token") == null ||
-                    localStorage.getItem("token") == undefined ? (
-                      ""
-                    ) : (
+                    
                       <Link to="/merchant">
                         <StyledButton name="Merchandise" />
                       </Link>
-                    )}
+                     
 
                     {/* <ScrollRouter
                       to="sponsor"
@@ -304,11 +301,7 @@ const Navbar = () => {
                         rel="noreferrer"
                       />
                     </ScrollRouter> */}
-                    {localStorage.getItem("token") == null ||
-                    localStorage.getItem("token") == undefined ? (
-                      ""
-                    ) : (<>
-                      <Link to={"/merchant"}>
+                    <Link to={"/merchant"}>
                         <MobileLink
                           text="Merchandise"
                           component="a"
@@ -317,6 +310,11 @@ const Navbar = () => {
                           rel="noreferrer"
                         />
                       </Link>
+                    {localStorage.getItem("token") == null ||
+                    localStorage.getItem("token") == undefined ? (
+                      ""
+                    ) : (<>
+                      
                       <Link to={"/profile"}>
                       <MobileLink
                         text="Profile"
