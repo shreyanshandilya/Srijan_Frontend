@@ -75,7 +75,7 @@ function Profile() {
               Show more
             </button> */}
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
-                {details.Merchandise.map((item, index) => {
+                {details.Merchandise!=undefined&&details.Merchandise.length>0&&details.Merchandise.map((item, index) => {
                   return (
                     <>
                       <div className="max-w-sm p-6 bg-[#3c3708] border border-gray-200 rounded-lg shadow">
