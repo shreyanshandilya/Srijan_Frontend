@@ -80,7 +80,8 @@ export const OutsideRegister = (props) => {
       console.log(abcd);
       setShowOtpBox(false);
       localStorage["token"] = abcd.token;
-      localStorage["email"] = abcd.user.Email;
+      localStorage.setItem('email',abcd.user.Email);
+
       if (abcd.token) {
         toast.success(abcd.message, {
           position: toast.POSITION.BOTTOM_RIGHT,
