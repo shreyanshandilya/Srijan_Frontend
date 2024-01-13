@@ -87,7 +87,7 @@ export const OutsideRegister = (props) => {
           position: toast.POSITION.BOTTOM_RIGHT,
         });
         setTimeout(() => {
-          navigate("/merchant");
+          navigate("/");
         }, 1000);
       } else {
         toast.error(abcd.message, {
@@ -106,7 +106,7 @@ export const OutsideRegister = (props) => {
   };
 
   return (
-    <div className="rounded-lg max-w-screen h-screen">
+    <div className="rounded-lg max-w-screen">
       <motion.div
         initial={{ x: -10, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
@@ -184,6 +184,7 @@ export const OutsideRegister = (props) => {
                   placeholder="Password"
                   id="password"
                   name="password"
+                  minLength="6"
                   required
                 />
               </div>
@@ -201,6 +202,8 @@ export const OutsideRegister = (props) => {
                   type="password"
                   placeholder="Password"
                   id="password"
+                  minLength="6"
+
                   name="password"
                   required
                 />
@@ -220,6 +223,8 @@ export const OutsideRegister = (props) => {
                 onChange={(e) => setPhno(e.target.value)}
                 type="text"
                 placeholder="983XXXXX02"
+                minLength="10"
+                maxLength="10"
                 id="phNo"
                 name="phNo"
                 required

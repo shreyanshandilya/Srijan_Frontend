@@ -89,7 +89,7 @@ export const CollegeRegister = (props) => {
           position: toast.POSITION.BOTTOM_RIGHT,
         });
         setTimeout(() => {
-          navigate("/merchant");
+          navigate("/");
         }, 1000);
       } else {
         toast.error(abcd.message, {
@@ -107,7 +107,7 @@ export const CollegeRegister = (props) => {
   };
 
   return (
-    <div className="rounded-lg max-w-screen h-screen">
+    <div className="rounded-lg max-w-screen">
       <motion.div
         initial={{ x: -10, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
@@ -185,6 +185,7 @@ export const CollegeRegister = (props) => {
                   placeholder="Password"
                   id="password"
                   name="password"
+                  minLength="6"
                   required
                 />
               </div>
@@ -203,6 +204,8 @@ export const CollegeRegister = (props) => {
                   placeholder="Password"
                   id="password"
                   name="password"
+                  minLength="6"
+
                   required
                 />
               </div>
@@ -223,6 +226,8 @@ export const CollegeRegister = (props) => {
                 placeholder="983XXXXX02"
                 id="phNo"
                 name="phNo"
+                minLength="10"
+                maxLength="10"
                 required
               />
             </div>

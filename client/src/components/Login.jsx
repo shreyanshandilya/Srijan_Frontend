@@ -47,7 +47,7 @@ function Login() {
         position: toast.POSITION.BOTTOM_RIGHT,
       });
       setTimeout(() => {
-        navigate("/merchant");
+        navigate("/");
       }, 1000);
     } else {
       toast.error("Invalid credential", {
@@ -107,6 +107,7 @@ function Login() {
               placeholder="Password"
               label="Password"
               name="password"
+              // minLength="6"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required

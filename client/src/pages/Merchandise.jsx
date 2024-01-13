@@ -81,12 +81,12 @@ function Merchandise() {
           }),
           {
             position: toast.POSITION.BOTTOM_RIGHT,
-            pending: 'Promise is pending',
-            success: 'Promise resolved',
-            error: 'Promise rejected'
+            pending: 'Placing Order',
+            success: 'Order Placed',
+            error: 'Order failed to process please try again'
           })
         })
-      
+         
        
       .catch((err) => {
         console.log(err);
@@ -94,8 +94,11 @@ function Merchandise() {
           position: toast.POSITION.BOTTOM_RIGHT,
         });
       });
+      
       setLoading(false);
-
+     setData({tshirtSize: "",
+      address: "",
+      quantity: ""})
   };
 
   const [scope, animate] = useAnimate();
@@ -402,12 +405,13 @@ function Merchandise() {
               type="submit"
               className="text-[#efede0] bg-[#514c08]/60 hover:bg-[#efede0] hover:text-[#514c08] focus:ring-2 focus:outline-none focus:ring-[#514c08] font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center "
             >
-           {loading?"Loading...":"Submit"} 
+           {loading?"Placing Order":"Submit"} 
             </button>
           </motion.form>
         )}
         <ToastContainer
-        // position="Bottom_Right"
+
+        position="bottom-right"
           autoClose={5000}
           hideProgressBar={false}
           newestOnTop={false}
