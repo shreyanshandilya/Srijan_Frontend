@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ToastContainer, toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
@@ -23,13 +23,22 @@ export const CollegeRegister = (props) => {
       IsISM: true,
       Password: pass,
     };
-    const response = await fetch("https://srijan2024.onrender.com/api/signup", {
+    const response = await toast.promise(
+      fetch("https://srijan2024.onrender.com/api/signup", {
       method: "post",
       headers: {
         "Content-Type": "application/json", // Set the content type to JSON
       },
       body: JSON.stringify(body),
-    });
+    }),
+       {
+         position: toast.POSITION.BOTTOM_RIGHT,
+         pending: 'Loading',
+         
+         error: 'User already exist or invalid credentials'
+       })
+      
+     
     const abcd = await response.json();
     if (abcd.status) {
       toast.success(abcd.message, {
@@ -41,7 +50,11 @@ export const CollegeRegister = (props) => {
       });
     }
 
-    if (abcd.status === "success") setShowOtpBox(true), setEmail2(abcd.Email);
+    if (abcd.status === "success") {
+      setShowOtpBox(true);
+      localStorage["showOtp"] = "true";
+      setEmail2(abcd.Email);
+    }
     console.log(abcd);
   };
 
@@ -52,24 +65,35 @@ export const CollegeRegister = (props) => {
       otp: otpInput,
     };
     try {
-      const response = await fetch(
-        "https://srijan2024.onrender.com/api/signup/verify",
-        {
-          method: "post",
-          headers: {
-            "Content-Type": "application/json", // Set the content type to JSON
-          },
-          body: JSON.stringify(body),
-        }
-      );
+      const response = await toast.promise(
+        fetch(
+          "https://srijan2024.onrender.com/api/signup/verify",
+          {
+            method: "post",
+            headers: {
+              "Content-Type": "application/json", // Set the content type to JSON
+            },
+            body: JSON.stringify(body),
+          }),
+         {
+           position: toast.POSITION.BOTTOM_RIGHT,
+           pending: 'Loading',
+           success: 'User Created',
+           error: 'Invalid or expired OTP'
+         })
+        
       const abcd = await response.json();
       console.log(abcd);
-      setShowOtpBox(false);
       localStorage["token"] = abcd.token;
       if (abcd.token) {
         toast.success(abcd.message, {
           position: toast.POSITION.BOTTOM_RIGHT,
         });
+<<<<<<< HEAD
+        setShowOtpBox(false);
+        localStorage["showOtp"] = false;
+=======
+>>>>>>> 98678edc7b8a686058ed91eb2ef9edbd3ad96a6e
         setTimeout(() => {
           navigate("/merchant");
         }, 1000);
@@ -99,7 +123,7 @@ export const CollegeRegister = (props) => {
         College Signup
       </motion.div>
 
-      <motion.div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center w-auto max-w-screen h-auto">
+      <motion.div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center w-auto max-w-screen px-40 h-auto">
         <motion.button
           initial={{ x: 20, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -255,6 +279,7 @@ export const CollegeRegister = (props) => {
         </motion.div>
       </motion.div>
       <ToastContainer
+      position="bottom-right"
         autoClose={5000}
         hideProgressBar={false}
         newestOnTop={false}

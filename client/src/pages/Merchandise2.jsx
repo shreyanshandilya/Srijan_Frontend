@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState,useEffect,useNavigate } from "react";
 
 import axios from 'axios';
 
 function Merchandise2() {
+  
   const [img, setImg] = useState("");
   const [formData, setFormData] = React.useState({
     tshirtSize: "",

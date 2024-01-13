@@ -24,17 +24,24 @@ function Login() {
       Password: password,
     };
     console.log(data);
-    const response = await fetch("https://srijan2024.onrender.com/api/login", {
+    const response = await toast.promise(fetch("https://srijan2024.onrender.com/api/login", {
       method: "post",
       headers: {
         "Content-Type": "application/json", // Set the content type to JSON
       },
       body: JSON.stringify(data),
-    });
+    }),
+       {
+         position: toast.POSITION.BOTTOM_RIGHT,
+         pending: 'Loading',
+         
+         error: 'Invalid credentials'
+       })
+    
     const abcd = await response.json();
     console.log(abcd);
     localStorage["token"] = abcd.Token;
-    // localStorage["email"] = data.Email;
+    localStorage["email"] = data.Email;
     if (abcd.Token) {
       toast.success("Login Successful !!!", {
         position: toast.POSITION.BOTTOM_RIGHT,
@@ -43,7 +50,7 @@ function Login() {
         navigate("/merchant");
       }, 1000);
     } else {
-      toast.error("Login credential failed", {
+      toast.error("Invalid credential", {
         position: toast.POSITION.BOTTOM_RIGHT,
       });
     }
@@ -115,6 +122,7 @@ function Login() {
           </motion.button>
         </motion.form>
         <ToastContainer
+        position="bottom-right"
           autoClose={5000}
           hideProgressBar={false}
           newestOnTop={false}
