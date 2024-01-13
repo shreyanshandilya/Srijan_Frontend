@@ -25,20 +25,20 @@ export const OutsideRegister = (props) => {
     };
     const response = await toast.promise(
       fetch("https://srijan2024.onrender.com/api/signup", {
-      method: "post",
-      headers: {
-        "Content-Type": "application/json", // Set the content type to JSON
-      },
-      body: JSON.stringify(body),
-    }),
-       {
-         position: toast.POSITION.BOTTOM_RIGHT,
-         pending: 'Loading',
-          
-         error: 'User already exist or invalid credentials'
-       })
-      
-     
+        method: "post",
+        headers: {
+          "Content-Type": "application/json", // Set the content type to JSON
+        },
+        body: JSON.stringify(body),
+      }),
+      {
+        position: toast.POSITION.BOTTOM_RIGHT,
+        pending: "Loading",
+
+        error: "User already exist or invalid credentials",
+      }
+    );
+
     const abcd = await response.json();
     if (abcd.status) {
       toast.success(abcd.message, {
@@ -61,22 +61,21 @@ export const OutsideRegister = (props) => {
     };
     try {
       const response = await toast.promise(
-        fetch(
-          "https://srijan2024.onrender.com/api/signup/verify",
-          {
-            method: "post",
-            headers: {
-              "Content-Type": "application/json", // Set the content type to JSON
-            },
-            body: JSON.stringify(body),
-          }),
-         {
-           position: toast.POSITION.BOTTOM_RIGHT,
-           pending: 'Loading',
-           success: 'User Created',
-           error: 'Invalid or expired OTP'
-         })
-        
+        fetch("https://srijan2024.onrender.com/api/signup/verify", {
+          method: "post",
+          headers: {
+            "Content-Type": "application/json", // Set the content type to JSON
+          },
+          body: JSON.stringify(body),
+        }),
+        {
+          position: toast.POSITION.BOTTOM_RIGHT,
+          pending: "Loading",
+          success: "User Created",
+          error: "Invalid or expired OTP",
+        }
+      );
+
       const abcd = await response.json();
       console.log(abcd);
       setShowOtpBox(false);
@@ -99,7 +98,6 @@ export const OutsideRegister = (props) => {
     }
   };
 
-
   const submitBtn = async (e) => {
     e.preventDefault();
     await handleSubmit();
@@ -117,15 +115,15 @@ export const OutsideRegister = (props) => {
       </motion.div>
 
       <motion.div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center w-auto max-w-screen px-auto">
-        <motion.div
+        <motion.button
           initial={{ x: 20, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
-          className="cursor-pointer py-4 w-[240px] flex justify-center bg-[#544b08] focus:border-2 focues:border-[#efede0] text-[#efede0] rounded-lg px-4"
+          className="cursor-pointer py-4 mx-auto w-[240px] flex justify-center bg-[#544b08] focus:border-2 focus:border-[#efede0] text-[#efede0] rounded-lg px-4"
           onClick={() => props.onFormSwitch("CollegeSignup")}
         >
           Go to college signup
-        </motion.div>
+        </motion.button>
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -203,7 +201,6 @@ export const OutsideRegister = (props) => {
                   placeholder="Password"
                   id="password"
                   minLength="6"
-
                   name="password"
                   required
                 />
@@ -277,7 +274,7 @@ export const OutsideRegister = (props) => {
         </motion.div>
       </motion.div>
       <ToastContainer
-      position="bottom-right"
+        position="bottom-right"
         autoClose={5000}
         hideProgressBar={false}
         newestOnTop={false}
