@@ -116,7 +116,7 @@ export const OutsideRegister = (props) => {
         Outside Signup
       </motion.div>
 
-      <motion.div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center w-auto px-40 h-auto">
+      <motion.div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center w-auto max-w-screen px-auto">
         <motion.div
           initial={{ x: 20, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
