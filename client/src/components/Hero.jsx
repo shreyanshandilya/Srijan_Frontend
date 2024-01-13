@@ -96,7 +96,7 @@ function Hero() {
                 variants={textAnimate2}
                 initial="hidden"
                 animate="show"
-                className="mb-8 overflow-x-hidden text-lg font-normal text-[#efede0] lg:text-xl sm:px-16 lg:px-48"
+                className="mb-5 overflow-x-hidden text-base font-normal text-[#efede0] lg:text-lg sm:px-16 lg:px-48"
               >
                 Did someone say Eastern India’s Biggest Cultural Fest?
                 <br /> We heard SRIJAN
@@ -105,7 +105,7 @@ function Hero() {
                 variants={textAnimate2}
                 initial="hidden"
                 animate="show"
-                className="mb-8 overflow-x-hidden text-lg font-normal text-[#efede0] lg:text-xl sm:px-16 lg:px-48"
+                className="mb-5 overflow-x-hidden text-base font-normal text-[#efede0] lg:text-lg sm:px-16 lg:px-48"
               >
                 An intersection of cultures and communities <br />
                 The Socio-Cultural Fest of IIT (ISM) Dhanbad is back!
