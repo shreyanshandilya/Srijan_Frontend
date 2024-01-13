@@ -5,7 +5,7 @@ import { Link, Element } from "react-scroll";
 import Countdown from "./asset-components/Countdown";
 import logo from "./Footer/srijan Light (3).png";
 import Nav from "./Navbar/navbar";
-// import image from "../assets"
+import image from "../assets/image4.png";
 // import Nav from "../components/Navbar/navbar"
 function Hero() {
   const sponsor = useRef(null);
@@ -81,7 +81,7 @@ function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
-            className="w-screen h-screen flex justify-center items-center bg-cover bg-center bg-no-repeat bg-[url('assets/bgimage.jpg')] bg-[#c9bc57] bg-blend-multiply"
+            className="w-screen h-screen flex justify-center items-center bg-cover bg-center bg-no-repeat bg-[url('assets/image4.png')] bg-[#c9bc57] bg-blend-multiply"
           >
             <motion.div className="px-4 grid grid-row-3 gap-1 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
               <motion.h1
@@ -98,8 +98,17 @@ function Hero() {
                 animate="show"
                 className="mb-8 overflow-x-hidden text-lg font-normal text-[#efede0] lg:text-xl sm:px-16 lg:px-48"
               >
-                Get a taste of the flavours all around the world. The biggest
-                cultural fest is back!
+                Did someone say Eastern India’s Biggest Cultural Fest?
+                <br /> We heard SRIJAN
+              </motion.p>
+              <motion.p
+                variants={textAnimate2}
+                initial="hidden"
+                animate="show"
+                className="mb-8 overflow-x-hidden text-lg font-normal text-[#efede0] lg:text-xl sm:px-16 lg:px-48"
+              >
+                An intersection of cultures and communities <br />
+                The Socio-Cultural Fest of IIT (ISM) Dhanbad is back!
               </motion.p>
               <motion.p
                 variants={textAnimate2}
@@ -115,7 +124,7 @@ function Hero() {
                 animate="show"
                 className="h-auto overflow-x-hidden flex justify-center text-lg font-semibold text-[#fbe10e] lg:text-2xl py-4 sm:px-5 bg-opacity-50 backdrop-blur-xl"
               >
-                From 2nd - 4th Feburary 2024
+                February 2nd to 4th, 2024
               </motion.span>
               <motion.button
                 variants={textAnimate2}

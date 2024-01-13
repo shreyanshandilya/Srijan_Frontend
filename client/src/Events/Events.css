@@ -1,4 +1,4 @@
-/* .gradient{
+.gradient{
 	background: linear-gradient(-45deg, #f43c04, #0f0c5b, #eca50c, #0f4538);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
@@ -15,7 +15,7 @@
 	100% {
 		background-position: 0% 50%;
 	}
-} */
+}
 .container
 {
   display: flex;
