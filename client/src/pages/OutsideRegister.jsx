@@ -164,7 +164,7 @@ export const OutsideRegister = (props) => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 type="email"
-                placeholder="College Email-id"
+                placeholder="Email-id"
                 id="email"
                 name="email"
                 required
