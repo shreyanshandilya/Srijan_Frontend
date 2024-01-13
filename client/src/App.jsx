@@ -42,7 +42,7 @@ function App() {
       element: <Event />,
     },
     {
-      path: "your_profile",
+      path: "profile",
       element: <Profile />,
     },
     {
