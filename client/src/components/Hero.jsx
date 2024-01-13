@@ -5,6 +5,7 @@ import { Link, Element } from "react-scroll";
 import Countdown from "./asset-components/Countdown";
 import logo from "./Footer/srijan Light (3).png";
 import Nav from "./Navbar/navbar";
+// import image from "../assets"
 // import Nav from "../components/Navbar/navbar"
 function Hero() {
   const sponsor = useRef(null);
@@ -80,7 +81,7 @@ function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
-            className="w-screen h-screen flex justify-center items-center bg-cover bg-center bg-no-repeat bg-[url('assets/bgimage.jpg')] bg-yellow-800 bg-blend-multiply"
+            className="w-screen h-screen flex justify-center items-center bg-cover bg-center bg-no-repeat bg-[url('assets/Desktop.jpg')] bg-blend-multiply"
           >
             <motion.div className="px-4 grid grid-row-3 gap-1 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
               <motion.h1
