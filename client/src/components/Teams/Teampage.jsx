@@ -6,7 +6,7 @@ export const Teampage = () => {
     <>
       <div className="pt-7 flex justify-center">
         <h1 className="flex justify-center text-2xl mt-10 font-bold tracking-tight leading-none text-[#dad3a5] md:text-4xl">
-          Convener
+          Convenor
         </h1>
       </div>
       <sectionTeam>
@@ -28,7 +28,7 @@ export const Teampage = () => {
                     </h5>
                   </a>
                   <p class="mb-3 font-semibold text-gray-700 dark:text-gray-400">
-                    Dept of Electrical Engineering
+                    Dept. of Electrical Engineering
                   </p>
                 </div>
               </div>
@@ -39,7 +39,7 @@ export const Teampage = () => {
 
       <sectionTeam className="bg-[#dad3a5]">
         <h1 className="pt-20 flex justify-center mb-8 text-2xl mt-10 font-bold tracking-tight leading-none text-[#202731] md:text-4xl">
-          Co-Convener
+          Co-Convenor
         </h1>
         <div className="md:flex">
           <div className="grid md:grid-cols-2 grid-cols-1">
@@ -63,7 +63,7 @@ export const Teampage = () => {
                         </h5>
                       </a>
                       <p class="mb-3 font-semibold text-[#69644e] dark:text-gray-400">
-                        Dept of Electrical Engineering
+                        Dept. of Electrical Engineering
                       </p>
                     </div>
                   </div>
@@ -90,7 +90,7 @@ export const Teampage = () => {
                         </h5>
                       </a>
                       <p class="mb-3 font-semibold text-[#69644e] dark:text-gray-400">
-                        Dept of Chemical Engineering
+                        Dept. of Chemical Engineering
                       </p>
                     </div>
                   </div>
@@ -121,7 +121,7 @@ export const Teampage = () => {
                       </h5>
                     </a>
                     <p class="mb-3 font-semibold text-[#69644e] dark:text-gray-400">
-                      Dept of Chemistry and Chemical Biology
+                      Dept. of Chemistry and Chemical Biology
                     </p>
                   </div>
                 </div>
@@ -147,7 +147,7 @@ export const Teampage = () => {
 
       <div className="bg-[#202731]">
         <h1 className="flex justify-center mb-8 text-2xl pt-10 font-bold tracking-tight leading-none text-[#dad3a5] md:text-4xl">
-          Core-Team
+          Core Team
         </h1>
         <div className="text-white">
           <div className="teams flex-wrap flex pt-[80px] w-full">

@@ -109,11 +109,11 @@ const Navbar = () => {
                       <StyledButton name="Events" />
                     </Link> */}
                     <Link to="/event">
-                      <StyledButton name="Events" />
+                      <StyledButton name="EVENTS" />
                     </Link>
                     
                       <Link to="/merchant">
-                        <StyledButton name="Merchandise" />
+                        <StyledButton name="MERCHANDISE" />
                       </Link>
                      
 
@@ -126,10 +126,10 @@ const Navbar = () => {
                       <StyledButton name="Sponsor"></StyledButton>
                     </ScrollRouter> */}
                     <Link to="/about">
-                      <StyledButton name="About Us"></StyledButton>
+                      <StyledButton name="ABOUT"></StyledButton>
                     </Link>
                     <Link to="/team">
-                      <StyledButton name="Teams"></StyledButton>
+                      <StyledButton name="CORE TEAM"></StyledButton>
                     </Link>
                     <div className="sm:block">
                       <Dropdown
@@ -181,7 +181,7 @@ const Navbar = () => {
                             <Link to={"/profile"}>
                               {" "}
                               <Dropdown.Item className="h-full w-full">
-                                Profile
+                                PROFILE
                               </Dropdown.Item>
                             </Link>
                             <Link
@@ -194,7 +194,7 @@ const Navbar = () => {
                               <Dropdown.Item>
                                 {" "}
                                 <i class="fa-solid fa-right-from-bracket"></i>{" "}
-                                Logout
+                                LOGOUT
                               </Dropdown.Item>
                             </Link>
                           </div>
@@ -265,10 +265,10 @@ const Navbar = () => {
                     localStorage.getItem("token") == undefined ? (
                       <div>
                         <Link to={"/register"}>
-                          <MobileLink url="/register" text="Register" />
+                          <MobileLink url="/register" text="REGISTER" />
                         </Link>
                         <Link to={"/login"}>
-                          <MobileLink url="/login" text="Login" />
+                          <MobileLink url="/login" text="LOGIN" />
                         </Link>
                       </div>
                     ) : (
@@ -283,7 +283,7 @@ const Navbar = () => {
                     )}
 
                     <Link to={"/event"}>
-                      <MobileLink url="/event" text="Events" />
+                      <MobileLink url="/event" text="EVENTS" />
                     </Link>
 
                     {/* <ScrollRouter
@@ -303,7 +303,7 @@ const Navbar = () => {
                     </ScrollRouter> */}
                     <Link to={"/merchant"}>
                         <MobileLink
-                          text="Merchandise"
+                          text="MERCHANDISE"
                           component="a"
                           url="/merchant"
                           target="_blank"
@@ -317,7 +317,7 @@ const Navbar = () => {
                       
                       <Link to={"/profile"}>
                       <MobileLink
-                        text="Profile"
+                        text="PROFILE"
                         component="a"
                         url="/profile"
                         target="_blank"
@@ -331,7 +331,7 @@ const Navbar = () => {
                     
                      <Link to={"/team"}>
                       <MobileLink
-                        text="Teams"
+                        text="CORE TEAM"
                         component="a"
                         href="https://forms.gle/J5f4kswgcTCcmLB78"
                         target="_blank"
@@ -363,7 +363,7 @@ const Navbar = () => {
                     </ListItem> */}
                     {/* <MobileLink url="/tshirt" text="Merchandise" /> */}
                     <Link to="/about">
-                      <MobileLink url="/about" text="About Us" noBorder />
+                      <MobileLink url="/about" text="ABOUT" noBorder />
                     </Link>
                     <hr />
                     {localStorage.getItem("token") == null ||
@@ -379,7 +379,7 @@ const Navbar = () => {
                       >
                         {/* <i class="fa-solid fa-right-from-bracket"></i>{" "} */}
 
-                        <MobileLink url="/" text="Logout" />
+                        <MobileLink url="/" text="LOGOUT" />
                       </Link>
                     )}
 

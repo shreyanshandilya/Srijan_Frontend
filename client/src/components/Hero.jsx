@@ -98,7 +98,7 @@ function Hero() {
                 animate="show"
                 className="mb-5 overflow-x-hidden text-base font-normal text-[#efede0] lg:text-lg sm:px-16 lg:px-48"
               >
-                An intersection of cultures and communities <br />
+                An Intersection of Cultures and Communities <br />
                 The Socio-Cultural Fest of IIT (ISM) Dhanbad is back!
               </motion.p>
               <motion.p
