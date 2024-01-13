@@ -81,15 +81,20 @@ export const CollegeRegister = (props) => {
         {
           position: toast.POSITION.BOTTOM_RIGHT,
           pending: "Loading",
-          success: "User Created",
+           
           error: "Invalid or expired OTP",
         }
       );
 
       const abcd = await response.json();
       console.log(abcd);
-      localStorage["token"] = abcd.token;
-      localStorage.setItem('email',abcd.user.Email);
+    if(abcd.token!=undefined){ localStorage["token"] = abcd.token;
+      localStorage.setItem('email',abcd.user.Email);}
+    else{
+      toast.error(abcd.message, {
+        position: toast.POSITION.BOTTOM_RIGHT,
+      });
+    }
       if (abcd.token) {
         toast.success(abcd.message, {
           position: toast.POSITION.BOTTOM_RIGHT,

@@ -40,8 +40,8 @@ function Login() {
     
     const abcd = await response.json();
     console.log(abcd);
-    localStorage["token"] = abcd.Token;
-    localStorage["email"] = data.Email;
+   if(abcd.Token!=undefined){ localStorage["token"] = abcd.Token;
+    localStorage["email"] = data.Email;}
     if (abcd.Token) {
       toast.success("Login Successful !!!", {
         position: toast.POSITION.BOTTOM_RIGHT,
@@ -107,7 +107,7 @@ function Login() {
               placeholder="Password"
               label="Password"
               name="password"
-              // minLength="6"
+              minLength="6"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
