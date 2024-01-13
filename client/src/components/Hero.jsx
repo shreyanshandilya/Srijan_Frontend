@@ -98,8 +98,17 @@ function Hero() {
                 animate="show"
                 className="mb-8 overflow-x-hidden text-lg font-normal text-[#efede0] lg:text-xl sm:px-16 lg:px-48"
               >
-                Get a taste of the flavours all around the world. The biggest
-                cultural fest is back!
+                Did someone say Eastern India’s Biggest Cultural Fest?
+                <br /> We heard SRIJAN
+              </motion.p>
+              <motion.p
+                variants={textAnimate2}
+                initial="hidden"
+                animate="show"
+                className="mb-8 overflow-x-hidden text-lg font-normal text-[#efede0] lg:text-xl sm:px-16 lg:px-48"
+              >
+                An intersection of cultures and communities <br />
+                The Socio-Cultural Fest of IIT (ISM) Dhanbad is back!
               </motion.p>
               <motion.p
                 variants={textAnimate2}
@@ -115,7 +124,7 @@ function Hero() {
                 animate="show"
                 className="h-auto overflow-x-hidden flex justify-center text-lg font-semibold text-[#fbe10e] lg:text-2xl py-4 sm:px-5 bg-opacity-50 backdrop-blur-xl"
               >
-                From 2nd - 4th Feburary 2024
+                February 2nd to 4th, 2024
               </motion.span>
               <motion.button
                 variants={textAnimate2}
