@@ -24,7 +24,7 @@ function Hero() {
       transition: {
         ease: "easeInOut",
         duration: 0.8,
-        delay: 0.3,
+        delay: 1,
       },
     },
   };
@@ -59,7 +59,7 @@ function Hero() {
       transition: {
         ease: "easeInOut",
         duration: 0.8,
-        delay: 2,
+        delay: 3,
       },
     },
   };
