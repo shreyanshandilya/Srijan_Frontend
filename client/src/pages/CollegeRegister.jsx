@@ -23,9 +23,12 @@ export const CollegeRegister = (props) => {
       IsISM: true,
       Password: pass,
     };
-    if(pass!=re_pass){  toast.error("Confirm password does not match with the orignal one.", {
-      position: toast.POSITION.BOTTOM_RIGHT,
-    }); return;}
+    if (pass != re_pass) {
+      toast.error("Confirm password does not match with the orignal one.", {
+        position: toast.POSITION.BOTTOM_RIGHT,
+      });
+      return;
+    }
     const response = await toast.promise(
       fetch("https://srijan2024.onrender.com/api/signup", {
         method: "post",
@@ -57,8 +60,6 @@ export const CollegeRegister = (props) => {
       setShowOtpBox(true);
       localStorage["showOtp"] = "true";
       setEmail2(abcd.Email);
-       
-
     }
     console.log(abcd);
   };
@@ -81,20 +82,21 @@ export const CollegeRegister = (props) => {
         {
           position: toast.POSITION.BOTTOM_RIGHT,
           pending: "Loading",
-           
+
           error: "Invalid or expired OTP",
         }
       );
 
       const abcd = await response.json();
       console.log(abcd);
-    if(abcd.token!=undefined){ localStorage["token"] = abcd.token;
-      localStorage.setItem('email',abcd.user.Email);}
-    else{
-      toast.error(abcd.message, {
-        position: toast.POSITION.BOTTOM_RIGHT,
-      });
-    }
+      if (abcd.token != undefined) {
+        localStorage["token"] = abcd.token;
+        localStorage.setItem("email", abcd.user.Email);
+      } else {
+        toast.error(abcd.message, {
+          position: toast.POSITION.BOTTOM_RIGHT,
+        });
+      }
       if (abcd.token) {
         toast.success(abcd.message, {
           position: toast.POSITION.BOTTOM_RIGHT,

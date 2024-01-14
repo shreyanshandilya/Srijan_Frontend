@@ -88,7 +88,7 @@ function Hero() {
                 variants={textAnimate1}
                 initial="hidden"
                 animate="show"
-                className="mb-4 text-6xl flex justify-center font-extrabold tracking-tight leading-none uppercase text-white md:text-5xl lg:text-6xl"
+                className="mb-4 text-6xl flex justify-center font-extrabold tracking-tight leading-none uppercase text-white md:text-5xl py-11 lg:text-6xl"
               >
                 <img src={logo} width="250px" />
               </motion.h1>
@@ -96,7 +96,7 @@ function Hero() {
                 variants={textAnimate2}
                 initial="hidden"
                 animate="show"
-                className="mb-5 overflow-x-hidden text-base font-normal text-[#efede0] lg:text-lg sm:px-16 lg:px-48"
+                className="mb-5 overflow-x-hidden text-base font-normal text-[#efede0] lg:text-lg sm:px-16 py-11 lg:px-48"
               >
                 An Intersection of Cultures and Communities <br />
                 The Socio-Cultural Fest of IIT (ISM) Dhanbad is back!
