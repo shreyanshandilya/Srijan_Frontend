@@ -139,22 +139,23 @@ function Merchandise() {
         Authorization: `Bearer ${localStorage["token"]}`,
       }, 
     });
+
     const order = await response.json();
     console.log(order);
 
     var options = {
-      "key": "rzp_live_hCIa25zbx0icRX", // Enter the Key ID generated from the Dashboard
-      "amount": "100", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
-      "currency": "INR",
-      "name": "Acme Co", //your business name
-      "description": "Test Transaction",
-      "image": "https://example.com/your_logo",
-      "order_id": order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-      "callback_url": "https://localhost:2000/merchant",
-      "notes": {
+      key: "rzp_live_hCIa25zbx0icRX", // Enter the Key ID generated from the Dashboard
+      amount: "100", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+      currency: "INR",
+      name: "Acme Co", //your business name
+      description: "Test Transaction",
+      image: "https://example.com/your_logo",
+      order_id: order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+      callback_url: "https://localhost:2000/merchant",
+      notes: {
           "address": "Razorpay Corporate Office"
       },
-      "theme": {
+      theme: {
           "color": "#3399cc"
       }
   };
