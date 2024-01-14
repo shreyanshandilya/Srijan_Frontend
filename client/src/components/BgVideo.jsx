@@ -13,10 +13,10 @@
 // export default BgVideo;
 import React from "react";
 import VideoPreload from "../assets/VideoPreload.mp4";
-function BgVideo() {
-
+function BgVideo({setLoad}) {
+  const myCallback = () => setLoad(false);
   return (
-    <video id="myVideo" className="h-100vh w-screen h-screen object-cover" autoPlay  muted>
+    <video id="myVideo" className="h-100vh w-screen h-screen object-cover absolute z-10" onEnded={() => myCallback()} autoPlay  muted>
       <source src={VideoPreload} type="video/mp4" />
     </video>
   );
