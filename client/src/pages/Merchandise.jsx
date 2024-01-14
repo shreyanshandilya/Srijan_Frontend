@@ -126,6 +126,7 @@ function Merchandise() {
   const receiptId = "siddharthAggarwal";
 
   const paymentHandler = async (e) => {
+    e.preventDefault();
     const response = await fetch("https://srijan2024.onrender.com/api/order", {
       method: "POST",
       mode: "cors",
@@ -496,9 +497,6 @@ function Merchandise() {
                   backgroundColor: "#020508",
                 }}
               />{" "}
-              <label className="block mb-2 text-sm font-medium text-[#040d10]">
-                Delivery outside IIT ISM (Rs. 50 delivery charges)
-              </label>
             </div>
 
             <button

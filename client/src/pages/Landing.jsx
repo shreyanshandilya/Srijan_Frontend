@@ -7,13 +7,12 @@ function Landing() {
   const [load, setLoad] = useState(true);
   useEffect(()=>{
     if(window.innerWidth<=760) setLoad(false);
-
   },[])
   return (
     <>
       {/* <Nav/> */}
       {load ? <BgVideo setLoad={setLoad} /> : (<> <Hero /> <FooterT /> </>)}
-      
+
     </>
   );
 }

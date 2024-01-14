@@ -120,28 +120,6 @@ function Profile() {
                           <p className="mb-3 font-normal text-[#efede0]">
                             Quantity: {item.quantity}
                           </p>
-                          <a
-                            className={`${
-                              item.approved ? `bg-[#fbe10e]` : `bg-[#fbe10e]/70`
-                            } inline-flex items-center bg-[#fbe10e]/70 px-3 py-2 text-sm font-medium text-center text-[#17160e] rounded-lg focus:outline-none`}
-                          >
-                            {item.approved ? `Approved` : `Not Approved`}
-                            {/* <svg
-                        className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 14 10"
-                      >
-                        <path
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M1 5h12m0 0L9 1m4 4L9 9"
-                        />
-                      </svg> */}
-                          </a>
                         </div>
                       </>
                     );
