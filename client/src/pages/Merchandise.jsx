@@ -139,42 +139,26 @@ function Merchandise() {
         Authorization: `Bearer ${localStorage["token"]}`,
       }, 
     });
+
     const order = await response.json();
     console.log(order);
 
     var options = {
-      key: "rzp_live_hCIa25zbx0icRX",
-      amount,
-      currency,
-      name: "Srijan",
-      description: "Merchandise Payment",
-      image: Srijanmage  ,// add srih=jan image 
-      order_id: order.id,
-      handler: async function (response) {
-        const body = {
-          ...response,
-        };
-
-        var validateRes = await fetch(
-          "https://srijan2024.onrender.com/api/order/validate",
-          {
-            method: "POST",
-            mode: "cors",
-            body: JSON.stringify({...body , tshirtSize :beta.tshirtSize[0] , quantity :beta.quantity[0] ,addresss: beta.address[0] }),
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: `Bearer ${localStorage["token"]}`,
-            },
-          }
-        );
-      },
+      key: "rzp_live_hCIa25zbx0icRX", // Enter the Key ID generated from the Dashboard
+      amount: "100", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+      currency: "INR",
+      name: "Acme Co", //your business name
+      description: "Test Transaction",
+      image: "https://example.com/your_logo",
+      order_id: order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+      callback_url: "https://localhost:2000/merchant",
       notes: {
-        address: "Razorpay Corporate Office",
+          "address": "Razorpay Corporate Office"
       },
       theme: {
-        color: "#1a190c",
-      },
-    };
+          "color": "#3399cc"
+      }
+  };
     let rzp1 = new Razorpay(options);
 
     rzp1.on('payment.success', function (response) {
