@@ -138,5 +138,12 @@ body {
   .flip {
     transform: rotate(180deg);
   }
-
+  .insideStyles {
+    background: white;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  };
 /* Team page css end */

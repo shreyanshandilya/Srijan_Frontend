@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState } from "react";
 import * as ReactDOM from "react-dom";
 import "./App.css";
 import Landing from "./pages/Landing";
@@ -22,16 +23,18 @@ import { Register } from "./pages/Register";
 import { PackSelectionPage } from "./pages/PackSelectionPage";
 import Merchandise2 from "./pages/Merchandise2";
 import Profile from "./pages/Profile";
+import BgVideo from "./components/BgVideo";
 
 function App() {
-  // const path = useLocation();
-  // React.useEffect(() => {
-  //   scroll.scrollToTop({ duration: 1000 });
-  // }, [path.pathname]);
+  const [load, setLoader]=useState(true);
   const router = createHashRouter([
     {
       path: "/",
-      element: <Landing />,
+      element: <Landing load={load}/>,
+    },
+    {
+      path: "/preloader",
+      element: < BgVideo setLoader={setLoader}/>,
     },
     {
       path: "merchant",

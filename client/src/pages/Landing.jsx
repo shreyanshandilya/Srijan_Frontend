@@ -1,18 +1,19 @@
 import React, { useEffect, useState, useCallback } from "react";
 import Hero from "../components/Hero";
 import FooterT from "../components/Footer";
-import BgVideo from "../components/BgVideo";
+import { useNavigate } from "react-router-dom";
 
-function Landing() {
-  const [load, setLoad] = useState(true);
-  useEffect(()=>{
-    if(window.innerWidth<=760) setLoad(false);
-  },[])
+function Landing({load}) {
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (window.innerWidth > 760 && load) {
+      navigate("/preloader");
+    }
+  }, []);
   return (
     <>
       {/* <Nav/> */}
-      {load ? <BgVideo setLoad={setLoad} /> : (<> <Hero /> <FooterT /> </>)}
-
+      <Hero /> <FooterT />
     </>
   );
 }

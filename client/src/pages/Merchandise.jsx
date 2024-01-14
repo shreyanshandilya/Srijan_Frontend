@@ -25,6 +25,7 @@ function Merchandise() {
     tshirtSize: "",
     address: "",
     quantity: "",
+    type:"",
   });
   useEffect(() => {
     scroll.scrollToTop({ duration: 1000 });
@@ -152,7 +153,7 @@ function Merchandise() {
       description: "Test Transaction",
       image: "https://example.com/your_logo",
       order_id: order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-      callback_url: "https://localhost:2000/merchant",
+      callback_url: "/#/profile",
       notes: {
           "address": "Razorpay Corporate Office"
       },
@@ -278,7 +279,7 @@ function Merchandise() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
             onSubmit={paymentHandler}
-            className="max-w-sm mx-auto rounded-lg bg-[#dad3a5] shadow-xl px-5 py-5 backdrop-blur-lg"
+            className="sm:w-[400px] mn-w-screen mx-auto rounded-lg bg-[#dad3a5] shadow-xl px-5 py-5 backdrop-blur-lg"
           >
             {/* <div className="mb-4">
               <label
@@ -332,7 +333,7 @@ function Merchandise() {
                 required
               />
             </div> */}
-            <div className="justify-center items-center mb-4">
+            <div className="justify-center items-center w-full mb-4">
               {/* <div className="mb-1">
                 <label
                   htmlFor="hostel"
@@ -385,6 +386,26 @@ function Merchandise() {
             </div>
             <div className="mb-4">
               <label
+                htmlFor="tshirtSize"
+                className="block mb-2 text-sm font-medium text-gray-900"
+              >
+                Available Merchandise
+              </label>
+              <select
+                id="type"
+                onChange={handleChangeInput}
+                value={beta.type}
+                placeholder="Hoodie"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0d0c06] focus:border-[#0d0c06] block w-full p-2.5"
+                required
+              >
+                <option value="">Select our merch...</option>
+                <option value="Hoodie">Hoodie</option>
+                <option value="Tshirt">Tshirt</option>
+              </select>
+            </div>
+            <div className="mb-4">
+              <label
                 htmlFor="quantity"
                 className="block mb-2 text-sm font-medium text-[#040d10]"
               >
@@ -417,6 +438,7 @@ function Merchandise() {
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0d0c06] focus:border-[#0d0c06] block w-full p-2.5"
                 required
               >
+                <option value="">Eg. S, M, L, XL ...</option>
                 <option value="S">S</option>
                 <option value="M">M</option>
                 <option value="L">L</option>
@@ -482,7 +504,7 @@ function Merchandise() {
               </div>*/}
               <div className="mt-4">
                 Payable Amount:{" "}
-                {outside ? 399 * beta.quantity + 50 : 399 * beta.quantity}
+                {beta.type == "Tshirt" ? 399 * beta.quantity : 799 * beta.quantity}
               </div>
             </div> 
             <div className="flex mb-4" style={{ alignItems: "flex-start" }}>

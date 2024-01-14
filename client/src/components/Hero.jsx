@@ -5,6 +5,7 @@ import { Link, Element } from "react-scroll";
 import Countdown from "./asset-components/Countdown";
 import logo from "./Footer/srijan Light (3).png";
 import Nav from "./Navbar/navbar";
+import bgSponsor from "../assets/color2.jpg";
 import image from "../assets/image4.png";
 // import Nav from "../components/Navbar/navbar"
 function Hero() {
@@ -113,7 +114,7 @@ function Hero() {
                 variants={textAnimate2}
                 initial="hidden"
                 animate="show"
-                className="h-auto my-5 overflow-x-hidden flex justify-center text-lg font-semibold text-[#fbe10e] lg:text-2xl sm:px-5 bg-opacity-50 backdrop-blur-xl"
+                className="h-auto  overflow-y-hiddenmy-5 overflow-x-hidden flex justify-center text-lg font-semibold text-[#fbe10e] lg:text-2xl sm:px-5 bg-opacity-50 backdrop-blur-xl"
               >
                 February 2nd to 4th, 2024
               </motion.span>
@@ -302,7 +303,8 @@ function Hero() {
           <div
             id="sponsor"
             ref={sponsor}
-            className="max-w-screen p-5 md:p-10 bg-[#17160e]"
+            className="max-w-screen p-5 md:p-10  bg-no-repeat bg-cover"
+            style={{ backgroundImage: "url(" + bgSponsor + ")" }}
           >
             <h1 className="flex md:text-6xl text-[#efede0] font-bold text-2xl justify-center items-center">
               Past Sponsors

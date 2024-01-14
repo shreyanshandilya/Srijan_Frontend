@@ -47,7 +47,7 @@ function Login() {
         position: toast.POSITION.BOTTOM_RIGHT,
       });
       setTimeout(() => {
-        navigate("/");
+        navigate("/merchant");
       }, 1000);
     } else {
       toast.error("Invalid credential", {
@@ -101,7 +101,7 @@ function Login() {
               Password
             </label>
             <input
-              type="text"
+              type="password"
               id="password"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0d0c06] focus:border-[#0d0c06] block w-full p-2.5"
               placeholder="Password"
