@@ -8,8 +8,9 @@ import Footer from "../components/Footer.jsx";
 import { Carousel } from "flowbite-react";
 import { animateScroll as scroll } from "react-scroll";
 import { ToastContainer, toast } from "react-toastify";
-import AlertDialog from "./Alert.jsx";
+import AlertDialog from "./Alert.jsx"; 
 import useRazorpay from "react-razorpay";
+import Srijanmage from "../assets/SrijanLogo.png"
 
 function Merchandise() {
   const navigate = useNavigate();
@@ -29,7 +30,7 @@ function Merchandise() {
     scroll.scrollToTop({ duration: 1000 });
   }, []);
   const [loading, setLoading] = useState(false);
-  const [img, setImg] = useState("");
+  // const [img, setImg] = useState("");
   const [token, setToken] = useState("");
 
   // const token = localStorage["token"];
@@ -39,75 +40,75 @@ function Merchandise() {
     setData({ ...beta, [event.target.id]: [event.target.value] });
     // console.log(data);
   };
-  const handleImg = (event) => {
-    setImg(event.target.files[0]);
-  };
+  // const handleImg = (event) => {
+  //   setImg(event.target.files[0]);
+  // };
 
-  const handleMerchantSubmit = async (e) => {
-    e.preventDefault();
-    if (loading) {
-      return;
-    }
-    if (
-      localStorage.getItem("token") == null ||
-      localStorage.getItem("token") == undefined
-    ) {
-      toast.warning("Register or Sign-in to order merchandise", {
-        position: toast.POSITION.BOTTOM_RIGHT,
-      });
-      setTimeout(() => {
-        navigate("/register");
-      }, 3000);
-      return;
-    }
-    setLoading(true);
-    const body = new FormData();
-    body.append("file", img);
-    body.append("upload_preset", "windsanctuary");
+  // const handleMerchantSubmit = async (e) => {
+  //   e.preventDefault();
+  //   if (loading) {
+  //     return;
+  //   }
+  //   if (
+  //     localStorage.getItem("token") == null ||
+  //     localStorage.getItem("token") == undefined
+  //   ) {
+  //     toast.warning("Register or Sign-in to order merchandise", {
+  //       position: toast.POSITION.BOTTOM_RIGHT,
+  //     });
+  //     setTimeout(() => {
+  //       navigate("/register");
+  //     }, 3000);
+  //     return;
+  //   }
+  //   setLoading(true);
+  //   const body = new FormData();
+  //   body.append("file", img);
+  //   body.append("upload_preset", "windsanctuary");
 
-    await fetch("https://api.cloudinary.com/v1_1/dkdratnao/image/upload", {
-      method: "post",
-      body: body,
-    })
-      .then((res) => res.json())
-      .then(async (body) => {
-        const data = {
-          imageURL: body.secure_url,
-          tshirtSize: beta.tshirtSize[0],
-          address: beta.address[0],
-          quantity: beta.quantity[0],
-          // token: token,
-        };
-        console.log(data);
-        const response = await toast.promise(
-          fetch("https://srijan2024.onrender.com/api/purchase", {
-            method: "POST",
-            mode: "cors",
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: `Bearer ${localStorage["token"]}`,
-            },
-            body: JSON.stringify(data),
-          }),
-          {
-            position: toast.POSITION.BOTTOM_RIGHT,
-            pending: "Placing Order",
-            success: "Order Placed",
-            error: "Order failed to process please try again",
-          }
-        );
-      })
+  //   await fetch("https://api.cloudinary.com/v1_1/dkdratnao/image/upload", {
+  //     method: "post",
+  //     body: body,
+  //   })
+  //     .then((res) => res.json())
+  //     .then(async (body) => {
+  //       const data = {
+  //         imageURL: body.secure_url,
+  //         tshirtSize: beta.tshirtSize[0],
+  //         address: beta.address[0],
+  //         quantity: beta.quantity[0],
+  //         // token: token,
+  //       };
+  //       console.log(data);
+  //       const response = await toast.promise(
+  //         fetch("https://srijan2024.onrender.com/api/purchase", {
+  //           method: "POST",
+  //           mode: "cors",
+  //           headers: {
+  //             "Content-Type": "application/json",
+  //             Authorization: `Bearer ${localStorage["token"]}`,
+  //           },
+  //           body: JSON.stringify(data),
+  //         }),
+  //         {
+  //           position: toast.POSITION.BOTTOM_RIGHT,
+  //           pending: "Placing Order",
+  //           success: "Order Placed",
+  //           error: "Order failed to process please try again",
+  //         }
+  //       );
+  //     })
 
-      .catch((err) => {
-        console.log(err);
-        toast.error("Probelem in uploading image", {
-          position: toast.POSITION.BOTTOM_RIGHT,
-        });
-      });
+  //     .catch((err) => {
+  //       console.log(err);
+  //       toast.error("Probelem in uploading image", {
+  //         position: toast.POSITION.BOTTOM_RIGHT,
+  //       });
+  //     });
 
-    setLoading(false);
-    setData({ tshirtSize: "", address: "", quantity: "" });
-  };
+  //   setLoading(false);
+  //   setData({ tshirtSize: "", address: "", quantity: "" });
+  // };
 
   const [scope, animate] = useAnimate();
   const [open, setOpen] = useState(false);
@@ -120,13 +121,14 @@ function Merchandise() {
     console.log(open);
   };
 
-  const amount = netPrice*100 ;
+  const amount = 1*100 ;
   const currency = "INR";
   const receiptId = "siddharthAggarwal";
 
   const paymentHandler = async (e) => {
-    const response = await fetch("http://srijan2024.onrender.com/api/order", {
+    const response = await fetch("https://srijan2024.onrender.com/api/order", {
       method: "POST",
+      mode: "cors",
       body: JSON.stringify({
         amount,
         currency,
@@ -146,18 +148,19 @@ function Merchandise() {
       currency,
       name: "Srijan",
       description: "Merchandise Payment",
-      image: ""  ,// add srih=jan image 
+      image: Srijanmage  ,// add srih=jan image 
       order_id: order.id,
       handler: async function (response) {
         const body = {
           ...response,
         };
 
-        const validateRes = await fetch(
-          "http://srijan2024.onrender.com/api/order/validate",
+        var validateRes = await fetch(
+          "https://srijan2024.onrender.com/api/order/validate",
           {
             method: "POST",
-            body: JSON.stringify(body),
+            mode: "cors",
+            body: JSON.stringify({...body , tshirtSize :beta.tshirtSize[0] , quantity :beta.quantity[0] ,addresss: beta.address[0] }),
             headers: {
               "Content-Type": "application/json",
               Authorization: `Bearer ${localStorage["token"]}`,
@@ -169,13 +172,22 @@ function Merchandise() {
         address: "Razorpay Corporate Office",
       },
       theme: {
-        color: "#3399cc",
+        color: "#1a190c",
       },
     };
     let rzp1 = new Razorpay(options);
-    rzp1.on("payment.failed", function (response) {
-      alert(response.error);
+
+    rzp1.on('payment.success', function (response) {
+      console.log('Payment success event:', response);
     });
+
+    rzp1.on("payment.failed", function (response) {
+      toast.warning(response.error, {
+        position: toast.POSITION.BOTTOM_RIGHT,
+      });
+    });
+    console.log(rzp1);
+     
     rzp1.open();
     e.preventDefault();
   };
@@ -280,7 +292,7 @@ function Merchandise() {
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
-            onSubmit={handleMerchantSubmit}
+            onSubmit={paymentHandler}
             className="max-w-sm mx-auto rounded-lg bg-[#dad3a5] shadow-xl px-5 py-5 backdrop-blur-lg"
           >
             {/* <div className="mb-4">
@@ -461,8 +473,8 @@ function Merchandise() {
                 />
               </div> */}
 
-            <div className="max-w-lg mx-auto mb-2">
-              <label
+             <div className="max-w-lg mx-auto mb-2">
+               {/*<label
                 className="block mb-2 text-sm font-medium text-[#040d10]"
                 htmlFor="user_avatar"
               >
@@ -482,12 +494,12 @@ function Merchandise() {
                 id="user_avatar_help"
               >
                 Screenshot of your payment
-              </div>
+              </div>*/}
               <div className="mt-4">
                 Payable Amount:{" "}
                 {outside ? 399 * beta.quantity + 50 : 399 * beta.quantity}
               </div>
-            </div>
+            </div> 
             <div className="flex mb-4" style={{ alignItems: "flex-start" }}>
               <div
                 // type="checkbox"

@@ -142,8 +142,8 @@ const Navbar = () => {
                             type="button"
                           >
                             <span class="sr-only">Open user menu</span>
-                            {localStorage.getItem("token") != null ||
-                            localStorage.getItem("token") != undefined ? (
+                            {(localStorage.getItem("token") != null ||
+                            localStorage.getItem("token") != undefined) ? (
                               <i
                                 class="fa-solid fa-user"
                                 style={{
