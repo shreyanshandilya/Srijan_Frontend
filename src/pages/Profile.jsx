@@ -100,7 +100,7 @@ function Profile() {
               Show more
             </button> */}
             <h1 style={{"textAlign":"center", "fontSize":"150%"}}><strong>Your Merchandise Orders</strong></h1>
-            <p><center>If you have placed an order, and it is not reflecting here, kindly contact along with yur transaction details. </center></p><br></br>
+            <p><center>If you have placed an order, and it is not reflecting here, kindly mail us at srijan@iitism.ac.in with your transaction details. </center></p><br></br>
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
                 {details.Merchandise != undefined &&
                   details.Merchandise.length > 0 &&
