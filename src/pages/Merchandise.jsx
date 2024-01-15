@@ -22,7 +22,7 @@ function Merchandise() {
     // mobileNumber: "",
     // token: "",
     // outsider: false,
-    tshirtSize: "",
+    tshirtSize: "S",
     address: "",
     quantity: 0,
   });
@@ -123,23 +123,37 @@ function Merchandise() {
 
    const currency="INR";
   const paymentHandler = async (e) => {
-    e.preventDefault();
+    if(loading) return;
+
+    setLoading(true);
     const amount = (beta.quantity[0])*399*100 ;
+     
     console.log(amount);
-    const response = await fetch("https://srijan2024.onrender.com/api/order", {
-      method: "POST",
-      mode: "cors",
-      body: JSON.stringify({
-        amount
+    const response = await toast.promise(
+      fetch("https://srijan2024.onrender.com/api/order", {
+        method: "POST",
+        mode: "cors",
+        body: JSON.stringify({
+          amount
+           
+        }),
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${localStorage["token"]}`,
+        }, 
       }),
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${localStorage["token"]}`,
-      }, 
-    });
+          {
+            position: toast.POSITION.BOTTOM_RIGHT,
+            pending: "Placing Order",
+           
+            error: "Order failed to process please try again",
+          }
+        );
      
     if(!response){
-      // add toast for error;
+      toast.error("Probelem in Processing Payment", {
+                  position: toast.POSITION.BOTTOM_RIGHT,
+                });
       return; 
 
     }
@@ -183,18 +197,28 @@ function Merchandise() {
     let rzp1 = new Razorpay(options);
 
     rzp1.on('payment.success', function (response) {
+      toast.success("Order Placed", {
+              position: toast.POSITION.BOTTOM_RIGHT,
+              });
       console.log('Payment success event:', response);
     });
 
     rzp1.on("payment.failed", function (response) {
-      toast.warning(response.error, {
+      toast.error(response.error, {
         position: toast.POSITION.BOTTOM_RIGHT,
       });
     });
     console.log(rzp1);
      
     rzp1.open();
+    setLoading(false);
     e.preventDefault();
+    setData({
+      tshirtSize: "S",
+      address: "",
+      quantity: 0
+    });
+     
   };
 
 
@@ -207,24 +231,27 @@ function Merchandise() {
       <Nav />
       <div className="h-[75vh] ">
         <Carousel>
-          <img
-            src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967522/fotofreaks_iitism_1675676767_3032118946815236599_5457821429_g7qhtw.jpg"
+        <img
+            src="https://res.cloudinary.com/dkdratnao/image/upload/v1705303858/Slide_16_9_-_2_efjkce.jpg"
             alt="..."
           />
+         
           <img
-            src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967528/fotofreaks_iitism_1675676767_3032118946815244991_5457821429_bih4qi.jpg"
+            src="https://res.cloudinary.com/dkdratnao/image/upload/v1705303857/Slide_16_9_-_3_ijz7nd.jpg"
             alt="..."
           />
-          <img
-            src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967514/fotofreaks_iitism_1675751379_3032744844136248579_5457821429_yrkxry.jpg"
+           <img
+            src="https://res.cloudinary.com/dkdratnao/image/upload/v1705303854/Slide_16_9_-_1_iljfez.jpg"
             alt="..."
           />
-          <img
+          {/* <img
             src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967509/fotofreaks_iitism_1675676767_3032118946798465237_5457821429_qldckp.jpg"
             alt="..."
-          />
+          /> */}  
         </Carousel>
       </div>
+
+ 
 
       <div className="py-8 px-4 mx-auto max-w-screen-xl text-center flex flex-col sm:flex-row justify-center items-center lg:py-16">
         <motion.div
@@ -433,7 +460,7 @@ function Merchandise() {
                 id="tshirtSize"
                 onChange={handleChangeInput}
                 value={beta.tshirtSize}
-                placeholder="M"
+                placeholder="Eg. S, M"
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0d0c06] focus:border-[#0d0c06] block w-full p-2.5"
                 required
               >
