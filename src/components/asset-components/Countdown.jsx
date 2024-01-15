@@ -12,6 +12,11 @@ const getTimeLeft = () => {
 	return { DAYS, HOURS, MINUTES, SECONDS };
 };
 
+const styleContent = {
+	"display" : "flex",
+	"justifyContent" : "center"
+}
+
 const Countdown = () => {
 	const [timeLeft, setTimeLeft] = useState(() => getTimeLeft());
 
@@ -27,7 +32,7 @@ const Countdown = () => {
 
 	return (
 		<div className='countdown'>
-			<div className='content'>
+			<div className='content' style={styleContent}>
 				{Object.entries(timeLeft).map((el) => {
 					const label = el[0];
 					const value = el[1];
