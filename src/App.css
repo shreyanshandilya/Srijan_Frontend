@@ -1,5 +1,10 @@
 /* scroll below arrow animation */
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&family=Lato:wght@300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700;800&display=swap");
+
+body {
+    font-family: 'Exo 2', sans-serif;
+}
+
 #section07 a span {
     position: absolute;
     top: 0;
@@ -133,5 +138,12 @@
   .flip {
     transform: rotate(180deg);
   }
-
+  .insideStyles {
+    background: white;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  };
 /* Team page css end */

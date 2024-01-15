@@ -5,6 +5,7 @@ import { Link, Element } from "react-scroll";
 import Countdown from "./asset-components/Countdown";
 import logo from "./Footer/srijan Light (3).png";
 import Nav from "./Navbar/navbar";
+import bgSponsor from "../assets/color2.jpg";
 import image from "../assets/image4.png";
 // import Nav from "../components/Navbar/navbar"
 function Hero() {
@@ -24,7 +25,7 @@ function Hero() {
       transition: {
         ease: "easeInOut",
         duration: 0.8,
-        delay: 0.3,
+        delay: 1,
       },
     },
   };
@@ -59,7 +60,7 @@ function Hero() {
       transition: {
         ease: "easeInOut",
         duration: 0.8,
-        delay: 2,
+        delay: 3,
       },
     },
   };
@@ -88,7 +89,7 @@ function Hero() {
                 variants={textAnimate1}
                 initial="hidden"
                 animate="show"
-                className="mb-4 text-6xl flex justify-center font-extrabold tracking-tight leading-none uppercase text-white md:text-5xl py-11 lg:text-6xl"
+                className="text-6xl flex justify-center font-extrabold tracking-tight leading-none uppercase text-white md:text-5xl lg:text-6xl"
               >
                 <img src={logo} width="250px" />
               </motion.h1>
@@ -96,7 +97,7 @@ function Hero() {
                 variants={textAnimate2}
                 initial="hidden"
                 animate="show"
-                className="mb-5 overflow-x-hidden text-base font-normal text-[#efede0] lg:text-lg sm:px-16 py-11 lg:px-48"
+                className="mb-5 overflow-x-hidden text-base font-normal text-[#efede0] lg:text-lg sm:px-16 py-5 lg:px-48"
               >
                 An Intersection of Cultures and Communities <br />
                 The Socio-Cultural Fest of IIT (ISM) Dhanbad is back!
@@ -113,7 +114,7 @@ function Hero() {
                 variants={textAnimate2}
                 initial="hidden"
                 animate="show"
-                className="h-auto overflow-x-hidden flex justify-center text-lg font-semibold text-[#fbe10e] lg:text-2xl py-4 sm:px-5 bg-opacity-50 backdrop-blur-xl"
+                className="h-auto  overflow-y-hidden my-5 overflow-x-hidden flex justify-center text-lg font-semibold text-[#fbe10e] lg:text-2xl sm:px-5 bg-opacity-50 backdrop-blur-xl"
               >
                 February 2nd to 4th, 2024
               </motion.span>
@@ -302,7 +303,8 @@ function Hero() {
           <div
             id="sponsor"
             ref={sponsor}
-            className="max-w-screen p-5 md:p-10 bg-[#17160e]"
+            className="max-w-screen p-5 md:p-10  bg-no-repeat bg-cover"
+            style={{ backgroundImage: "url(" + bgSponsor + ")" }}
           >
             <h1 className="flex md:text-6xl text-[#efede0] font-bold text-2xl justify-center items-center">
               Past Sponsors

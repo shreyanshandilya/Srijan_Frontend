@@ -1,24 +1,19 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import Hero from "../components/Hero";
-import Gallery from "../components/Gallery";
-import Sponsor from "../components/Sponsor";
-// import { gsap } from 'gsap/gsap-core';
-// import Footer from "../components/Footer";
-// import Footer from "../components/Footer/footer";
-// import Nav from "../components/Navbar/navbar";
 import FooterT from "../components/Footer";
-import { animateScroll as scroll } from "react-scroll";
+import { useNavigate } from "react-router-dom";
 
-function Landing() {
+function Landing({load}) {
+  const navigate = useNavigate();
   useEffect(() => {
-    scroll.scrollToTop({ duration: 1000 });
+    if (window.innerWidth > 760 && load) {
+      navigate("/preloader");
+    }
   }, []);
   return (
     <>
       {/* <Nav/> */}
-      <Hero />
-      {/* <Footer /> */}
-      <FooterT />
+      <Hero /> <FooterT />
     </>
   );
 }
