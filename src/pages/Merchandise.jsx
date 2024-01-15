@@ -8,9 +8,9 @@ import Footer from "../components/Footer.jsx";
 import { Carousel } from "flowbite-react";
 import { animateScroll as scroll } from "react-scroll";
 import { ToastContainer, toast } from "react-toastify";
-import AlertDialog from "./Alert.jsx"; 
+import AlertDialog from "./Alert.jsx";
 import useRazorpay from "react-razorpay";
-import Srijanmage from "../assets/SrijanLogo.png"
+import Srijanmage from "../assets/SrijanLogo.png";
 
 function Merchandise() {
   const navigate = useNavigate();
@@ -25,7 +25,7 @@ function Merchandise() {
     tshirtSize: "",
     address: "",
     quantity: "",
-    type:"",
+    type: "",
   });
   useEffect(() => {
     scroll.scrollToTop({ duration: 1000 });
@@ -122,7 +122,7 @@ function Merchandise() {
     console.log(open);
   };
 
-  const amount = 1*100 ;
+  const amount = 1 * 100;
   const currency = "INR";
   const receiptId = "siddharthAggarwal";
 
@@ -139,7 +139,7 @@ function Merchandise() {
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${localStorage["token"]}`,
-      }, 
+      },
     });
 
     const order = await response.json();
@@ -155,16 +155,16 @@ function Merchandise() {
       order_id: order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
       callback_url: "/#/profile",
       notes: {
-          "address": "Razorpay Corporate Office"
+        address: "Razorpay Corporate Office",
       },
       theme: {
-          "color": "#3399cc"
-      }
-  };
+        color: "#3399cc",
+      },
+    };
     let rzp1 = new Razorpay(options);
 
-    rzp1.on('payment.success', function (response) {
-      console.log('Payment success event:', response);
+    rzp1.on("payment.success", function (response) {
+      console.log("Payment success event:", response);
     });
 
     rzp1.on("payment.failed", function (response) {
@@ -173,35 +173,29 @@ function Merchandise() {
       });
     });
     console.log(rzp1);
-     
+
     rzp1.open();
     e.preventDefault();
   };
 
-
-
-
-
-
   return (
     <div className="bg-[#090d06] jusitfy-center items-center mt-0 h-full w-full">
       <Nav />
-      <div className="h-[75vh] ">
+      <div className="h-[80vh] bg-cover">
         <Carousel>
           <img
-            src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967522/fotofreaks_iitism_1675676767_3032118946815236599_5457821429_g7qhtw.jpg"
+            className="bg-cover"
+            src="https://res.cloudinary.com/dfr1kvie3/image/upload/v1705309249/Slide_16_9_-_1_c1nnnp.jpg"
             alt="..."
           />
           <img
-            src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967528/fotofreaks_iitism_1675676767_3032118946815244991_5457821429_bih4qi.jpg"
+            className="object-cover"
+            src="https://res.cloudinary.com/dfr1kvie3/image/upload/v1705309250/Slide_16_9_-_2_furu74.jpg"
             alt="..."
           />
           <img
-            src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967514/fotofreaks_iitism_1675751379_3032744844136248579_5457821429_yrkxry.jpg"
-            alt="..."
-          />
-          <img
-            src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967509/fotofreaks_iitism_1675676767_3032118946798465237_5457821429_qldckp.jpg"
+            className="object-fill"
+            src="https://res.cloudinary.com/dfr1kvie3/image/upload/v1705309250/Slide_16_9_-_3_jh6gin.jpg"
             alt="..."
           />
         </Carousel>
@@ -226,7 +220,7 @@ function Merchandise() {
                 <h1 className="mb-4 text-2xl font-semibold tracking-tight leading-none text-[#dad3a5] md:text-3xl lg:text-4xl ">
                   Kindly register or login to buy merchandise.
                 </h1>
-                <div className="flex justify-center items-center gap-x-6">
+                <div className="flex justify-center items-center gap-x-10 mt-6">
                   <motion.div
                     whileHover={{ y: -10 }}
                     className="inline-flex justify-center items-center py-3 px-5 text-xl font-medium text-center text-[#090d06] rounded-lg bg-[#dad3a5] hover:drop-shadow-md focus:ring-4 focus:ring-blue-300 cursor-pointer"
@@ -480,8 +474,8 @@ function Merchandise() {
                 />
               </div> */}
 
-             <div className="max-w-lg mx-auto mb-2">
-               {/*<label
+            <div className="max-w-lg mx-auto mb-2">
+              {/*<label
                 className="block mb-2 text-sm font-medium text-[#040d10]"
                 htmlFor="user_avatar"
               >
@@ -504,9 +498,11 @@ function Merchandise() {
               </div>*/}
               <div className="mt-4">
                 Payable Amount:{" "}
-                {beta.type == "Tshirt" ? 399 * beta.quantity : 799 * beta.quantity}
+                {beta.type == "Tshirt"
+                  ? 399 * beta.quantity
+                  : 799 * beta.quantity}
               </div>
-            </div> 
+            </div>
             <div className="flex mb-4" style={{ alignItems: "flex-start" }}>
               <div
                 // type="checkbox"
