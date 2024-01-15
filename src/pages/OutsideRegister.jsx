@@ -120,7 +120,7 @@ else{
         transition={{ duration: 0.6 }}
         className="text-center p-4 text-[#dad3a5] font-semibold text-4xl"
       >
-        Outside Signup
+        REGISTRATION FOR OUTSIDE IIT (ISM) MEMBERS
       </motion.div>
 
       <motion.div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center w-auto max-w-screen px-auto">
@@ -131,7 +131,7 @@ else{
           className="cursor-pointer py-4 mx-auto w-[240px] flex justify-center bg-[#544b08] focus:border-2 focus:border-[#efede0] text-[#efede0] rounded-lg px-4"
           onClick={() => props.onFormSwitch("CollegeSignup")}
         >
-          Go to college signup
+          GO TO REGISTRATION FOR IIT (ISM) MEMBERS
         </motion.button>
         <motion.div
           initial={{ y: 20, opacity: 0 }}
