@@ -114,7 +114,7 @@ function Hero() {
                 variants={textAnimate2}
                 initial="hidden"
                 animate="show"
-                className="h-auto  overflow-y-hiddenmy-5 overflow-x-hidden flex justify-center text-lg font-semibold text-[#fbe10e] lg:text-2xl sm:px-5 bg-opacity-50 backdrop-blur-xl"
+                className="h-auto  overflow-y-hidden my-5 overflow-x-hidden flex justify-center text-lg font-semibold text-[#fbe10e] lg:text-2xl sm:px-5 bg-opacity-50 backdrop-blur-xl"
               >
                 February 2nd to 4th, 2024
               </motion.span>
