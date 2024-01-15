@@ -127,7 +127,7 @@ export const CollegeRegister = (props) => {
         transition={{ duration: 0.6 }}
         className="text-center py-11 text-[#dad3a5] font-semibold text-4xl"
       >
-        REGISTRATION FOR IIT (ISM) MEMBERS
+        GO TO REGISTRATION FOR IIT (ISM) MEMBERS
       </motion.div>
 
       <motion.div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center w-auto max-w-screen px-auto">
