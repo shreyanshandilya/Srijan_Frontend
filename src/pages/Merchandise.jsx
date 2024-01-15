@@ -345,7 +345,7 @@ function Merchandise() {
           <p>
             <strong>Guidelines for online transaction : </strong>
             <ul>
-              <li>As of now, kindly instead of using the QR use your UPI ID in order to pay.</li>
+              <li>As of now, kindly use your UPI ID in order to pay.</li>
               <li>Kindly keep your transaction details with you.</li>
             </ul> 
             <br></br>
