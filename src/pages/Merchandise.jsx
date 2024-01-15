@@ -8,9 +8,9 @@ import Footer from "../components/Footer.jsx";
 import { Carousel } from "flowbite-react";
 import { animateScroll as scroll } from "react-scroll";
 import { ToastContainer, toast } from "react-toastify";
-import AlertDialog from "./Alert.jsx";
+import AlertDialog from "./Alert.jsx"; 
 import useRazorpay from "react-razorpay";
-import Srijanmage from "../assets/SrijanLogo.png";
+import Srijanmage from "../assets/SrijanLogo.png"
 
 function Merchandise() {
   const navigate = useNavigate();
@@ -24,7 +24,7 @@ function Merchandise() {
     // outsider: false,
     tshirtSize: "",
     address: "",
-    quantity: ""
+    quantity: "",
   });
   useEffect(() => {
     scroll.scrollToTop({ duration: 1000 });
@@ -121,12 +121,11 @@ function Merchandise() {
     console.log(open);
   };
 
-  const amount = 1 * 100;
+  const amount = 1*100 ;
   const currency = "INR";
   const receiptId = "siddharthAggarwal";
 
   const paymentHandler = async (e) => {
-    e.preventDefault();
     const response = await fetch("https://srijan2024.onrender.com/api/order", {
       method: "POST",
       mode: "cors",
@@ -138,32 +137,48 @@ function Merchandise() {
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${localStorage["token"]}`,
-      },
+      }, 
     });
-
     const order = await response.json();
     console.log(order);
 
     var options = {
-      key: "rzp_live_hCIa25zbx0icRX", // Enter the Key ID generated from the Dashboard
-      amount: "100", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
-      currency: "INR",
-      name: "Acme Co", //your business name
-      description: "Test Transaction",
-      image: "https://example.com/your_logo",
-      order_id: order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-      callback_url: "/#/profile",
+      key: "rzp_live_hCIa25zbx0icRX",
+      amount,
+      currency,
+      name: "Srijan",
+      description: "Merchandise Payment",
+      image: Srijanmage  ,// add srih=jan image 
+      order_id: order.id,
+      handler: async function (response) {
+        const body = {
+          ...response,
+        };
+
+        var validateRes = await fetch(
+          "https://srijan2024.onrender.com/api/order/validate",
+          {
+            method: "POST",
+            mode: "cors",
+            body: JSON.stringify({...body , tshirtSize :beta.tshirtSize[0] , quantity :beta.quantity[0] ,addresss: beta.address[0] }),
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${localStorage["token"]}`,
+            },
+          }
+        );
+      },
       notes: {
         address: "Razorpay Corporate Office",
       },
       theme: {
-        color: "#3399cc",
+        color: "#1a190c",
       },
     };
     let rzp1 = new Razorpay(options);
 
-    rzp1.on("payment.success", function (response) {
-      console.log("Payment success event:", response);
+    rzp1.on('payment.success', function (response) {
+      console.log('Payment success event:', response);
     });
 
     rzp1.on("payment.failed", function (response) {
@@ -172,29 +187,35 @@ function Merchandise() {
       });
     });
     console.log(rzp1);
-
+     
     rzp1.open();
     e.preventDefault();
   };
 
+
+
+
+
+
   return (
     <div className="bg-[#090d06] jusitfy-center items-center mt-0 h-full w-full">
       <Nav />
-      <div className="h-[80vh] bg-cover">
+      <div className="h-[75vh] ">
         <Carousel>
           <img
-            className="bg-cover"
-            src="https://res.cloudinary.com/dfr1kvie3/image/upload/v1705309249/Slide_16_9_-_1_c1nnnp.jpg"
+            src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967522/fotofreaks_iitism_1675676767_3032118946815236599_5457821429_g7qhtw.jpg"
             alt="..."
           />
           <img
-            className="object-cover"
-            src="https://res.cloudinary.com/dfr1kvie3/image/upload/v1705309250/Slide_16_9_-_2_furu74.jpg"
+            src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967528/fotofreaks_iitism_1675676767_3032118946815244991_5457821429_bih4qi.jpg"
             alt="..."
           />
           <img
-            className="object-fill"
-            src="https://res.cloudinary.com/dfr1kvie3/image/upload/v1705309250/Slide_16_9_-_3_jh6gin.jpg"
+            src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967514/fotofreaks_iitism_1675751379_3032744844136248579_5457821429_yrkxry.jpg"
+            alt="..."
+          />
+          <img
+            src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967509/fotofreaks_iitism_1675676767_3032118946798465237_5457821429_qldckp.jpg"
             alt="..."
           />
         </Carousel>
@@ -219,7 +240,7 @@ function Merchandise() {
                 <h1 className="mb-4 text-2xl font-semibold tracking-tight leading-none text-[#dad3a5] md:text-3xl lg:text-4xl ">
                   Kindly register or login to buy merchandise.
                 </h1>
-                <div className="flex justify-center items-center gap-x-10 mt-6">
+                <div className="flex justify-center items-center gap-x-6">
                   <motion.div
                     whileHover={{ y: -10 }}
                     className="inline-flex justify-center items-center py-3 px-5 text-xl font-medium text-center text-[#090d06] rounded-lg bg-[#dad3a5] hover:drop-shadow-md focus:ring-4 focus:ring-blue-300 cursor-pointer"
@@ -272,7 +293,7 @@ function Merchandise() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
             onSubmit={paymentHandler}
-            className="sm:w-[400px] mn-w-screen mx-auto rounded-lg bg-[#dad3a5] shadow-xl px-5 py-5 backdrop-blur-lg"
+            className="max-w-sm mx-auto rounded-lg bg-[#dad3a5] shadow-xl px-5 py-5 backdrop-blur-lg"
           >
             {/* <div className="mb-4">
               <label
@@ -326,7 +347,7 @@ function Merchandise() {
                 required
               />
             </div> */}
-            <div className="justify-center items-center w-full mb-4">
+            <div className="justify-center items-center mb-4">
               {/* <div className="mb-1">
                 <label
                   htmlFor="hostel"
@@ -395,6 +416,7 @@ function Merchandise() {
                 required
               />
             </div>
+
             <div className="mb-4">
               <label
                 htmlFor="tshirtSize"
@@ -410,7 +432,6 @@ function Merchandise() {
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0d0c06] focus:border-[#0d0c06] block w-full p-2.5"
                 required
               >
-                <option value="">Eg. S, M, L, XL ...</option>
                 <option value="S">S</option>
                 <option value="M">M</option>
                 <option value="L">L</option>
@@ -452,8 +473,8 @@ function Merchandise() {
                 />
               </div> */}
 
-            <div className="max-w-lg mx-auto mb-2">
-              {/*<label
+             <div className="max-w-lg mx-auto mb-2">
+               {/*<label
                 className="block mb-2 text-sm font-medium text-[#040d10]"
                 htmlFor="user_avatar"
               >
@@ -476,11 +497,9 @@ function Merchandise() {
               </div>*/}
               <div className="mt-4">
                 Payable Amount:{" "}
-                {beta.type == "Tshirt"
-                  ? 399 * beta.quantity
-                  : 799 * beta.quantity}
+                {outside ? 399 * beta.quantity + 50 : 399 * beta.quantity}
               </div>
-            </div>
+            </div> 
             <div className="flex mb-4" style={{ alignItems: "flex-start" }}>
               <div
                 // type="checkbox"
@@ -493,8 +512,11 @@ function Merchandise() {
                   backgroundColor: "#020508",
                 }}
               />{" "}
+              <label className="block mb-2 text-sm font-medium text-[#040d10]">
+                Delivery outside IIT ISM (Rs. 50 delivery charges)
+              </label>
             </div>
-            {beta.type}
+
             <button
               type="submit"
               className="text-[#efede0] bg-[#514c08]/60 hover:bg-[#efede0] hover:text-[#514c08] focus:ring-2 focus:outline-none focus:ring-[#514c08] font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center "
