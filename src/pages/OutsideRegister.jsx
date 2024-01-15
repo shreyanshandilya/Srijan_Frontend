@@ -252,7 +252,7 @@ else{
               className="max-w-sm mt-5 mx-auto rounded-lg bg-[#dad3a5] flex-col justify-center shadow-xl p-4 backdrop-blur-lg"
               onSubmit={otpRequest}
             >
-              <div>OTP is sent to your email !!!</div>
+              <div>An OTP has been sent to your email</div>
               <div className="my-2">
                 <label
                   htmlFor="otp"
