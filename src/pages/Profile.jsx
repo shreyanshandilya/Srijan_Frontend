@@ -99,6 +99,8 @@ function Profile() {
             <button className="text-indigo-500 py-2 px-4  font-medium mt-4">
               Show more
             </button> */}
+            <h1 style={{"textAlign":"center", "fontSize":"150%"}}><strong>Your Merchandise Orders</strong></h1>
+            <p><center>If you have placed an order, and it is not reflecting here, kindly contact along with yur transaction details. </center></p><br></br>
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
                 {details.Merchandise != undefined &&
                   details.Merchandise.length > 0 &&
@@ -108,17 +110,20 @@ function Profile() {
                         <div className="max-w-sm p-6 bg-[#3c3708] backdrop-blur-xl bg-opacity-70 rounded-lg shadow">
                           <a href="#">
                             <h5 className="mb-2 text-2xl font-bold flex justify-center tracking-tight text-[#dad3a5]">
-                              {`Merchandise ${index + 1}`}
+                              {`Order ${index + 1}`}
                             </h5>
                           </a>
                           <p className="mb-3 font-normal text-[#efede0]">
-                            Address: {item.address}
+                            <strong>Address :</strong> {item.address}
                           </p>
                           <p className="mb-3 font-normal text-[#efede0]">
-                            T-Shirt Size: {item.tshirtSize}
+                            <strong>Size :</strong> {item.tshirtSize}
                           </p>
                           <p className="mb-3 font-normal text-[#efede0]">
-                            Quantity: {item.quantity}
+                            <strong>Quantity :</strong> {item.quantity}
+                          </p>
+                          <p className="mb-3 font-normal text-[#efede0]">
+                            <strong>Specification :</strong> {item.type}
                           </p>
                         </div>
                       </>

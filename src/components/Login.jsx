@@ -47,7 +47,7 @@ function Login() {
         position: toast.POSITION.BOTTOM_RIGHT,
       });
       setTimeout(() => {
-        navigate("/merchant");
+        navigate("/");
       }, 1000);
     } else {
       toast.error("Invalid credential", {
