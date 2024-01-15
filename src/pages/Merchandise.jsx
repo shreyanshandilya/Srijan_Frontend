@@ -123,6 +123,7 @@ function Merchandise() {
 
    const currency="INR";
   const paymentHandler = async (e) => {
+    e.preventDefault();
     if(loading) return;
 
     setLoading(true);
@@ -227,22 +228,35 @@ function Merchandise() {
 
 
   return (
-    <div className="bg-[#090d06] jusitfy-center items-center mt-0 h-full w-full">
+    <div className="bg-[#090d06] jusitfy-center items-center mt-0 h-full w-full" style={{"marginTop":"5vh"}}>
       <Nav />
-      <div className="h-[75vh] ">
+      <center>
+      <div className="h-[80vh]">
         <Carousel>
         <img
             src="https://res.cloudinary.com/dkdratnao/image/upload/v1705303858/Slide_16_9_-_2_efjkce.jpg"
             alt="..."
+            style={{
+              "maxHeight":"100%",
+              "maxWidth":"100%"
+            }}
           />
          
           <img
             src="https://res.cloudinary.com/dkdratnao/image/upload/v1705303857/Slide_16_9_-_3_ijz7nd.jpg"
             alt="..."
+            style={{
+              "maxHeight":"100%",
+              "maxWidth":"100%"
+            }}
           />
            <img
             src="https://res.cloudinary.com/dkdratnao/image/upload/v1705303854/Slide_16_9_-_1_iljfez.jpg"
             alt="..."
+            style={{
+              "maxHeight":"100%",
+              "maxWidth":"100%"
+            }}
           />
           {/* <img
             src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967509/fotofreaks_iitism_1675676767_3032118946798465237_5457821429_qldckp.jpg"
@@ -250,6 +264,7 @@ function Merchandise() {
           /> */}  
         </Carousel>
       </div>
+      </center>
 
  
 
@@ -327,6 +342,14 @@ function Merchandise() {
             onSubmit={paymentHandler}
             className="max-w-sm mx-auto rounded-lg bg-[#dad3a5] shadow-xl px-5 py-5 backdrop-blur-lg"
           >
+          <p>
+            <strong>Guidelines for online transaction : </strong>
+            <ul>
+              <li>As of now, kindly instead of using the QR use your UPI ID in order to pay.</li>
+              <li>Kindly keep your transaction details with you.</li>
+            </ul> 
+            <br></br>
+          </p>
             {/* <div className="mb-4">
               <label
                 htmlFor="name"
@@ -426,7 +449,7 @@ function Merchandise() {
                 onChange={handleChangeInput}
                 value={beta.address}
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0d0c06] focus:border-[#0d0c06] block w-full p-2.5"
-                placeholder="Jhon doe ,123 Main Street ,Mumbai ,Maharashtra 400001"
+                placeholder="Your Address"
                 required
               />
             </div>
@@ -527,10 +550,10 @@ function Merchandise() {
               >
                 Screenshot of your payment
               </div>*/}
-              <div className="mt-4">
-                Payable Amount:{" "}
+              <strong><div className="mt-4">
+                Payable Amount: INR {" "}
                 {outside ? 399 * beta.quantity + 50 : 399 * beta.quantity}
-              </div>
+              </div></strong>
             </div> 
             <div className="flex mb-4" style={{ alignItems: "flex-start" }}>
               <div
@@ -544,9 +567,11 @@ function Merchandise() {
                   backgroundColor: "#020508",
                 }}
               />{" "}
-              <label className="block mb-2 text-sm font-medium text-[#040d10]">
+              {/* <label className="block mb-2 text-sm font-medium text-[#040d10]">
                 Delivery outside IIT ISM (Rs. 50 delivery charges)
-              </label>
+              </label> */}
+              Once an order has been placed, you can view them in the profile section.
+              Please keep your transaction details with you.
             </div>
 
             <button
