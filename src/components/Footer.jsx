@@ -140,14 +140,25 @@ function FooterT() {
                 <FaInstagram />
                 <span className="sr-only">Instagram page</span>
               </a>
-              <a
+              {/* <a
                 href="https://www.linkedin.com/company/srijaniitismdhn/"
                 className=" hover:text-[#c9bc57] ms-5"
               >
                 <FaLinkedin />
                 <span className="sr-only">LinkedIn page</span>
-              </a>
+              </a> */}
             </div>
+            <div>
+            <Link to="/privacy-policy" className="hover:underline mx-5">
+              Privacy Policy
+            </Link>
+            <Link to="/terms-and-conditions" className="hover:underline mx-5">
+              Terms & Conditions
+            </Link>
+            <Link to="/returns-and-refunds-policy" className="hover:underline mx-5">
+              Returns & Refunds Policy
+            </Link>
+          </div>
           </div>
         </div>
       </footer>

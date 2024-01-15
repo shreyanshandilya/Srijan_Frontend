@@ -25,6 +25,10 @@ import Merchandise2 from "./pages/Merchandise2";
 import Profile from "./pages/Profile";
 import BgVideo from "./components/BgVideo";
 
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsAndConditions from "./pages/TermsAndConditions";
+import ReturnsAndRefundsPolicy from "./pages/ReturnsAndRefundsPolicy";
+
 function App() {
   const [load, setLoader]=useState(true);
   const router = createHashRouter([
@@ -84,6 +88,18 @@ function App() {
       path: "/event/event-details/eventRegister/:id",
       element: <EventRegister />,
     },
+    {
+      path: "privacy-policy",
+      element: <PrivacyPolicy />,
+    },
+    {
+      path: "terms-and-conditions",
+      element: <TermsAndConditions />,
+    },
+    {
+      path: "returns-and-refunds-policy",
+      element: <ReturnsAndRefundsPolicy />,
+    },
   ]);
   return <RouterProvider router={router} />;
 }
