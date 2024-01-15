@@ -89,8 +89,8 @@ function App() {
       element: <EventRegister />,
     },
     {
-      // path: "privacy-policy",
-      // element: <PrivacyPolicy />,
+      path: "privacy-policy",
+      element: <PrivacyPolicy />,
     },
     {
       path: "terms-and-conditions",
