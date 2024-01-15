@@ -24,7 +24,7 @@ function Merchandise() {
     // outsider: false,
     tshirtSize: "",
     address: "",
-    quantity: "",
+    quantity: 0,
   });
   useEffect(() => {
     scroll.scrollToTop({ duration: 1000 });
@@ -121,25 +121,30 @@ function Merchandise() {
     console.log(open);
   };
 
-  const amount = 1*100 ;
-  const currency = "INR";
-  const receiptId = "siddharthAggarwal";
-
+   const currency="INR";
   const paymentHandler = async (e) => {
+    e.preventDefault();
+    const amount = (beta.quantity[0])*399*100 ;
+    console.log(amount);
     const response = await fetch("https://srijan2024.onrender.com/api/order", {
       method: "POST",
       mode: "cors",
       body: JSON.stringify({
-        amount,
-        currency,
-        receipt: receiptId,
+        amount
       }),
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${localStorage["token"]}`,
       }, 
     });
+     
+    if(!response){
+      // add toast for error;
+      return; 
+
+    }
     const order = await response.json();
+    
     console.log(order);
 
     var options = {
@@ -172,7 +177,7 @@ function Merchandise() {
         address: "Razorpay Corporate Office",
       },
       theme: {
-        color: "#1a190c",
+        color: "#000",
       },
     };
     let rzp1 = new Razorpay(options);
