@@ -24,8 +24,7 @@ function Merchandise() {
     // outsider: false,
     tshirtSize: "",
     address: "",
-    quantity: "",
-    type: "",
+    quantity: ""
   });
   useEffect(() => {
     scroll.scrollToTop({ duration: 1000 });
@@ -380,26 +379,6 @@ function Merchandise() {
             </div>
             <div className="mb-4">
               <label
-                htmlFor="tshirtSize"
-                className="block mb-2 text-sm font-medium text-gray-900"
-              >
-                Available Merchandise
-              </label>
-              <select
-                id="type"
-                onChange={handleChangeInput}
-                value={beta.type}
-                placeholder="Hoodie"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0d0c06] focus:border-[#0d0c06] block w-full p-2.5"
-                required
-              >
-                <option value="">Select our merch...</option>
-                <option value="Hoodie">Hoodie</option>
-                <option value="Tshirt">Tshirt</option>
-              </select>
-            </div>
-            <div className="mb-4">
-              <label
                 htmlFor="quantity"
                 className="block mb-2 text-sm font-medium text-[#040d10]"
               >
@@ -416,7 +395,6 @@ function Merchandise() {
                 required
               />
             </div>
-
             <div className="mb-4">
               <label
                 htmlFor="tshirtSize"
