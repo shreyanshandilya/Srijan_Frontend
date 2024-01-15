@@ -11,14 +11,15 @@ function About() {
   return (
     <>
       <Navbar />
-      <div className="bg-[url('https://res.cloudinary.com/dkdratnao/image/upload/v1705271577/bg0fabout_v8frwc.jpg')] bg-cover bg-no-repeat bg-[#0d0c06] jusitfy-center items-center mt-5 h-full w-full backdrop-brightness-50">
-        <div className="py-8 px-2 sm:px-4 max-w-screen-xl text-center flex flex-col sm:flex-row justify-center items-center lg:py-16 mx-4 sm:mx-10">
+      <div className="bg-[url('https://res.cloudinary.com/dkdratnao/image/upload/v1705271577/bg0fabout_v8frwc.jpg')] bg-cover bg-no-repeat bg-[#0d0c06] justify-center items-center mt-5 h-full w-full backdrop-brightness-50">
+        {/* <div className="py-8 px-2 sm:px-4 max-w-screen-xl w-screen text-center flex justify-center items-center lg:py-16 mx-4 sm:mx-10">
           <motion.div
             //   ref={scope}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            layout
-            transition={{ duration: 1 }}
+            // initial={{ opacity: 0 }}
+            // animate={{ opacity: 1 }}
+            // layout
+            // transition={{ duration: 1 }}
+            className="flex-col justify-center items-center"
           >
             <h1 className="mb-8 text-4xl mt-10 font-bold tracking-tight leading-none text-[#dad3a5] md:text-5xl lg:text-6xl">
               About Us
@@ -48,6 +49,48 @@ function About() {
               creativity, personality, and talents, fostering interaction and
               skill enhancement on a national scale.
             </p>
+          </motion.div>
+        </div> */}
+        <div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className=" mx-[6vw] md:mx-[10vw] flex justify-center items-center rounded-lg shadow my-10"
+          >
+            <div className="flex flex-col items-center py-10 px-8 ">
+              <h5 className="mb-1 mt-5 font-semibold text-[#dad3a5] text-5xl lg:text-6xl">
+                About Us
+              </h5>
+              <div className="flex mt-4 md:mt-6 text-[#efede0] md:text-base text-sm">
+                <p className="text-[#efede0] px-5 rounded-xl text-base md:text-lg lg:text-xl backdrop-blur-xl bg-opacity-30 py-10 text-justify md:text-center">
+                  Established in 1926, the Indian Institute of Technology
+                  (Indian School of Mines) Dhanbad, erstwhile Indian School of
+                  Mines Dhanbad, stands as a prestigious engineering and
+                  research institution in the heart of the Coal Capital of
+                  India, Dhanbad. Approaching its centenary, IIT (ISM) holds the
+                  esteemed Institute of National Importance and has evolved from
+                  its initial focus on Earth Sciences and Engineering to
+                  encompass 18 academic departments across various technical
+                  disciplines. Standing as the third oldest among IITs, IIT
+                  (ISM) has experienced significant growth beyond its roots in
+                  Earth Sciences. Notably, it achieved the 26th position in the
+                  QS World University Rankings for Mining and Mineral
+                  Engineering in 2022. The institute admits undergraduate
+                  students through the Joint Entrance Examination (Advanced),
+                  making it a beacon of academic excellence and innovation that
+                  attracts students nationwide. Integral to the institutes
+                  vibrant culture is SRIJAN, a Socio-Cultural Festival that has
+                  been captivating audiences in Eastern India since 1977. With
+                  over 30,000 annual attendees from 200 colleges nationwide,
+                  SRIJAN serves as a dynamic platform for budding talents. The
+                  festival, boasting a prize pool exceeding INR 7.5 lakhs,
+                  provides participants with a unique opportunity to showcase
+                  their creativity, personality, and talents, fostering
+                  interaction and skill enhancement on a national scale.
+                </p>
+              </div>
+            </div>
           </motion.div>
         </div>
         <div>

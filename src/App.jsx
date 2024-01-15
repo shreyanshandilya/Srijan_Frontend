@@ -30,15 +30,15 @@ import TermsAndConditions from "./pages/TermsAndConditions";
 import ReturnsAndRefundsPolicy from "./pages/ReturnsAndRefundsPolicy";
 
 function App() {
-  const [load, setLoader]=useState(true);
+  const [load, setLoader] = useState(true);
   const router = createHashRouter([
     {
       path: "/",
-      element: <Landing load={load}/>,
+      element: <Landing load={load} />,
     },
     {
       path: "/preloader",
-      element: < BgVideo setLoader={setLoader}/>,
+      element: <BgVideo setLoader={setLoader} />,
     },
     {
       path: "merchant",
@@ -98,8 +98,8 @@ function App() {
     },
     {
       path: "returns-and-refunds-policy",
-      element: <ReturnsAndRefundsPolicy />,
-    },
+      element: <ReturnsAndRefundsPolicy />,
+    },
   ]);
   return <RouterProvider router={router} />;
 }
