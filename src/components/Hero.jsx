@@ -322,7 +322,7 @@ function Hero() {
             </div>
           </div>
         </div>
-        <div>
+        {/* <div>
           <div className="relative flex justify-center bg-[#17160e]">
             <div className="flex items-center overflow-hidden">
               <motion.div
@@ -406,7 +406,7 @@ function Hero() {
               </motion.div>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-4 px-5 py-5 bg-[#17160e]">
           <div className="grid gap-4">
             <div>
@@ -501,7 +501,7 @@ function Hero() {
             </div>
           </div>
         </div> */}
-        <div className="relative flex justify-center bg-[#17160e]">
+        {/* <div className="relative flex justify-center bg-[#17160e]">
           <div className="flex items-center overflow-hidden">
             <motion.div
               ref={ref2}
@@ -537,7 +537,7 @@ function Hero() {
               </div>
             </motion.div>
           </div>
-        </div>
+        </div> */}
         {/* <div className="relative flex justify-center">
             <div className="flex items-center overflow-hidden">
               <motion.div
