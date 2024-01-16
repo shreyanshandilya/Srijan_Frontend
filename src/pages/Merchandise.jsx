@@ -279,7 +279,7 @@ function Merchandise() {
             Merchandise
           </h1>
           <h1 className="my-4 text-2xl font-semibold tracking-tight leading-none text-[#efede0] md:text-3xl lg:text-4xl ">
-            399 INR / T-Shirt
+            INR 399 / T-Shirt
           </h1>
 
           <div className="flex flex-col space-y-4 my-10 sm:flex-row sm:justify-center sm:space-y-0">
