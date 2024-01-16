@@ -26,6 +26,7 @@ function Merchandise() {
     tshirtSize: "S",
     address: "",
     quantity: 0,
+    type: "Hoodie",
   });
   useEffect(() => {
     scroll.scrollToTop({ duration: 1000 });
@@ -38,8 +39,8 @@ function Merchandise() {
 
   const [outside, setOutside] = useState(false);
   const handleChangeInput = (event) => {
-    setData({ ...beta, [event.target.id]: [event.target.value] });
-    // console.log(data);
+    setData({ ...beta, [event.target.id]: event.target.value });
+    // console.log(beta);
   };
   // const handleImg = (event) => {
   //   setImg(event.target.files[0]);
@@ -128,7 +129,7 @@ function Merchandise() {
     if (loading) return;
 
     setLoading(true);
-    const amount = beta.quantity[0] * 399 * 100;
+    const amount = beta.quantity * (beta.type === "Hoodie" ? 1 : 399) * 100;
 
     console.log(amount);
     const response = await toast.promise(
@@ -181,9 +182,10 @@ function Merchandise() {
             mode: "cors",
             body: JSON.stringify({
               ...body,
-              tshirtSize: beta.tshirtSize[0],
-              quantity: beta.quantity[0],
-              addresss: beta.address[0],
+              tshirtSize: beta.tshirtSize,
+              quantity: beta.quantity,
+              addresss: beta.address,
+              type : beta.type,
             }),
             headers: {
               "Content-Type": "application/json",
@@ -222,6 +224,7 @@ function Merchandise() {
       tshirtSize: "S",
       address: "",
       quantity: 0,
+      type: "Hoodie",
     });
   };
 
@@ -234,6 +237,14 @@ function Merchandise() {
       <center>
         <div className="h-[80vh]">
           <Carousel>
+          <img
+              src="https://res.cloudinary.com/dkdratnao/image/upload/v1705433458/hoodieimg_tr5fia.jpg"
+              alt="..."
+              style={{
+                maxHeight: "100%",
+                maxWidth: "100%",
+              }}
+            />
             <img
               src="https://res.cloudinary.com/dkdratnao/image/upload/v1705303858/Slide_16_9_-_2_efjkce.jpg"
               alt="..."
@@ -460,6 +471,25 @@ function Merchandise() {
             </div>
             <div className="mb-4">
               <label
+                htmlFor="tshirtSize"
+                className="block mb-2 text-sm font-medium text-gray-900"
+              >
+                Available Merchandise
+              </label>
+              <select
+                id="type"
+                onChange={handleChangeInput}
+                value={beta.type}
+                placeholder="Hoodie"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0d0c06] focus:border-[#0d0c06] block w-full p-2.5"
+                required
+              >
+                <option value="Hoodie">Hoodie</option>
+                <option value="Tshirt">Tshirt</option>
+              </select>
+            </div>
+            <div className="mb-4">
+              <label
                 htmlFor="quantity"
                 className="block mb-2 text-sm font-medium text-[#040d10]"
               >
@@ -558,7 +588,7 @@ function Merchandise() {
               <strong>
                 <div className="mt-4">
                   Payable Amount: INR{" "}
-                  {outside ? 399 * beta.quantity + 50 : 399 * beta.quantity}
+                  {beta.type === "Hoodie" ? (799 * beta.quantity) : (399 * beta.quantity)}
                 </div>
               </strong>
             </div>
