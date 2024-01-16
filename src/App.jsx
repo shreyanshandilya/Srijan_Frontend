@@ -7,6 +7,7 @@ import Merchandise from "./pages/Merchandise";
 import Team from "./components/Teams/Team";
 import About from "./pages/About";
 import Frm from "./components/Profile/form";
+import { RegisterForEvents } from "./pages/RegisterForEvents";
 // import { Profile } from "./pages/Profile";
 import PurchaseListPage from "./pages/PurcahseListPage";
 import EventDetails from "./pages/EventDetails";
@@ -17,14 +18,14 @@ import {
   useLocation,
 } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
-import { EventRegister } from "./pages/EventRegister";
+import { RegisterTheEvents } from "./EventRegister/RegisterTheEvents";
 import Login from "./components/Login";
 import { Register } from "./pages/Register";
 import { PackSelectionPage } from "./pages/PackSelectionPage";
 import Merchandise2 from "./pages/Merchandise2";
 import Profile from "./pages/Profile";
 import BgVideo from "./components/BgVideo";
-
+import { EventRegister } from "./pages/EventRegister";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import ReturnsAndRefundsPolicy from "./pages/ReturnsAndRefundsPolicy";
@@ -56,6 +57,10 @@ function App() {
       path: "/event/event-details/:id",
       element: <EventDetails />,
     },
+    {
+      path: "/event/event-details/register/:id",
+      element: <EventRegister />,
+    },
     // {
     //   path: "/profile",
     //   element: <Frm />,
@@ -85,8 +90,8 @@ function App() {
       element: <Register />,
     },
     {
-      path: "/event/event-details/eventRegister/:id",
-      element: <EventRegister />,
+      path: "/event-register/:id",
+      element: <RegisterTheEvents/>,
     },
     {
       path: "privacy-policy",
