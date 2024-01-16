@@ -8,9 +8,9 @@ import Footer from "../components/Footer.jsx";
 import { Carousel } from "flowbite-react";
 import { animateScroll as scroll } from "react-scroll";
 import { ToastContainer, toast } from "react-toastify";
-import AlertDialog from "./Alert.jsx"; 
+import AlertDialog from "./Alert.jsx";
 import useRazorpay from "react-razorpay";
-import Srijanmage from "../assets/SrijanLogo.png"
+import Srijanmage from "../assets/SrijanLogo.png";
 import FooterT from "../components/Footer.jsx";
 
 function Merchandise() {
@@ -122,45 +122,43 @@ function Merchandise() {
     console.log(open);
   };
 
-   const currency="INR";
+  const currency = "INR";
   const paymentHandler = async (e) => {
     e.preventDefault();
-    if(loading) return;
+    if (loading) return;
 
     setLoading(true);
-    const amount = (beta.quantity[0])*399*100 ;
-     
+    const amount = beta.quantity[0] * 399 * 100;
+
     console.log(amount);
     const response = await toast.promise(
       fetch("https://srijan2024.onrender.com/api/order", {
         method: "POST",
         mode: "cors",
         body: JSON.stringify({
-          amount
-           
+          amount,
         }),
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${localStorage["token"]}`,
-        }, 
+        },
       }),
-          {
-            position: toast.POSITION.BOTTOM_RIGHT,
-            pending: "Placing Order",
-           
-            error: "Order failed to process please try again",
-          }
-        );
-     
-    if(!response){
-      toast.error("Probelem in Processing Payment", {
-                  position: toast.POSITION.BOTTOM_RIGHT,
-                });
-      return; 
+      {
+        position: toast.POSITION.BOTTOM_RIGHT,
+        pending: "Placing Order",
 
+        error: "Order failed to process please try again",
+      }
+    );
+
+    if (!response) {
+      toast.error("Probelem in Processing Payment", {
+        position: toast.POSITION.BOTTOM_RIGHT,
+      });
+      return;
     }
     const order = await response.json();
-    
+
     console.log(order);
 
     var options = {
@@ -169,7 +167,7 @@ function Merchandise() {
       currency,
       name: "Srijan",
       description: "Merchandise Payment",
-      image: Srijanmage  ,// add srih=jan image 
+      image: Srijanmage, // add srih=jan image
       order_id: order.id,
       handler: async function (response) {
         const body = {
@@ -181,7 +179,12 @@ function Merchandise() {
           {
             method: "POST",
             mode: "cors",
-            body: JSON.stringify({...body , tshirtSize :beta.tshirtSize[0] , quantity :beta.quantity[0] ,addresss: beta.address[0] }),
+            body: JSON.stringify({
+              ...body,
+              tshirtSize: beta.tshirtSize[0],
+              quantity: beta.quantity[0],
+              addresss: beta.address[0],
+            }),
             headers: {
               "Content-Type": "application/json",
               Authorization: `Bearer ${localStorage["token"]}`,
@@ -198,11 +201,11 @@ function Merchandise() {
     };
     let rzp1 = new Razorpay(options);
 
-    rzp1.on('payment.success', function (response) {
+    rzp1.on("payment.success", function (response) {
       toast.success("Order Placed", {
-              position: toast.POSITION.BOTTOM_RIGHT,
-              });
-      console.log('Payment success event:', response);
+        position: toast.POSITION.BOTTOM_RIGHT,
+      });
+      console.log("Payment success event:", response);
     });
 
     rzp1.on("payment.failed", function (response) {
@@ -211,63 +214,58 @@ function Merchandise() {
       });
     });
     console.log(rzp1);
-     
+
     rzp1.open();
     setLoading(false);
     e.preventDefault();
     setData({
       tshirtSize: "S",
       address: "",
-      quantity: 0
+      quantity: 0,
     });
-     
   };
 
-
-
-
-
-
   return (
-    <div className="bg-[#090d06] jusitfy-center items-center mt-0 h-full w-full" style={{"marginTop":"5vh"}}>
+    <div
+      className="bg-[#090d06] jusitfy-center items-center mt-0 h-full w-full"
+      style={{ marginTop: "5vh" }}
+    >
       <Nav />
       <center>
-      <div className="h-[80vh]">
-        <Carousel>
-        <img
-            src="https://res.cloudinary.com/dkdratnao/image/upload/v1705303858/Slide_16_9_-_2_efjkce.jpg"
-            alt="..."
-            style={{
-              "maxHeight":"100%",
-              "maxWidth":"100%"
-            }}
-          />
-         
-          <img
-            src="https://res.cloudinary.com/dkdratnao/image/upload/v1705303857/Slide_16_9_-_3_ijz7nd.jpg"
-            alt="..."
-            style={{
-              "maxHeight":"100%",
-              "maxWidth":"100%"
-            }}
-          />
-           <img
-            src="https://res.cloudinary.com/dkdratnao/image/upload/v1705303854/Slide_16_9_-_1_iljfez.jpg"
-            alt="..."
-            style={{
-              "maxHeight":"100%",
-              "maxWidth":"100%"
-            }}
-          />
-          {/* <img
+        <div className="h-[80vh]">
+          <Carousel>
+            <img
+              src="https://res.cloudinary.com/dkdratnao/image/upload/v1705303858/Slide_16_9_-_2_efjkce.jpg"
+              alt="..."
+              style={{
+                maxHeight: "100%",
+                maxWidth: "100%",
+              }}
+            />
+
+            <img
+              src="https://res.cloudinary.com/dkdratnao/image/upload/v1705303857/Slide_16_9_-_3_ijz7nd.jpg"
+              alt="..."
+              style={{
+                maxHeight: "100%",
+                maxWidth: "100%",
+              }}
+            />
+            <img
+              src="https://res.cloudinary.com/dkdratnao/image/upload/v1705303854/Slide_16_9_-_1_iljfez.jpg"
+              alt="..."
+              style={{
+                maxHeight: "100%",
+                maxWidth: "100%",
+              }}
+            />
+            {/* <img
             src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967509/fotofreaks_iitism_1675676767_3032118946798465237_5457821429_qldckp.jpg"
             alt="..."
-          /> */}  
-        </Carousel>
-      </div>
+          /> */}
+          </Carousel>
+        </div>
       </center>
-
- 
 
       <div className="py-8 px-4 mx-auto max-w-screen-xl text-center flex flex-col sm:flex-row justify-center items-center lg:py-16">
         <motion.div
@@ -277,8 +275,11 @@ function Merchandise() {
           layout
           transition={{ duration: 1 }}
         >
-          <h1 className="mb-4 text-4xl font-bold tracking-tight leading-none text-[#dad3a5] md:text-5xl lg:text-6xl ">
+          <h1 className="mb-2 text-4xl font-bold tracking-tight leading-none text-[#dad3a5] md:text-5xl lg:text-6xl ">
             Merchandise
+          </h1>
+          <h1 className="my-4 text-2xl font-semibold tracking-tight leading-none text-[#efede0] md:text-3xl lg:text-4xl ">
+            399 INR / T-Shirt
           </h1>
 
           <div className="flex flex-col space-y-4 my-10 sm:flex-row sm:justify-center sm:space-y-0">
@@ -343,14 +344,17 @@ function Merchandise() {
             onSubmit={paymentHandler}
             className="max-w-sm mx-auto rounded-lg bg-[#dad3a5] shadow-xl px-5 py-5 backdrop-blur-lg"
           >
-          <p>
-            <strong>Guidelines for online transaction : </strong>
-            <ul className="bg-[#514c08]/60 p-3 my-2 rounded-lg text-white">
-              <li className="m-3">As of now, kindly use your<br/> UPI ID in order to pay.</li>
-              <li>Kindly keep your transaction details with you.</li>
-            </ul> 
-            <br></br>
-          </p>
+            <p>
+              <strong>Guidelines for online transaction : </strong>
+              <ul className="bg-[#514c08]/60 p-3 my-2 rounded-lg text-white">
+                <li className="m-3">
+                  As of now, kindly use your
+                  <br /> UPI ID in order to pay.
+                </li>
+                <li>Kindly keep your transaction details with you.</li>
+              </ul>
+              <br></br>
+            </p>
             {/* <div className="mb-4">
               <label
                 htmlFor="name"
@@ -529,8 +533,8 @@ function Merchandise() {
                 />
               </div> */}
 
-             <div className="max-w-lg mx-auto mb-2">
-               {/*<label
+            <div className="max-w-lg mx-auto mb-2">
+              {/*<label
                 className="block mb-2 text-sm font-medium text-[#040d10]"
                 htmlFor="user_avatar"
               >
@@ -551,11 +555,13 @@ function Merchandise() {
               >
                 Screenshot of your payment
               </div>*/}
-              <strong><div className="mt-4">
-                Payable Amount: INR {" "}
-                {outside ? 399 * beta.quantity + 50 : 399 * beta.quantity}
-              </div></strong>
-            </div> 
+              <strong>
+                <div className="mt-4">
+                  Payable Amount: INR{" "}
+                  {outside ? 399 * beta.quantity + 50 : 399 * beta.quantity}
+                </div>
+              </strong>
+            </div>
             <div className="flex mb-4" style={{ alignItems: "flex-start" }}>
               <div
                 // type="checkbox"
@@ -571,8 +577,8 @@ function Merchandise() {
               {/* <label className="block mb-2 text-sm font-medium text-[#040d10]">
                 Delivery outside IIT ISM (Rs. 50 delivery charges)
               </label> */}
-              Once an order has been placed, you can view them in the profile section.
-              Please keep your transaction details with you.
+              Once an order has been placed, you can view them in the profile
+              section. Please keep your transaction details with you.
             </div>
 
             <button
