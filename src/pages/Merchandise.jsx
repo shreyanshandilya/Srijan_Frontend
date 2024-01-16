@@ -11,6 +11,7 @@ import { ToastContainer, toast } from "react-toastify";
 import AlertDialog from "./Alert.jsx"; 
 import useRazorpay from "react-razorpay";
 import Srijanmage from "../assets/SrijanLogo.png"
+import FooterT from "../components/Footer.jsx";
 
 function Merchandise() {
   const navigate = useNavigate();
@@ -344,8 +345,8 @@ function Merchandise() {
           >
           <p>
             <strong>Guidelines for online transaction : </strong>
-            <ul>
-              <li>As of now, kindly use your UPI ID in order to pay.</li>
+            <ul className="bg-[#514c08]/60 p-3 my-2 rounded-lg text-white">
+              <li className="m-3">As of now, kindly use your<br/> UPI ID in order to pay.</li>
               <li>Kindly keep your transaction details with you.</li>
             </ul> 
             <br></br>
@@ -595,6 +596,7 @@ function Merchandise() {
           theme="dark"
         />
       </div>
+      <FooterT />
     </div>
   );
 }
