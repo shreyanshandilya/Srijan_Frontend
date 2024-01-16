@@ -129,7 +129,7 @@ function Merchandise() {
     if (loading) return;
 
     setLoading(true);
-    const amount = beta.quantity * (beta.type === "Hoodie" ? 1 : 399) * 100;
+    const amount = beta.quantity * (beta.type === "Hoodie" ? 799 : 399) * 100;
 
     console.log(amount);
     const response = await toast.promise(
