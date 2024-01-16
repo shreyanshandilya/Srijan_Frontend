@@ -6,37 +6,41 @@ import Navbar from "../components/Navbar/navbar";
 import { useNavigate } from "react-router-dom";
 import image from "../assets/BgProfile.jpg";
 import { ToastContainer, toast } from "react-toastify";
+import FooterT from "../components/Footer";
 
 function Profile() {
-
-  const navigate=useNavigate();
-  const [loading,setLoading] = useState(false);
-  useEffect(()=>{
-    if(localStorage.getItem("token") == null|| localStorage.getItem("token") == undefined){
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    if (
+      localStorage.getItem("token") == null ||
+      localStorage.getItem("token") == undefined
+    ) {
       navigate("/register");
     }
-  },[localStorage.getItem("token")])
-   
+  }, [localStorage.getItem("token")]);
+
   const [details, setDetails] = useState([]);
   const url = "https://srijan2024.onrender.com/api/getUser";
   const fetchUser = useCallback(async () => {
-    const response = await toast.promise(
-      fetch(url, {
-        method: "GET",
-        mode: "cors",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${localStorage["token"]}`,
-        },
-      }),
-       {
-         position: toast.POSITION.BOTTOM_RIGHT,
-         pending: 'Loading Profile',
-        
-         error: 'Something wrong occured'
-       })
-    
-     
+    const response = await toast
+      .promise(
+        fetch(url, {
+          method: "GET",
+          mode: "cors",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${localStorage["token"]}`,
+          },
+        }),
+        {
+          position: toast.POSITION.BOTTOM_RIGHT,
+          pending: "Loading Profile",
+
+          error: "Something wrong occured",
+        }
+      )
+
       .then(async (res) => {
         const data = await res.json();
         console.log(data);
@@ -50,7 +54,6 @@ function Profile() {
     fetchUser();
   }, [fetchUser]);
   return (
-    
     <>
       <div
         className="bg-[#17160e]"
@@ -99,8 +102,17 @@ function Profile() {
             <button className="text-indigo-500 py-2 px-4  font-medium mt-4">
               Show more
             </button> */}
-            <h1 style={{"textAlign":"center", "fontSize":"150%"}}><strong>Your Merchandise Orders</strong></h1>
-            <p><center>If you have placed an order, and it is not reflecting here, kindly mail us at srijan@iitism.ac.in with your transaction details. </center></p><br></br>
+              <h1 style={{ textAlign: "center", fontSize: "150%" }}>
+                <strong>Your Merchandise Orders</strong>
+              </h1>
+              <p>
+                <center>
+                  If you have placed an order, and it is not reflecting here,
+                  kindly mail us at srijan@iitism.ac.in with your transaction
+                  details.{" "}
+                </center>
+              </p>
+              <br></br>
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
                 {details.Merchandise != undefined &&
                   details.Merchandise.length > 0 &&
@@ -134,18 +146,18 @@ function Profile() {
           </div>
         </div>
         <ToastContainer
-
-position="bottom-right"
-  autoClose={5000}
-  hideProgressBar={false}
-  newestOnTop={false}
-  closeOnClick
-  rtl={false}
-  pauseOnFocusLoss
-  draggable
-  pauseOnHover
-  theme="dark"
-/>
+          position="bottom-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
+        <FooterT />
       </div>
     </>
   );

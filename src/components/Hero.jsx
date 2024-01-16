@@ -11,10 +11,37 @@ import image from "../assets/image4.png";
 function Hero() {
   const sponsor = useRef(null);
   const container = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: [""],
+  const ref2 = useRef(null);
+  const ref = useRef(null);
+  const { scrollYProgress: scrollYProgress2 } = useScroll({
+    target: "ref2",
   });
+  const { scrollYProgress: scrollYProgress } = useScroll({
+    target: "ref",
+  });
+  const x = useTransform(scrollYProgress2, [0, 1], ["0%", "60%"]);
+  const x2 = useTransform(scrollYProgress, [1, 0], ["40%", "-20%"]);
+  const Card = ({ card }) => {
+    return (
+      <div
+        key={card.id}
+        className="bg-white w-[350px] h-[250px] rounded-lg drop-shadow-lg m-3"
+      >
+        <div className="flex gap-x-2">
+          <img
+            className="rounded-full h-10 w-10 mt-1"
+            src={card.url}
+            alt="krittibas"
+          />
+        </div>
+      </div>
+    );
+  };
+
+  // const { scrollYProgress } = useScroll({
+  //   target: container,
+  //   offset: [""],
+  // });
   const scrollSponsor = () => {};
   const bgAnimate = {
     hidden: {
@@ -295,6 +322,259 @@ function Hero() {
             </div>
           </div>
         </div>
+        {/* <div>
+          <div className="relative flex justify-center bg-[#17160e]">
+            <div className="flex items-center overflow-hidden">
+              <motion.div
+                ref={ref2}
+                style={{ x }}
+                className="flex justify-center w-[95vw] gap-4"
+              >
+                <div className="bg-white w-[350px] h-[250px] rounded-lg drop-shadow-lg m-3">
+                  <div className="flex gap-x-2">
+                    <img
+                      className="w-auto mt-1"
+                      src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967638/fotofreaks_iitism_1675510867_3030727283232442698_5457821429_ntn445.jpg"
+                      alt="krittibas"
+                    />
+                  </div>
+                </div>
+                <div className="bg-white w-[350px] h-[250px] rounded-lg drop-shadow-lg m-3">
+                  <div className="flex gap-x-2">
+                    <img
+                      className="w-auto mt-1"
+                      src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967635/fotofreaks_iitism_1675751380_3032744844446654362_5457821429_wdblrk.jpg"
+                      alt="krittibas"
+                    />
+                  </div>
+                </div>
+                <div className="bg-white w-[350px] h-[250px] rounded-lg drop-shadow-lg m-3">
+                  <div className="flex gap-x-2">
+                    <img
+                      className="w-auto mt-1"
+                      src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967634/fotofreaks_iitism_1675510867_3030727283232278412_5457821429_bncuph.jpg"
+                      alt="krittibas"
+                    />
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+          <div className="relative flex justify-center bg-[#17160e]">
+            <div className="flex items-center overflow-hidden">
+              <motion.div
+                ref={ref}
+                style={{ x2 }}
+                className="flex justify-center w-[95vw] gap-4"
+              >
+                <div className="bg-white w-[350px] h-[250px] rounded-lg drop-shadow-lg m-3">
+                  <div className="flex gap-x-2 object-cover">
+                    <img
+                      className="w-auto mt-1"
+                      src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967632/fotofreaks_iitism_1675510867_3030727283215629849_5457821429_rdiys1.jpg"
+                      alt="krittibas"
+                    />
+                  </div>
+                </div>
+                <div className="bg-white w-[350px] h-[250px] rounded-lg drop-shadow-lg m-3">
+                  <div className="flex gap-x-2 object-cover">
+                    <img
+                      className="w-auto mt-1 object-cover"
+                      src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967635/fotofreaks_iitism_1675751380_3032744844446654362_5457821429_wdblrk.jpg"
+                      alt="krittibas"
+                    />
+                  </div>
+                </div>
+                <div className="bg-white w-[350px] h-[250px] rounded-lg drop-shadow-lg m-3">
+                  <div className="flex gap-x-2">
+                    <img
+                      className="w-auto mt-1"
+                      src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967533/fotofreaks_iitism_1675597389_3031453081182662787_5457821429_zbs9ev.jpg"
+                      alt="krittibas"
+                    />
+                  </div>
+                </div>
+                <div className="bg-white w-[350px] h-[250px] rounded-lg drop-shadow-lg m-3">
+                  <div className="flex gap-x-2">
+                    <img
+                      className="w-auto mt-1"
+                      src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967625/fotofreaks_iitism_1675510867_3030727283140034780_5457821429_gxrzzk.jpg"
+                      alt="krittibas"
+                    />
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </div> */}
+        {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-4 px-5 py-5 bg-[#17160e]">
+          <div className="grid gap-4">
+            <div>
+              <img
+                className="h-auto max-w-full rounded-lg"
+                src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967638/fotofreaks_iitism_1675510867_3030727283232442698_5457821429_ntn445.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                className="h-auto max-w-full rounded-lg"
+                src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967635/fotofreaks_iitism_1675751380_3032744844446654362_5457821429_wdblrk.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                className="h-auto max-w-full rounded-lg"
+                src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967634/fotofreaks_iitism_1675510867_3030727283232278412_5457821429_bncuph.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div className="grid gap-4">
+            <div>
+              <img
+                className="h-auto max-w-full rounded-lg"
+                src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967632/fotofreaks_iitism_1675510867_3030727283215629849_5457821429_rdiys1.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                className="h-auto max-w-full rounded-lg"
+                src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967477/fotofreaks_iitism_1675751379_3032744844127884839_5457821429_clavzn.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                className="h-auto max-w-full rounded-lg"
+                src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967631/fotofreaks_iitism_1675597389_3031453081258077365_5457821429_fclfrl.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div className="grid gap-4">
+            <div>
+              <img
+                className="h-auto max-w-full rounded-lg"
+                src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967623/fotofreaks_iitism_1675510867_3030727283148499964_5457821429_e2sk8e.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                className="h-auto max-w-full rounded-lg"
+                src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967563/fotofreaks_iitism_1675751379_3032744844136108526_5457821429_ejmxch.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                className="h-auto max-w-full rounded-lg"
+                src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967522/fotofreaks_iitism_1675676767_3032118946815236599_5457821429_g7qhtw.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div className="grid gap-4">
+            <div>
+              <img
+                className="h-auto max-w-full rounded-lg"
+                src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967625/fotofreaks_iitism_1675510867_3030727283140034780_5457821429_gxrzzk.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                className="h-auto max-w-full rounded-lg"
+                src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967625/fotofreaks_iitism_1675510867_3030727283140053768_5457821429_f8ul1t.jpg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                className="h-auto max-w-full rounded-lg"
+                src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967533/fotofreaks_iitism_1675597389_3031453081182662787_5457821429_zbs9ev.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div> */}
+        {/* <div className="relative flex justify-center bg-[#17160e]">
+          <div className="flex items-center overflow-hidden">
+            <motion.div
+              ref={ref2}
+              style={{ x }}
+              className="flex justify-center w-[95vw] gap-4"
+            >
+              <div className="bg-white w-[350px] h-[250px] rounded-lg drop-shadow-lg m-3">
+                <div className="flex gap-x-2 object-cover">
+                  <img
+                    className="w-auto mt-1"
+                    src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967638/fotofreaks_iitism_1675510867_3030727283232442698_5457821429_ntn445.jpg"
+                    alt="krittibas"
+                  />
+                </div>
+              </div>
+              <div className="bg-white w-[350px] h-[250px] rounded-lg drop-shadow-lg m-3">
+                <div className="flex gap-x-2">
+                  <img
+                    className="w-auto mt-1"
+                    src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967635/fotofreaks_iitism_1675751380_3032744844446654362_5457821429_wdblrk.jpg"
+                    alt="krittibas"
+                  />
+                </div>
+              </div>
+              <div className="bg-white w-[350px] h-[250px] rounded-lg drop-shadow-lg m-3">
+                <div className="flex gap-x-2">
+                  <img
+                    className="w-auto mt-1"
+                    src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967634/fotofreaks_iitism_1675510867_3030727283232278412_5457821429_bncuph.jpg"
+                    alt="krittibas"
+                  />
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div> */}
+        {/* <div className="relative flex justify-center">
+            <div className="flex items-center overflow-hidden">
+              <motion.div
+                ref={ref}
+                style={{ x2 }}
+                className="flex justify-center w-[95vw] gap-4"
+              >
+                <div className="bg-white w-[350px] h-[250px] rounded-lg drop-shadow-lg m-3">
+                  <div className="flex gap-x-2">
+                    <img
+                      className="w-auto mt-1"
+                      src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967632/fotofreaks_iitism_1675510867_3030727283215629849_5457821429_rdiys1.jpg"
+                      alt="krittibas"
+                    />
+                  </div>
+                </div>
+                <div className="bg-white w-[350px] h-[250px] rounded-lg drop-shadow-lg m-3">
+                  <div className="flex gap-x-2">
+                    <img
+                      className="w-auto mt-1"
+                      src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967635/fotofreaks_iitism_1675751380_3032744844446654362_5457821429_wdblrk.jpg"
+                      alt="krittibas"
+                    />
+                  </div>
+                </div>
+                <div className="bg-white w-[350px] h-[250px] rounded-lg drop-shadow-lg m-3">
+                  <div className="flex gap-x-2">
+                    <img
+                      className="w-auto mt-1"
+                      src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967477/fotofreaks_iitism_1675751379_3032744844127884839_5457821429_clavzn.jpg"
+                      alt="krittibas"
+                    />
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div> */}
 
         <motion.div className="md:text-8xl text-4xl font-bold bg-[#090d06] flex justify-center items-center py-10 text-[#dad3a5]">
           Coming Soon!
