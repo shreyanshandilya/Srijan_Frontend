@@ -4,7 +4,7 @@ import React from "react";
 import Card from "./Zonner_cards"; // Create a Card component if not already created
 import Navbar from "../components/Navbar/navbar";
 import { motion } from "framer-motion";
-import img from "./pngs/bgg.png";
+import img from "./Pngs/bgg.png";
 const cardsData = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 const CardContainer = () => {
