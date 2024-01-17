@@ -6,6 +6,7 @@ import { FaInstagram } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { FaPhoneAlt } from "react-icons/fa";
 
 function FooterT() {
   return (
@@ -73,10 +74,19 @@ function FooterT() {
                     <li className="my-4">
                       <a
                         href="mailto:srijan@iitism.ac.in"
-                        className="hover:underline text-xs sm:text-sm md:text-base text-[#fbe10e] flex items-center justify-start gap-x-2 sm:gap-x-4"
+                        className="hover:underline text-xs sm:text-sm md:text-base text-[#fbe10e] flex items-center justify-start gap-x-3 sm:gap-x-4"
                       >
                         <IoMdMail className="text-[#dad3a5] text-xl sm:text-2xl" />
                         srijan@iitism.ac.in
+                      </a>
+                    </li>
+                    <li className="my-4">
+                      <a
+                        href="mailto:srijan@iitism.ac.in"
+                        className="hover:underline text-xs sm:text-sm md:text-base text-[#fbe10e] flex items-center justify-start gap-x-3 sm:gap-x-5"
+                      >
+                        <FaPhoneAlt className="text-[#dad3a5] text-lg sm:text-xl" />
+                        9637111550
                       </a>
                     </li>
                     <li className="mb-4">
@@ -149,16 +159,20 @@ function FooterT() {
               </a> */}
             </div>
             <div>
-            <Link to="/privacy-policy" className="hover:underline mx-5">
-              Privacy Policy
-            </Link>
-            <Link to="/terms-and-conditions" className="hover:underline mx-5">
-              Terms & Conditions
-            </Link>
-            <Link to="/returns-and-refunds-policy" className="hover:underline mx-5">
-              Returns & Refunds Policy
-            </Link>
-          </div>
+              <Link to="/privacy-policy" className="hover:underline mx-5">
+                Privacy Policy
+              </Link>
+              <Link to="/terms-and-conditions" className="hover:underline mx-5">
+                Terms & Conditions
+              </Link>
+              <Link
+                to="/returns-and-refunds-policy"
+                className="hover:underline mx-5"
+              >
+                Returns & Refunds Policy
+              </Link>
+                        
+            </div>
           </div>
         </div>
       </footer>
