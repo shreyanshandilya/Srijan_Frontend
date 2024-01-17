@@ -10,7 +10,9 @@ import Frm from "./components/Profile/form";
 // import { Profile } from "./pages/Profile";
 import PurchaseListPage from "./pages/PurcahseListPage";
 import EventDetails from "./pages/EventDetails";
-import Event from "./pages/Event";
+import Event from "./Events/EventsZone";
+import Events from "./pages/Event";
+// import EventTest from "./Events/Event_card";
 import {
   createHashRouter,
   RouterProvider,
@@ -49,11 +51,15 @@ function App() {
       element: <Event />,
     },
     {
+      path: "event/:category",
+      element: <Events />,
+    },
+    {
       path: "profile",
       element: <Profile />,
     },
     {
-      path: "/event/event-details/:id",
+      path: "/event/:category/:name",
       element: <EventDetails />,
     },
     // {
