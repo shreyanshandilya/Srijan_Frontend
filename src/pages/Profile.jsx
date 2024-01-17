@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import image from "../assets/BgProfile.jpg";
 import { ToastContainer, toast } from "react-toastify";
 import FooterT from "../components/Footer";
+import { API_BASE_URL } from "../../config"
 
 function Profile() {
   const navigate = useNavigate();
@@ -21,7 +22,7 @@ function Profile() {
   }, [localStorage.getItem("token")]);
 
   const [details, setDetails] = useState([]);
-  const url = "https://srijan2024.onrender.com/api/getUser";
+  const url = `${API_BASE_URL}/getUser`;
   const fetchUser = useCallback(async () => {
     const response = await toast
       .promise(

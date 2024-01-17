@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Navbar from "./Navbar/navbar";
 import { ToastContainer, toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { API_BASE_URL } from "../../config"
 
 function Login() {
   const navigate = useNavigate();
@@ -24,7 +25,7 @@ function Login() {
       Password: password,
     };
     console.log(data);
-    const response = await toast.promise(fetch("https://srijan2024.onrender.com/api/login", {
+    const response = await toast.promise(fetch(`${API_BASE_URL}/login`, {
       method: "post",
       headers: {
         "Content-Type": "application/json", // Set the content type to JSON

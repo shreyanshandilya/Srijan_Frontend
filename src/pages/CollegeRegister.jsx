@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ToastContainer, toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { API_BASE_URL } from "../../config";
 
 export const CollegeRegister = (props) => {
   const navigate = useNavigate();
@@ -30,7 +31,7 @@ export const CollegeRegister = (props) => {
       return;
     }
     const response = await toast.promise(
-      fetch("https://srijan2024.onrender.com/api/signup", {
+      fetch(`${API_BASE_URL}/signup`, {
         method: "post",
         headers: {
           "Content-Type": "application/json", // Set the content type to JSON
@@ -72,7 +73,7 @@ export const CollegeRegister = (props) => {
     };
     try {
       const response = await toast.promise(
-        fetch("https://srijan2024.onrender.com/api/signup/verify", {
+        fetch(`${API_BASE_URL}/signup/verify`, {
           method: "post",
           headers: {
             "Content-Type": "application/json", // Set the content type to JSON
