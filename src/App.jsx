@@ -57,10 +57,6 @@ function App() {
       path: "/event/event-details/:id",
       element: <EventDetails />,
     },
-    {
-      path: "/event/event-details/register/:id",
-      element: <EventRegister />,
-    },
     // {
     //   path: "/profile",
     //   element: <Frm />,
@@ -90,7 +86,7 @@ function App() {
       element: <Register />,
     },
     {
-      path: "/event-register/:id",
+      path: "/event-register/:eventId",
       element: <RegisterTheEvents/>,
     },
     {

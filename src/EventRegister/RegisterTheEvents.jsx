@@ -1,8 +1,12 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import toast from "react-hot-toast";
 import EventImage from "../assets/bgimage.jpg";
 import eventList from "../assets/SrijanEvents";
+import { ToastContainer, toast } from "react-toastify";
+import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+// import Button, { ButtonProps } from '@mui/material/Button';
+
 import {
   Box,
   Typography,
@@ -17,33 +21,33 @@ import { Wrapper } from "./style";
 
 const InputDefault = styled(TextField)({
   "& label.Mui-focused": {
-    color: "#2F3C7E",
+    color: "#dad3a5",
   },
   "& .MuiInput-underline:after": {
-    borderBottomColor: "#8AAAE5", // Change this color
+    borderBottomColor: " #dad3a5", // Change this color
   },
   "& .MuiOutlinedInput-root": {
     "& fieldset": {
-      borderColor: "#317773", // Change this color
+      borderColor: " #dad3a5", // Change this color
     },
     "&:hover fieldset": {
-      borderColor: "#E2D1F9", // Change this color
+      borderColor: " #dad3a5", // Change this color
     },
     "&.Mui-focused fieldset": {
-      borderColor: "#ADD8E6", // Change this color
+      borderColor: " #dad3a5", // Change this color
     },
   },
   "& input": {
-    color: "#FFFFFF", // Change the text color
+    color: "#dad3a5", // Change the text color
   },
   "& .MuiFormLabel-root": {
-    color: "#FFFFFF", // Change the label text color
+    color: "#efede0", // Change the label text color
   },
   "& .MuiInputLabel-root.Mui-focused": {
-    color: "#FFFFFF", // Change the focused label text color
+    color: "#efede0", // Change the focused label text color
   },
   "& .MuiInputBase-input::placeholder": {
-    color: "#FFFFFF", // Change the placeholder color
+    color: " #c9bc57", // Change the placeholder color
   },
 });
 const flexContainerStyle = {
@@ -71,104 +75,85 @@ const Member = ({
 }) => {
   if (!memberDetails || !handleMemberChange) return null;
   return (
-    <Grid container spacing={2} sx={{ width: "100%", p: 3 }}>
-      <Grid item xs={12} sm={4} lg={4}>
-        <InputDefault
-          size="small"
-          name="name"
-          type="text"
-          required
-          fullWidth
-          onChange={(e) => handleMemberChange(e, memberIdx)}
-          value={memberDetails[memberIdx]?.name}
-          label="Full Name"
-          color="secondary"
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">
-                {/* <PersonIcon fontSize="small" /> */}
-              </InputAdornment>
-            ),
-          }}
-        />
-      </Grid>
-      <Grid item xs={12} sm={4} lg={4}>
-        <InputDefault
-          size="small"
-          name="college"
-          type="text"
-          required
-          fullWidth
-          onChange={(e) => handleMemberChange(e, memberIdx)}
-          value={memberDetails[memberIdx]?.college}
-          label="College"
-          color="secondary"
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">
-                {/* <PersonIcon fontSize="small" /> */}
-              </InputAdornment>
-            ),
-          }}
-        />
-      </Grid>
-      <Grid item xs={12} sm={4} lg={4}>
-        <InputDefault
-          size="small"
-          name="email"
-          type="email"
-          required
-          fullWidth
-          onChange={(e) => handleMemberChange(e, memberIdx)}
-          value={memberDetails[memberIdx]?.email}
-          label="Email"
-          color="secondary"
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">
-                {/* <EmailIcon fontSize="small" /> */}
-              </InputAdornment>
-            ),
-          }}
-        />
-      </Grid>
-      <Grid item xs={12} sm={12} lg={4}>
-        <InputDefault
-          size="small"
-          name="phone"
-          type="number"
-          onChange={(e) => handleMemberChange(e, memberIdx)}
-          value={memberDetails[memberIdx]?.phone}
-          required
-          fullWidth
-          onWheel={(event) => {
-            event.preventDefault();
-          }}
-          label="Mobile Number"
-          color="secondary"
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">
-                {/* <LocalPhoneIcon fontSize="small" /> */}
-              </InputAdornment>
-            ),
-          }}
-        />
-      </Grid>
-      {isInstrument && (
+    <motion.div
+      initial={{ y: 20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 1, delay: 0.5 }}
+    >
+      <Grid container spacing={2} sx={{ width: "100%", p: 3 }}>
+        <Grid item xs={12} sm={4} lg={4}>
+          <InputDefault
+            size="small"
+            name="Name"
+            type="text"
+            required
+            fullWidth
+            onChange={(e) => handleMemberChange(e, memberIdx)}
+            value={memberDetails[memberIdx]?.name}
+            label="Full Name"
+            color="secondary"
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                  {/* <PersonIcon fontSize="small" /> */}
+                </InputAdornment>
+              ),
+            }}
+          />
+        </Grid>
+        <Grid item xs={12} sm={4} lg={4}>
+          <InputDefault
+            size="small"
+            name="College"
+            type="text"
+            required
+            fullWidth
+            onChange={(e) => handleMemberChange(e, memberIdx)}
+            value={memberDetails[memberIdx]?.college}
+            label="College"
+            color="secondary"
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                  {/* <PersonIcon fontSize="small" /> */}
+                </InputAdornment>
+              ),
+            }}
+          />
+        </Grid>
+        <Grid item xs={12} sm={4} lg={4}>
+          <InputDefault
+            size="small"
+            name="Email"
+            type="email"
+            required
+            fullWidth
+            onChange={(e) => handleMemberChange(e, memberIdx)}
+            value={memberDetails[memberIdx]?.email}
+            label="Email"
+            color="secondary"
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                  {/* <EmailIcon fontSize="small" /> */}
+                </InputAdornment>
+              ),
+            }}
+          />
+        </Grid>
         <Grid item xs={12} sm={12} lg={4}>
           <InputDefault
             size="small"
-            name="Instrument"
-            type="text"
+            name="PhoneNumber"
+            type="number"
             onChange={(e) => handleMemberChange(e, memberIdx)}
-            value={memberDetails[memberIdx]?.Instrument}
+            value={memberDetails[memberIdx]?.phone}
             required
             fullWidth
             onWheel={(event) => {
               event.preventDefault();
             }}
-            label="Instrument"
+            label="Mobile Number"
             color="secondary"
             InputProps={{
               startAdornment: (
@@ -179,8 +164,32 @@ const Member = ({
             }}
           />
         </Grid>
-      )}
-      {/* <Grid item xs={12} sm={12}>
+        {isInstrument && (
+          <Grid item xs={12} sm={12} lg={4}>
+            <InputDefault
+              size="small"
+              name="Instrument"
+              type="text"
+              onChange={(e) => handleMemberChange(e, memberIdx)}
+              value={memberDetails[memberIdx]?.Instrument}
+              required
+              fullWidth
+              onWheel={(event) => {
+                event.preventDefault();
+              }}
+              label="Instrument"
+              color="secondary"
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    {/* <LocalPhoneIcon fontSize="small" /> */}
+                  </InputAdornment>
+                ),
+              }}
+            />
+          </Grid>
+        )}
+        {/* <Grid item xs={12} sm={12}>
         <InputDefault
           size="small"
           name="admissionNumber"
@@ -200,13 +209,19 @@ const Member = ({
           }}
         />
       </Grid> */}
-    </Grid>
+      </Grid>
+    </motion.div>
   );
 };
 
 export const RegisterTheEvents = () => {
   const { eventId } = useParams();
+  const navigate = useNavigate();
+
   // console.log(eventId);
+  // useEffect(()=>{
+  //   console.log(eventList);
+  // },[])
   const [loading, setLoading] = useState(true);
   const [imgSrcMob, setImgSrcMob] = useState("");
   const [imgSrcWeb, setImgSrcWeb] = useState("");
@@ -216,6 +231,7 @@ export const RegisterTheEvents = () => {
   const [teamStructure, setTeamStructure] = useState({});
   const [sponsorYesNo, setsponsorYesNo] = useState();
   const [accompanistYesNo, setaccompanistYesNo] = useState();
+  const [nameofevent, setNameofevent] = useState();
 
   // this function will be called when a radio button is checked
   const handleRadioChange = (e) => {
@@ -224,21 +240,23 @@ export const RegisterTheEvents = () => {
   const handleAccompanist = (e) => {
     setaccompanistYesNo(e.target.value);
   };
-  const fetchFieldValidity = async () => {
-    // try {
-    //   const resp = await customFetchJson.get(`/api/events/${eventId}`);
-    //   console.log(resp.data);
-    setTeamStructure({
-      Sponsor: true,
-      audioLink: true,
-      Accompanist: true,
-      LeaderName: true,
-      Instrument: true,
-    });
-    // } catch (e) {
-    //   console.log(e);
-    //   toast.error(e.response.data.msg || "Something went wrong! ");
-    // }
+  const fetchFieldValidity = () => {
+    try {
+      const resp = eventList.filter(
+        (events) => events.EventName === `${eventId}`
+      );
+      // console.log(resp);
+      setTeamStructure({
+        Sponsor: resp[0].sponsor,
+        audioLink: resp[0].audio,
+        Accompanist: resp[0].accompanist,
+        LeaderName: resp[0].teamName,
+        Instrument: false,
+      });
+    } catch (e) {
+      // console.log(e);
+      toast.error("Something went wrong! ");
+    }
   };
   const initiateMembers = () => {
     setMemberDetails(() => {
@@ -249,51 +267,55 @@ export const RegisterTheEvents = () => {
       return memberArr;
     });
   };
-  // useEffect(() => {
-  //   initiateMembers();
-  // }, [minSiz]);
-  const getEventData = async () => {
-    // try {
-    // const resp = await customFetchJson.get(`/api/showEvents/${eventId}`);
-    // setMinSiz(resp.data[0].minTeamSize);
-    setMinSiz(1);
+  useEffect(() => {
+    initiateMembers();
+    if (!localStorage["token"]) {
+      navigate("/");
+    }
+  }, [minSiz]);
+  const getEventData = () => {
+    try {
+      const resp = eventList.filter(
+        (events) => events.EventName === `${eventId}`
+      );
+      // setMinSiz(resp.data[0].minTeamSize);
+      setMinSiz(resp[0].Minimummembers);
 
-    // setMaxSiz(resp.data[0].maxTeamSize);
-    setMaxSiz(2);
+      // setMaxSiz(resp.data[0].maxTeamSize);
+      setMaxSiz(resp[0].Maximummembers);
 
-    // setImgSrcMob(resp.data[0].posterMobile);
-    setImgSrcMob(EventImage);
+      // setImgSrcMob(resp.data[0].posterMobile);
+      // setImgSrcMob(EventImage);
 
-    // setImgSrcWeb(resp.data[0].posterWeb);
-    setImgSrcWeb(EventImage);
+      // setImgSrcWeb(resp.data[0].posterWeb);
+      setImgSrcWeb(resp[0].Poster || EventImage);
 
-    // setEventName(resp.data[0].name);
-    setEventName("Name of The Event");
+      // setEventName(resp.data[0].name);
+      setEventName(resp[0].EventName);
 
-    // console.log(resp.data);
-    // } catch (error) {
-    //   console.log(error);
-    //   toast.error(error.response.data.msg || "Something went wrong! ");
-    // }
+      setNameofevent(resp[0].EventName);
+
+      // console.log(resp.data);
+    } catch (error) {
+      // console.log(error);
+      toast.error("Something went wrong! ");
+    }
   };
 
   const memberProtoType = {
-    name: "",
-    email: "",
-    phone: "",
-    college: "",
-    yearOfStudy: "",
-    branch: "",
-    admissionNumber: "",
+    Name: "",
+    Email: "",
+    PhoneNumber: "",
+    College: "",
     Instrument: "",
   };
   const [memberDetails, setMemberDetails] = useState([]);
 
   useEffect(() => {
-    // setLoading(true);
+    setLoading(true);
     fetchFieldValidity();
     getEventData();
-    // setLoading(false);
+    setLoading(false);
   }, []);
   const handleAddMember = () => {
     if (memberDetails.length + 1 > maxSiz) {
@@ -320,33 +342,70 @@ export const RegisterTheEvents = () => {
     setMemberDetails(updatetdDetails);
   };
   const handleSubmit = async (event) => {
-    // try {
-    //   setLoading(true);
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log("handleSubmit" + data);
-    //   const teamObj = {
-    //     teamName: data.get("teamName").trim(),
-    //     teamLeader: memberDetails[0].name,
-    //     eventName: eventName,
-    //     problemStatementChosen: data.get("problemStatementChosen"),
-    //     botWeight: data.get("botWeight"),
-    //     driveLink: data.get("driveLink"),
-    //     member: memberDetails,
-    //     fieldOfInterest: data.get("fieldOfInterest"),
-    //   };
-    //   // console.log("r = ", teamObj);
-    //   const resp = await customFetchJson.post(`/api/eventRegitration`, teamObj);
-    //   setLoading(false);
-    //   toast.success(resp.data.msg);
-    //   event.target.reset();
-    //   initiateMembers();
-    //   // console.log(resp);
-    // } catch (error) {
-    //   setLoading(false);
-    //   console.log(error);
-    //   toast.error(error.response.data.msg || "Something went wrong! ");
-    // }
+    try {
+      setLoading(true);
+      event.preventDefault();
+      const data = new FormData(event.currentTarget);
+      console.log(data);
+      // console.log("handleSubmit" + data);
+      const teamObj = {
+        EventName: nameofevent,
+        Teams: [
+          {
+            MembersList: memberDetails,
+            TeamName: data.get("teamName"),
+            isSponser: sponsorYesNo === "yes",
+            Audio: data.get("audioLink"),
+            Accompanist: data.get("Accompanist"),
+          },
+        ],
+      };
+      console.log("r = ", teamObj);
+
+      try {
+        const response = await toast.promise(
+          fetch("https://srijan2024.onrender.com/api/event/register", {
+            method: "post",
+            headers: {
+              "Content-Type": "application/json", // Set the content type to JSON
+            },
+            body: JSON.stringify(teamObj),
+          }),
+          {
+            position: toast.POSITION.BOTTOM_RIGHT,
+            pending: "Loading",
+
+            error: "Invalid or expired OTP",
+          }
+        );
+
+        const abcd = await response.json();
+        console.log(abcd);
+        if (abcd.status) {
+          event.target.reset();
+          initiateMembers();
+          toast.success(abcd.message, {
+            position: toast.POSITION.BOTTOM_RIGHT,
+          });
+        } else {
+          toast.error(abcd.message, {
+            position: toast.POSITION.BOTTOM_RIGHT,
+          });
+        }
+      } catch (error) {
+        console.log(error);
+      }
+
+      // const resp = await customFetchJson.post(`/api/eventRegitration`, teamObj);
+      // setLoading(false);
+      // toast.success(resp.data.msg);
+      // event.target.reset();
+      // initiateMembers();
+      // console.log(resp);
+    } catch (error) {
+      setLoading(false);
+      console.log(error);
+    }
   };
   const [width, setWidth] = useState();
 
@@ -388,12 +447,15 @@ export const RegisterTheEvents = () => {
               />
             </Box>
             {true && (
-              <div
+              <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: 0.5 }}
                 className="text-light"
                 style={{ marginTop: "2em", opacity: "1" }}
               >
                 <h5 className="mb-1 mt-5 font-semibold text-[#dad3a5] text-5xl lg:text-6xl">
-                  Event Name
+                  {nameofevent || "Event's Name"}
                 </h5>
                 <Form className="m-3" onSubmit={handleSubmit}>
                   {teamStructure.LeaderName && (
@@ -454,23 +516,44 @@ export const RegisterTheEvents = () => {
                       </Box>
                     );
                   })}
-                  <div className="grid grid-cols-2 sm:gap-6 gap-1">
-                    <Button
-                      className="m-3"
-                      variant="contained"
-                      onClick={handleAddMember}
-                      sx={{ transform: "none", left: "0" }}
+
+                  <div className="grid grid-cols-2 sm:gap-6 gap-1 my-6">
+                    <motion.div
+                      className="box"
+                      whileHover={{ scale: 1.1 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 400,
+                        damping: 10,
+                      }}
                     >
-                      Add Member
-                    </Button>
-                    <Button
-                      className="m-3"
-                      variant="contained"
-                      onClick={handleRemoveMember}
-                      sx={{ transform: "none", left: "0" }}
+                      <Button
+                        className="m-3"
+                        variant="contained"
+                        onClick={handleAddMember}
+                        sx={{ transform: "none", left: "0" }}
+                      >
+                        Add Member
+                      </Button>
+                    </motion.div>
+                    <motion.div
+                      className="box "
+                      whileHover={{ scale: 1.1 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 400,
+                        damping: 10,
+                      }}
                     >
-                      Remove Member
-                    </Button>
+                      <Button
+                        className="m-3 bg-[#dad3a5]"
+                        variant="contained"
+                        onClick={handleRemoveMember}
+                        sx={{ transform: "none", left: "0" }}
+                      >
+                        Remove Member
+                      </Button>
+                    </motion.div>
                   </div>
 
                   {teamStructure.Sponsor && (
@@ -504,7 +587,7 @@ export const RegisterTheEvents = () => {
                   )}
 
                   {teamStructure.audioLink && (
-                    <div style={responsiveColumn}>
+                    <div className="my-5" style={responsiveColumn}>
                       <InputDefault
                         size="small"
                         label="Audio Link"
@@ -524,7 +607,7 @@ export const RegisterTheEvents = () => {
                     </div>
                   )}
                   {teamStructure.Accompanist && (
-                    <>
+                    <div className="my-5">
                       <div className="grid grid-cols-2 m-7">
                         <div>Need Accompanist ?</div>
                         <div className="grid grid-cols-2 gap-5">
@@ -553,7 +636,7 @@ export const RegisterTheEvents = () => {
                         </div>
                       </div>
                       {accompanistYesNo === "yes" && (
-                        <div style={responsiveColumn}>
+                        <div className="my-5" style={responsiveColumn}>
                           <InputDefault
                             size="small"
                             label="Accompanist"
@@ -572,23 +655,45 @@ export const RegisterTheEvents = () => {
                           />
                         </div>
                       )}
-                    </>
+                    </div>
                   )}
-                  <Button
-                    className="m-3"
-                    variant="contained"
-                    type="submit"
-                    sx={{ transform: "none", left: "0" }}
+                  <motion.div
+                    className="box"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 10,
+                    }}
                   >
-                    Register
-                  </Button>
+                    <Button
+                      className="m-3"
+                      variant="contained"
+                      type="submit"
+                      sx={{ transform: "none", left: "0" }}
+                    >
+                      Register
+                    </Button>
+                  </motion.div>
                 </Form>
-              </div>
+              </motion.div>
             )}
           </div>
         </div>
         <div></div>
       </div>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </Wrapper>
     // </div>
     // teamName?<div>hello</div>:<div>bye</div>
