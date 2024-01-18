@@ -2,6 +2,7 @@ import React, { useState, Fragment, useNavigate, useEffect } from "react";
 import { styled } from "@mui/joy/styles";
 import TextField from "@mui/material/TextField";
 import { ToastContainer, toast } from "react-toastify";
+import { API_BASE_URL } from "../../../config"
 
 import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
@@ -90,43 +91,34 @@ const Dashboard = () => {
 
   async function onSubmit(e) {
     e.preventDefault();
-    if(loading) return;
+    if (loading) return;
     setLoading(true);
 
     let response;
     try {
       const response = await toast.promise(
-        fetch(
-          `https://srijan2024.onrender.com/api/getOrder/${phoneNumber}/${Email}`,
-          {
-            method: "POST",
-          }),
+        fetch(`${API_BASE_URL}/getOrder/${phoneNumber}/${Email}`, {
+          method: "POST",
+        }),
         {
           pending: "Finding order",
-          
+
           error: "Oops!, couldn't find order",
         }
       );
-       if(response.status!=200){
+      if (response.status != 200) {
         toast.error("Invalid Credentials !", {
           position: toast.POSITION.BOTTOM_RIGHT,
-
-        }); 
+        });
         setLoading(false);
-
-       }
-      
-
-       
+      }
 
       let responseData = await response.json();
       setIsLoggedIn(true);
       console.log(responseData);
-      
 
       setListItem(responseData);
-    setLoading(false);
-
+      setLoading(false);
     } catch (error) {
       console.error(error);
       toast.error("Invalid Credentials !", {
@@ -138,19 +130,18 @@ const Dashboard = () => {
 
   return listItem.length ? (
     <div className="bg-[#1f3433]">
-       <a
+      <a
         // href="/profile"
         // target="_blank"
         // rel="noopener noreferrer"
         style={{
-          paddingTop:"100px",
-          paddingLeft:"10px"
+          paddingTop: "100px",
+          paddingLeft: "10px",
         }}
         className="flex bg-[#1f3433]"
       >
         <motion.button
           type="button"
-          
           onClick={listItemChange}
           className="  backdrop-blur-lg bg-[#dad3a5] hover:bg-[antiquewhite] font-medium rounded-lg text-sm px-3 text-center inline-flex items-cente text-[#090d06]  me-2 my-2"
         >
@@ -167,9 +158,8 @@ const Dashboard = () => {
           overflowX: "hidden",
           flexDirection: "column",
           aligContent: "flex-start",
-          
-          alignItems: "center"
-         
+
+          alignItems: "center",
         }}
         className="bg-[#1f3433]"
       >
@@ -179,7 +169,7 @@ const Dashboard = () => {
         ))}
       </div>
       {/* <Link to="/profile"> */}
-     
+
       <FooterT />
       {/* </Link> */}
     </div>
@@ -305,7 +295,7 @@ const Dashboard = () => {
             type="submit"
             className="text-[#efede0] bg-[#514c08]/60 hover:bg-[#efede0] hover:text-[#514c08] focus:ring-2 focus:outline-none focus:ring-[#514c08] font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center "
           >
-            {loading?"Loading...":"Submit"}
+            {loading ? "Loading..." : "Submit"}
           </motion.button>
         </motion.form>
         <ToastContainer

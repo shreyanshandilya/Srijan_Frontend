@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { ToastContainer, toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { API_BASE_URL } from "../../config"
 
 export const OutsideRegister = (props) => {
   const navigate = useNavigate();
@@ -23,11 +24,14 @@ export const OutsideRegister = (props) => {
       IsISM: false,
       Password: pass,
     };
-  if(pass!=re_pass){  toast.error("Confirm password does not match with the orignal one.", {
-      position: toast.POSITION.BOTTOM_RIGHT,
-    }); return;}
+    if (pass != re_pass) {
+      toast.error("Confirm password does not match with the orignal one.", {
+        position: toast.POSITION.BOTTOM_RIGHT,
+      });
+      return;
+    }
     const response = await toast.promise(
-      fetch("https://srijan2024.onrender.com/api/signup", {
+      fetch(`${API_BASE_URL}/signup`, {
         method: "post",
         headers: {
           "Content-Type": "application/json", // Set the content type to JSON
@@ -37,7 +41,7 @@ export const OutsideRegister = (props) => {
       {
         position: toast.POSITION.BOTTOM_RIGHT,
         pending: "Loading",
-        
+
         error: "User already exist or invalid credentials",
       }
     );
@@ -64,7 +68,7 @@ export const OutsideRegister = (props) => {
     };
     try {
       const response = await toast.promise(
-        fetch("https://srijan2024.onrender.com/api/signup/verify", {
+        fetch(`${API_BASE_URL}/signup/verify`, {
           method: "post",
           headers: {
             "Content-Type": "application/json", // Set the content type to JSON
@@ -74,7 +78,7 @@ export const OutsideRegister = (props) => {
         {
           position: toast.POSITION.BOTTOM_RIGHT,
           pending: "Loading",
-           
+
           error: "Invalid or expired OTP",
         }
       );
@@ -82,14 +86,14 @@ export const OutsideRegister = (props) => {
       const abcd = await response.json();
       console.log(abcd);
       setShowOtpBox(false);
-      if(abcd.token!=undefined){localStorage["token"] = abcd.token;
-      localStorage.setItem('email',abcd.user.Email);
-}
-else{
-  // toast.error(abcd.message, {
-  //   position: toast.POSITION.BOTTOM_RIGHT,
-  // });
-}
+      if (abcd.token != undefined) {
+        localStorage["token"] = abcd.token;
+        localStorage.setItem("email", abcd.user.Email);
+      } else {
+        // toast.error(abcd.message, {
+        //   position: toast.POSITION.BOTTOM_RIGHT,
+        // });
+      }
       if (abcd.token) {
         toast.success(abcd.message, {
           position: toast.POSITION.BOTTOM_RIGHT,

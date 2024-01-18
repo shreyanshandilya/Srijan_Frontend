@@ -7,18 +7,16 @@ import axios from "axios";
 import { duration } from "@mui/material";
 import { useParams } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
-
+import { API_BASE_URL } from "../../config"
 
 function EventDetails(props) {
-
   useEffect(() => {
     scroll.scrollToTop({ duration: 1000 });
   }, []);
 
-
   const { id } = useParams();
   console.log(id);
-  const Eventurl = `https://srijan2024.onrender.com/api/showEvents/${id}`;
+  const Eventurl = `${API_BASE_URL}/showEvents/${id}`;
   const [details, setDetails] = useState([]);
   //   const [img, setImg] = useState(null);
   //   const [name, setName] = useState(null);

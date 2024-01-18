@@ -29,7 +29,7 @@ import { EventRegister } from "./pages/EventRegister";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import ReturnsAndRefundsPolicy from "./pages/ReturnsAndRefundsPolicy";
-
+export const baseUrl = ""
 function App() {
   const [load, setLoader] = useState(true);
   const router = createHashRouter([

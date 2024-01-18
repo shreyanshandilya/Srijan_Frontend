@@ -12,6 +12,7 @@ import AlertDialog from "./Alert.jsx";
 import useRazorpay from "react-razorpay";
 import Srijanmage from "../assets/SrijanLogo.png";
 import FooterT from "../components/Footer.jsx";
+import { API_BASE_URL } from "../../config.js"
 
 function Merchandise() {
   const navigate = useNavigate();
@@ -83,7 +84,7 @@ function Merchandise() {
   //       };
   //       console.log(data);
   //       const response = await toast.promise(
-  //         fetch("https://srijan2024.onrender.com/api/purchase", {
+  //         fetch("${API_BASE_URL}/purchase", {
   //           method: "POST",
   //           mode: "cors",
   //           headers: {
@@ -133,7 +134,7 @@ function Merchandise() {
 
     console.log(amount);
     const response = await toast.promise(
-      fetch("https://srijan2024.onrender.com/api/order", {
+      fetch(`${API_BASE_URL}/order`, {
         method: "POST",
         mode: "cors",
         body: JSON.stringify({
@@ -175,24 +176,21 @@ function Merchandise() {
           ...response,
         };
 
-        var validateRes = await fetch(
-          "https://srijan2024.onrender.com/api/order/validate",
-          {
-            method: "POST",
-            mode: "cors",
-            body: JSON.stringify({
-              ...body,
-              tshirtSize: beta.tshirtSize,
-              quantity: beta.quantity,
-              addresss: beta.address,
-              type : beta.type,
-            }),
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: `Bearer ${localStorage["token"]}`,
-            },
-          }
-        );
+        var validateRes = await fetch(`${API_BASE_URL}/order/validate`, {
+          method: "POST",
+          mode: "cors",
+          body: JSON.stringify({
+            ...body,
+            tshirtSize: beta.tshirtSize,
+            quantity: beta.quantity,
+            addresss: beta.address,
+            type: beta.type,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${localStorage["token"]}`,
+          },
+        });
       },
       notes: {
         address: "Razorpay Corporate Office",
@@ -237,7 +235,7 @@ function Merchandise() {
       <center>
         <div className="h-[80vh]">
           <Carousel>
-          <img
+            <img
               src="https://res.cloudinary.com/dkdratnao/image/upload/v1705433458/hoodieimg_tr5fia.jpg"
               alt="..."
               style={{
@@ -306,7 +304,8 @@ function Merchandise() {
             Merchandise
           </h1>
           <h1 className="my-4 text-2xl font-semibold tracking-tight leading-none text-[#efede0] md:text-3xl lg:text-4xl ">
-           <br/> INR 399 / T-Shirt <br/><br/> INR 799 / Hoodie
+            <br /> INR 399 / T-Shirt <br />
+            <br /> INR 799 / Hoodie
           </h1>
 
           <div className="flex flex-col space-y-4 my-10 sm:flex-row sm:justify-center sm:space-y-0">
@@ -607,7 +606,9 @@ function Merchandise() {
               <strong>
                 <div className="mt-4">
                   Payable Amount: INR{" "}
-                  {beta.type === "Hoodie" ? (799 * beta.quantity) : (399 * beta.quantity)}
+                  {beta.type === "Hoodie"
+                    ? 799 * beta.quantity
+                    : 399 * beta.quantity}
                 </div>
               </strong>
               (For delivery outside IIT ISM, optimal delivery charges will be taken at the time of delivery)

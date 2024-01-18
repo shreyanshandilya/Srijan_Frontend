@@ -6,13 +6,15 @@ import { animateScroll as scroll } from "react-scroll";
 import "../Events/Events.css";
 import axios from "axios";
 import EventCard from "../Events/EventsCard";
+import { API_BASE_URL } from "../../config";
+
 
 function Event() {
   const [events, setEvents] = useState([]);
   const [allEvents, setAllEvents] = useState([]);
   const [clubEvents, setClubEvents] = useState([]);
   const [deptEvents, setDeptEvents] = useState([]);
-  const allEventsUrl = "https://srijan2024.onrender.com/api/showAllEvents";
+  const allEventsUrl = `${API_BASE_URL}/showAllEvents`;
 
   const fetchAllEvents = useCallback(async () => {
     var clubEvents = [],

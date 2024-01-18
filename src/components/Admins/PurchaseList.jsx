@@ -1,4 +1,5 @@
 import React from "react";
+import { API_BASE_URL } from "../../../config"
 
 function PurchaseList() {
   let [listItem, setListItem] = React.useState([]);
@@ -9,7 +10,7 @@ function PurchaseList() {
     async function getListIems() {
       let response;
       try {
-        response = await fetch("https://srijan2024.onrender.com/api/allOrders");
+        response = await fetch(`${API_BASE_URL}/allOrders`);
         if (!response.ok) {
           throw new Error("error occured in fetching");
         }
@@ -24,12 +25,9 @@ function PurchaseList() {
   async function changeApprovalStatus(orderId) {
     let response;
     try {
-      response = await fetch(
-        `https://srijan2024.onrender.com/api/changeApproved/${orderId}`,
-        {
-          method: "PUT",
-        }
-      );
+      response = await fetch(`${API_BASE_URL}/changeApproved/${orderId}`, {
+        method: "PUT",
+      });
       if (!response.ok) {
         throw new Error("error occured");
       }
@@ -42,8 +40,7 @@ function PurchaseList() {
 
   async function handleSubmit(e) {
     let response;
-    if(!e.target.value){
-      
+    if (!e.target.value) {
     }
     try {
       response = await fetch(
@@ -95,64 +92,61 @@ function PurchaseList() {
         {listItem &&
           listItem.map((item) => (
             <>
-            <div key={item._id} className="rounded-md border">
-              <img
-                src={item.imageURL}
-                alt="Laptop"
-                className="aspect-[16/9] w-full rounded-md md:aspect-auto md:h-[300px] lg:h-[200px]"
-              />
-              <div className="p-4">
-                <h1 className="inline-flex items-center text-lg font-semibold">
-                  {item.name}
-                </h1>
+              <div key={item._id} className="rounded-md border">
+                <img
+                  src={item.imageURL}
+                  alt="Laptop"
+                  className="aspect-[16/9] w-full rounded-md md:aspect-auto md:h-[300px] lg:h-[200px]"
+                />
+                <div className="p-4">
+                  <h1 className="inline-flex items-center text-lg font-semibold">
+                    {item.name}
+                  </h1>
 
-                <div className="mt-3 ">
-                  <div className=" text-md py-1 font-semibold">
-                    Admission number : {item.admissionNumber}
+                  <div className="mt-3 ">
+                    <div className=" text-md py-1 font-semibold">
+                      Admission number : {item.admissionNumber}
+                    </div>
+                    <div className=" text-md py-1 font-semibold">
+                      Hostel : {item.hostel}
+                    </div>
+                    <div className=" text-md py-1 font-semibold">
+                      Mobile Number : {item.mobileNumber}
+                    </div>
+                    <div className=" text-md py-1 font-semibold">
+                      Hostel : {item.hostel}
+                    </div>
+                    <div className=" text-md py-1 font-semibold">
+                      Room No :{item.roomNumber}{" "}
+                    </div>
+                    <div className=" text-md py-1 font-semibold">
+                      Tshirt size :{item.tshirtSize}{" "}
+                    </div>
+                    <div className=" text-md py-1 font-semibold">
+                      Qunantity : {item.quantity}
+                    </div>
                   </div>
-                  <div className=" text-md py-1 font-semibold">
-                    Hostel : {item.hostel}
-                  </div>
-                  <div className=" text-md py-1 font-semibold">
-                    Mobile Number : {item.mobileNumber}
-                  </div>
-                  <div className=" text-md py-1 font-semibold">
-                    Hostel : {item.hostel}
-                  </div>
-                  <div className=" text-md py-1 font-semibold">
-                    Room No :{item.roomNumber}{" "}
-                  </div>
-                  <div className=" text-md py-1 font-semibold">
-                    Tshirt size :{item.tshirtSize}{" "}
-                  </div>
-                  <div className=" text-md py-1 font-semibold">
-                    Qunantity : {item.quantity}
-                  </div>
+
+                  <div className="mt-3 flex items-center space-x-2"></div>
+
+                  {item.approved ? (
+                    <button
+                      type="button"
+                      className="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+                    >
+                      Approved
+                    </button>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => changeApprovalStatus(item._id)}
+                      className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                    >
+                      Approve This
+                    </button>
+                  )}
                 </div>
-
-                <div className="mt-3 flex items-center space-x-2"></div>
-
-                {item.approved ? (
-                  <button
-                    type="button"
-                    className="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
-                  >
-                    Approved
-                  </button>
-                ) : (
-                  <button
-                    type="button"
-                    onClick={() => changeApprovalStatus(item._id)}
-                    className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-                  >
-                    Approve This
-                  </button>
-                )}
               </div>
-            </div>
-            
-
-            
             </>
           ))}
       </div>
