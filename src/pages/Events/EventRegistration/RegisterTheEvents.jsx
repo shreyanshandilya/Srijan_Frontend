@@ -4,7 +4,9 @@ import EventImage from "../../../assets/bgimage.jpg";
 import eventList from "../../Events/ZoneEventList/Database/SrijanEvents";
 import { ToastContainer, toast } from "react-toastify";
 import { motion } from "framer-motion";
+import Navbar from "../../../components/Navbar/navbar";
 import { useNavigate } from "react-router-dom";
+import FooterT from "../../../components/Footer";
 // import Button, { ButtonProps } from '@mui/material/Button';
 
 import {
@@ -361,7 +363,9 @@ export const RegisterTheEvents = () => {
         ],
       };
       console.log("r = ", teamObj);
-
+      const officialUrl = "https://srijan2024.onrender.com/api/event/register";
+      const demo =
+        "https://srijanlocalmonogodbbackend.onrender.com/api/event/register";
       try {
         const response = await toast.promise(
           fetch("https://srijan2024.onrender.com/api/event/register", {
@@ -429,6 +433,7 @@ export const RegisterTheEvents = () => {
 
   return (
     // <div style={{ backgroundColor: "black", height: "100%" }}>
+
     <Wrapper>
       {/* <Navbar className="navbar-with-high-z-index" /> */}
       <div id="canvas_container2" className="min-h-screen">
@@ -437,6 +442,7 @@ export const RegisterTheEvents = () => {
           id="canvas_box2"
           style={{ opacity: "1", top: "0", padding: "0" }}
         >
+          <Navbar />
           <div style={flexContainerStyle}>
             <Box className="poster w-full">
               <img
@@ -695,6 +701,7 @@ export const RegisterTheEvents = () => {
         pauseOnHover
         theme="dark"
       />
+      <FooterT />
     </Wrapper>
     // </div>
     // teamName?<div>hello</div>:<div>bye</div>
