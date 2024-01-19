@@ -169,7 +169,7 @@ const events = [
     accompanist: false,
   },
   {
-    EventName: "GPT Quiz",
+    EventName: "GPT QUIZ",
     Zone: "Quiz",
     Poster: "",
     miniDescription: "In house quiz.",
@@ -201,13 +201,14 @@ const events = [
     accompanist: false,
   },
   {
-    EventName: "Street Reloaded",
+    EventName: "STREET RELOADED",
     Zone: "Dance",
-    Poster: "",
+    Poster:
+      "https://res.cloudinary.com/dfr1kvie3/image/upload/v1705652808/Street_Reloaded_siiw6e.jpg",
     miniDescription: "Solo Dance Battle",
     Description:
       "Whether your style is Hip-hop, Popping, Krumping or Breaking, Street Reloaded - Solo Dance Battle brings improvisation to a new level and challenges you to take over the floor. Unpredictable tunes, from mainstream hits to timeless classics, fire up the dancefloor, allowing dancers to showcase their skills and wow the crowd!",
-    Venue: "Basketball Court",
+    Venue: "OAT",
     Fees: 0,
     Contactdetails: [
       { name: "Shivam Pipalwa", phone: "+918799007314" },
@@ -237,13 +238,14 @@ const events = [
     accompanist: false,
   },
   {
-    EventName: "Street Beats",
+    EventName: "STREET BEATS",
     Zone: "Dance",
-    Poster: "",
+    Poster:
+      "https://res.cloudinary.com/dfr1kvie3/image/upload/v1705652810/Street_Beats_nznboo.jpg",
     miniDescription: "Crew Dance Battle",
     Description:
       "The most awaited crew battle of the year. Be it any form or any song, Street Beats - Crew Dance Battle provides the perfect battle arena to showcase your talent. Get ready to witness a combination of exciting Judges, DJ, Emcee and of course the crews",
-    Venue: "Basketball Court",
+    Venue: "In Front of Library",
     Fees: 0,
     Contactdetails: [
       { name: "Divya Joshi", phone: "+918595632476" },
@@ -270,13 +272,14 @@ const events = [
     accompanist: false,
   },
   {
-    EventName: "Reflection",
+    EventName: "REFLECTION",
     Zone: "Dance",
-    Poster: "",
+    Poster:
+      "https://res.cloudinary.com/dfr1kvie3/image/upload/v1705653230/Reflection_lm60ke.png",
     miniDescription: "Duo",
     Description:
       "If you and your partner have outstanding synergy and coordination, then Reflection is the perfect platform to showcase your talent. Grab your partner and get the most out of this terrific chance to highlight your talent. Bear in mind that winning this competition will be quite challenging, so prepare yourself intensely and show your skills.",
-    Venue: "To be announced",
+    Venue: "Penman",
     Fees: 0,
     Contactdetails: [
       { name: "Praveen", phone: "+918008318685" },
@@ -301,13 +304,14 @@ const events = [
     accompanist: false,
   },
   {
-    EventName: "Footloose",
+    EventName: "FOOTLOOSE",
     Zone: "Dance",
-    Poster: "",
+    Poster:
+      "https://res.cloudinary.com/dfr1kvie3/image/upload/v1705653130/Footloose_uhdneo.png",
     miniDescription: "Solo Dance",
     Description:
       "The ultimate solo dance face-off. It is for those who think they can set ablaze on the stage and steal the thunder while others stay watching with awe and jealousy! This is the ultimate quest for the greatest dancers",
-    Venue: "To be announced",
+    Venue: "Penman",
     Fees: 0,
     Contactdetails: [
       { name: "Praveen", phone: "+918008318685" },
@@ -333,13 +337,14 @@ const events = [
     accompanist: false,
   },
   {
-    EventName: "HUSTLEHERD",
+    EventName: "HUSTLE HERD",
     Zone: "Dance",
-    Poster: "",
+    Poster:
+      "https://res.cloudinary.com/dfr1kvie3/image/upload/v1705652807/Hustle_Herd_i5hk2u.png",
     miniDescription: "Dance",
     Description:
       "Being a group is growing together and creating a sense of unity. When it comes to performances, having a united identity can be great for sharing experiences. Hustle Herd is here for you to show your teamwork and encourage these fantastic dance groups to showcase their talent.",
-    Venue: "To be announced",
+    Venue: "Penman",
     Fees: 0,
     Contactdetails: [
       { name: "Praveen", phone: "+918008318685" },
@@ -363,63 +368,63 @@ const events = [
     audio: true,
     accompanist: false,
   },
-  {
-    EventName: "HARMONY",
-    Zone: "Music",
-    Poster: "",
-    miniDescription: "Music",
-    Description:
-      "Dive into the world of music at Harmony, where student bands bring the stage to life with captivating performances across all genres. There are no restrictions on the number of members in a team. Basic drum sets will be provided, allowing bands to focus on their musical mastery while arranging other instruments independently. Immerse in musical brilliance as student bands showcase their genre-defying talents.",
-    Venue: "To be announced",
-    Fees: 0,
-    Contactdetails: [{ name: "Aneekesh Kumar", phone: "8439826290" }],
-    Rules: [
-      "Only the students and not the professional bands are allowed in the competition.",
-      "There is no restriction on the genre of songs performed.",
-      "The band will be given a maximum time of 15 minutes for performance + 5 minutes for sound setup",
-      "Points will be deducted if time exceeds the allotted time.",
-      "Drum set (basic one) will be provided to the bands. Bands need to arrange for their instruments themselves. A total prize money of Rs. 25,000 for the event No 2 bands can have the same members playing the same role.",
-      "There is no restriction on the number of members in the band.",
-    ],
-    RuleBookLink:
-      "https://docs.google.com/document/d/1qVgtpUZFsNC4W1tsHvSW-578uJb_DRj8-m-Hn3VRLwU/edit?usp=drive_link",
+  // {
+  //   EventName: "HARMONY",
+  //   Zone: "Music",
+  //   Poster: "",
+  //   miniDescription: "Music",
+  //   Description:
+  //     "Dive into the world of music at Harmony, where student bands bring the stage to life with captivating performances across all genres. There are no restrictions on the number of members in a team. Basic drum sets will be provided, allowing bands to focus on their musical mastery while arranging other instruments independently. Immerse in musical brilliance as student bands showcase their genre-defying talents.",
+  //   Venue: "To be announced",
+  //   Fees: 0,
+  //   Contactdetails: [{ name: "Aneekesh Kumar", phone: "8439826290" }],
+  //   Rules: [
+  //     "Only the students and not the professional bands are allowed in the competition.",
+  //     "There is no restriction on the genre of songs performed.",
+  //     "The band will be given a maximum time of 15 minutes for performance + 5 minutes for sound setup",
+  //     "Points will be deducted if time exceeds the allotted time.",
+  //     "Drum set (basic one) will be provided to the bands. Bands need to arrange for their instruments themselves. A total prize money of Rs. 25,000 for the event No 2 bands can have the same members playing the same role.",
+  //     "There is no restriction on the number of members in the band.",
+  //   ],
+  //   RuleBookLink:
+  //     "https://docs.google.com/document/d/1qVgtpUZFsNC4W1tsHvSW-578uJb_DRj8-m-Hn3VRLwU/edit?usp=drive_link",
 
-    Minimummembers: 1,
-    Maximummembers: 50,
-    teamName: false,
-    sponsor: false,
-    audio: false,
-    accompanist: false,
-  },
-  {
-    EventName: "AAROH",
-    Zone: "Music",
-    Poster: "",
-    miniDescription: "Music",
-    Description:
-      'Calling all singing enthusiasts! Manthan presents "Aaroh, " a solo singing competition that invites you to pour your heart out. A unique opportunity to showcase your diverse singing talent. Get ready to make a mark in the prelims and secure your spot in the final event. Join us, impress the audience, and become the singing sensation you\'ve always dreamed of!',
-    Venue: "To be announced",
-    Fees: 0,
-    Contactdetails: [{ name: "Aneekesh Kumar", phone: "8439826290" }],
-    Rules: [
-      "Indian and Western Vocals will be judged separately.",
-      "All the contestants will have to go through a prelims round. These participants will be judged and entry to the main event will be given based on that.",
-      "Each Performer would be given a total time of 5 minutes on stage. Exceeding the time limit will cause deduction in marks.",
-      "Each Performer is allowed to carry a maximum of two instrumentalists with them on stage to accompany him/her in their performance.",
-      "The performer is also allowed to sing on a pre-recorded karaoke track. The performer will have to arrange for the karaoke track himself and submit it to the organizers prior to the event.",
-      "Judging would only be based on the level of singing in the performance.",
-      "All participants will appear in the prelims but only 30 vocalists would qualify for the finals.",
-    ],
-    RuleBookLink:
-      "https://docs.google.com/document/d/1NypFIBw4NqfwlM2vIvFlHB7KBU8XdVa7ijXOgtlpIHI/edit?usp=drive_link",
+  //   Minimummembers: 1,
+  //   Maximummembers: 50,
+  //   teamName: false,
+  //   sponsor: false,
+  //   audio: false,
+  //   accompanist: false,
+  // },
+  // {
+  //   EventName: "AAROH",
+  //   Zone: "Music",
+  //   Poster: "",
+  //   miniDescription: "Music",
+  //   Description:
+  //     'Calling all singing enthusiasts! Manthan presents "Aaroh, " a solo singing competition that invites you to pour your heart out. A unique opportunity to showcase your diverse singing talent. Get ready to make a mark in the prelims and secure your spot in the final event. Join us, impress the audience, and become the singing sensation you\'ve always dreamed of!',
+  //   Venue: "To be announced",
+  //   Fees: 0,
+  //   Contactdetails: [{ name: "Aneekesh Kumar", phone: "8439826290" }],
+  //   Rules: [
+  //     "Indian and Western Vocals will be judged separately.",
+  //     "All the contestants will have to go through a prelims round. These participants will be judged and entry to the main event will be given based on that.",
+  //     "Each Performer would be given a total time of 5 minutes on stage. Exceeding the time limit will cause deduction in marks.",
+  //     "Each Performer is allowed to carry a maximum of two instrumentalists with them on stage to accompany him/her in their performance.",
+  //     "The performer is also allowed to sing on a pre-recorded karaoke track. The performer will have to arrange for the karaoke track himself and submit it to the organizers prior to the event.",
+  //     "Judging would only be based on the level of singing in the performance.",
+  //     "All participants will appear in the prelims but only 30 vocalists would qualify for the finals.",
+  //   ],
+  //   RuleBookLink:
+  //     "https://docs.google.com/document/d/1NypFIBw4NqfwlM2vIvFlHB7KBU8XdVa7ijXOgtlpIHI/edit?usp=drive_link",
 
-    Minimummembers: 1,
-    Maximummembers: 1,
-    teamName: false,
-    sponsor: false,
-    audio: false,
-    accompanist: true,
-  },
+  //   Minimummembers: 1,
+  //   Maximummembers: 1,
+  //   teamName: false,
+  //   sponsor: false,
+  //   audio: false,
+  //   accompanist: true,
+  // },
   // {
   //   EventName: "Things the Brits Ruined(debate)",
   //   Zone: " Literary",

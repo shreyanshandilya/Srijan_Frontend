@@ -63,14 +63,16 @@ function EventDetails(props) {
   return (
     <>
       <div
-        className="bg-[#0d0c06] w-screen pt-[100px] overflow-y-scroll"
+        className="bg-[#0d0c06] w-screen pt-[70px] overflow-y-scroll"
         style={{ backgroundImage: `url(${bgsvg})`, objectFit: "cover" }}
       >
         <Navbar />
-        <div>
-          <img src={eventArr[0].Poster} alt="" />
-        </div>
-        <div className="text-center font-bold text-7xl text-[#dad3a5]">
+        <img
+          src={eventArr[0].Poster}
+          alt=""
+          className="max-h-[70vh] w-screen object-cover"
+        />
+        <div className="text-center mt-6 mb-4 font-bold text-7xl text-[#dad3a5]">
           {" "}
           {eventArr[0].EventName}
         </div>
