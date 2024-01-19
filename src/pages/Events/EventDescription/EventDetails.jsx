@@ -8,6 +8,7 @@ import { duration } from "@mui/material";
 import { useParams } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
 import { Link } from "react-router-dom";
+import bgsvg from "../../../assets/large-triangles.svg";
 import EventArr from "../ZoneEventList/Database/SrijanEvents";
 // import { motion } from "framer-motion";
 
@@ -61,12 +62,17 @@ function EventDetails(props) {
 
   return (
     <>
-      <div className="bg-[#0d0c06] w-screen pt-[100px]">
+      <div
+        className="bg-[#0d0c06] w-screen pt-[70px] overflow-y-scroll"
+        style={{ backgroundImage: `url(${bgsvg})`, objectFit: "cover" }}
+      >
         <Navbar />
-        <div>
-          <img src={details.posterWeb} alt="" />
-        </div>
-        <div className="text-center font-bold text-7xl text-[#dad3a5]">
+        <img
+          src={eventArr[0].Poster}
+          alt=""
+          className="max-h-[70vh] w-screen object-cover"
+        />
+        <div className="text-center mt-6 mb-4 font-bold text-7xl text-[#dad3a5]">
           {" "}
           {eventArr[0].EventName}
         </div>
@@ -93,7 +99,10 @@ function EventDetails(props) {
             </motion.button>
           </Link>
         </div>
-        <Accordion collapseAll className="px-10 pt-5 pb-10 border-none">
+        <Accordion
+          collapseAll
+          className="px-10 pt-8 pb-10 border-none bg-opacity-70 backdrop-blur-lg"
+        >
           <Accordion.Panel>
             <Accordion.Title className="text-xl text-[#efede0] bg-[#0d0c06] hover:bg-[#dad3a5] hover:text-[#0d0c06] focus:text-[#0d0c06] focus:bg-[#dad3a5] focus:ring-2 focus:ring-[#c9bc57]">
               Description
