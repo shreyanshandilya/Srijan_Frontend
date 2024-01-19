@@ -9,8 +9,8 @@ import img from "../../../assets/Desktop.jpg";
 import "./Events.css";
 import axios from "axios";
 // import EventCard from "../Events/EventsCard";
-
-import bg from "../../../assets/slanted-gradient.svg";
+ 
+import bg from "../../../assets/Images_for_events/slanted-gradient.png";
 import EventsArr from "./Database/SrijanEvents";
 import Event_card from "./Event_card";
 
@@ -84,7 +84,7 @@ function Event(props) {
   console.log(finalCategoryEvents);
   return (
     <div
-      className="bg-black h-screen w-screen overflow-y-scroll bg-cover bg-no-repeat"
+      className="bg-black h-screen  overflow-y-scroll bg-cover bg-no-repeat"
       style={{ backgroundImage: `url(${bg})`, objectFit: "cover" }}
     >
       <Navbar />
@@ -653,7 +653,7 @@ function Event(props) {
             )}
           </motion.div>
         </motion.div> */}
-      <Footer />
+     
     </div>
   );
 }
