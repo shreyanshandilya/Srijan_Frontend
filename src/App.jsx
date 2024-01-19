@@ -33,6 +33,8 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import { RegisterTheEvents } from "./pages/Events/EventRegistration/RegisterTheEvents";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import ReturnsAndRefundsPolicy from "./pages/ReturnsAndRefundsPolicy";
+import PackagePage from "./pages/Accomodation/Package";
+import Accomodation from "./pages/Accomodation/form";
 
 function App() {
   const [load, setLoader] = useState(true);
@@ -56,6 +58,18 @@ function App() {
     {
       path: "profile",
       element: <Profile />,
+    },
+    // {
+    //   path: "accomodation",
+    //   element: <Accomodation />,
+    // },
+    {
+      path: "/accomodation/:type",
+      element: <Accomodation />,
+    },
+    {
+      path: "packages",
+      element: <PackagePage />,
     },
     {
       path: "/event/:category",

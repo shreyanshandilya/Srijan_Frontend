@@ -47,7 +47,7 @@ function PurchaseList() {
     }
     try {
       response = await fetch(
-        `http://localhost:2000/api/getOrder/get/${e.target.value}`,
+        `https://srijan2024.onrender.com/api/getOrder/get/${e.target.value}`,
         {
           method: "POST",
         }

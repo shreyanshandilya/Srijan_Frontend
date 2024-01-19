@@ -202,7 +202,7 @@ function EventDetails(props) {
           </motion.button>
         </div> */}
       </div>
-      <FooterT />
+       
     </>
   );
 }
