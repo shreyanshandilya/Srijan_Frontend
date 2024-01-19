@@ -64,7 +64,7 @@ function Merchandise() {
     if (loading) return;
 
     setLoading(true);
-    const amount = Price[type];
+    const amount = Price[type]*100;
 
     console.log(amount);
     const response = await toast.promise(
