@@ -62,14 +62,10 @@ function EventDetails(props) {
 
   return (
     <>
-<<<<<<< HEAD
-      <div className="bg-[#0d0c06] min-h-[100vh] pt-[100px]">
-=======
       <div
         className="bg-[#0d0c06] w-screen pt-[70px] overflow-y-scroll"
         style={{ backgroundImage: `url(${bgsvg})`, objectFit: "cover" }}
       >
->>>>>>> 11ee74c14b28d4b4844eef7b7fda21968d57c8ae
         <Navbar />
         <img
           src={eventArr[0].Poster}
