@@ -1,0 +1,245 @@
+/* Common styles for all cards */
+.card1 {
+    position: relative;
+    height: 300px;
+    width: 230px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.card1 .boxshadow0 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform: scale(0.8);
+    box-shadow: rgb(255, 0, 0) 0px 30px 70px 0px;
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.card1 .main0 {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    -webkit-clip-path: polygon(0 40px, 40px 0, calc(100% - 40px) 0, 100% 40px, 100% calc(100% - 40px), calc(100% - 40px) 100%, 40px 100%, 0 calc(100% - 40px));
+    clip-path: polygon(0 40px, 40px 0, calc(100% - 40px) 0, 100% 40px, 100% calc(100% - 40px), calc(100% - 40px) 100%, 40px 100%, 0 calc(100% - 40px));
+    box-shadow: rgb(255, 0, 0) 0px 7px 29px 0px;
+    transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.card1 .main0 .top0 {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 0px;
+    height: 0px;
+    z-index: 2;
+    border-top: 115px solid black;
+    border-left: 115px solid transparent;
+    border-right: 115px solid transparent;
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.card1 .main0 .side0 {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    transform: translateX(-50%);
+    height: 101%;
+    background: black;
+    -webkit-clip-path: polygon(0% 0%, 50% 0, 95% 45%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 50% 0, 95% 45%, 100% 100%, 0% 100%);
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 1s;
+}
+
+.card1 .main0 .left0 {
+    left: 0;
+}
+
+.card1 .main0 .right0 {
+    right: 0;
+    transform: translateX(50%) scale(-1, 1);
+}
+
+.card1 .main0 .title0 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 90px;
+    font-weight: bold;
+    font-size: 25px;
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.2s ease-out 0s;
+}
+
+.card1 .main0 .button-container0 {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card1 .main0 .button-container0 .button0 {
+    position: absolute;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    -webkit-clip-path: polygon(0 0, 100% 0, 81% 100%, 21% 100%);
+    clip-path: polygon(0 0, 100% 0, 81% 100%, 21% 100%);
+    border: none;
+    color: white;
+    display: grid;
+    place-content: center;
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.card1 .main0 .button-container0 .button0 .svg0 {
+    width: 168px;
+    transition: all 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.card1 .main0 .button-container0 .button0:nth-child(1) {
+    bottom: 300px;
+    transition-delay: 0.4s;
+}
+
+.card1 .main0 .button-container0 .button0:nth-child(2) {
+    bottom: 300px;
+    transition-delay: 0.6s;
+}
+
+.card1 .main0 .button-container0 .button0:nth-child(3) {
+    bottom: 300px;
+    transition-delay: 0.8s;
+}
+
+.card1 .main0 .button-container0 .button0:hover .svg0 {
+    transform: scale(1);
+}
+
+.card1 .main0 .button-container0 .button0:active .svg0 {
+    transform: scale(0.7);
+}
+
+.card1:hover .main0 {
+    transform: scale(1);
+}
+
+.card1:hover .main0 .top0 {
+    top: -50px;
+}
+
+.card1:hover .main0 .left0 {
+    left: -50px;
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.1s;
+}
+
+.card1:hover .main0 .right0 {
+    right: -50px;
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.1s;
+}
+
+.card1:hover .main0 .title0 {
+    opacity: 1;
+    transition: all 0.2s ease-out 1.3s;
+}
+
+.card1:hover .main0 .button-container0 .button0:nth-child(1) {
+    bottom: 80px;
+    transition-delay: 0.8s;
+}
+
+.card1:hover .main0 .button-container0 .button0:nth-child(2) {
+    bottom: 40px;
+    transition-delay: 0.6s;
+}
+
+.card1:hover .main0 .button-container0 .button0:nth-child(3) {
+    bottom: 0;
+    transition-delay: 0.4s;
+}
+/* Platinum */
+.card1-platinum .boxshadow0-platinum {
+    border: 1px solid #8a7d9e;
+    box-shadow: #8a7d9e 0px 30px 70px 0px;
+}
+
+.card1-platinum .main0-platinum {
+    background: #8a7d9e;
+    box-shadow: #8a7d9e 0px 7px 29px 0px;
+}
+
+.card1-platinum:hover .main0 {
+    background: linear-gradient(to bottom, #8a7d9e 0%, #D6D5D3 100%);
+}
+
+/* Gold */
+.card1-gold .boxshadow0-gold {
+    border: 1px solid gold;
+    box-shadow: rgb(255, 223, 0) 0px 30px 70px 0px;
+}
+
+.card1-gold .main0-gold {
+    background: gold;
+    box-shadow: rgb(255, 223, 0) 0px 7px 29px 0px;
+}
+
+.card1-gold:hover .main0 {
+    background: linear-gradient(0deg, rgb(185, 163, 89) 0%, gold 60%, rgb(185, 163, 89) 100%);
+}
+
+/* Silver */
+.card1-silver .boxshadow0-silver {
+    border: 1px solid #797878;
+    box-shadow: rgb(192, 192, 192) 0px 30px 70px 0px;
+}
+
+.card1-silver .main0-silver {
+    background: #797878;
+    box-shadow: rgb(192, 192, 192) 0px 7px 29px 0px;
+}
+
+.card1-silver:hover .main0 {
+    background: linear-gradient(0deg, rgb(169, 169, 169) 0%, #797878 60%, rgb(169, 169, 169) 100%);
+}
+
+/* Bronze */
+.card1-bronze .boxshadow0-bronze {
+    border: 1px solid #cd7f32; /* Bronze color */
+    box-shadow: rgb(205, 127, 50) 0px 30px 70px 0px;
+}
+
+.card1-bronze .main0-bronze {
+    background: #cd7f32; /* Bronze color */
+    box-shadow: rgb(205, 127, 50) 0px 7px 29px 0px;
+}
+
+.card1-bronze:hover .main0 {
+    background: linear-gradient(0deg, rgb(139, 69, 19) 0%, #cd7f32 60%, rgb(139, 69, 19) 100%);
+}
+.button1 {
+    --hover-shadows: 16px 16px 33px #121212, -16px -16px 33px #303030;
+    --accent: fuchsia;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    border: none;
+    border-radius: 1.1em;
+    background-color: #212121;
+    cursor: pointer;
+    color: white;
+    padding: 1em 2em;
+    transition: box-shadow ease-in-out 0.3s, background-color ease-in-out 0.1s,
+      letter-spacing ease-in-out 0.1s, transform ease-in-out 0.1s;
+    box-shadow: 13px 13px 10px #1c1c1c, -13px -13px 10px #262626;
+  }
+  
+  .button1:hover {
+    box-shadow: var(--hover-shadows);
+  }
+  
+  .button1:active {
+    box-shadow: var(--hover-shadows), var(--accent) 0px 0px 30px 5px;
+    background-color: var(--accent);
+    transform: scale(0.95);
+  }
+  

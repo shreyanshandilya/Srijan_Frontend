@@ -61,7 +61,7 @@ function EventDetails(props) {
 
   return (
     <>
-      <div className="bg-[#0d0c06] w-screen pt-[100px]">
+      <div className="bg-[#0d0c06] min-h-[100vh] pt-[100px]">
         <Navbar />
         <div>
           <img src={details.posterWeb} alt="" />
@@ -193,7 +193,7 @@ function EventDetails(props) {
           </motion.button>
         </div> */}
       </div>
-      <FooterT />
+       
     </>
   );
 }

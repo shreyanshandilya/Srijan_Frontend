@@ -80,7 +80,7 @@ const Member = ({
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 1, delay: 0.5 }}
     >
-      <Grid container spacing={2} sx={{ width: "100%", p: 3 }}>
+      <Grid container  sx={{p: 3 }}>
         <Grid item xs={12} sm={4} lg={4}>
           <InputDefault
             size="small"
