@@ -84,7 +84,7 @@ function Event(props) {
   console.log(finalCategoryEvents);
   return (
     <div
-      className="bg-black h-screen w-screen overflow-y-scroll bg-cover bg-no-repeat"
+      className="bg-black max-w-screen h-screen w-screen overflow-y-scroll bg-cover bg-no-repeat"
       style={{ backgroundImage: `url(${bg})`, objectFit: "cover" }}
     >
       <Navbar />
