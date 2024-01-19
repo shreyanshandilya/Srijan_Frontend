@@ -12,7 +12,10 @@ const Card = ({ index, event }) => {
         <div className="back0">
           <div
             className="back-content0"
-            style={{ backgroundImage: `url(${img})`, objectFit: "contain" }}
+            // style={{
+            //   backgroundImage: `url(${event.Poster})`,
+            //   objectFit: "fill",
+            // }}
           >
             {/* <svg
               stroke="#ffffff"
@@ -24,7 +27,10 @@ const Card = ({ index, event }) => {
               fill="#ffffff"
             >
             </svg> */}
-            <strong>{event.EventName}</strong>
+            <img src={`${event.Poster}`} alt="" className="bg-contain p-2" />
+            <p className=" text-[#0d0c06] text-3xl font-bold absolute bottom-4 left-3 px-2 py-2 bg-opacity-35 backdrop-blur-lg rounded-lg">
+              {event.EventName}
+            </p>
           </div>
         </div>
         <div className="front0">
@@ -44,7 +50,7 @@ const Card = ({ index, event }) => {
                 <div className="title0 venue0 flex justify-around my-4">
                   Venue:{" "}
                   <strong className="">
-                    {event.venue ? ` ${event.venue} ` : ` TBD`}
+                    {event.Venue ? ` ${event.Venue} ` : ` TBD`}
                   </strong>
                 </div>
                 <div className="title0">

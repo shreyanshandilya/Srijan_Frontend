@@ -22,6 +22,8 @@ function Profile() {
 
   const [details, setDetails] = useState([]);
   const url = "https://srijan2024.onrender.com/api/getUser";
+  const urlEvents =
+    "https://srijan2024.onrender.com/api/profile/eventsRegistered";
   const fetchUser = useCallback(async () => {
     const response = await toast
       .promise(
