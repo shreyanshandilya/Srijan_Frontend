@@ -270,6 +270,22 @@ function Merchandise() {
                 maxWidth: "100%",
               }}
             />
+            <img
+              src="https://res.cloudinary.com/ds6u0jd3x/image/upload/v1705477984/HoMan/subemislrjntbvxc3omj.jpg"
+              alt="..."
+              style={{
+                maxHeight: "100%",
+                maxWidth: "100%",
+              }}
+            />
+            <img
+              src="https://res.cloudinary.com/ds6u0jd3x/image/upload/v1705477951/HoMan/mbtrx9mzmp1xppy1jnkp.jpg"
+              alt="..."
+              style={{
+                maxHeight: "100%",
+                maxWidth: "100%",
+              }}
+            />
             {/* <img
             src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967509/fotofreaks_iitism_1675676767_3032118946798465237_5457821429_qldckp.jpg"
             alt="..."
@@ -363,6 +379,7 @@ function Merchandise() {
                   <br /> UPI ID in order to pay.
                 </li>
                 <li>Kindly keep your transaction details with you.</li>
+                <li>Do not reload or go back to the page when payment is in progress.</li>
               </ul>
               <br></br>
             </p>
@@ -522,10 +539,12 @@ function Merchandise() {
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0d0c06] focus:border-[#0d0c06] block w-full p-2.5"
                 required
               >
+                <option value="XS">XS</option>
                 <option value="S">S</option>
                 <option value="M">M</option>
                 <option value="L">L</option>
                 <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
               </select>
             </div>
             {/* <div className="mb-1">
@@ -591,6 +610,7 @@ function Merchandise() {
                   {beta.type === "Hoodie" ? (799 * beta.quantity) : (399 * beta.quantity)}
                 </div>
               </strong>
+              (For delivery outside IIT ISM, optimal delivery charges will be taken at the time of delivery)
             </div>
             <div className="flex mb-4" style={{ alignItems: "flex-start" }}>
               <div

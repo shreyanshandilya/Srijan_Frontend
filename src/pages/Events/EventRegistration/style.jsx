@@ -14,7 +14,7 @@ export const Wrapper = styled(Box)({
     position: "relative",
     textAlign: "center",
     zIndex: "5",
-    backgroundColor: "#090D06"
+    backgroundColor: "#090D06",
     // bg-[#544b08]
     // backgroundImage : "url('https://res.cloudinary.com/dkdratnao/image/upload/v1705427074/ismGraffity_usbkdd.jpg')",
   },
@@ -81,3 +81,4 @@ export const Wrapper = styled(Box)({
     },
   },
 });
+//style.jsx

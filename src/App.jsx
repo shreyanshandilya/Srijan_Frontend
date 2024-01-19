@@ -6,27 +6,31 @@ import Landing from "./pages/Landing";
 import Merchandise from "./pages/Merchandise";
 import Team from "./components/Teams/Team";
 import About from "./pages/About";
+
+import EventZone from "./pages/Events/Zone/EventsZone";
 import Frm from "./components/Profile/form";
-import { RegisterForEvents } from "./pages/RegisterForEvents";
+import EventList from "./pages/Events/ZoneEventList/ZoneEventList";
+// import { RegisterForEvents } from "./pages/RegisterForEvents";
 // import { Profile } from "./pages/Profile";
 import PurchaseListPage from "./pages/PurcahseListPage";
-import EventDetails from "./pages/EventDetails";
-import Event from "./pages/Event";
+import EventDetails from "./pages/Events/EventDescription/EventDetails";
+// import Event from "./pages/Event";
 import {
   createHashRouter,
   RouterProvider,
   useLocation,
 } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
-import { RegisterTheEvents } from "./EventRegister/RegisterTheEvents";
+// import { RegisterTheEvents } from "./pages/Events/EventRegistration/RegisterTheEvents";
 import Login from "./components/Login";
 import { Register } from "./pages/Register";
 import { PackSelectionPage } from "./pages/PackSelectionPage";
 import Merchandise2 from "./pages/Merchandise2";
 import Profile from "./pages/Profile";
 import BgVideo from "./components/BgVideo";
-import { EventRegister } from "./pages/EventRegister";
+// import { EventRegister } from "./pages/EventRegister";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import { RegisterTheEvents } from "./pages/Events/EventRegistration/RegisterTheEvents";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import ReturnsAndRefundsPolicy from "./pages/ReturnsAndRefundsPolicy";
 
@@ -47,15 +51,23 @@ function App() {
     },
     {
       path: "event",
-      element: <Event />,
+      element: <EventZone />,
     },
     {
       path: "profile",
       element: <Profile />,
     },
     {
-      path: "/event/event-details/:id",
+      path: "/event/:category",
+      element: <EventList />,
+    },
+    {
+      path: "/event/:category/:name",
       element: <EventDetails />,
+    },
+    {
+      path: "/event/:category/:eventId/register",
+      element: <RegisterTheEvents />,
     },
     // {
     //   path: "/profile",
@@ -86,8 +98,8 @@ function App() {
       element: <Register />,
     },
     {
-      path: "/event-register/:eventId",
-      element: <RegisterTheEvents/>,
+      path: "/event-register/:id",
+      element: <RegisterTheEvents />,
     },
     {
       path: "privacy-policy",
