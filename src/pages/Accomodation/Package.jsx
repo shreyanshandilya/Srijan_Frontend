@@ -9,7 +9,7 @@ const PackagePage = () => {
   // Define an array of packages with their titles and eligible things
   useEffect(() => {
     if (localStorage.token != null && localStorage.token != undefined) {
-      if (localStorage.endsWith("@iitism.ac.in")) {
+      if (localStorage.email.endsWith("@iitism.ac.in")) {
       } else {
         navigate("/");
       }
