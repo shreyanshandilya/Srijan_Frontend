@@ -10,7 +10,7 @@ import "./Events.css";
 import axios from "axios";
 // import EventCard from "../Events/EventsCard";
 
-import bg from "../../../assets/slanted-gradient.svg";
+import bg from "../../../assets/Images_for_events/slanted-gradient.png";
 import EventsArr from "./Database/SrijanEvents";
 import Event_card from "./Event_card";
 

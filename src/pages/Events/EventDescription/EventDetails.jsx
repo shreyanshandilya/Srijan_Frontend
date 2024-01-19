@@ -8,7 +8,7 @@ import { duration } from "@mui/material";
 import { useParams } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
 import { Link } from "react-router-dom";
-import bgsvg from "../../../assets/large-triangles.svg";
+import bgsvg from "../../../assets/Images_for_events/large-triangles.png";
 import EventArr from "../ZoneEventList/Database/SrijanEvents";
 // import { motion } from "framer-motion";
 
