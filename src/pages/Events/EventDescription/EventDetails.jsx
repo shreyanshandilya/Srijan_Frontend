@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useEffect } from "react";
 import Navbar from "../../../components/Navbar/navbar";
 import FooterT from "../../../components/Footer";
-import { Accordion } from "flowbite-react";
+import { Accordion, Footer } from "flowbite-react";
 import { motion } from "framer-motion";
 import axios from "axios";
 import { duration } from "@mui/material";
@@ -63,7 +63,7 @@ function EventDetails(props) {
   return (
     <>
       <div
-        className="bg-[#0d0c06] w-screen pt-[70px] overflow-y-scroll"
+        className="bg-[#0d0c06] max-w-screen pt-[70px] overflow-y-scroll"
         style={{ backgroundImage: `url(${bgsvg})`, objectFit: "cover" }}
       >
         <Navbar />
@@ -202,6 +202,7 @@ function EventDetails(props) {
           </motion.button>
         </div> */}
       </div>
+      <FooterT />
        
     </>
   );

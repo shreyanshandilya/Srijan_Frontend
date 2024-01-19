@@ -13,6 +13,7 @@ import axios from "axios";
 import bg from "../../../assets/Images_for_events/slanted-gradient.png";
 import EventsArr from "./Database/SrijanEvents";
 import Event_card from "./Event_card";
+import FooterT from "../../../components/Footer";
 
 function Event(props) {
   console.log(EventsArr);
@@ -84,7 +85,7 @@ function Event(props) {
   console.log(finalCategoryEvents);
   return (
     <div
-      className="bg-black h-screen  overflow-y-scroll bg-cover bg-no-repeat"
+      className="bg-black min-h-screen bg-cover bg-no-repeat"
       style={{ backgroundImage: `url(${bg})`, objectFit: "cover" }}
     >
       <Navbar />
@@ -230,6 +231,7 @@ function Event(props) {
           );
         })}
       </div>
+        <FooterT />
 
       {/* <div cla)ssName="grid grid-cols-2 gap-y-[150px]"> */}
       {/* <motion.div
