@@ -217,7 +217,7 @@ function Event(props) {
           </div>
         </div>
       </div> */}
-      <h2 className="text-5xl font-bold text-[#dad3a5] mt-[135px]">
+      <h2 className="text-5xl min-h-[100px]  font-bold text-[#dad3a5] mt-[135px]">
         {category.toUpperCase()} Events
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-y-20 mt-[100px] mb-10">
