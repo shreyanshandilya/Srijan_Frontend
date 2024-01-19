@@ -1,4 +1,3 @@
-import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
 const Button = styled.button`
@@ -6,12 +5,12 @@ const Button = styled.button`
   position: relative;
   margin:10px;
   width: 11em;
-  height: 4em;
+  height: 3em;
   outline: none;
   transition: 0.1s;
   background-color: transparent;
-  border: none;
-  font-size: 11px;
+  border: dashed yellow 1px;
+  font-size: 14px;
   
   color: #ddebf0;
   
@@ -161,18 +160,18 @@ const rightArrow8 = keyframes`
   }
 `;
 
-export default function StyledButton({name,to}) {
+export default function StyledButton({ name }) {
   return (
     <Button>
       {name}
-      <Clip>
+      {/* <Clip>
         <LeftTop className="corner" />
         <RightBottom className="corner" />
         <RightTop className="corner" />
         <LeftBottom className="corner" />
       </Clip>
       <RightArrow id="rightArrow" className="arrow" />
-      <LeftArrow id="leftArrow" className="arrow" />
+      <LeftArrow id="leftArrow" className="arrow" /> */}
     </Button>
   );
 }

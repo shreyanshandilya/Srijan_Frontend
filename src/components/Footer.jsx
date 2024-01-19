@@ -1,5 +1,5 @@
 import React from "react";
-import srijanlogo from "./Footer/srijan Light (3).png";
+import srijanlogo from "../assets/logos/ismxsrijan.png";
 import { IoMdMail } from "react-icons/io";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
@@ -91,7 +91,7 @@ function FooterT() {
                     </li>
                     <li className="mb-4">
                       <a
-                        href="https://flowbite.com/"
+                        href="https://www.iitism.ac.in/"
                         className="hover:underline text-xs sm:text-sm md:text-base flex items-center justify-start gap-x-2 sm:gap-x-4"
                       >
                         <FaMapMarkerAlt className="text-[#dad3a5] text-5xl sm:text-4xl" />
@@ -171,7 +171,7 @@ function FooterT() {
               >
                 Returns & Refunds Policy
               </Link>
-                        
+
             </div>
           </div>
         </div>

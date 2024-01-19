@@ -91,7 +91,7 @@ const Navbar = () => {
                     sx={{ color: "#fff", marginRight: "100px" }}
                   >
                     <Button component={Link} to="/">
-                      <img src={srijanlogo} width="130px" alt="Srijan"></img>
+                      <img src={srijanlogo} width="100px" alt="Srijan"></img>
                     </Button>
                   </Typography>
 
@@ -149,7 +149,7 @@ const Navbar = () => {
                           >
                             <span class="sr-only">Open user menu</span>
                             {localStorage.getItem("token") != null ||
-                            localStorage.getItem("token") != undefined ? (
+                              localStorage.getItem("token") != undefined ? (
                               <strong>
                                 <svg
                                   xmlns="http://www.w3.org/2000/svg"
@@ -180,7 +180,7 @@ const Navbar = () => {
                         )}
                       >
                         {localStorage.getItem("token") == null ||
-                        localStorage.getItem("token") == undefined ? (
+                          localStorage.getItem("token") == undefined ? (
                           <div>
                             <Dropdown.Item className="h-full w-full">
                               <Link to={"/register"}>Register</Link>
@@ -203,7 +203,7 @@ const Navbar = () => {
                                 PROFILE
                               </Dropdown.Item>
                             </Link>
-                           
+
                             <Link
                               onClick={() => {
                                 localStorage.clear();
@@ -282,7 +282,7 @@ const Navbar = () => {
 
                   <List>
                     {localStorage.getItem("token") == null ||
-                    localStorage.getItem("token") == undefined ? (
+                      localStorage.getItem("token") == undefined ? (
                       <div>
                         <Link to={"/register"}>
                           <MobileLink url="/register" text="REGISTER" />
@@ -321,7 +321,7 @@ const Navbar = () => {
                         rel="noreferrer"
                       />
                     </ScrollRouter> */}
-                     {/* {((localStorage.getItem("email") == null ||localStorage.getItem("email") == undefined  ||
+                    {/* {((localStorage.getItem("email") == null ||localStorage.getItem("email") == undefined  ||
                             !localStorage
                               .getItem("email")
                               .endsWith("@iitism.ac.in"))) && (
@@ -346,7 +346,7 @@ const Navbar = () => {
                       />
                     </Link>
                     {localStorage.getItem("token") == null ||
-                    localStorage.getItem("token") == undefined ? (
+                      localStorage.getItem("token") == undefined ? (
                       ""
                     ) : (
                       <>
@@ -399,7 +399,7 @@ const Navbar = () => {
                     </Link>
                     <hr />
                     {localStorage.getItem("token") == null ||
-                    localStorage.getItem("token") == undefined ? (
+                      localStorage.getItem("token") == undefined ? (
                       ""
                     ) : (
                       <Link

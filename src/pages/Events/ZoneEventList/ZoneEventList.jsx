@@ -9,7 +9,7 @@ import img from "../../../assets/Desktop.jpg";
 import "./Events.css";
 import axios from "axios";
 // import EventCard from "../Events/EventsCard";
- 
+
 import bg from "../../../assets/Images_for_events/slanted-gradient.png";
 import EventsArr from "./Database/SrijanEvents";
 import Event_card from "./Event_card";
@@ -218,8 +218,8 @@ function Event(props) {
           </div>
         </div>
       </div> */}
-      <h2 className="text-5xl min-h-[100px]  font-bold text-[#dad3a5] mt-[135px]">
-        {category.toUpperCase()} Events
+      <h2 className="text-7xl min-h-[100px] font-bold text-[#dad3a5] mt-[135px] titleHeading">
+        {category.toUpperCase()} &nbsp; EVENTS
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-y-20 mt-[100px] mb-10">
         {finalCategoryEvents.map((event, index) => {
@@ -231,7 +231,7 @@ function Event(props) {
           );
         })}
       </div>
-        <FooterT />
+      <FooterT />
 
       {/* <div cla)ssName="grid grid-cols-2 gap-y-[150px]"> */}
       {/* <motion.div
@@ -655,7 +655,7 @@ function Event(props) {
             )}
           </motion.div>
         </motion.div> */}
-     
+
     </div>
   );
 }

@@ -185,7 +185,7 @@ function Merchandise() {
               tshirtSize: beta.tshirtSize,
               quantity: beta.quantity,
               addresss: beta.address,
-              type : beta.type,
+              type: beta.type,
             }),
             headers: {
               "Content-Type": "application/json",
@@ -237,7 +237,7 @@ function Merchandise() {
       <center>
         <div className="h-[80vh]">
           <Carousel>
-          <img
+            <img
               src="https://res.cloudinary.com/dkdratnao/image/upload/v1705433458/hoodieimg_tr5fia.jpg"
               alt="..."
               style={{
@@ -302,16 +302,16 @@ function Merchandise() {
           layout
           transition={{ duration: 1 }}
         >
-          <h1 className="mb-2 text-4xl font-bold tracking-tight leading-none text-[#dad3a5] md:text-5xl lg:text-6xl ">
+          <h1 className="mb-2 text-6xl font-bold tracking-tight leading-none text-[#dad3a5] md:text-7xl titleHeading">
             Merchandise
           </h1>
-          <h1 className="my-4 text-2xl font-semibold tracking-tight leading-none text-[#efede0] md:text-3xl lg:text-4xl ">
-           <br/> INR 399 / T-Shirt <br/><br/> INR 799 / Hoodie
+          <h1 className="my-4 text-md font-semibold tracking-tight leading-none text-[#efede0] md:text-xl lg:text-2xl ">
+            <br /> INR 399 / T-Shirt <br /><br /> INR 799 / Hoodie
           </h1>
 
           <div className="flex flex-col space-y-4 my-10 sm:flex-row sm:justify-center sm:space-y-0">
             {localStorage.getItem("token") == null ||
-            localStorage.getItem("token") == undefined ? (
+              localStorage.getItem("token") == undefined ? (
               <div>
                 <h1 className="mb-4 text-2xl font-semibold tracking-tight leading-none text-[#dad3a5] md:text-3xl lg:text-4xl ">
                   Kindly register or login to buy merchandise.

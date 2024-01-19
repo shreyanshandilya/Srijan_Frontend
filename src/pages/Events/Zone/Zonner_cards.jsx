@@ -1,9 +1,5 @@
-// Card.js
-
-import React from "react";
 import "./Card.css";
 import { useNavigate } from "react-router-dom";
-import Typography from "@mui/material/Typography";
 
 import img1 from "../../../assets/Images_for_events/Dance.05190f49712746c776b2.png";
 import img2 from "../../../assets/Images_for_events/Music.c91b700a4c5acdc4bb1c.png";
@@ -15,7 +11,6 @@ import img7 from "../../../assets/Images_for_events/download.png";
 import img8 from "../../../assets/Images_for_events/Literary.ee3a4fdc591b333cb436.png";
 import img9 from "../../../assets/Images_for_events/pngegg.png";
 import img10 from "../../../assets/Images_for_events/culinary.png";
-// import img9 from "../../../assets/Images_for_events/"
 
 const Card = ({ index }) => {
   const navigate = useNavigate();
