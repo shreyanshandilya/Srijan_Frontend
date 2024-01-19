@@ -18,7 +18,7 @@ function Merchandise() {
   const navigate = useNavigate();
   const [Razorpay] = useRazorpay();
   const { type } = useParams();
-  
+
   const Price={
     "bronze":1199,
     "silver":1499,
@@ -111,7 +111,7 @@ function Merchandise() {
         };
 
         var validateRes = await fetch(
-          "http://localhost:2000/api/user/pacakge",
+          "https://srijan2024.onrender.com/api/user/pacakge",
           {
             method: "POST",
             mode: "cors",
