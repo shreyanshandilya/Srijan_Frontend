@@ -270,12 +270,12 @@ export const RegisterTheEvents = () => {
       return memberArr;
     });
   };
-  useEffect(() => {
-    initiateMembers();
-    if (!localStorage["token"]) {
-      navigate("/");
-    }
-  }, [minSiz]);
+  // useEffect(() => {
+  //   initiateMembers();
+  //   if (!localStorage["token"]) {
+  //     navigate("/login");
+  //   }
+  // }, [minSiz]);
   const getEventData = () => {
     try {
       const resp = eventList.filter(

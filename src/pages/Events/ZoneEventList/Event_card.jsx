@@ -1,6 +1,6 @@
 import React from "react";
 import "./card2.css";
-import bg from "../../../assets/sun-tornado.svg";
+import bg from "../../../assets/sun-tornado.png";
 import img from "../../../assets/image 43.png";
 import { Link } from "react-router-dom";
 
@@ -35,7 +35,7 @@ const Card = ({ index, event }) => {
         </div>
         <div className="front0">
           <div
-            className="img0"
+            className="img0 bg-cover"
             style={{ backgroundImage: `url(${bg})`, objectFit: "cover" }}
           >
             <div className="circle0"></div>
