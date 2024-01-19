@@ -24,7 +24,7 @@ function Login() {
       Password: password,
     };
     console.log(data);
-    const response = await toast.promise(fetch("https://srijan2024.onrender.com/api/login", {
+    const response = await toast.promise(fetch("http://localhost:2000/api/login", {
       method: "post",
       headers: {
         "Content-Type": "application/json", // Set the content type to JSON

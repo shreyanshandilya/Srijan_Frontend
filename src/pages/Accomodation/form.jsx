@@ -4,6 +4,7 @@ import Nav from "../../components/Navbar/navbar";
 import { useNavigate } from "react-router-dom";
 // import axios from "axios";
 import "react-toastify/dist/ReactToastify.css";
+import Srijanmage from "../../assets/SrijanLogo.png";
 import Footer from "../../components/Footer.jsx";
 import { Carousel } from "flowbite-react";
 import { animateScroll as scroll } from "react-scroll";
@@ -17,6 +18,7 @@ function Merchandise() {
   const navigate = useNavigate();
   const [Razorpay] = useRazorpay();
   const { type } = useParams();
+  
   const Price={
     "bronze":1199,
     "silver":1499,
@@ -24,12 +26,12 @@ function Merchandise() {
     "platinum":1999
   }
   const [beta, setData] = useState({
-    Email:"",
+    
     Package:type,
     tshirtSize: "S",
     Idproof:"",
-   
-    Gender: "",
+    address:"",
+    Gender: "Male",
     
   });
   useEffect(() => {
@@ -101,7 +103,7 @@ function Merchandise() {
       currency,
       name: "Srijan",
       description: "Merchandise Payment",
-      image: Srijanmage, // add srih=jan image
+      image: Srijanmage,  
       order_id: order.id,
       handler: async function (response) {
         const body = {
@@ -109,16 +111,17 @@ function Merchandise() {
         };
 
         var validateRes = await fetch(
-          "https://srijan2024.onrender.com/api/order/validate",
+          "http://localhost:2000/api/user/pacakge",
           {
             method: "POST",
             mode: "cors",
             body: JSON.stringify({
               ...body,
               tshirtSize: beta.tshirtSize,
-              quantity: beta.quantity,
-              addresss: beta.address,
-              type : beta.type,
+              Gender:beta.Gender,
+              address: beta.address,
+              Idproof:beta.Idproof,
+              pacakage : type.toLowerCase(),
             }),
             headers: {
               "Content-Type": "application/json",
@@ -127,7 +130,7 @@ function Merchandise() {
           }
         );
       },
-      notes: {
+      notes: {              
         address: "Razorpay Corporate Office",
       },
       theme: {
@@ -153,12 +156,7 @@ function Merchandise() {
     rzp1.open();
     setLoading(false);
     e.preventDefault();
-    setData({
-      tshirtSize: "S",
-      address: "",
-      quantity: 0,
-      type: "Hoodie",
-    });
+    
   };
 
   return (
@@ -168,58 +166,38 @@ function Merchandise() {
     >
       <Nav />
       <center>
-        <div className="h-[60vh]">
+        <div className="h-[80vh]">
           <Carousel>
-          <img
-              src="https://res.cloudinary.com/dkdratnao/image/upload/v1705433458/hoodieimg_tr5fia.jpg"
-              alt="..."
-              style={{
-                maxHeight: "100%",
-                maxWidth: "100%",
-              }}
-            />
-            <img
-              src="https://res.cloudinary.com/dkdratnao/image/upload/v1705303858/Slide_16_9_-_2_efjkce.jpg"
-              alt="..."
-              style={{
-                maxHeight: "100%",
-                maxWidth: "100%",
-              }}
-            />
-
-            <img
-              src="https://res.cloudinary.com/dkdratnao/image/upload/v1705303857/Slide_16_9_-_3_ijz7nd.jpg"
-              alt="..."
-              style={{
-                maxHeight: "100%",
-                maxWidth: "100%",
-              }}
-            />
-            <img
-              src="https://res.cloudinary.com/dkdratnao/image/upload/v1705303854/Slide_16_9_-_1_iljfez.jpg"
-              alt="..."
-              style={{
-                maxHeight: "100%",
-                maxWidth: "100%",
-              }}
-            />
-            <img
-              src="https://res.cloudinary.com/ds6u0jd3x/image/upload/v1705477984/HoMan/subemislrjntbvxc3omj.jpg"
-              alt="..."
-              style={{
-                maxHeight: "100%",
-                maxWidth: "100%",
-              }}
-            />
-            <img
-              src="https://res.cloudinary.com/ds6u0jd3x/image/upload/v1705477951/HoMan/mbtrx9mzmp1xppy1jnkp.jpg"
-              alt="..."
-              style={{
-                maxHeight: "100%",
-                maxWidth: "100%",
-              }}
-            />
           
+
+          
+            <img
+              src="          https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967604/fotofreaks_iitism_1675597389_3031453081190844097_5457821429_pi6mct.jpg
+              "
+              alt="..."
+              style={{
+                maxHeight: "100%",
+                maxWidth: "100%",
+              }}
+            />
+            <img
+              src="          https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967578/fotofreaks_iitism_1675597389_3031453081199233841_5457821429_e5n33e.jpg
+              "
+              alt="..."
+              style={{
+                maxHeight: "100%",
+                maxWidth: "100%",
+              }}
+            />
+            <img
+              src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967496/fotofreaks_iitism_1675676767_3032118946806802425_5457821429_pcq54i.jpg
+              "
+              alt="..."
+              style={{
+                maxHeight: "100%",
+                maxWidth: "100%",
+              }}
+            />
           </Carousel>
         </div>
       </center>
@@ -295,15 +273,15 @@ function Merchandise() {
               htmlFor="address"
               className="block mb-2 text-sm font-medium text-[#040d10]"
             >
-              Email
+              Id Proof
             </label>
             <input
-              type="email"
-              id="email"
+              type="string"
+              id="Idproof"
               onChange={handleChangeInput}
-              value={beta.Email}
+              value={beta.Idproof}
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0d0c06] focus:border-[#0d0c06] block w-full p-2.5"
-              placeholder="Your Email"
+              placeholder="G-Drive Link with view access to all"
               required
             />
           </div>
@@ -315,7 +293,7 @@ function Merchandise() {
               Gender
             </label>
             <select
-              id="type"
+              id="Gender"
               onChange={handleChangeInput}
               value={beta.Gender}
               placeholder="Gender"
@@ -329,7 +307,57 @@ function Merchandise() {
           </div>
           
 
-         {(type=="platinum"||type=="gold")&&<div className="mb-4">
+         {(type=="platinum"||type=="gold")&&<> <div className="justify-center items-center mb-4">
+              {/* <div className="mb-1">
+                <label
+                  htmlFor="hostel"
+                  className="block mb-1 text-sm font-medium text-[#040d10]"
+                >
+                  Hostel
+                </label>
+                <input
+                  type="text"
+                  id="hostel"
+                  onChange={handleChangeInput}
+                  value={data.hostel}
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0d0c06] focus:border-[#0d0c06] block w-full p-2.5"
+                  placeholder="Aquamarine"
+                  required
+                />
+              </div>
+              <div className="mb-1">
+                <label
+                  htmlFor="roomNumber"
+                  className="block mb-1 text-sm font-medium text-[#040d10]"
+                >
+                  Room
+                </label>
+                <input
+                  type="text"
+                  id="roomNumber"
+                  onChange={handleChangeInput}
+                  value={data.roomNumber}
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0d0c06] focus:border-[#0d0c06] block w-full p-2.5"
+                  placeholder="C/06/09"
+                  required
+                />
+              </div> */}
+              <label
+                htmlFor="address"
+                className="block mb-2 text-sm font-medium text-[#040d10]"
+              >
+                Address
+              </label>
+              <input
+                type="string"
+                id="address"
+                onChange={handleChangeInput}
+                value={beta.address}
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0d0c06] focus:border-[#0d0c06] block w-full p-2.5"
+                placeholder="Your Address"
+                required
+              />
+            </div><div className="mb-4">
             <label
               htmlFor="tshirtSize"
               className="block mb-2 text-sm font-medium text-gray-900"
@@ -352,7 +380,7 @@ function Merchandise() {
               <option value="XXL">XXL</option>
             </select>
           </div>
-         }
+          </>}
 
           <div className="max-w-lg mx-auto mb-2">
             

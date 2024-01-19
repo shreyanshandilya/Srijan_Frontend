@@ -161,7 +161,7 @@
 /* Platinum */
 .card1-platinum .boxshadow0-platinum {
     border: 1px solid #8a7d9e;
-    box-shadow: #8a7d9e 0px 30px 70px 0px;
+    box-shadow: #8a7d9e 0px 30px 120px 0px;
 }
 
 .card1-platinum .main0-platinum {
@@ -176,7 +176,7 @@
 /* Gold */
 .card1-gold .boxshadow0-gold {
     border: 1px solid gold;
-    box-shadow: rgb(255, 223, 0) 0px 30px 70px 0px;
+    box-shadow: rgb(255, 223, 0) 0px 30px 120px 0px;
 }
 
 .card1-gold .main0-gold {
@@ -191,7 +191,7 @@
 /* Silver */
 .card1-silver .boxshadow0-silver {
     border: 1px solid #797878;
-    box-shadow: rgb(192, 192, 192) 0px 30px 70px 0px;
+    box-shadow: rgb(192, 192, 192) 0px 30px 120px 0px;
 }
 
 .card1-silver .main0-silver {
@@ -206,7 +206,7 @@
 /* Bronze */
 .card1-bronze .boxshadow0-bronze {
     border: 1px solid #cd7f32; /* Bronze color */
-    box-shadow: rgb(205, 127, 50) 0px 30px 70px 0px;
+    box-shadow: rgb(205, 127, 50) 0px 30px 120px 0px;
 }
 
 .card1-bronze .main0-bronze {
@@ -230,7 +230,7 @@
     padding: 1em 2em;
     transition: box-shadow ease-in-out 0.3s, background-color ease-in-out 0.1s,
       letter-spacing ease-in-out 0.1s, transform ease-in-out 0.1s;
-    box-shadow: 13px 13px 10px #1c1c1c, -13px -13px 10px #262626;
+    /* box-shadow: 13px 13px 10px #1c1c1c, -13px -13px 10px #262626; */
   }
   
   .button1:hover {
@@ -238,7 +238,7 @@
   }
   
   .button1:active {
-    box-shadow: var(--hover-shadows), var(--accent) 0px 0px 30px 5px;
+    /* box-shadow: var(--hover-shadows), var(--accent) 0px 0px 30px 5px; */
     background-color: var(--accent);
     transform: scale(0.95);
   }
