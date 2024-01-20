@@ -105,7 +105,7 @@ const events = [
   {
     EventName: "Let's Get Quizzical!",
     Zone: "Quiz",
-    Poster: "",
+    Poster: "https://res.cloudinary.com/dvlxqrbjm/image/upload/v1705731475/ueuzlblpsuy3sxiyro0b.png",
     miniDescription:
       "The quiz is a MELA quiz. Centered around fun fundas from the world of music, entertainment, literature and art.",
     Description:
@@ -138,7 +138,7 @@ const events = [
   {
     EventName: "The Usual Fundas",
     Zone: "Quiz",
-    Poster: "",
+    Poster: "https://res.cloudinary.com/dvlxqrbjm/image/upload/v1705731691/mqcuirzrt3jhcu2ymo7b.png",
     miniDescription:
       "The quiz is a general quiz about everything and anything under the sun. Hosted by Renowned QM Samanway Banerjee who is popular across the country for his quizzing prowess.",
     Description:
@@ -169,9 +169,34 @@ const events = [
     accompanist: false,
   },
   {
+    EventName: "QUEER TRIVIA",
+    Zone: "Quiz",
+    Poster: "https://res.cloudinary.com/dvlxqrbjm/image/upload/v1705731632/ohgjnyalkzubsf7va6mb.png",
+    miniDescription: "Written quiz",
+    Description:
+      "Participants will take part in teams of 1-3 people. The event will be a written quiz with questions projected on the screen. The trivia will cover queer culture across the globe.",
+    Venue: "NLHC",
+    Fees: 0,
+    Contactdetails: [
+      { name: "Anushka", phone: "8374934030" }
+    ],
+    Rules: [
+      "Each team should consist of 3 members or less.",
+    ],
+    RuleBookLink:
+      "https://docs.google.com/document/d/1PaD0hEfsQzRlCJH50fD5l8U41G5T0GF8-ApzwjRJmbE/edit",
+
+    Minimummembers: 1,
+    Maximummembers: 3,
+    teamName: true,
+    sponsor: false,
+    audio: false,
+    accompanist: false,
+  },
+  {
     EventName: "GPT QUIZ",
     Zone: "Quiz",
-    Poster: "",
+    Poster: "https://res.cloudinary.com/dvlxqrbjm/image/upload/v1705732018/wnccjh9wmnfroip2x6b6.png",
     miniDescription: "In house quiz.",
     Description:
       "Teams of 3 or less, no electronics, only paper and pen, offline mode and even after all these restrictions, can you triumph over difficulties and win the Science, Business and Technology quiz hosted by our QuizClub members? Let your brains speak and propel you towards victory, this Srijan.",
