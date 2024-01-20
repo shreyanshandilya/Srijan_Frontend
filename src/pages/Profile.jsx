@@ -21,9 +21,9 @@ function Profile() {
   }, [localStorage.getItem("token")]);
 
   const [details, setDetails] = useState([]);
-  const url = "https://srijan2024.onrender.com/api/getUser";
+  const url = "https://srijan-prod.onrender.com/api/getUser";
   const urlEvents =
-    "https://srijan2024.onrender.com/api/profile/eventsRegistered";
+    "https://srijan-prod.onrender.com/api/profile/eventsRegistered";
   const fetchUser = useCallback(async () => {
     const response = await toast
       .promise(

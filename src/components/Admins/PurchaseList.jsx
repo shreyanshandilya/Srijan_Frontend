@@ -9,7 +9,7 @@ function PurchaseList() {
     async function getListIems() {
       let response;
       try {
-        response = await fetch("https://srijan2024.onrender.com/api/allOrders");
+        response = await fetch("https://srijan-prod.onrender.com/api/allOrders");
         if (!response.ok) {
           throw new Error("error occured in fetching");
         }
@@ -25,7 +25,7 @@ function PurchaseList() {
     let response;
     try {
       response = await fetch(
-        `https://srijan2024.onrender.com/api/changeApproved/${orderId}`,
+        `https://srijan-prod.onrender.com/api/changeApproved/${orderId}`,
         {
           method: "PUT",
         }
@@ -47,7 +47,7 @@ function PurchaseList() {
     }
     try {
       response = await fetch(
-        `https://srijan2024.onrender.com/api/getOrder/get/${e.target.value}`,
+        `https://srijan-prod.onrender.com/api/getOrder/get/${e.target.value}`,
         {
           method: "POST",
         }

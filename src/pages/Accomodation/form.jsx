@@ -68,7 +68,7 @@ function Merchandise() {
 
     console.log(amount);
     const response = await toast.promise(
-      fetch("https://srijan2024.onrender.com/api/order", {
+      fetch("https://srijan-prod.onrender.com/api/order", {
         method: "POST",
         mode: "cors",
         body: JSON.stringify({
@@ -111,7 +111,7 @@ function Merchandise() {
         };
 
         var validateRes = await fetch(
-          "https://srijan2024.onrender.com/api/user/pacakge",
+          "https://srijan-prod.onrender.com/api/user/pacakge",
           {
             method: "POST",
             mode: "cors",

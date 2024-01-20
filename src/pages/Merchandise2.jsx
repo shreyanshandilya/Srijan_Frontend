@@ -29,7 +29,7 @@ function Merchandise2() {
   const receiptId = "qwsaq1";
 
   const paymentHandler = async (e) => {
-    const response = await fetch("http://srijan2024.onrender.com/order", {
+    const response = await fetch("http://srijan-prod.onrender.com/order", {
       method: "POST",
       body: JSON.stringify({
         amount,
@@ -89,7 +89,7 @@ function Merchandise2() {
     try {
       let token_user = localStorage.getItem("token");
       response = await axios.post(
-        "http://srijan2024.onrender.com/api/purchase",
+        "http://srijan-prod.onrender.com/api/purchase",
         {
           ...formData,
           image: img,
