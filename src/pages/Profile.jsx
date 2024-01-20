@@ -21,10 +21,16 @@ function Profile() {
   }, [localStorage.getItem("token")]);
 
   const [details, setDetails] = useState([]);
+<<<<<<< HEAD
   const [accomodations, setAccomodations] = useState([]);
   const url = "https://srijan-prod.onrender.com/api/getUser";
   const urlEvents =
     "https://srijan-prod.onrender.com/api/profile/userAccomodation";
+=======
+  const url = "https://srijan-prod.onrender.com/api/getUser";
+  const urlEvents =
+    "https://srijan-prod.onrender.com/api/profile/eventsRegistered";
+>>>>>>> 92d8b6fc76e7fdb7c9ba47aff7a12f993a92dafb
   const fetchUser = useCallback(async () => {
     const response = await toast
       .promise(

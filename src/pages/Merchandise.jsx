@@ -83,7 +83,7 @@ function Merchandise() {
   //       };
   //       console.log(data);
   //       const response = await toast.promise(
-  //         fetch("https://srijan2024.onrender.com/api/purchase", {
+  //         fetch("https://srijan-prod.onrender.com/api/purchase", {
   //           method: "POST",
   //           mode: "cors",
   //           headers: {
