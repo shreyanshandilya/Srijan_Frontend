@@ -433,6 +433,8 @@ export const RegisterTheEvents = () => {
 
   // if (loading) return <Loader />; // Not working
 
+  const [displayForm,setDisplayForm] = useState(false);
+
   const url = "https://srijan-prod.onrender.com/api/getUser";
   const fetchUser = useCallback(async () => {
     const response = await fetch(url, {
@@ -447,8 +449,8 @@ export const RegisterTheEvents = () => {
         const data = await res.json();
         console.log(data.IsEvents);
         if (data.IsEvents === true) {
-          navigate("/packages");
-        }
+          navigate("/packages/true");
+        } else setDisplayForm(true);
         // if()
         // console.log(ans);
         // console.log(res.json());
