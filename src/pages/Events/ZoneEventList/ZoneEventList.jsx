@@ -16,7 +16,7 @@ import Event_card from "./Event_card";
 import FooterT from "../../../components/Footer";
 
 function Event(props) {
-  console.log(EventsArr);
+  // console.log(EventsArr);
   // const [open, setOpen] = useState(false);
   // const [open2, setOpen2] = useState(false);
   const [events, setEvents] = useState([]);
@@ -82,7 +82,7 @@ function Event(props) {
   const finalCategoryEvents = EventsArr.filter((obj) => {
     return obj.Zone.toLowerCase() == category;
   });
-  console.log(finalCategoryEvents);
+  // console.log(finalCategoryEvents);
   return (
     <div
       className="bg-black min-h-screen bg-cover bg-no-repeat"

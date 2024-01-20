@@ -46,7 +46,7 @@ function Profile() {
 
       .then(async (res) => {
         const data = await res.json();
-        console.log(data);
+        // console.log(data);
         setDetails(data);
         // console.log(ans);
         // console.log(res.json());
@@ -65,7 +65,7 @@ function Profile() {
           },
         }).then(async (res) => {
         const data = await res.json();
-        console.log(data);
+        // console.log(data);
         setAccomodations(data);
       })
       .catch((err) => console.log(err));

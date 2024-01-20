@@ -20,7 +20,7 @@ import {
 import { styled } from "@mui/system";
 import Form from "react-bootstrap/Form";
 import { Wrapper } from "./style";
-import Loading from "./Loading.jsx";
+import Loading from "./Loading";
 
 const InputDefault = styled(TextField)({
   "& label.Mui-focused": {
@@ -221,11 +221,6 @@ const Member = ({
 export const RegisterTheEvents = () => {
   const { eventId } = useParams();
   const navigate = useNavigate();
-
-  // console.log(eventId);
-  // useEffect(()=>{
-  //   console.log(eventList);
-  // },[])
   const [loading, setLoading] = useState(true);
   const [imgSrcMob, setImgSrcMob] = useState("");
   const [imgSrcWeb, setImgSrcWeb] = useState("");
@@ -249,7 +244,6 @@ export const RegisterTheEvents = () => {
       const resp = eventList.filter(
         (events) => events.EventName === `${eventId}`
       );
-      // console.log(resp);
       setTeamStructure({
         Sponsor: resp[0].sponsor,
         audioLink: resp[0].audio,
@@ -258,51 +252,58 @@ export const RegisterTheEvents = () => {
         Instrument: false,
       });
     } catch (e) {
-      // console.log(e);
       toast.error("Something went wrong! ");
     }
   };
   const initiateMembers = () => {
     setMemberDetails(() => {
-      // console.log(minSiz);
       const memberArr = new Array(minSiz)
         .fill("")
         .map(() => ({ ...memberProtoType }));
       return memberArr;
     });
   };
-  // useEffect(() => {
-  //   initiateMembers();
-  //   if (!localStorage["token"]) {
-  //     navigate("/login");
-  //   }
-  // }, [minSiz]);
+  useEffect(() => {
+    initiateMembers();
+    if (!localStorage["token"]) {
+      navigate("/login");
+    }
+  }, [minSiz]);
   const getEventData = () => {
     try {
       const resp = eventList.filter(
         (events) => events.EventName === `${eventId}`
       );
-      // setMinSiz(resp.data[0].minTeamSize);
       setMinSiz(resp[0].Minimummembers);
-
-      // setMaxSiz(resp.data[0].maxTeamSize);
       setMaxSiz(resp[0].Maximummembers);
-
-      // setImgSrcMob(resp.data[0].posterMobile);
-      // setImgSrcMob(EventImage);
-
-      // setImgSrcWeb(resp.data[0].posterWeb);
       setImgSrcWeb(resp[0].Poster || EventImage);
-
-      // setEventName(resp.data[0].name);
       setEventName(resp[0].EventName);
-
       setNameofevent(resp[0].EventName);
-
-      // console.log(resp.data);
     } catch (error) {
       // console.log(error);
       toast.error("Something went wrong! ");
+    }
+  };
+  const url = "https://srijan-prod.onrender.com/api/getUser";
+  const fetchUser = async () => {
+    // console.log("aa");
+    setLoading(true);
+    const response = await fetch(url, {
+      method: "GET",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage["token"]}`,
+      },
+    })
+    const data  = await response.json();
+    setLoading(false);
+    // console.log(data);
+    if(data.IsEvents === false){
+      toast.error("Please Purchase a plan for registering in a event .", {
+        position: toast.POSITION.BOTTOM_RIGHT,
+      });
+      navigate("/packages/true");
     }
   };
 
@@ -316,10 +317,9 @@ export const RegisterTheEvents = () => {
   const [memberDetails, setMemberDetails] = useState([]);
 
   useEffect(() => {
-    setLoading(true);
+    fetchUser();
     fetchFieldValidity();
     getEventData();
-    setLoading(false);
   }, []);
   const handleAddMember = () => {
     if (memberDetails.length + 1 > maxSiz) {
@@ -340,17 +340,15 @@ export const RegisterTheEvents = () => {
 
   const handleMemberChange = (e, memberIdx) => {
     const updatetdDetails = [...memberDetails];
-    // console.log(memberIdx);
     updatetdDetails[memberIdx][e.target.name] = e.target.value;
-    // console.log(updatetdDetails);
     setMemberDetails(updatetdDetails);
   };
   const handleSubmit = async (event) => {
     try {
-      setLoading(true);
+      // setLoading(true);
       event.preventDefault();
       const data = new FormData(event.currentTarget);
-      console.log(data);
+      // console.log(data);
       // console.log("handleSubmit" + data);
       const teamObj = {
         EventName: nameofevent,
@@ -364,7 +362,7 @@ export const RegisterTheEvents = () => {
           },
         ],
       };
-      console.log("r = ", teamObj);
+      // console.log("r = ", teamObj);
       const officialUrl = "https://srijan-prod.onrender.com/api/event/register";
       const demo =
         "https://srijanlocalmonogodbbackend.onrender.com/api/event/register";
@@ -386,7 +384,7 @@ export const RegisterTheEvents = () => {
         );
 
         const abcd = await response.json();
-        console.log(abcd);
+        // console.log(abcd);
         if (abcd.status) {
           event.target.reset();
           initiateMembers();
@@ -435,35 +433,18 @@ export const RegisterTheEvents = () => {
 
   const [displayForm,setDisplayForm] = useState(false);
 
-  const url = "https://srijan-prod.onrender.com/api/getUser";
-  const fetchUser = useCallback(async () => {
-    const response = await fetch(url, {
-      method: "GET",
-      mode: "cors",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${localStorage["token"]}`,
-      },
-    })
-      .then(async (res) => {
-        const data = await res.json();
-        console.log(data.IsEvents);
-        if (data.IsEvents === true) {
-          navigate("/packages/true");
-        } else setDisplayForm(true);
-        // if()
-        // console.log(ans);
-        // console.log(res.json());
-      })
-      .catch((err) => console.log(err));
-  }, []);
-  useEffect(() => {
-    fetchUser();
-  }, [fetchUser]);
+  
+  // useEffect(() => {
+  //   fetchUser();
+  // }, []);
 
   return (
     // <Loading />
-    <div style={{ backgroundColor: "black", height: "100%" }}>
+    
+      loading ? (
+      <Loading />
+    ):(
+      <div style={{ backgroundColor: "black", height: "100%" }}>
       <Wrapper>
         {/* <Navbar className="navbar-with-high-z-index" /> */}
         <div id="canvas_container2" className="min-h-screen">
@@ -733,7 +714,9 @@ export const RegisterTheEvents = () => {
         />
         <FooterT />
       </Wrapper>
-    </div>
-    // teamName?<div>hello</div>:<div>bye</div>
-  );
+      </div>
+    )
+  )
+    
+    
 };

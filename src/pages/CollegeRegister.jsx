@@ -61,7 +61,7 @@ export const CollegeRegister = (props) => {
       localStorage["showOtp"] = "true";
       setEmail2(abcd.Email);
     }
-    console.log(abcd);
+    // console.log(abcd);
   };
 
   const otpRequest = async (e) => {
@@ -88,7 +88,7 @@ export const CollegeRegister = (props) => {
       );
 
       const abcd = await response.json();
-      console.log(abcd);
+      // console.log(abcd);
       if (abcd.token != undefined) {
         localStorage["token"] = abcd.token;
         localStorage.setItem("email", abcd.user.Email);

@@ -54,7 +54,7 @@ export const OutsideRegister = (props) => {
     }
 
     if (abcd.status === "success") setShowOtpBox(true), setEmail2(abcd.Email);
-    console.log(abcd);
+    // console.log(abcd);
   };
   const otpRequest = async (e) => {
     e.preventDefault();
@@ -80,7 +80,7 @@ export const OutsideRegister = (props) => {
       );
 
       const abcd = await response.json();
-      console.log(abcd);
+      // console.log(abcd);
       setShowOtpBox(false);
       if(abcd.token!=undefined){localStorage["token"] = abcd.token;
       localStorage.setItem('email',abcd.user.Email);
