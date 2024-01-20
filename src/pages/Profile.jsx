@@ -22,9 +22,9 @@ function Profile() {
 
   const [details, setDetails] = useState([]);
   const [accomodations, setAccomodations] = useState([]);
-  const url = "https://srijan2024.onrender.com/api/getUser";
+  const url = "https://srijan-prod.onrender.com/api/getUser";
   const urlEvents =
-    "https://srijan2024.onrender.com/api/profile/userAccomodation";
+    "https://srijan-prod.onrender.com/api/profile/userAccomodation";
   const fetchUser = useCallback(async () => {
     const response = await toast
       .promise(
@@ -53,7 +53,7 @@ function Profile() {
       .catch((err) => console.log(err));
   }, []);
   const urlAccomodation =
-    "https://srijan2024.onrender.com/api/profile/userAccomodation";
+    "https://srijan-prod.onrender.com/api/profile/userAccomodation";
   const fetchAccomodation = useCallback(async () => {
     const response = await fetch(urlAccomodation, {
           method: "GET",
@@ -193,7 +193,7 @@ function Profile() {
                           <div className="max-w-sm p-6 bg-[#3c3708] backdrop-blur-xl bg-opacity-70 rounded-lg shadow">
                             <a href="#">
                               <h5 className="mb-2 text-2xl font-bold flex justify-center tracking-tight text-[#dad3a5]">
-                                {`Order ${index + 1}`}
+                                {`Details`}
                               </h5>
                             </a>
                             <p className="mb-3 font-normal text-[#efede0]">
