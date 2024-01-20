@@ -30,7 +30,7 @@ const CardContainer = () => {
         }),
         {
           position: toast.POSITION.BOTTOM_RIGHT,
-          pending: "Loading Profile",
+          pending: "Checking your Event Access !!",
           error: "Something wrong occured",
         }
       )
