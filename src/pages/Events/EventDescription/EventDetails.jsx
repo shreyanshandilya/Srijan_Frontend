@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useEffect } from "react";
 import Navbar from "../../../components/Navbar/navbar";
 import FooterT from "../../../components/Footer";
-import { Accordion } from "flowbite-react";
+import { Accordion, Footer } from "flowbite-react";
 import { motion } from "framer-motion";
 import axios from "axios";
 import { duration } from "@mui/material";
@@ -23,7 +23,7 @@ function EventDetails(props) {
   const eventArr = EventArr.filter((e) => {
     return e.EventName == name;
   });
-  // const Eventurl = `https://srijan2024.onrender.com/api/showEvents/${id}`;
+  // const Eventurl = `https://srijan-prod.onrender.com/api/showEvents/${id}`;
   const [details, setDetails] = useState([]);
   //   const [img, setImg] = useState(null);
   //   const [name, setName] = useState(null);
@@ -63,7 +63,7 @@ function EventDetails(props) {
   return (
     <>
       <div
-        className="bg-[#0d0c06] max-w-screen w-screen pt-[70px] overflow-y-scroll"
+        className="bg-[#0d0c06] max-w-screen pt-[70px] overflow-y-scroll"
         style={{ backgroundImage: `url(${bgsvg})`, objectFit: "cover" }}
       >
         <Navbar />
@@ -203,6 +203,7 @@ function EventDetails(props) {
         </div> */}
       </div>
       <FooterT />
+       
     </>
   );
 }

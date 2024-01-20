@@ -13,6 +13,7 @@ import axios from "axios";
 import bg from "../../../assets/Images_for_events/slanted-gradient.png";
 import EventsArr from "./Database/SrijanEvents";
 import Event_card from "./Event_card";
+import FooterT from "../../../components/Footer";
 
 function Event(props) {
   console.log(EventsArr);
@@ -22,7 +23,7 @@ function Event(props) {
   const [allEvents, setAllEvents] = useState([]);
   const [clubEvents, setClubEvents] = useState([]);
   const [deptEvents, setDeptEvents] = useState([]);
-  const allEventsUrl = "https://srijan2024.onrender.com/api/showAllEvents";
+  const allEventsUrl = "https://srijan-prod.onrender.com/api/showAllEvents";
 
   const fetchAllEvents = useCallback(async () => {
     var clubEvents = [],
@@ -84,7 +85,7 @@ function Event(props) {
   console.log(finalCategoryEvents);
   return (
     <div
-      className="bg-black max-w-screen h-screen w-screen overflow-y-scroll bg-cover bg-no-repeat"
+      className="bg-black min-h-screen bg-cover bg-no-repeat"
       style={{ backgroundImage: `url(${bg})`, objectFit: "cover" }}
     >
       <Navbar />
@@ -217,7 +218,7 @@ function Event(props) {
           </div>
         </div>
       </div> */}
-      <h2 className="text-5xl font-bold text-[#dad3a5] mt-[135px]">
+      <h2 className="text-5xl min-h-[100px]  font-bold text-[#dad3a5] mt-[135px]">
         {category.toUpperCase()} Events
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-y-20 mt-[100px] mb-10">
@@ -230,6 +231,7 @@ function Event(props) {
           );
         })}
       </div>
+      <FooterT />
 
       {/* <div cla)ssName="grid grid-cols-2 gap-y-[150px]"> */}
       {/* <motion.div
@@ -653,7 +655,6 @@ function Event(props) {
             )}
           </motion.div>
         </motion.div> */}
-      <Footer />
     </div>
   );
 }

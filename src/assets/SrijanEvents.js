@@ -1,4 +1,4 @@
-export const eventList = [
+const eventList = [
     {
         "EventName": "SRIJANTHROUGH MYLENS",
         "Zone": "CINEMATOGRAPHY",  
@@ -394,3 +394,5 @@ export const eventList = [
         "Maximummembers": 4
     }
 ]
+
+export default eventList;

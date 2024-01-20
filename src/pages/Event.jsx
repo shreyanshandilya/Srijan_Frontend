@@ -12,7 +12,7 @@ function Event() {
   const [allEvents, setAllEvents] = useState([]);
   const [clubEvents, setClubEvents] = useState([]);
   const [deptEvents, setDeptEvents] = useState([]);
-  const allEventsUrl = "https://srijan2024.onrender.com/api/showAllEvents";
+  const allEventsUrl = "https://srijan-prod.onrender.com/api/showAllEvents";
 
   const fetchAllEvents = useCallback(async () => {
     var clubEvents = [],
