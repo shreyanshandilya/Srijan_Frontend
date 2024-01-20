@@ -23,7 +23,7 @@ function Merchandise() {
     "bronze":1199,
     "silver":1499,
     "gold":1799,
-    "platinum":1999
+    "platinum":1
   }
   const [beta, setData] = useState({
     
