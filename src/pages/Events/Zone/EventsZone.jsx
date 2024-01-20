@@ -7,11 +7,14 @@ import { motion } from "framer-motion";
 import img from "../../../assets/Images_for_events/bgg.png";
 import { ToastContainer, toast } from "react-toastify";
 import { useCallback, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const cardsData = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 
 const CardContainer = () => {
+
+  const navigate = useNavigate();
 
   const url = "https://srijan-prod.onrender.com/api/getUser";
   const fetchUser = useCallback(async () => {
@@ -33,7 +36,10 @@ const CardContainer = () => {
       )
       .then(async (res) => {
         const data = await res.json();
-        console.log(data);
+        console.log(data.IsEvents);
+        if(data.IsEvents === true){
+          navigate('/packages');
+        }
         // if()
         // console.log(ans);
         // console.log(res.json());
