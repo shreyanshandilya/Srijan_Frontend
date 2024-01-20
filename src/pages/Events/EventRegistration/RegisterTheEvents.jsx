@@ -364,12 +364,12 @@ export const RegisterTheEvents = () => {
         ],
       };
       console.log("r = ", teamObj);
-      const officialUrl = "https://srijan2024.onrender.com/api/event/register";
+      const officialUrl = "https://srijan-prod.onrender.com/api/event/register";
       const demo =
         "https://srijanlocalmonogodbbackend.onrender.com/api/event/register";
       try {
         const response = await toast.promise(
-          fetch("https://srijanlocalmonogodbbackend.onrender.com/api/event/register", {
+          fetch("https://srijan-prod.onrender.com/api/event/register", {
             method: "post",
             headers: {
               "Content-Type": "application/json", // Set the content type to JSON

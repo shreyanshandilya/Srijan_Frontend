@@ -97,7 +97,7 @@ const Dashboard = () => {
     try {
       const response = await toast.promise(
         fetch(
-          `https://srijan2024.onrender.com/api/getOrder/${phoneNumber}/${Email}`,
+          `https://srijan-prod.onrender.com/api/getOrder/${phoneNumber}/${Email}`,
           {
             method: "POST",
           }),

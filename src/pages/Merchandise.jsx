@@ -83,7 +83,7 @@ function Merchandise() {
   //       };
   //       console.log(data);
   //       const response = await toast.promise(
-  //         fetch("https://srijan2024.onrender.com/api/purchase", {
+  //         fetch("https://srijan-prod.onrender.com/api/purchase", {
   //           method: "POST",
   //           mode: "cors",
   //           headers: {
@@ -133,7 +133,7 @@ function Merchandise() {
 
     console.log(amount);
     const response = await toast.promise(
-      fetch("https://srijan2024.onrender.com/api/order", {
+      fetch("https://srijan-prod.onrender.com/api/order", {
         method: "POST",
         mode: "cors",
         body: JSON.stringify({
@@ -176,7 +176,7 @@ function Merchandise() {
         };
 
         var validateRes = await fetch(
-          "https://srijan2024.onrender.com/api/order/validate",
+          "https://srijan-prod.onrender.com/api/order/validate",
           {
             method: "POST",
             mode: "cors",
