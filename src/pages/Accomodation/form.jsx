@@ -27,7 +27,7 @@ function Merchandise() {
   }
   const [beta, setData] = useState({
     
-    Package:type,
+    Package:type.toLowerCase(),
     tshirtSize: "S",
     Idproof:"",
     address:"",
@@ -64,7 +64,7 @@ function Merchandise() {
     if (loading) return;
 
     setLoading(true);
-    const amount = Price[type]*100;
+    const amount = Price[type.toLowerCase()]*100;
 
     console.log(amount);
     const response = await toast.promise(
@@ -111,7 +111,7 @@ function Merchandise() {
         };
 
         var validateRes = await fetch(
-          "https://srijan-prod.onrender.com/api/user/pacakge",
+          "https://srijan-prod.onrender.com/api/user/package",
           {
             method: "POST",
             mode: "cors",
@@ -214,7 +214,7 @@ function Merchandise() {
           {`${type.toLocaleUpperCase()} Package`}
           </h1>
           <h1 className="my-2 text-2xl font-semibold tracking-tight leading-none text-[#efede0] md:text-3xl lg:text-4xl ">
-           <br/> INR {Price[type]} only <br/> 
+           <br/> INR {Price[type.toLowerCase()]} only <br/> 
           </h1>
 
           <div className="flex flex-col space-y-4 my-10 sm:flex-row sm:justify-center sm:space-y-0">
@@ -307,7 +307,7 @@ function Merchandise() {
           </div>
           
 
-         {(type=="platinum"||type=="gold")&&<> <div className="justify-center items-center mb-4">
+         {(type.toLowerCase()=="platinum"||type.toLowerCase()=="gold")&&<> <div className="justify-center items-center mb-4">
               {/* <div className="mb-1">
                 <label
                   htmlFor="hostel"
@@ -387,7 +387,7 @@ function Merchandise() {
             <strong>
               <div className="mt-4">
                 Payable Amount: INR{" "}
-                {Price[type]}
+                {Price[type.toLowerCase()]}
               </div>
             </strong>
             (For delivery outside IIT ISM, optimal delivery charges will be taken at the time of delivery)

@@ -369,7 +369,7 @@ export const RegisterTheEvents = () => {
         "https://srijanlocalmonogodbbackend.onrender.com/api/event/register";
       try {
         const response = await toast.promise(
-          fetch("https://srijanlocalmonogodbbackend.onrender.com/api/event/register", {
+          fetch("https://srijan-prod.onrender.com/api/event/register", {
             method: "post",
             headers: {
               "Content-Type": "application/json", // Set the content type to JSON
