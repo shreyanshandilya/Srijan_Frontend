@@ -364,7 +364,7 @@ export const RegisterTheEvents = () => {
         ],
       };
       console.log("r = ", teamObj);
-      const officialUrl = "https://srijan2024.onrender.com/api/event/register";
+      const officialUrl = "https://srijan-prod.onrender.com/api/event/register";
       const demo =
         "https://srijanlocalmonogodbbackend.onrender.com/api/event/register";
       try {
