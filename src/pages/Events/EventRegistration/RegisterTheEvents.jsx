@@ -81,9 +81,10 @@ const Member = ({
     <motion.div
       initial={{ y: 20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 1, delay: 0.5 }}
+      transition={{ duration: 0.5, delay: 0.1 }}
+      className="sm:w-screen"
     >
-      <Grid container  sx={{p: 3 }}>
+      <Grid container  sx={{p: 3 }} className="gap-y-7 gap-x-5">
         <Grid item xs={12} sm={4} lg={4}>
           <InputDefault
             size="small"
@@ -433,279 +434,279 @@ export const RegisterTheEvents = () => {
   // if (loading) return <Loader />; // Not working
 
   return (
-    <Loading />
-    // <div style={{ backgroundColor: "black", height: "100%" }}>
+    // <Loading />
+    <div style={{ backgroundColor: "black", height: "100%" }}>
 
-    // <Wrapper>
-    //   {/* <Navbar className="navbar-with-high-z-index" /> */}
-    //   <div id="canvas_container2" className="min-h-screen">
-    //     <div
-    //       className="m-3  backdrop-blur-lg  text-white font-mono text-2xl"
-    //       id="canvas_box2"
-    //       style={{ opacity: "1", top: "0", padding: "0" }}
-    //     >
-    //       <Navbar />
-    //       <div style={flexContainerStyle}>
-    //         <Box className="poster w-full">
-    //           <img
-    //             src={imgSrcWeb}
-    //             className="h-[400px] rounded-lg w-full"
-    //             alt="tshirt"
-    //             style={{ objectFit: "cover", objectPosition: "center" }}
-    //           />
-    //         </Box>
-    //         {true && (
-    //           <motion.div
-    //             initial={{ y: 20, opacity: 0 }}
-    //             animate={{ y: 0, opacity: 1 }}
-    //             transition={{ duration: 1, delay: 0.5 }}
-    //             className="text-light"
-    //             style={{ marginTop: "2em", opacity: "1" }}
-    //           >
-    //             <h5 className="mb-1 mt-5 font-semibold text-[#dad3a5] text-5xl lg:text-6xl">
-    //               {nameofevent || "Event's Name"}
-    //             </h5>
-    //             <Form className="m-3" onSubmit={handleSubmit}>
-    //               {teamStructure.LeaderName && (
-    //                 <>
-    //                   <div className="p-3 m-3">Team Details</div>
-    //                   <div style={responsiveColumn}>
-    //                     <InputDefault
-    //                       label="Team Name"
-    //                       placeholder="XYZ"
-    //                       type="text"
-    //                       fullWidth
-    //                       name="teamName"
-    //                       required
-    //                     />
-    //                   </div>
-    //                   <Typography
-    //                     variant="subtitle2"
-    //                     className="padd"
-    //                     align="center"
-    //                     sx={{ mb: 3 }}
-    //                   >
-    //                     Enter Information About Your Team Members.
-    //                   </Typography>
-    //                 </>
-    //               )}
-    //               {!teamStructure.LeaderName && (
-    //                 <Typography
-    //                   variant="subtitle2"
-    //                   className="padd"
-    //                   align="center"
-    //                   sx={{ mb: 3 }}
-    //                 >
-    //                   Enter Your Details.
-    //                 </Typography>
-    //               )}
+    <Wrapper>
+      {/* <Navbar className="navbar-with-high-z-index" /> */}
+      <div id="canvas_container2" className="min-h-screen">
+        <div
+          className="m-3  backdrop-blur-lg  text-white font-mono text-2xl"
+          id="canvas_box2"
+          style={{ opacity: "1", top: "0", padding: "0" }}
+        >
+          <Navbar />
+          <div style={flexContainerStyle}>
+            <Box className="poster w-full">
+              <img
+                src={imgSrcWeb}
+                className="h-[400px] rounded-lg w-full"
+                alt="tshirt"
+                style={{ objectFit: "cover", objectPosition: "center" }}
+              />
+            </Box>
+            {true && (
+              <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: 0.5 }}
+                className="text-light"
+                style={{ marginTop: "2em", opacity: "1" }}
+              >
+                <h5 className="mb-1 mt-5 font-semibold text-[#dad3a5] text-5xl lg:text-6xl">
+                  {nameofevent || "Event's Name"}
+                </h5>
+                <Form className="m-3" onSubmit={handleSubmit}>
+                  {teamStructure.LeaderName && (
+                    <>
+                      <div className="p-3 m-3">Team Details</div>
+                      <div style={responsiveColumn}>
+                        <InputDefault
+                          label="Team Name"
+                          placeholder="XYZ"
+                          type="text"
+                          fullWidth
+                          name="teamName"
+                          required
+                        />
+                      </div>
+                      <Typography
+                        variant="subtitle2"
+                        className="padd"
+                        align="center"
+                        sx={{ mb: 3 }}
+                      >
+                        Enter Information About Your Team Members.
+                      </Typography>
+                    </>
+                  )}
+                  {!teamStructure.LeaderName && (
+                    <Typography
+                      variant="subtitle2"
+                      className="padd"
+                      align="center"
+                      sx={{ mb: 3 }}
+                    >
+                      Enter Your Details.
+                    </Typography>
+                  )}
 
-    //               <Member />
-    //               {memberDetails.map((_, idx) => {
-    //                 return (
-    //                   <Box
-    //                     key={idx}
-    //                     className="glass-morphism"
-    //                     sx={{
-    //                       mb: 2,
-    //                       p: 2,
-    //                       borderRadius: "10px",
-    //                     }}
-    //                   >
-    //                     <Typography>
-    //                       {idx === 0 ? "Team Leader" : `Member ${idx + 1}`}
-    //                     </Typography>
-    //                     <Member
-    //                       key={idx}
-    //                       handleMemberChange={handleMemberChange}
-    //                       memberIdx={idx}
-    //                       memberDetails={memberDetails}
-    //                       isInstrument={teamStructure.Instrument}
-    //                     />
-    //                   </Box>
-    //                 );
-    //               })}
+                  <Member />
+                  {memberDetails.map((_, idx) => {
+                    return (
+                      <Box
+                        key={idx}
+                        className="glass-morphism"
+                        sx={{
+                          mb: 2,
+                          p: 2,
+                          borderRadius: "10px",
+                        }}
+                      >
+                        <Typography>
+                          {idx === 0 ? "Team Leader" : `Member ${idx + 1}`}
+                        </Typography>
+                        <Member
+                          key={idx}
+                          handleMemberChange={handleMemberChange}
+                          memberIdx={idx}
+                          memberDetails={memberDetails}
+                          isInstrument={teamStructure.Instrument}
+                        />
+                      </Box>
+                    );
+                  })}
 
-    //               <div className="grid grid-cols-2 sm:gap-6 gap-1 my-6">
-    //                 <motion.div
-    //                   className="box"
-    //                   whileHover={{ scale: 1.1 }}
-    //                   transition={{
-    //                     type: "spring",
-    //                     stiffness: 400,
-    //                     damping: 10,
-    //                   }}
-    //                 >
-    //                   <Button
-    //                     className="m-3"
-    //                     variant="contained"
-    //                     onClick={handleAddMember}
-    //                     sx={{ transform: "none", left: "0" }}
-    //                   >
-    //                     Add Member
-    //                   </Button>
-    //                 </motion.div>
-    //                 <motion.div
-    //                   className="box "
-    //                   whileHover={{ scale: 1.1 }}
-    //                   transition={{
-    //                     type: "spring",
-    //                     stiffness: 400,
-    //                     damping: 10,
-    //                   }}
-    //                 >
-    //                   <Button
-    //                     className="m-3 bg-[#dad3a5]"
-    //                     variant="contained"
-    //                     onClick={handleRemoveMember}
-    //                     sx={{ transform: "none", left: "0" }}
-    //                   >
-    //                     Remove Member
-    //                   </Button>
-    //                 </motion.div>
-    //               </div>
+                  <div className="grid grid-cols-2 sm:gap-6 gap-1 my-6">
+                    <motion.div
+                      className="box"
+                      whileHover={{ scale: 1.1 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 400,
+                        damping: 10,
+                      }}
+                    >
+                      <Button
+                        className="m-3 h-full"
+                        variant="contained"
+                        onClick={handleAddMember}
+                        sx={{ transform: "none", left: "0" }}
+                      >
+                        Add Member
+                      </Button>
+                    </motion.div>
+                    <motion.div
+                      className="box "
+                      whileHover={{ scale: 1.1 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 400,
+                        damping: 10,
+                      }}
+                    >
+                      <Button
+                        className="m-3 bg-[#dad3a5]"
+                        variant="contained"
+                        onClick={handleRemoveMember}
+                        sx={{ transform: "none", left: "0" }}
+                      >
+                        Remove Member
+                      </Button>
+                    </motion.div>
+                  </div>
 
-    //               {teamStructure.Sponsor && (
-    //                 <div className="grid grid-cols-2 m-7">
-    //                   <div>Sponsor Check</div>
-    //                   <div className="grid grid-cols-2 gap-5">
-    //                     <div>
-    //                       <input
-    //                         type="radio"
-    //                         name="yes"
-    //                         id="radio-yes"
-    //                         value="yes"
-    //                         onChange={handleRadioChange}
-    //                         checked={sponsorYesNo === "yes"}
-    //                       />
-    //                       <label htmlFor="radio-yes">Yes</label>
-    //                     </div>
-    //                     <div>
-    //                       <input
-    //                         type="radio"
-    //                         name="no"
-    //                         id="radio-no"
-    //                         value="no"
-    //                         onChange={handleRadioChange}
-    //                         checked={sponsorYesNo === "no"}
-    //                       />
-    //                       <label htmlFor="radio-no">No</label>
-    //                     </div>
-    //                   </div>
-    //                 </div>
-    //               )}
+                  {teamStructure.Sponsor && (
+                    <div className="grid grid-cols-2 m-7">
+                      <div>Sponsor Check</div>
+                      <div className="grid grid-cols-2 gap-5">
+                        <div>
+                          <input
+                            type="radio"
+                            name="yes"
+                            id="radio-yes"
+                            value="yes"
+                            onChange={handleRadioChange}
+                            checked={sponsorYesNo === "yes"}
+                          />
+                          <label htmlFor="radio-yes">Yes</label>
+                        </div>
+                        <div>
+                          <input
+                            type="radio"
+                            name="no"
+                            id="radio-no"
+                            value="no"
+                            onChange={handleRadioChange}
+                            checked={sponsorYesNo === "no"}
+                          />
+                          <label htmlFor="radio-no">No</label>
+                        </div>
+                      </div>
+                    </div>
+                  )}
 
-    //               {teamStructure.audioLink && (
-    //                 <div className="my-5" style={responsiveColumn}>
-    //                   <InputDefault
-    //                     size="small"
-    //                     label="Audio Link"
-    //                     placeholder="XYZ"
-    //                     type="text"
-    //                     name="audioLink"
-    //                     fullWidth
-    //                     required
-    //                     InputProps={{
-    //                       startAdornment: (
-    //                         <InputAdornment position="start">
-    //                           {/* <DesignServicesIcon fontSize="small" /> */}
-    //                         </InputAdornment>
-    //                       ),
-    //                     }}
-    //                   />
-    //                 </div>
-    //               )}
-    //               {teamStructure.Accompanist && (
-    //                 <div className="my-5">
-    //                   <div className="grid grid-cols-2 m-7">
-    //                     <div>Need Accompanist ?</div>
-    //                     <div className="grid grid-cols-2 gap-5">
-    //                       <div>
-    //                         <input
-    //                           type="radio"
-    //                           name="yes"
-    //                           id="radio-yes"
-    //                           value="yes"
-    //                           onChange={handleAccompanist}
-    //                           checked={accompanistYesNo === "yes"}
-    //                         />
-    //                         <label htmlFor="radio-yes">Yes</label>
-    //                       </div>
-    //                       <div>
-    //                         <input
-    //                           type="radio"
-    //                           name="no"
-    //                           id="radio-no"
-    //                           value="no"
-    //                           onChange={handleAccompanist}
-    //                           checked={accompanistYesNo === "no"}
-    //                         />
-    //                         <label htmlFor="radio-no">No</label>
-    //                       </div>
-    //                     </div>
-    //                   </div>
-    //                   {accompanistYesNo === "yes" && (
-    //                     <div className="my-5" style={responsiveColumn}>
-    //                       <InputDefault
-    //                         size="small"
-    //                         label="Accompanist"
-    //                         placeholder="XYZ"
-    //                         type="text"
-    //                         name="Accompanist"
-    //                         fullWidth
-    //                         required
-    //                         InputProps={{
-    //                           startAdornment: (
-    //                             <InputAdornment position="start">
-    //                               {/* <DesignServicesIcon fontSize="small" /> */}
-    //                             </InputAdornment>
-    //                           ),
-    //                         }}
-    //                       />
-    //                     </div>
-    //                   )}
-    //                 </div>
-    //               )}
-    //               <motion.div
-    //                 className="box"
-    //                 whileHover={{ scale: 1.1 }}
-    //                 transition={{
-    //                   type: "spring",
-    //                   stiffness: 400,
-    //                   damping: 10,
-    //                 }}
-    //               >
-    //                 <Button
-    //                   className="m-3"
-    //                   variant="contained"
-    //                   type="submit"
-    //                   sx={{ transform: "none", left: "0" }}
-    //                 >
-    //                   Register
-    //                 </Button>
-    //               </motion.div>
-    //             </Form>
-    //           </motion.div>
-    //         )}
-    //       </div>
-    //     </div>
-    //     <div></div>
-    //   </div>
-    //   <ToastContainer
-    //     position="bottom-right"
-    //     autoClose={5000}
-    //     hideProgressBar={false}
-    //     newestOnTop={false}
-    //     closeOnClick
-    //     rtl={false}
-    //     pauseOnFocusLoss
-    //     draggable
-    //     pauseOnHover
-    //     theme="dark"
-    //   />
-    //   <FooterT />
-    // </Wrapper>
-    // </div>
+                  {teamStructure.audioLink && (
+                    <div className="my-5" style={responsiveColumn}>
+                      <InputDefault
+                        size="small"
+                        label="Audio Link"
+                        placeholder="XYZ"
+                        type="text"
+                        name="audioLink"
+                        fullWidth
+                        required
+                        InputProps={{
+                          startAdornment: (
+                            <InputAdornment position="start">
+                              {/* <DesignServicesIcon fontSize="small" /> */}
+                            </InputAdornment>
+                          ),
+                        }}
+                      />
+                    </div>
+                  )}
+                  {teamStructure.Accompanist && (
+                    <div className="my-5">
+                      <div className="grid grid-cols-2 m-7">
+                        <div>Need Accompanist ?</div>
+                        <div className="grid grid-cols-2 gap-5">
+                          <div>
+                            <input
+                              type="radio"
+                              name="yes"
+                              id="radio-yes"
+                              value="yes"
+                              onChange={handleAccompanist}
+                              checked={accompanistYesNo === "yes"}
+                            />
+                            <label htmlFor="radio-yes">Yes</label>
+                          </div>
+                          <div>
+                            <input
+                              type="radio"
+                              name="no"
+                              id="radio-no"
+                              value="no"
+                              onChange={handleAccompanist}
+                              checked={accompanistYesNo === "no"}
+                            />
+                            <label htmlFor="radio-no">No</label>
+                          </div>
+                        </div>
+                      </div>
+                      {accompanistYesNo === "yes" && (
+                        <div className="my-5" style={responsiveColumn}>
+                          <InputDefault
+                            size="small"
+                            label="Accompanist"
+                            placeholder="XYZ"
+                            type="text"
+                            name="Accompanist"
+                            fullWidth
+                            required
+                            InputProps={{
+                              startAdornment: (
+                                <InputAdornment position="start">
+                                  {/* <DesignServicesIcon fontSize="small" /> */}
+                                </InputAdornment>
+                              ),
+                            }}
+                          />
+                        </div>
+                      )}
+                    </div>
+                  )}
+                  <motion.div
+                    className="box"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 400,
+                      damping: 10,
+                    }}
+                  >
+                    <Button
+                      className="m-3"
+                      variant="contained"
+                      type="submit"
+                      sx={{ transform: "none", left: "0" }}
+                    >
+                      Register
+                    </Button>
+                  </motion.div>
+                </Form>
+              </motion.div>
+            )}
+          </div>
+        </div>
+        <div></div>
+      </div>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
+      <FooterT />
+    </Wrapper>
+    </div>
     // teamName?<div>hello</div>:<div>bye</div>
   );
 };

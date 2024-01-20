@@ -5,9 +5,45 @@ import Card from "./Zonner_cards"; // Create a Card component if not already cre
 import Navbar from "../../../components/Navbar/navbar";
 import { motion } from "framer-motion";
 import img from "../../../assets/Images_for_events/bgg.png";
+import { ToastContainer, toast } from "react-toastify";
+import { useCallback, useEffect } from "react";
+
 const cardsData = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
+
 const CardContainer = () => {
+
+  const url = "https://srijan-prod.onrender.com/api/getUser";
+  const fetchUser = useCallback(async () => {
+    const response = await toast
+      .promise(
+        fetch(url, {
+          method: "GET",
+          mode: "cors",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${localStorage["token"]}`,
+          },
+        }),
+        {
+          position: toast.POSITION.BOTTOM_RIGHT,
+          pending: "Loading Profile",
+          error: "Something wrong occured",
+        }
+      )
+      .then(async (res) => {
+        const data = await res.json();
+        console.log(data);
+        // if()
+        // console.log(ans);
+        // console.log(res.json());
+      })
+      .catch((err) => console.log(err));
+  }, []);
+  useEffect(() => {
+    fetchUser();
+  }, [fetchUser]);
+
   return (
     <div
       className="bg-cover bg-center bg-fixed w-screen max-w-screen"
@@ -37,6 +73,18 @@ const CardContainer = () => {
           ))}
         </div>
       </div>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </div>
   );
 };
