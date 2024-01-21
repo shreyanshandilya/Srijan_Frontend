@@ -9,7 +9,7 @@ import img from "../../../assets/Desktop.jpg";
 import "./Events.css";
 import axios from "axios";
 // import EventCard from "../Events/EventsCard";
- 
+
 import bg from "../../../assets/Images_for_events/slanted-gradient.png";
 import EventsArr from "./Database/SrijanEvents";
 import Event_card from "./Event_card";
@@ -231,7 +231,7 @@ function Event(props) {
           );
         })}
       </div>
-        <FooterT />
+      <FooterT />
 
       {/* <div cla)ssName="grid grid-cols-2 gap-y-[150px]"> */}
       {/* <motion.div
@@ -655,7 +655,6 @@ function Event(props) {
             )}
           </motion.div>
         </motion.div> */}
-     
     </div>
   );
 }

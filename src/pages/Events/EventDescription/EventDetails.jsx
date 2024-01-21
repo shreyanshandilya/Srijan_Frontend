@@ -70,7 +70,7 @@ function EventDetails(props) {
         <img
           src={eventArr[0].Poster}
           alt=""
-          className="max-h-[70vh] w-screen object-cover"
+          className="max-h-[75vh] w-screen object-cover"
         />
         <div className="text-center mt-6 mb-4 font-bold text-7xl text-[#dad3a5]">
           {" "}

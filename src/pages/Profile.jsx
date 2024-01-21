@@ -22,10 +22,9 @@ function Profile() {
 
   const [details, setDetails] = useState([]);
   const [accomodations, setAccomodations] = useState([]);
-  const url = "https://srijan-prod.onrender.com/api/getUser";
-  const urlEvents =
-    "https://srijan-prod.onrender.com/api/profile/eventsRegistered";
-    
+  const [events, setEvents] = useState([]);
+  const url = "https://srijanlocalmonogodbbackend.onrender.com/api/getUser";
+
   const fetchUser = useCallback(async () => {
     const response = await toast
       .promise(
@@ -54,25 +53,45 @@ function Profile() {
       .catch((err) => console.log(err));
   }, []);
   const urlAccomodation =
-    "https://srijan-prod.onrender.com/api/profile/userAccomodation";
+    "https://srijanlocalmonogodbbackend.onrender.com/api/profile/userAccomodation";
   const fetchAccomodation = useCallback(async () => {
     const response = await fetch(urlAccomodation, {
-          method: "GET",
-          mode: "cors",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${localStorage["token"]}`,
-          },
-        }).then(async (res) => {
+      method: "GET",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage["token"]}`,
+      },
+    })
+      .then(async (res) => {
         const data = await res.json();
         // console.log(data);
         setAccomodations(data);
       })
       .catch((err) => console.log(err));
   }, []);
+  const urlEvents =
+    "https://srijan-prod.onrender.com/api/profile/eventsRegistered";
+  const fetchEvents = useCallback(async () => {
+    const response = await fetch(urlEvents, {
+      method: "GET",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage["token"]}`,
+      },
+    })
+      .then(async (res) => {
+        const data = await res.json();
+        console.log(data);
+        setEvents(data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
   useEffect(() => {
     fetchUser();
     fetchAccomodation();
+    fetchEvents();
   }, [fetchUser]);
   return (
     <>
@@ -123,10 +142,10 @@ function Profile() {
             <button className="text-indigo-500 py-2 px-4  font-medium mt-4">
               Show more
             </button> */}
-              <h1 style={{ textAlign: "center", fontSize: "150%" }}>
+              <h1 className="text-center text-5xl font-bold mb-2">
                 <strong>Your Merchandise Orders</strong>
               </h1>
-              <p>
+              <p className="my-2">
                 <center>
                   If you have placed an order, and it is not reflecting here,
                   kindly mail us at srijan@iitism.ac.in with your transaction
@@ -134,7 +153,7 @@ function Profile() {
                 </center>
               </p>
               <br></br>
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 pb-10 border-b border-[#0d0c06]">
                 {details.Merchandise != undefined &&
                   details.Merchandise.length > 0 &&
                   details.Merchandise.map((item, index) => {
@@ -146,7 +165,7 @@ function Profile() {
                               {`Order ${index + 1}`}
                             </h5>
                           </a>
-                          <p className="mb-3 font-normal text-[#efede0]">
+                          <p className="mb-3 font-normal text-[#efede0] break-words">
                             <strong>Address :</strong> {item.address}
                           </p>
                           <p className="mb-3 font-normal text-[#efede0]">
@@ -164,6 +183,51 @@ function Profile() {
                   })}
               </div>
             </div>
+            <br></br>
+            <h1
+              // style={{ textAlign: "center", fontSize: "150%" }}
+              className="mb-5 text-5xl font-bold text-center"
+            >
+              Events
+            </h1>
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+              {events != undefined &&
+                events.length > 0 &&
+                events.map((item, index) => {
+                  return (
+                    <div className="flex justify-center  " key={index}>
+                      <div className="max-w-sm p-6 bg-[#3c3708] backdrop-blur-xl bg-opacity-70 rounded-lg shadow">
+                        <a href="#">
+                          <h5 className="mb-2 text-2xl font-bold flex justify-center tracking-tight text-[#dad3a5]">
+                            {item.EventName}
+                          </h5>
+                        </a>
+                        <div className="grid grid-cols-2 gap-x-2">
+                          {item.Teams.length > 1 &&
+                            item.Teams.map((team, ind) => {
+                              return (
+                                <div className="flex-col " key={ind}>
+                                  <p className="mb-3 font-normal text-base text-[#c9bc57]">
+                                    <strong>Your Team:</strong>
+                                  </p>
+                                  {team.MembersList.map((mem, ind) => {
+                                    return (
+                                      <>
+                                        <p className="mb-3 font-normal text-xs break-words text-[#efede0]">
+                                          <strong>{mem.Email}</strong>
+                                        </p>
+                                      </>
+                                    );
+                                  })}
+                                </div>
+                              );
+                            })}
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+            </div>
             {!localStorage["email"].endsWith("@iitism.ac.in") && (
               <div className="mt-12 flex flex-col justify-center">
                 {/* <p className="text-gray-600 text-center font-light lg:px-16">
@@ -175,13 +239,14 @@ function Profile() {
             <button className="text-indigo-500 py-2 px-4  font-medium mt-4">
               Show more
             </button> */}
-                <h1 style={{ textAlign: "center", fontSize: "150%" }}>
-                  <strong>Accomodations</strong>
+                <h1 className="text-center text-5xl font-bold">
+                  Accomodations
                 </h1>
                 <p>
                   <center>
-                    If you have purchased any package, it will be displayed here, <br/> further If you are facing any issue kindly mail us at srijan@iitism.ac.in with your transaction
-                  details.{" "}
+                    If you have purchased any package, it will be displayed
+                    here, <br /> further If you are facing any issue kindly mail
+                    us at srijan@iitism.ac.in with your transaction details.{" "}
                   </center>
                 </p>
                 <br></br>
@@ -210,13 +275,15 @@ function Profile() {
                               <strong>Id Proof :</strong> {item.Idproof}
                             </p>
                             <p className="mb-3 font-normal text-[#efede0]">
-                              <strong>Accomodation :</strong> {item.isAccomodation}
+                              <strong>Accomodation :</strong>{" "}
+                              {item.isAccomodation}
                             </p>
                             <p className="mb-3 font-normal text-[#efede0]">
                               <strong>Order Id :</strong> {item.OrderId}
                             </p>
                             <p className="mb-3 font-normal text-[#efede0]">
-                              <strong>Package :</strong> {item.Pacakage.toUpperCase()}
+                              <strong>Package :</strong>{" "}
+                              {item.Pacakage.toUpperCase()}
                             </p>
                             <p className="mb-3 font-normal text-[#efede0]">
                               <strong>Payment Id :</strong> {item.PaymentId}

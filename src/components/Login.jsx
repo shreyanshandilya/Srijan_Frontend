@@ -24,24 +24,29 @@ function Login() {
       Password: password,
     };
     // console.log(data);
-    const response = await toast.promise(fetch("https://srijan-prod.onrender.com/api/login", {
-      method: "post",
-      headers: {
-        "Content-Type": "application/json", // Set the content type to JSON
-      },
-      body: JSON.stringify(data),
-    }),
-       {
-         position: toast.POSITION.BOTTOM_RIGHT,
-         pending: 'Loading',
-         
-         error: 'Invalid credentials'
-       })
-    
+    const actualLogin = "https://srijan-prod.onrender.com/api/login";
+    const response = await toast.promise(
+      fetch(actualLogin, {
+        method: "post",
+        headers: {
+          "Content-Type": "application/json", // Set the content type to JSON
+        },
+        body: JSON.stringify(data),
+      }),
+      {
+        position: toast.POSITION.BOTTOM_RIGHT,
+        pending: "Loading",
+
+        error: "Invalid credentials",
+      }
+    );
+
     const abcd = await response.json();
     // console.log(abcd);
-   if(abcd.Token!=undefined){ localStorage["token"] = abcd.Token;
-    localStorage["email"] = data.Email;}
+    if (abcd.Token != undefined) {
+      localStorage["token"] = abcd.Token;
+      localStorage["email"] = data.Email;
+    }
     if (abcd.Token) {
       toast.success("Login Successful !!!", {
         position: toast.POSITION.BOTTOM_RIGHT,
@@ -123,7 +128,7 @@ function Login() {
           </motion.button>
         </motion.form>
         <ToastContainer
-        position="bottom-right"
+          position="bottom-right"
           autoClose={5000}
           hideProgressBar={false}
           newestOnTop={false}
