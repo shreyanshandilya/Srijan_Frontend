@@ -249,7 +249,7 @@ export const RegisterTheEvents = () => {
         audioLink: resp[0].audio,
         Accompanist: resp[0].accompanist,
         LeaderName: resp[0].teamName,
-        Instrument: false,
+        Instrument: resp[0].instrument,
       });
     } catch (e) {
       toast.error("Something went wrong! ");
@@ -359,6 +359,7 @@ export const RegisterTheEvents = () => {
             isSponser: sponsorYesNo === "yes",
             Audio: data.get("audioLink"),
             Accompanist: data.get("Accompanist"),
+            ReferralID: data.get("ReferralID"),
           },
         ],
       };
@@ -624,6 +625,23 @@ export const RegisterTheEvents = () => {
                         />
                       </div>
                     )}
+                    <div className="my-5" style={responsiveColumn}>
+                        <InputDefault
+                          size="small"
+                          label="Referral ID (Optional) "
+                          placeholder="Refferral Id"
+                          type="text"
+                          name="ReferralID"
+                          fullWidth
+                          InputProps={{
+                            startAdornment: (
+                              <InputAdornment position="start">
+                                {/* <DesignServicesIcon fontSize="small" /> */}
+                              </InputAdornment>
+                            ),
+                          }}
+                        />
+                      </div>
                     {teamStructure.Accompanist && (
                       <div className="my-5">
                         <div className="grid grid-cols-2 m-7">
@@ -658,7 +676,7 @@ export const RegisterTheEvents = () => {
                             <InputDefault
                               size="small"
                               label="Accompanist"
-                              placeholder="XYZ"
+                              placeholder="Instrument Name that Accompanist will play"
                               type="text"
                               name="Accompanist"
                               fullWidth
