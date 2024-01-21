@@ -105,7 +105,8 @@ const events = [
   {
     EventName: "Let's Get Quizzical!",
     Zone: "Quiz",
-    Poster: "https://res.cloudinary.com/dvlxqrbjm/image/upload/v1705731475/ueuzlblpsuy3sxiyro0b.png",
+    Poster:
+      "https://res.cloudinary.com/dvlxqrbjm/image/upload/v1705731475/ueuzlblpsuy3sxiyro0b.png",
     miniDescription:
       "The quiz is a MELA quiz. Centered around fun fundas from the world of music, entertainment, literature and art.",
     Description:
@@ -133,12 +134,14 @@ const events = [
     teamName: true,
     sponsor: false,
     audio: false,
+    instrument: false,
     accompanist: false,
   },
   {
     EventName: "The Usual Fundas",
     Zone: "Quiz",
-    Poster: "https://res.cloudinary.com/dvlxqrbjm/image/upload/v1705731691/mqcuirzrt3jhcu2ymo7b.png",
+    Poster:
+      "https://res.cloudinary.com/dvlxqrbjm/image/upload/v1705731691/mqcuirzrt3jhcu2ymo7b.png",
     miniDescription:
       "The quiz is a general quiz about everything and anything under the sun. Hosted by Renowned QM Samanway Banerjee who is popular across the country for his quizzing prowess.",
     Description:
@@ -166,23 +169,21 @@ const events = [
     teamName: true,
     sponsor: false,
     audio: false,
+    instrument: false,
     accompanist: false,
   },
   {
     EventName: "QUEER TRIVIA",
     Zone: "Quiz",
-    Poster: "https://res.cloudinary.com/dvlxqrbjm/image/upload/v1705731632/ohgjnyalkzubsf7va6mb.png",
+    Poster:
+      "https://res.cloudinary.com/dvlxqrbjm/image/upload/v1705731632/ohgjnyalkzubsf7va6mb.png",
     miniDescription: "Written quiz",
     Description:
       "Participants will take part in teams of 1-3 people. The event will be a written quiz with questions projected on the screen. The trivia will cover queer culture across the globe.",
     Venue: "NLHC",
     Fees: 0,
-    Contactdetails: [
-      { name: "Anushka", phone: "8374934030" }
-    ],
-    Rules: [
-      "Each team should consist of 3 members or less.",
-    ],
+    Contactdetails: [{ name: "Anushka", phone: "8374934030" }],
+    Rules: ["Each team should consist of 3 members or less."],
     RuleBookLink:
       "https://docs.google.com/document/d/1PaD0hEfsQzRlCJH50fD5l8U41G5T0GF8-ApzwjRJmbE/edit",
 
@@ -191,12 +192,14 @@ const events = [
     teamName: true,
     sponsor: false,
     audio: false,
+    instrument: false,
     accompanist: false,
   },
   {
     EventName: "GPT QUIZ",
     Zone: "Quiz",
-    Poster: "https://res.cloudinary.com/dvlxqrbjm/image/upload/v1705732018/wnccjh9wmnfroip2x6b6.png",
+    Poster:
+      "https://res.cloudinary.com/dvlxqrbjm/image/upload/v1705732018/wnccjh9wmnfroip2x6b6.png",
     miniDescription: "In house quiz.",
     Description:
       "Teams of 3 or less, no electronics, only paper and pen, offline mode and even after all these restrictions, can you triumph over difficulties and win the Science, Business and Technology quiz hosted by our QuizClub members? Let your brains speak and propel you towards victory, this Srijan.",
@@ -223,6 +226,7 @@ const events = [
     teamName: true,
     sponsor: false,
     audio: false,
+    instrument: false,
     accompanist: false,
   },
   {
@@ -260,6 +264,7 @@ const events = [
     teamName: false,
     sponsor: true,
     audio: false,
+    instrument: false,
     accompanist: false,
   },
   {
@@ -294,6 +299,7 @@ const events = [
     teamName: true,
     sponsor: true,
     audio: false,
+    instrument: false,
     accompanist: false,
   },
   {
@@ -326,6 +332,7 @@ const events = [
     teamName: true,
     sponsor: false,
     audio: true,
+    instrument: false,
     accompanist: false,
   },
   {
@@ -359,6 +366,7 @@ const events = [
     teamName: false,
     sponsor: true,
     audio: true,
+    instrument: false,
     accompanist: false,
   },
   {
@@ -391,65 +399,70 @@ const events = [
     teamName: true,
     sponsor: true,
     audio: true,
+    instrument: false,
     accompanist: false,
   },
-  // {
-  //   EventName: "HARMONY",
-  //   Zone: "Music",
-  //   Poster: "",
-  //   miniDescription: "Music",
-  //   Description:
-  //     "Dive into the world of music at Harmony, where student bands bring the stage to life with captivating performances across all genres. There are no restrictions on the number of members in a team. Basic drum sets will be provided, allowing bands to focus on their musical mastery while arranging other instruments independently. Immerse in musical brilliance as student bands showcase their genre-defying talents.",
-  //   Venue: "To be announced",
-  //   Fees: 0,
-  //   Contactdetails: [{ name: "Aneekesh Kumar", phone: "8439826290" }],
-  //   Rules: [
-  //     "Only the students and not the professional bands are allowed in the competition.",
-  //     "There is no restriction on the genre of songs performed.",
-  //     "The band will be given a maximum time of 15 minutes for performance + 5 minutes for sound setup",
-  //     "Points will be deducted if time exceeds the allotted time.",
-  //     "Drum set (basic one) will be provided to the bands. Bands need to arrange for their instruments themselves. A total prize money of Rs. 25,000 for the event No 2 bands can have the same members playing the same role.",
-  //     "There is no restriction on the number of members in the band.",
-  //   ],
-  //   RuleBookLink:
-  //     "https://docs.google.com/document/d/1qVgtpUZFsNC4W1tsHvSW-578uJb_DRj8-m-Hn3VRLwU/edit?usp=drive_link",
+  {
+    EventName: "HARMONY",
+    Zone: "Music",
+    Poster:
+      "https://res.cloudinary.com/dvlxqrbjm/image/upload/v1705831608/ldv1fd3rzhl4fbwarsu0.png",
+    miniDescription: "Music",
+    Description:
+      "Dive into the world of music at Harmony, where student bands bring the stage to life with captivating performances across all genres. There are no restrictions on the number of members in a team. Basic drum sets will be provided, allowing bands to focus on their musical mastery while arranging other instruments independently. Immerse in musical brilliance as student bands showcase their genre-defying talents.",
+    Venue: "To be announced",
+    Fees: 0,
+    Contactdetails: [{ name: "Aneekesh Kumar", phone: "8439826290" }],
+    Rules: [
+      "Only the students and not the professional bands are allowed in the competition.",
+      "There is no restriction on the genre of songs performed.",
+      "The band will be given a maximum time of 15 minutes for performance + 5 minutes for sound setup",
+      "Points will be deducted if time exceeds the allotted time.",
+      "Drum set (basic one) will be provided to the bands. Bands need to arrange for their instruments themselves. A total prize money of Rs. 25,000 for the event No 2 bands can have the same members playing the same role.",
+      "There is no restriction on the number of members in the band.",
+    ],
+    RuleBookLink:
+      "https://docs.google.com/document/d/1qVgtpUZFsNC4W1tsHvSW-578uJb_DRj8-m-Hn3VRLwU/edit?usp=drive_link",
 
-  //   Minimummembers: 1,
-  //   Maximummembers: 50,
-  //   teamName: false,
-  //   sponsor: false,
-  //   audio: false,
-  //   accompanist: false,
-  // },
-  // {
-  //   EventName: "AAROH",
-  //   Zone: "Music",
-  //   Poster: "",
-  //   miniDescription: "Music",
-  //   Description:
-  //     'Calling all singing enthusiasts! Manthan presents "Aaroh, " a solo singing competition that invites you to pour your heart out. A unique opportunity to showcase your diverse singing talent. Get ready to make a mark in the prelims and secure your spot in the final event. Join us, impress the audience, and become the singing sensation you\'ve always dreamed of!',
-  //   Venue: "To be announced",
-  //   Fees: 0,
-  //   Contactdetails: [{ name: "Aneekesh Kumar", phone: "8439826290" }],
-  //   Rules: [
-  //     "Indian and Western Vocals will be judged separately.",
-  //     "All the contestants will have to go through a prelims round. These participants will be judged and entry to the main event will be given based on that.",
-  //     "Each Performer would be given a total time of 5 minutes on stage. Exceeding the time limit will cause deduction in marks.",
-  //     "Each Performer is allowed to carry a maximum of two instrumentalists with them on stage to accompany him/her in their performance.",
-  //     "The performer is also allowed to sing on a pre-recorded karaoke track. The performer will have to arrange for the karaoke track himself and submit it to the organizers prior to the event.",
-  //     "Judging would only be based on the level of singing in the performance.",
-  //     "All participants will appear in the prelims but only 30 vocalists would qualify for the finals.",
-  //   ],
-  //   RuleBookLink:
-  //     "https://docs.google.com/document/d/1NypFIBw4NqfwlM2vIvFlHB7KBU8XdVa7ijXOgtlpIHI/edit?usp=drive_link",
+    Minimummembers: 1,
+    Maximummembers: 50,
+    teamName: false,
+    sponsor: false,
+    audio: false,
+    instrument: true,
+    accompanist: false,
+  },
+  {
+    EventName: "AAROH",
+    Zone: "Music",
+    Poster:
+      "https://res.cloudinary.com/dvlxqrbjm/image/upload/v1705831554/xfcc3g8bkycijlxgrvkv.png",
+    miniDescription: "Music",
+    Description:
+      'Calling all singing enthusiasts! Manthan presents "Aaroh, " a solo singing competition that invites you to pour your heart out. A unique opportunity to showcase your diverse singing talent. Get ready to make a mark in the prelims and secure your spot in the final event. Join us, impress the audience, and become the singing sensation you\'ve always dreamed of!',
+    Venue: "To be announced",
+    Fees: 0,
+    Contactdetails: [{ name: "Aneekesh Kumar", phone: "8439826290" }],
+    Rules: [
+      "Indian and Western Vocals will be judged separately.",
+      "All the contestants will have to go through a prelims round. These participants will be judged and entry to the main event will be given based on that.",
+      "Each Performer would be given a total time of 5 minutes on stage. Exceeding the time limit will cause deduction in marks.",
+      "Each Performer is allowed to carry a maximum of two instrumentalists with them on stage to accompany him/her in their performance.",
+      "The performer is also allowed to sing on a pre-recorded karaoke track. The performer will have to arrange for the karaoke track himself and submit it to the organizers prior to the event.",
+      "Judging would only be based on the level of singing in the performance.",
+      "All participants will appear in the prelims but only 30 vocalists would qualify for the finals.",
+    ],
+    RuleBookLink:
+      "https://docs.google.com/document/d/1NypFIBw4NqfwlM2vIvFlHB7KBU8XdVa7ijXOgtlpIHI/edit?usp=drive_link",
 
-  //   Minimummembers: 1,
-  //   Maximummembers: 1,
-  //   teamName: false,
-  //   sponsor: false,
-  //   audio: false,
-  //   accompanist: true,
-  // },
+    Minimummembers: 1,
+    Maximummembers: 1,
+    teamName: false,
+    sponsor: false,
+    audio: false,
+    instrument: false,
+    accompanist: true,
+  },
   // {
   //   EventName: "Things the Brits Ruined(debate)",
   //   Zone: " Literary",
