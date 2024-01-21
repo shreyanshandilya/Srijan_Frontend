@@ -5,7 +5,9 @@ import Card from "./Zonner_cards"; // Create a Card component if not already cre
 import Navbar from "../../../components/Navbar/navbar";
 import { motion } from "framer-motion";
 import img from "../../../assets/Images_for_events/bgg.png";
+
 const cardsData = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
 
 const CardContainer = () => {
   return (

@@ -7,7 +7,7 @@ import "../Events/Events.css";
 import axios from "axios";
 import EventCard from "../Events/EventsCard";
 
-function Event() {
+function Event() {  
   const [events, setEvents] = useState([]);
   const [allEvents, setAllEvents] = useState([]);
   const [clubEvents, setClubEvents] = useState([]);
