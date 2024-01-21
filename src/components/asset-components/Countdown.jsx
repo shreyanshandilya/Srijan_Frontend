@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./styles.css";
 
-const COUNTDOWN_TARGET = new Date("2024-02-02T23:59:59");
+const COUNTDOWN_TARGET = new Date("2024-02-01T23:59:59");
 
-const getTimeLeft = () => {
+const getTimeLeft = ()=> {
 	const totalTimeLeft = COUNTDOWN_TARGET - new Date();
 	const DAYS = Math.floor(totalTimeLeft / (1000 * 60 * 60 * 24));
 	const HOURS = Math.floor((totalTimeLeft / (1000 * 60 * 60)) % 24);

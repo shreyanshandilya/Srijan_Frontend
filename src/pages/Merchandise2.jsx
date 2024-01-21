@@ -41,7 +41,7 @@ function Merchandise2() {
       }, 
     });
     const order = await response.json();
-    console.log(order);
+    // console.log(order);
 
     var options = {
       key: "rzp_live_hCIa25zbx0icRX",
@@ -84,7 +84,7 @@ function Merchandise2() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    console.log(formData, img);
+    // console.log(formData, img);
     let response;
     try {
       let token_user = localStorage.getItem("token");
@@ -106,11 +106,11 @@ function Merchandise2() {
         throw new Error("Error occured please try again later ");
       }
       const responseData = await response.json();
-      console.log(responseData);
+      // console.log(responseData);
     } catch (error) {
       console.log(error);
     }
-    console.log(response);
+    // console.log(response);
   }
 
   return (

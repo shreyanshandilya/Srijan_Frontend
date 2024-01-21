@@ -18,8 +18,8 @@ function EventDetails(props) {
   }, []);
 
   const { category, name } = useParams();
-  console.log(category);
-  console.log(name);
+  // console.log(category);
+  // console.log(name);
   const eventArr = EventArr.filter((e) => {
     return e.EventName == name;
   });

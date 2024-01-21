@@ -57,7 +57,7 @@ export const RegisterForEvents = (props) => {
     }
 
     if (abcd.status === "success") setShowOtpBox(true), setEmail2(abcd.Email);
-    console.log(abcd);
+    // console.log(abcd);
   };
   const otpRequest = async (e) => {
     e.preventDefault();
@@ -83,7 +83,7 @@ export const RegisterForEvents = (props) => {
       );
 
       const abcd = await response.json();
-      console.log(abcd);
+      // console.log(abcd);
       setShowOtpBox(false);
       if (abcd.token != undefined) {
         localStorage["token"] = abcd.token;

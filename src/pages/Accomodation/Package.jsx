@@ -1,17 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import CardComponent from "./card";
 import Navbar from "../../components/Navbar/navbar";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-const PackagePage = () => {
+import { useNavigate, useParams } from "react-router-dom";
+import { Button, Modal } from "flowbite-react";
+
+
+const PackagePage = (props) => {
   const navigate = useNavigate();
+  let { msg } = useParams();
+  const [openModal, setOpenModal] = useState(msg);
+  // console.log(msg);
   // Define an array of packages with their titles and eligible things
   useEffect(() => {
     if (localStorage.token != null && localStorage.token != undefined) {
       if (localStorage.email.endsWith("@iitism.ac.in")) {
         navigate("/");
-
       } else {
       }
     }
@@ -45,6 +50,32 @@ const PackagePage = () => {
       }}
     >
       <Navbar />
+      <motion.div
+        initial={{ y: 20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+        className="sm:w-screen"
+      >
+        <Modal show={openModal} onClose={() => setOpenModal(false)}>
+          <Modal.Header>Package Details</Modal.Header>
+          <Modal.Body>
+            <div className="space-y-6">
+              <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                To register for the events, user outside campus have to
+                subscribe particular "Packs" that satisfies their interest.
+              </p>
+              <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                You can view your subscribed packs and merchs in profile
+                section. You can email srijan@iitism.ac.in for your further
+                query.
+              </p>
+            </div>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button onClick={() => setOpenModal(false)}>I accept</Button>
+          </Modal.Footer>
+        </Modal>
+      </motion.div>
       <div className="mt-[100px] min-h-[100vh]">
         <motion.div
           initial={{ opacity: 0 }}

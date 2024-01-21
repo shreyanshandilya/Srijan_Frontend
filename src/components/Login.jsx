@@ -23,7 +23,7 @@ function Login() {
       Email: email,
       Password: password,
     };
-    console.log(data);
+    // console.log(data);
     const response = await toast.promise(fetch("https://srijan-prod.onrender.com/api/login", {
       method: "post",
       headers: {
@@ -39,7 +39,7 @@ function Login() {
        })
     
     const abcd = await response.json();
-    console.log(abcd);
+    // console.log(abcd);
    if(abcd.Token!=undefined){ localStorage["token"] = abcd.Token;
     localStorage["email"] = data.Email;}
     if (abcd.Token) {

@@ -68,7 +68,11 @@ function App() {
       element: <Accomodation />,
     },
     {
-      path: "packages",
+      path: "packages/:msg",
+      element: <PackagePage />,
+    },
+    {
+      path: "packages/",
       element: <PackagePage />,
     },
     {
