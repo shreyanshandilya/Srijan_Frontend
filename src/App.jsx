@@ -1,6 +1,4 @@
-import * as React from "react";
 import { useState } from "react";
-import * as ReactDOM from "react-dom";
 import "./App.css";
 import Landing from "./pages/Landing";
 import Merchandise from "./pages/Merchandise";
@@ -8,7 +6,6 @@ import Team from "./components/Teams/Team";
 import About from "./pages/About";
 
 import EventZone from "./pages/Events/Zone/EventsZone";
-import Frm from "./components/Profile/form";
 import EventList from "./pages/Events/ZoneEventList/ZoneEventList";
 // import { RegisterForEvents } from "./pages/RegisterForEvents";
 // import { Profile } from "./pages/Profile";
@@ -18,14 +15,11 @@ import EventDetails from "./pages/Events/EventDescription/EventDetails";
 import {
   createHashRouter,
   RouterProvider,
-  useLocation,
 } from "react-router-dom";
-import { animateScroll as scroll } from "react-scroll";
 // import { RegisterTheEvents } from "./pages/Events/EventRegistration/RegisterTheEvents";
 import Login from "./components/Login";
 import { Register } from "./pages/Register";
 import { PackSelectionPage } from "./pages/PackSelectionPage";
-import Merchandise2 from "./pages/Merchandise2";
 import Profile from "./pages/Profile";
 import BgVideo from "./components/BgVideo";
 // import { EventRegister } from "./pages/EventRegister";

@@ -72,11 +72,11 @@ function EventDetails(props) {
           alt=""
           className="max-h-[70vh] w-screen object-cover"
         />
-        <div className="text-center mt-6 mb-4 font-bold text-7xl text-[#dad3a5]">
+        <div className="mx-10 mt-6 mb-4 font-bold text-7xl text-[#dad3a5] titleHeading">
           {" "}
           {eventArr[0].EventName}
         </div>
-        <div className="text-center my-3 underline italic text-4xl text-[#c9bc57]">
+        <div className="mx-10 my-3 underline text-xl text-[#c9bc57]">
           {" "}
           <a
             href={`${eventArr[0].RuleBookLink}`}
@@ -84,16 +84,16 @@ function EventDetails(props) {
             rel="noreferrer"
           >
             {" "}
-            Rulebook Link
+            Rulebook Doc
           </a>
         </div>
-        <div className="flex justify-center items-center">
+        <div className="mx-10 mt-10">
           <Link to="register">
             <motion.button
               layout
               whileHover={{ y: -10, scale: 1.1 }}
               type="button"
-              className="text-[#0d0c06] bg-gradient-to-r from-[#efede0] via-[#dad3a5] to-[#dad3a5] hover:bg-gradient-to-br focus:ring-2 focus:outline-none focus:ring-[#c9bc57] shadow-lg shadow-[#fbe10e]/50 dark:shadow-lg font-medium rounded-lg text-lg px-5 py-2.5 text-center me-2 my-5"
+              className="text-white border-yellow-200 border-dashed border-2 px-10 py-2 bg-black"
             >
               Register
             </motion.button>
@@ -203,7 +203,7 @@ function EventDetails(props) {
         </div> */}
       </div>
       <FooterT />
-       
+
     </>
   );
 }
