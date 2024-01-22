@@ -21,6 +21,7 @@ import { styled } from "@mui/system";
 import Form from "react-bootstrap/Form";
 import { Wrapper } from "./style";
 import Loading from "./Loading";
+import Soon from "./Soon";
 
 const InputDefault = styled(TextField)({
   "& label.Mui-focused": {
@@ -438,7 +439,10 @@ export const RegisterTheEvents = () => {
   // useEffect(() => {
   //   fetchUser();
   // }, []);
-
+  const {category} = useParams();
+  if(category == "cinematography" || category == "comedy") {
+    return <Soon />
+  }
   return (
     // <Loading />
     

@@ -1,107 +1,119 @@
 const events = [
-  // {
-  //   EventName: "SRIJANTHROUGH MYLENS",
-  //   Zone: "CINEMATOGRAPHY",
-  //   Poster: "",
-  //   miniDescription:
-  //     "An Online Event where participants need to capture photos related to Srijan and post it through their Instagram Story tagging handles of FotoFreaks as well as Srijan.",
-  //   Description:
-  //     'Discover the Art in Every Frame at Srijan. "Photography is the poetry of visuals, and Srijan is your canvas!" Join our Instagram Story Challenge, let your lens narrate tales of campus magic, and seize the chance to win fantastic prizes. Unleash your creativity, capture Srijan\'s vibrant moments, and let the snapshots speak louder than words.',
-  //   Venue: "Online",
-  //   Fees: 0,
-  //   Contactdetails: [{ name: "Chinmay Das Kanungo", phone: "7978304396" }],
-  //   Rules: [
-  //     "The event is open to all college students & there isn't any participation fee, but the image captured should be of inside the campus and during Srijan.",
-  //     "Story mentions from 10:00AM to 11:59 PM will be considered valid, and the image should be of that very day.",
-  //     "The Instagram handle of the participant must be a public account to allow FotoFreaks to view and repost the tagged photographs.",
-  //     "The photograph must be in the ratio of 9:16.",
-  //     "No inclusion of Instagram stickers, any kind of marks, and other sorts of distractions are allowed.",
-  //     "You can include Typography in Story to enhance the Final Look of the story.",
-  //     "Participants are required to tag the official Instagram handles of Srijan (@srijaniitism) and FotoFreaks (@fotofreaks_litism).",
-  //     "The Winners of each day will be declared on the following day through FotoFreaks Instagram Handle.",
-  //     "In case of any dispute, the Organizers' decision will be final and binding.",
-  //   ],
-  //   RuleBookLink:
-  //     "https://docs.google.com/document/d/1DDIU3Igy40YjuwJmuSkZLz0ZCqe-ilv4DVe5N6Ly6vM/edit?usp=drive_link",
-  //   Minimummembers: 1,
-  //   Maximummembers: 1,
-  // },
-  // {
-  //   EventName: "MANIPULATION WARS",
-  //   Zone: "CINEMATOGRAPHY",
-  //   Poster: "",
-  //   miniDescription:
-  //     "A Live Photo Manipulation Contest on Adobe Photoshop where each team will be given a few stock images. The participants will have to make a composite image using these images. They can use any number of images from the given lot, however no external image is allowed.",
-  //   Description:
-  //     "FotoFreaks encourages all to enter the empire of creativity through the Live Photo Manipulation Contest on Adobe Photoshop. Each team will receive a curated set of stock images, challenging participants to craft a stunning composite masterpiece. With no external images permitted, participants will unleash their artistic prowess, weaving a narrative through a collage of provided visuals.",
-  //   Venue: "Online",
-  //   Fees: 0,
-  //   Contactdetails: [{ name: "Nikhil Kumar", phone: "+91 99973 09195" }],
-  //   Rules: [
-  //     "The event is open to all college students & there isn't any participation fee.",
-  //     "Participants will have to register through the Google Form link provided. The stock images will be revealed at the beginning of the event.",
-  //     "There are no restrictions on using the number of images among the given ones. Usage of any photo other than provided will lead to direct disqualification. No typography is allowed.",
-  //     "Submission should include the following: Final created image, original PSD file, and separate writeup text file describing your final composite.",
-  //     "The final manipulation must be sent to 'fotofreaks@iitism.ac.in' with Subject 'Srijan Manipulation Wars 2023' along with the participant's team name, college name, contact details and a writeup text document for the composite.",
-  //     "Participants need to submit screenshots of their work with time, for every hour during the event (6 screenshots) in the Google Form provided.",
-  //     "Winners will be declared on 7 February from the Official Handles of Srijan, IIT ISM Dhanbad and FotoFreaks - The Photography Club Of IIT - ISM.",
-  //     "The Standing Proofs of Top 10 entries will be shared at the time of result declaration to ensure fair judgment.",
-  //     "In case of any dispute, the Organizers' decision will be final and binding.",
-  //     "No entries will be accepted past the deadline.",
-  //     "For any instant updates and announcements, follow Instagram and Facebook handles of FotoFreaks. (@fotofreaks_iitism)",
-  //   ],
-  //   RuleBookLink:
-  //     "https://docs.google.com/document/d/1SwGwFZcESFCdB9GMPVO20Fahlxp6E7JsGPSWeOirvu0/edit?usp=drive_link",
+  {
+    EventName: "SRIJANTHROUGH MYLENS",
+    Zone: "CINEMATOGRAPHY",
+    Poster: "https://res.cloudinary.com/ds6u0jd3x/image/upload/v1705859917/srijan_through_lens-min_nzrvxc.png",
+    miniDescription:
+      "An Online Event where participants need to capture photos related to Srijan and post it through their Instagram Story tagging handles of FotoFreaks as well as Srijan.",
+    Description:
+      'Discover the Art in Every Frame at Srijan. "Photography is the poetry of visuals, and Srijan is your canvas!" Join our Instagram Story Challenge, let your lens narrate tales of campus magic, and seize the chance to win fantastic prizes. Unleash your creativity, capture Srijan\'s vibrant moments, and let the snapshots speak louder than words.',
+    Venue: "Online",
+    Fees: 0,
+    Contactdetails: [{ name: "Chinmay Das Kanungo", phone: "7978304396" }],
+    Rules: [
+      "The event is open to all college students & there isn't any participation fee, but the image captured should be of inside the campus and during Srijan.",
+      "Story mentions from 10:00AM to 11:59 PM will be considered valid, and the image should be of that very day.",
+      "The Instagram handle of the participant must be a public account to allow FotoFreaks to view and repost the tagged photographs.",
+      "The photograph must be in the ratio of 9:16.",
+      "No inclusion of Instagram stickers, any kind of marks, and other sorts of distractions are allowed.",
+      "You can include Typography in Story to enhance the Final Look of the story.",
+      "Participants are required to tag the official Instagram handles of Srijan (@srijaniitism) and FotoFreaks (@fotofreaks_litism).",
+      "The Winners of each day will be declared on the following day through FotoFreaks Instagram Handle.",
+      "In case of any dispute, the Organizers' decision will be final and binding.",
+    ],
+    RuleBookLink:
+      "https://docs.google.com/document/d/1DDIU3Igy40YjuwJmuSkZLz0ZCqe-ilv4DVe5N6Ly6vM/edit?usp=drive_link",
+    Minimummembers: 1,
+    Maximummembers: 1,
+  },
+  {
+    EventName: "MANIPULATION WARS",
+    Zone: "CINEMATOGRAPHY",
+    Poster: "https://res.cloudinary.com/ds6u0jd3x/image/upload/v1705858458/Manipulation_wars_faqwfk.png",
+    miniDescription:
+      "A Live Photo Manipulation Contest on Adobe Photoshop where each team will be given a few stock images. The participants will have to make a composite image using these images. They can use any number of images from the given lot, however no external image is allowed.",
+    Description:
+      "FotoFreaks encourages all to enter the empire of creativity through the Live Photo Manipulation Contest on Adobe Photoshop. Each team will receive a curated set of stock images, challenging participants to craft a stunning composite masterpiece. With no external images permitted, participants will unleash their artistic prowess, weaving a narrative through a collage of provided visuals.",
+    Venue: "Online",
+    Fees: 0,
+    Contactdetails: [{ name: "Nikhil Kumar", phone: "+91 99973 09195" }],
+    Rules: [
+      "The event is open to all college students & there isn't any participation fee.",
+      "Participants will have to register through the Google Form link provided. The stock images will be revealed at the beginning of the event.",
+      "There are no restrictions on using the number of images among the given ones. Usage of any photo other than provided will lead to direct disqualification. No typography is allowed.",
+      "Submission should include the following: Final created image, original PSD file, and separate writeup text file describing your final composite.",
+      "The final manipulation must be sent to 'fotofreaks@iitism.ac.in' with Subject 'Srijan Manipulation Wars 2023' along with the participant's team name, college name, contact details and a writeup text document for the composite.",
+      "Participants need to submit screenshots of their work with time, for every hour during the event (6 screenshots) in the Google Form provided.",
+      "Winners will be declared on 7 February from the Official Handles of Srijan, IIT ISM Dhanbad and FotoFreaks - The Photography Club Of IIT - ISM.",
+      "The Standing Proofs of Top 10 entries will be shared at the time of result declaration to ensure fair judgment.",
+      "In case of any dispute, the Organizers' decision will be final and binding.",
+      "No entries will be accepted past the deadline.",
+      "For any instant updates and announcements, follow Instagram and Facebook handles of FotoFreaks. (@fotofreaks_iitism)",
+    ],
+    RuleBookLink:
+      "https://docs.google.com/document/d/1SwGwFZcESFCdB9GMPVO20Fahlxp6E7JsGPSWeOirvu0/edit?usp=drive_link",
 
-  //   Minimummembers: 1,
-  //   Maximummembers: 2,
-  // },
-  // {
-  //   EventName: "GENRE-O-MANIA",
-  //   Zone: "CINEMATOGRAPHY",
-  //   Poster: "",
-  //   miniDescription:
-  //     "Love watching Reels?? Then you must have seen some of the extraordinary edits which makes us all in awe. So now is your time to showcase your video-making skills!!\nLightsCameraISM invite you to showcase your cinematic prowess in our thrilling event, GENRE-O-MANIA.",
-  //   Description:
-  //     "If you love watching reels, you must have seen some of the extraordinary edits, which make us all in awe. So now is your time to showcase your video-making skills in Genre-O-Mania, a cinematic challenge where participants create a short video incorporating various genres of videography like Hyperlapse Magic, Paper Cutout Delight, Double Trouble Drama, or Smooth Transitions Elegance. Unleash your creativity and seize the chance to win big in this exciting cinematic showcase.",
-  //   Venue: "Online",
-  //   Fees: 0,
-  //   Contactdetails: [],
-  //   Rules: [
-  //     "In this challenge, participants are tasked with creating a captivating short video lasting between 10 to 25 seconds. The challenge lies in choosing and incorporating at least one of the following genres in your video:",
-  //     "1) Hyperlapse Magic: Take us on a mesmerizing journey through time and space.",
-  //     "2) Paper Cutout Delight: Transform your simple videos into different paper cutouts!",
-  //     "3) Double Trouble Drama: Create a narrative featuring two of yourselves!",
-  //     "4) Smooth Transitions Elegance: Showcase seamless transitions that leave us in awe.",
-  //     "Extra points will be awarded for incorporating more than one genre in the same video!!",
-  //     "*NO STOCK FOOTAGES ALLOWED IN THE VIDEO. ALL THE SHOTS SHOULD BE TAKEN DURING THE FEST BY YOUR OWN TEAM.*",
-  //   ],
-  //   RuleBookLink:
-  //     "https://docs.google.com/document/d/1ofy6z27Up7qRx7vo1eVpkfTQtG78LICAdi95DlELqd0/edit?usp=drive_link",
+    Minimummembers: 1,
+    Maximummembers: 2,
+  },
+  {
+    EventName: "GENRE-O-MANIA",
+    Zone: "CINEMATOGRAPHY",
+    Poster: "https://res.cloudinary.com/ds6u0jd3x/image/upload/v1705858466/GOM_aqcrcu.png",
+    miniDescription:
+      "Love watching Reels?? Then you must have seen some of the extraordinary edits which makes us all in awe. So now is your time to showcase your video-making skills!!\nLightsCameraISM invite you to showcase your cinematic prowess in our thrilling event, GENRE-O-MANIA.",
+    Description:
+      "If you love watching reels, you must have seen some of the extraordinary edits, which make us all in awe. So now is your time to showcase your video-making skills in Genre-O-Mania, a cinematic challenge where participants create a short video incorporating various genres of videography like Hyperlapse Magic, Paper Cutout Delight, Double Trouble Drama, or Smooth Transitions Elegance. Unleash your creativity and seize the chance to win big in this exciting cinematic showcase.",
+    Venue: "Online",
+    Fees: 0,
+    Contactdetails: [],
+    Rules: [
+      "In this challenge, participants are tasked with creating a captivating short video lasting between 10 to 25 seconds. The challenge lies in choosing and incorporating at least one of the following genres in your video:",
+      "1) Hyperlapse Magic: Take us on a mesmerizing journey through time and space.",
+      "2) Paper Cutout Delight: Transform your simple videos into different paper cutouts!",
+      "3) Double Trouble Drama: Create a narrative featuring two of yourselves!",
+      "4) Smooth Transitions Elegance: Showcase seamless transitions that leave us in awe.",
+      "Extra points will be awarded for incorporating more than one genre in the same video!!",
+      "NO STOCK FOOTAGES ALLOWED IN THE VIDEO. ALL THE SHOTS SHOULD BE TAKEN DURING THE FEST BY YOUR OWN TEAM.",
+    ],
+    RuleBookLink:
+      "https://docs.google.com/document/d/1ofy6z27Up7qRx7vo1eVpkfTQtG78LICAdi95DlELqd0/edit?usp=drive_link",
 
-  //   Minimummembers: 1,
-  //   Maximummembers: 2,
-  // },
-  // {
-  //   EventName: "VLOGSTRAVAGANZA!",
-  //   Zone: "CINEMATOGRAPHY",
-  //   Poster: "",
-  //   miniDescription:
-  //     "Participants are tasked with crafting a crazy vlog that captures every ounce of excitement, joy, and pure hilarity experienced during the event. Your mission is to create a vlog of 4-5 minutes filled with laughter, some of the performances you did, or just revelling in the festivities of Srijan and take this as a chance to\ncreate long-lasting memories.",
-  //   Description:
-  //     "Get ready to dive headfirst into the ultimate rollercoaster of emotions, laughter, and unfiltered fun at Srijan! Brace yourselves as participants take on the challenge of crafting a crazy vlog that captures every ounce of excitement, joy, and pure hilarity experienced during the event.\nYour mission, should you choose to accept it, is to unleash your creativity and showcase the wildest, most unforgettable moments from Srijan. Whether you're rolling with laughter, engaging in epic banter, or simply reveling in the sheer joy of the festivities – we want it all captured in your vlog.\nSo, rally your friends, grab your cameras, and let the good times roll! This challenge isn't just about documenting the fun; it's about curating the essence of the Srijan experience in a way that'll have everyone laughing, reminiscing, and eagerly awaiting the next cultural fest.",
-  //   Venue: "Online",
-  //   Fees: 0,
-  //   Contactdetails: [],
-  //   Rules: [
-  //     "The individual has to shoot their experience throughout Srijan and compile it into a video. The video might contain their crazy experience, a bit of any performance they did, stupid and fun banter with their friends and all the fun they can put into one.",
-  //   ],
-  //   RuleBookLink:
-  //     "https://docs.google.com/document/d/10whTO4FQec97xQju49eEyABZSfzYU_21WVFy9FxjmNw/edit?usp=drive_link",
+    Minimummembers: 1,
+    Maximummembers: 2,
+    teamName: true,
+    sponsor: false,
+    audio: false,
+    instrument: false,
+    accompanist: false,
+    genre: true
+  },
+  {
+    EventName: "VLOGSTRAVAGANZA!",
+    Zone: "CINEMATOGRAPHY",
+    Poster: "https://res.cloudinary.com/ds6u0jd3x/image/upload/v1705858457/Vlogstravaganza_ddawat.png",
+    miniDescription:
+      "Participants are tasked with crafting a crazy vlog that captures every ounce of excitement, joy, and pure hilarity experienced during the event. Your mission is to create a vlog of 4-5 minutes filled with laughter, some of the performances you did, or just revelling in the festivities of Srijan and take this as a chance to\ncreate long-lasting memories.",
+    Description:
+      "Get ready to dive headfirst into the ultimate rollercoaster of emotions, laughter, and unfiltered fun at Srijan! Brace yourselves as participants take on the challenge of crafting a crazy vlog that captures every ounce of excitement, joy, and pure hilarity experienced during the event.\nYour mission, should you choose to accept it, is to unleash your creativity and showcase the wildest, most unforgettable moments from Srijan. Whether you're rolling with laughter, engaging in epic banter, or simply reveling in the sheer joy of the festivities - we want it all captured in your vlog.\nSo, rally your friends, grab your cameras, and let the good times roll! This challenge isn't just about documenting the fun; it's about curating the essence of the Srijan experience in a way that'll have everyone laughing, reminiscing, and eagerly awaiting the next cultural fest.",
+    Venue: "Online",
+    Fees: 0,
+    Contactdetails: [],
+    Rules: [
+      "The individual has to shoot their experience throughout Srijan and compile it into a video. The video might contain their crazy experience, a bit of any performance they did, stupid and fun banter with their friends and all the fun they can put into one.",
+    ],
+    RuleBookLink:
+      "https://docs.google.com/document/d/10whTO4FQec97xQju49eEyABZSfzYU_21WVFy9FxjmNw/edit?usp=drive_link",
 
-  //   Minimummembers: 1,
-  //   Maximummembers: 1,
-  // },
+    Minimummembers: 1,
+    Maximummembers: 1,
+    teamName: false,
+    sponsor: false,
+    audio: false,
+    instrument: false,
+    accompanist: false,
+    genre: false
+  },
   {
     EventName: "Let's Get Quizzical!",
     Zone: "Quiz",
@@ -136,6 +148,7 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    genre:false
   },
   {
     EventName: "The Usual Fundas",
@@ -171,6 +184,7 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    genre:false
   },
   {
     EventName: "QUEER TRIVIA",
@@ -194,6 +208,7 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    genre:false
   },
   {
     EventName: "GPT QUIZ",
@@ -228,6 +243,7 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    genre: false
   },
   {
     EventName: "STREET RELOADED",
@@ -266,6 +282,7 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    genre: false
   },
   {
     EventName: "STREET BEATS",
@@ -301,6 +318,7 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    genre: false
   },
   {
     EventName: "REFLECTION",
@@ -334,6 +352,7 @@ const events = [
     audio: true,
     instrument: false,
     accompanist: false,
+    genre: false
   },
   {
     EventName: "FOOTLOOSE",
@@ -368,6 +387,7 @@ const events = [
     audio: true,
     instrument: false,
     accompanist: false,
+    genre: false
   },
   {
     EventName: "HUSTLE HERD",
@@ -401,6 +421,7 @@ const events = [
     audio: true,
     instrument: false,
     accompanist: false,
+    genre: false
   },
   {
     EventName: "HARMONY",
@@ -431,6 +452,7 @@ const events = [
     audio: false,
     instrument: true,
     accompanist: false,
+    genre: false
   },
   {
     EventName: "AAROH",
@@ -462,7 +484,75 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: true,
+    genre: false
   },
+  {
+    EventName: "YOU LAUGH YOU LOSE",
+    Zone: "Comedy",
+    Poster:"https://res.cloudinary.com/dvlxqrbjm/image/upload/v1705903965/fwwb9leikdsodgdnrnu6.png",
+    miniDescription: "God gives their toughest battles to their funniest soldiers!",
+    Description:
+      'Get ready for the grand showdown of laughter and comedic chaos at the Comedy Clubs "You Laugh, You Lose" challenge!". Teams will battle it out in the ultimate face-off, armed with water-filled mouths and a mission to keep a straight face while the opponents throw their comedic grenades at them. This is straight up war! Soldiers, remember to keep those lips sealed tight with the toughest poker face, or risk a waterlogged exit – its comedy or dampness!',
+    Venue: "NLHC",
+    Fees: 0,
+    Contactdetails: [{ name: "Riyal Patel", phone: "+91-7567180580" },{ name: "Ritwik Singh", phone: "+91-6307039194" }],
+    Rules: [
+      "This event will be a knockout tournament, where 2 teams of 4 will face each other at one time",
+      "Teams compete in single-elimination matches. A loss results in immediate elimination from the tournament and Winners advance to the next round. The last remaining team is declared the overall tournament champion.      ",
+      "Competing teams will be divided into 2 teams. Attacking team will be the ones who make the defending team laugh. Defending team will be the ones with water in their mouths.",
+      "Members of a team can use their creativity and humor to make the opponents laugh and as a result spill out the water from their mouths.",
+      "Any laughter resulting in spilled water leads to the elimination of the individual responsible.      ",
+      "The face-off persists until the complete elimination of all members of the team. There will be a timer and the team which was able to eliminate the opponents in lesser time will advance to the next match.",
+      "However there is a time constraint of 3 minutes for each round. In the case of tie which means that at the end of 3 minutes both the teams had the same number of members still standing with water in their mouths then to decide the winner , the legendary game of “Chidiya Udd” will be played as the tie breaker.      ",
+      "Defending team members are not allowed to swallow the water and doing so will lead to direct disqualification of the entire team giving the attacking team the win.      ",
+      "Attacking team members are not allowed to physically touch the defending team. Use of props is encouraged",
+      "All humor presented must be clean, appropriate, and in good spirits, ensuring an enjoyable and respectful atmosphere. Personal attacks on the defending team members is not allowed .Profanity is allowed but not encouraged.",
+      "The decisions made by the judges are considered final, and no disputes or protests regarding water-spilling are permissible.",
+    ],
+    RuleBookLink:
+      "https://docs.google.com/document/d/1TqojGPVUxTuY7kvG-F3JhNfom7gk1SEY3hKGQiIMfuE/edit",
+
+    Minimummembers: 4,
+    Maximummembers: 4,
+    teamName: true,
+    sponsor: false,
+    audio: false,
+    instrument: false,
+    accompanist: false,
+    genre: false
+  },
+  {
+    EventName: "SAANP TANK",
+    Zone: "Comedy",
+    Poster:"https://res.cloudinary.com/dvlxqrbjm/image/upload/v1705904258/ve02rewaaqbrmtyeqjsz.png",
+    miniDescription: "Dive into the entrepreneurial waters at our Saanp Tank . Expect laughter, creativity, and a splash of business brilliance. Join us for a funtastic event – where ideas swim or sink!",
+    Description:
+      'We are delighted to introduce "Saamp Tank," a comedic adaptation inspired by the esteemed original Shark Tank. Teams armed with wit, humor and innovation, pitch their unique products to our panel of judges. The twist lies in the selection of these products—each one deliberately crafted to be outlandishly bizarre and practically impossible to present with a straight face.',
+    Venue: "NLHC",
+    Fees: 0,
+    Contactdetails: [{ name: "Shubham Soni", phone: "+91-9589985495" },{ name: "Payal Prajapati", phone: "+91-8279711662" }],
+    Rules: [
+      "Teams of 1-4 have to present a pitch to sell an unique item. The item will be out of the blue weird and unusual.      ",
+      "The product to be pitched will be given 3-4 days prior to the event and teams have to use their creativity to try to woo the judges.",
+      "Use of self made powerpoint presentations ,video advertisements and props is encouraged, however these will not hold any extra marks.",
+      "There will be a time limit of 3 minutes. Exceeding time limit will lead to deduction in marks.      ",
+      "You are encouraged to let go of logical limits; your goal is to make the judges laugh .Humor is the primary focus; factual accuracy holds lesser importance in evaluation.",
+      "Laughing and getting out of character while pitching may lead to deduction in marks (Up to the judge's discretion)",
+      "Teams are advised to refrain from excessive vulgarity. Profanity is allowed but not encouraged.",
+    ],
+    RuleBookLink:
+      "https://docs.google.com/document/d/1TqojGPVUxTuY7kvG-F3JhNfom7gk1SEY3hKGQiIMfuE/edit",
+
+    Minimummembers: 1,
+    Maximummembers: 4,
+    teamName: true,
+    sponsor: false,
+    audio: false,
+    instrument: false,
+    accompanist: false,
+    genre: false
+  },
+  
   // {
   //   EventName: "Things the Brits Ruined(debate)",
   //   Zone: " Literary",
@@ -479,6 +569,12 @@ const events = [
 
   //   Minimummembers: 2,
   //   Maximummembers: 2,
+  // teamName: true,
+  //   sponsor: false,
+  //   audio: false,
+  //   instrument: false,
+  //   accompanist: false,
+  //   genre: false
   // },
   // {
   //   EventName: "The Quill Switch",
@@ -486,7 +582,7 @@ const events = [
   //   Poster: "",
   //   miniDescription: " Literary",
   //   Description:
-  //     'Switch to a literary journey in pairs for "The Quill Switch." Form teams, pick a theme, and weave a cohesive story together. But here\'s the twist – every 15 mins, pass your creation to your teammate. With a minimum of 4 and a maximum of 8 exchanges, communicate solely through the written word. Silence is golden; let your story speak. Ready to switch pens and perspectives?',
+  //     'Switch to a literary journey in pairs for "The Quill Switch." Form teams, pick a theme, and weave a cohesive story together. But here\'s the twist - every 15 mins, pass your creation to your teammate. With a minimum of 4 and a maximum of 8 exchanges, communicate solely through the written word. Silence is golden; let your story speak. Ready to switch pens and perspectives?',
   //   Venue: "",
   //   Fees: 0,
   //   Contactdetails: [],
@@ -496,6 +592,12 @@ const events = [
 
   //   Minimummembers: 2,
   //   Maximummembers: 2,
+  //   teamName: true,
+  //   sponsor: false,
+  //   audio: false,
+  //   instrument: false,
+  //   accompanist: false,
+  //   genre: false
   // },
   // {
   //   EventName: "Folktwist",
