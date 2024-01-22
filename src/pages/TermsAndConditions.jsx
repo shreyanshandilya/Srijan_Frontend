@@ -20,7 +20,7 @@ function TermsAndConditions() {
                         layout
                         transition={{ duration: 1 }}
                     >
-                        <h1 className="mb-4 text-4xl mt-10 font-bold tracking-tight leading-none text-[#dad3a5] md:text-5xl lg:text-6xl">
+                        <h1 className="mb-4 text-4xl mt-10 font-bold tracking-tight leading-none text-[#dad3a5] md:text-5xl lg:text-6xl titleHeading">
                             Terms & Conditions
                         </h1>
                     </motion.div>

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 // import gsap from 'gsap'
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Link, Element } from "react-scroll";
@@ -6,7 +6,6 @@ import Countdown from "./asset-components/Countdown";
 import logo from "./Footer/srijan Light (3).png";
 import Nav from "./Navbar/navbar";
 import bgSponsor from "../assets/color2.jpg";
-import image from "../assets/image4.png";
 // import Nav from "../components/Navbar/navbar"
 function Hero() {
   const sponsor = useRef(null);
@@ -42,7 +41,7 @@ function Hero() {
   //   target: container,
   //   offset: [""],
   // });
-  const scrollSponsor = () => {};
+  const scrollSponsor = () => { };
   const bgAnimate = {
     hidden: {
       clipPath: "polygon(21% 27%, 77% 26%, 77% 77%, 21% 77%)",
@@ -109,7 +108,7 @@ function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
-            className="w-screen h-screen flex justify-center items-center bg-cover bg-center bg-no-repeat bg-[url('assets/image4.png')] bg-[#c9bc57] bg-blend-multiply"
+            className="w-screen h-screen flex justify-center items-center bg-cover bg-right bg-no-repeat bg-[url('assets/backgrounds/crowd4.jpg')] bg-[#c9bc57] bg-blend-multiply"
           >
             <motion.div className="px-4 grid grid-row-3 gap-1 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
               <motion.h1
@@ -586,7 +585,7 @@ function Hero() {
             className="max-w-screen p-5 md:p-10  bg-no-repeat bg-cover"
             style={{ backgroundImage: "url(" + bgSponsor + ")" }}
           >
-            <h1 className="flex md:text-6xl text-[#efede0] font-bold text-2xl justify-center items-center">
+            <h1 className="flex  text-[#efede0] font-bold text-7xl justify-center items-center titleHeading">
               Past Sponsors
             </h1>
             <div className="grid grid-cols-2 md:grid-cols-4 flex-wrap gap-x-5 gap-y-10 p-10 rounded-lg">
