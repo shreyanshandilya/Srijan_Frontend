@@ -30,7 +30,7 @@ export const CollegeRegister = (props) => {
       return;
     }
     const response = await toast.promise(
-      fetch("https://srijan2024.onrender.com/api/signup", {
+      fetch("https://srijan-prod.onrender.com/api/signup", {
         method: "post",
         headers: {
           "Content-Type": "application/json", // Set the content type to JSON
@@ -61,7 +61,7 @@ export const CollegeRegister = (props) => {
       localStorage["showOtp"] = "true";
       setEmail2(abcd.Email);
     }
-    console.log(abcd);
+    // console.log(abcd);
   };
 
   const otpRequest = async (e) => {
@@ -72,7 +72,7 @@ export const CollegeRegister = (props) => {
     };
     try {
       const response = await toast.promise(
-        fetch("https://srijan2024.onrender.com/api/signup/verify", {
+        fetch("https://srijan-prod.onrender.com/api/signup/verify", {
           method: "post",
           headers: {
             "Content-Type": "application/json", // Set the content type to JSON
@@ -88,7 +88,7 @@ export const CollegeRegister = (props) => {
       );
 
       const abcd = await response.json();
-      console.log(abcd);
+      // console.log(abcd);
       if (abcd.token != undefined) {
         localStorage["token"] = abcd.token;
         localStorage.setItem("email", abcd.user.Email);

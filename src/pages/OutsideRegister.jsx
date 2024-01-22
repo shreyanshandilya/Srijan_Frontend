@@ -27,7 +27,7 @@ export const OutsideRegister = (props) => {
       position: toast.POSITION.BOTTOM_RIGHT,
     }); return;}
     const response = await toast.promise(
-      fetch("https://srijan2024.onrender.com/api/signup", {
+      fetch("https://srijan-prod.onrender.com/api/signup", {
         method: "post",
         headers: {
           "Content-Type": "application/json", // Set the content type to JSON
@@ -54,7 +54,7 @@ export const OutsideRegister = (props) => {
     }
 
     if (abcd.status === "success") setShowOtpBox(true), setEmail2(abcd.Email);
-    console.log(abcd);
+    // console.log(abcd);
   };
   const otpRequest = async (e) => {
     e.preventDefault();
@@ -64,7 +64,7 @@ export const OutsideRegister = (props) => {
     };
     try {
       const response = await toast.promise(
-        fetch("https://srijan2024.onrender.com/api/signup/verify", {
+        fetch("https://srijan-prod.onrender.com/api/signup/verify", {
           method: "post",
           headers: {
             "Content-Type": "application/json", // Set the content type to JSON
@@ -80,7 +80,7 @@ export const OutsideRegister = (props) => {
       );
 
       const abcd = await response.json();
-      console.log(abcd);
+      // console.log(abcd);
       setShowOtpBox(false);
       if(abcd.token!=undefined){localStorage["token"] = abcd.token;
       localStorage.setItem('email',abcd.user.Email);

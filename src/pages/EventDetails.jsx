@@ -17,8 +17,8 @@ function EventDetails(props) {
 
 
   const { id } = useParams();
-  console.log(id);
-  const Eventurl = `https://srijan2024.onrender.com/api/showEvents/${id}`;
+  // console.log(id);
+  const Eventurl = `https://srijan-prod.onrender.com/api/showEvents/${id}`;
   const [details, setDetails] = useState([]);
   //   const [img, setImg] = useState(null);
   //   const [name, setName] = useState(null);
@@ -28,7 +28,7 @@ function EventDetails(props) {
   const fetchAllEvents = useCallback(async () => {
     // const res = await fetch(allEvents);
     const res = await axios.get(Eventurl);
-    console.log(res.data);
+    // console.log(res.data);
     setDetails(res.data[0]);
   }, [Eventurl]);
   useEffect(() => {

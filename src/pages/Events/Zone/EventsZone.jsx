@@ -1,10 +1,10 @@
 import Card from "./Zonner_cards"; // Create a Card component if not already created
 import Navbar from "../../../components/Navbar/navbar";
 import { motion } from "framer-motion";
+import img from "../../../assets/Images_for_events/bgg.png";
 import FooterT from "../../../components/Footer";
-// import img from "../../../assets/Images_for_events/bgg.png";
-import img from "../../../assets/backgrounds/crowd3.jpg"
 const cardsData = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
 
 const CardContainer = () => {
   return (

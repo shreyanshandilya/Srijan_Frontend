@@ -29,7 +29,7 @@ function Merchandise2() {
   const receiptId = "qwsaq1";
 
   const paymentHandler = async (e) => {
-    const response = await fetch("http://srijan2024.onrender.com/order", {
+    const response = await fetch("http://srijan-prod.onrender.com/order", {
       method: "POST",
       body: JSON.stringify({
         amount,
@@ -41,7 +41,7 @@ function Merchandise2() {
       }, 
     });
     const order = await response.json();
-    console.log(order);
+    // console.log(order);
 
     var options = {
       key: "rzp_live_hCIa25zbx0icRX",
@@ -84,12 +84,12 @@ function Merchandise2() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    console.log(formData, img);
+    // console.log(formData, img);
     let response;
     try {
       let token_user = localStorage.getItem("token");
       response = await axios.post(
-        "http://srijan2024.onrender.com/api/purchase",
+        "http://srijan-prod.onrender.com/api/purchase",
         {
           ...formData,
           image: img,
@@ -106,11 +106,11 @@ function Merchandise2() {
         throw new Error("Error occured please try again later ");
       }
       const responseData = await response.json();
-      console.log(responseData);
+      // console.log(responseData);
     } catch (error) {
       console.log(error);
     }
-    console.log(response);
+    // console.log(response);
   }
 
   return (

@@ -6,14 +6,15 @@ import Navbar from "../../../components/Navbar/navbar";
 import FooterT from "../../../components/Footer";
 
 
-export default function Loading() {
+const Loading=()=> {
   return (
     <>
       <Navbar/>
       <body className="flex items-center justify-center min-h-[400px]  max-w-screen" style={{ backgroundImage: `url(${image})`}}>
-        <h1 className="text-4xl text-[#dad3a5] floating  font-bold">Registration will open soon</h1>
+        <h1 className="text-4xl text-[#dad3a5] floating  font-bold">Loading......</h1>
       </body>
       <FooterT />
     </>
   );
 }
+export default Loading ;

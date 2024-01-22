@@ -112,14 +112,14 @@ const Navbar = () => {
                       <StyledButton name="EVENTS" />
                     </Link>
 
-                    {/* {localStorage.getItem("email") == null ||
+                    {localStorage.getItem("email") == null ||
                     !localStorage.getItem("email").endsWith("@iitism.ac.in") ? (
                       <Link to="/packages">
                         <StyledButton name="ACCOMODATION" />
                       </Link>
                     ) : (
                       ""
-                    )} */}
+                    )}
                     <Link to="/merchant">
                       <StyledButton name="MERCHANDISE" />
                     </Link>
@@ -321,7 +321,7 @@ const Navbar = () => {
                         rel="noreferrer"
                       />
                     </ScrollRouter> */}
-                    {/* {((localStorage.getItem("email") == null ||localStorage.getItem("email") == undefined  ||
+                     {((localStorage.getItem("email") == null ||localStorage.getItem("email") == undefined  ||
                             !localStorage
                               .getItem("email")
                               .endsWith("@iitism.ac.in"))) && (
@@ -335,7 +335,7 @@ const Navbar = () => {
                         rel="noreferrer"
                       />
                               </Link>
-                            ) } */}
+                            ) }
                     <Link to={"/merchant"}>
                       <MobileLink
                         text="MERCHANDISE"
