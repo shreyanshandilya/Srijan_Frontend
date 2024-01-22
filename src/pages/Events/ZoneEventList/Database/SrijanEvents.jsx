@@ -24,8 +24,14 @@ const events = [
     ],
     RuleBookLink:
       "https://docs.google.com/document/d/1DDIU3Igy40YjuwJmuSkZLz0ZCqe-ilv4DVe5N6Ly6vM/edit?usp=drive_link",
-    Minimummembers: 1,
-    Maximummembers: 1,
+    Minimummembers: 0,
+    Maximummembers: 0,
+    teamName: true,
+    sponsor: false,
+    audio: false,
+    instrument: false,
+    accompanist: false,
+    genre: true,
   },
   {
     EventName: "MANIPULATION WARS",
@@ -57,6 +63,12 @@ const events = [
 
     Minimummembers: 1,
     Maximummembers: 2,
+    teamName: false,
+    sponsor: false,
+    audio: false,
+    instrument: false,
+    accompanist: false,
+    genre: false,
   },
   {
     EventName: "GENRE-O-MANIA",
