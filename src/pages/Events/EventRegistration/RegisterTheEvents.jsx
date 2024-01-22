@@ -8,6 +8,7 @@ import Navbar from "../../../components/Navbar/navbar";
 import { useNavigate } from "react-router-dom";
 import FooterT from "../../../components/Footer";
 // import Button, { ButtonProps } from '@mui/material/Button';
+import image from "../../../assets/Images_for_events/bgg.png"
 
 import {
   Box,
@@ -220,7 +221,7 @@ const Member = ({
 };
 
 export const RegisterTheEvents = () => {
-  const { eventId } = useParams();
+  const { eventId,category } = useParams();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
   const [imgSrcMob, setImgSrcMob] = useState("");
@@ -439,8 +440,18 @@ export const RegisterTheEvents = () => {
   // useEffect(() => {
   //   fetchUser();
   // }, []);
-  const {category} = useParams();
-  if(category == "cinematography" || category == "comedy") {
+  if(maxSiz==0){
+    return (
+      <>
+      <Navbar/>
+      <body className="flex items-center justify-center min-h-[400px]  max-w-screen" style={{ backgroundImage: `url(${image})`}}>
+        <h1 className="text-4xl text-[#dad3a5] floating  font-bold">No registration required</h1>
+      </body>
+      <FooterT />
+    </>
+    )
+  }
+  if(category == "cinematography") {
     return <Soon />
   }
   return (
