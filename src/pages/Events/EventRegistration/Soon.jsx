@@ -1,5 +1,5 @@
 import React from "react";
-import Particles from "react-tsparticles";
+// import Particles from "react-tsparticles";
 import "./loading.css";
 import image from "../../../assets/Images_for_events/bgg.png"
 import Navbar from "../../../components/Navbar/navbar";

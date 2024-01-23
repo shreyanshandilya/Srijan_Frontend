@@ -23,7 +23,9 @@ function Merchandise() {
     "bronze":1199,
     "silver":1499,
     "gold":1799,
-    "platinum":1999
+    "platinum":1999,
+    "basic":799,
+    "essential":699
   }
   const [beta, setData] = useState({
     
@@ -307,7 +309,7 @@ function Merchandise() {
           </div>
           
 
-         {(type.toLowerCase()=="platinum"||type.toLowerCase()=="gold")&&<> <div className="justify-center items-center mb-4">
+         {(type.toLowerCase()=="platinum"||type.toLowerCase()=="gold"||type.toLowerCase()=="basic")&&<> <div className="justify-center items-center mb-4">
               {/* <div className="mb-1">
                 <label
                   htmlFor="hostel"
