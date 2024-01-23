@@ -187,6 +187,37 @@
 .card1-gold:hover .main0 {
     background: linear-gradient(0deg, rgb(185, 163, 89) 0%, gold 60%, rgb(185, 163, 89) 100%);
 }
+/* Basic Package Styles */
+/* Basic Package Styles with a new color */
+.card1-basic .boxshadow0-basic {
+    border: 1px solid #008080; /* New Basic color */
+    box-shadow: rgb(0, 128, 128) 0px 30px 120px 0px;
+}
+
+.card1-basic .main0-basic {
+    background: #008080; /* New Basic color */
+    box-shadow: rgb(0, 128, 128) 0px 7px 29px 0px;
+}
+
+.card1-basic:hover .main0-basic {
+    background: linear-gradient(0deg, rgb(0, 64, 64) 0%, #008080 60%, rgb(0, 64, 64) 100%);
+}
+
+
+/* Essential Package Styles */
+.card1-essential .boxshadow0-essential {
+    border: 1px solid #4682b4; /* Essential color */
+    box-shadow: rgb(70, 130, 180) 0px 30px 120px 0px;
+}
+
+.card1-essential .main0-essential {
+    background: #4682b4; /* Essential color */
+    box-shadow: rgb(70, 130, 180) 0px 7px 29px 0px;
+}
+
+.card1-essential:hover .main0-essential {
+    background: linear-gradient(0deg, rgb(25, 25, 112) 0%, #4682b4 60%, rgb(25, 25, 112) 100%);
+}
 
 /* Silver */
 .card1-silver .boxshadow0-silver {

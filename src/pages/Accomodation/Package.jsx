@@ -38,6 +38,14 @@ const PackagePage = (props) => {
       title: "Bronze",
       eligibleThings: ["Pronites", "Events"],
     },
+    {
+      title: "Basic",
+      eligibleThings: ["Merchandise","Events"],
+    },
+    {
+      title: "Essential",
+      eligibleThings: [ "Events"],
+    },
     // Add more packages as needed
   ];
 
@@ -86,7 +94,7 @@ const PackagePage = (props) => {
           PACKAGES <hr />
         </motion.div>
         <div
-          className="py-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-5 p-6
+          className="py-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5 p-6
 }"
           style={{
             alignContent: "center",

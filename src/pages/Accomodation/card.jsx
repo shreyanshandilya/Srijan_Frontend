@@ -8,6 +8,8 @@ const CardComponent = ({ title, eligibleThings }) => {
     silver: 1499,
     gold: 1799,
     platinum: 1999,
+    "basic":799,
+    "essential":699
   };
   return (
     <div
