@@ -7,7 +7,13 @@ import { motion } from "framer-motion";
 import Navbar from "../../../components/Navbar/navbar";
 import { useNavigate } from "react-router-dom";
 import FooterT from "../../../components/Footer";
+import FormControl from "@mui/material/FormControl";
+import InputLabel from "@mui/material/InputLabel";
+import Select from "@mui/material/Select";
+import MenuItem from "@mui/material/MenuItem";
+
 // import Button, { ButtonProps } from '@mui/material/Button';
+import image from "../../../assets/Images_for_events/bgg.png";
 
 import {
   Box,
@@ -24,6 +30,37 @@ import Loading from "./Loading";
 import Soon from "./Soon";
 
 const InputDefault = styled(TextField)({
+  "& label.Mui-focused": {
+    color: "#dad3a5",
+  },
+  "& .MuiInput-underline:after": {
+    borderBottomColor: " #dad3a5", // Change this color
+  },
+  "& .MuiOutlinedInput-root": {
+    "& fieldset": {
+      borderColor: " #dad3a5", // Change this color
+    },
+    "&:hover fieldset": {
+      borderColor: " #dad3a5", // Change this color
+    },
+    "&.Mui-focused fieldset": {
+      borderColor: " #dad3a5", // Change this color
+    },
+  },
+  "& input": {
+    color: "#dad3a5", // Change the text color
+  },
+  "& .MuiFormLabel-root": {
+    color: "#efede0", // Change the label text color
+  },
+  "& .MuiInputLabel-root.Mui-focused": {
+    color: "#efede0", // Change the focused label text color
+  },
+  "& .MuiInputBase-input::placeholder": {
+    color: " #c9bc57", // Change the placeholder color
+  },
+});
+const InputDefault1 = styled(FormControl)({
   "& label.Mui-focused": {
     color: "#dad3a5",
   },
@@ -220,7 +257,17 @@ const Member = ({
 };
 
 export const RegisterTheEvents = () => {
-  const { eventId } = useParams();
+  const options = [
+    "Hyperlapse Magic",
+    "Paper Cutout Delight",
+    "Double Trouble Drama",
+    "Smooth Transitions Elegance",
+  ];
+  const [selectedOptions, setSelectedOptions] = useState([]);
+  const handleOptionChange = (event) => {
+    setSelectedOptions(event.target.value);
+  };
+  const { eventId, category } = useParams();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
   const [imgSrcMob, setImgSrcMob] = useState("");
@@ -251,6 +298,7 @@ export const RegisterTheEvents = () => {
         Accompanist: resp[0].accompanist,
         LeaderName: resp[0].teamName,
         Instrument: resp[0].instrument,
+        Genre: resp[0].genre,
       });
     } catch (e) {
       toast.error("Something went wrong! ");
@@ -296,11 +344,11 @@ export const RegisterTheEvents = () => {
         "Content-Type": "application/json",
         Authorization: `Bearer ${localStorage["token"]}`,
       },
-    })
-    const data  = await response.json();
+    });
+    const data = await response.json();
     setLoading(false);
     // console.log(data);
-    if(data.IsEvents === false){
+    if (data.IsEvents === false) {
       toast.error("Please Purchase a plan for registering in a event .", {
         position: toast.POSITION.BOTTOM_RIGHT,
       });
@@ -346,11 +394,8 @@ export const RegisterTheEvents = () => {
   };
   const handleSubmit = async (event) => {
     try {
-      // setLoading(true);
       event.preventDefault();
       const data = new FormData(event.currentTarget);
-      // console.log(data);
-      // console.log("handleSubmit" + data);
       const teamObj = {
         EventName: nameofevent,
         Teams: [
@@ -361,10 +406,10 @@ export const RegisterTheEvents = () => {
             Audio: data.get("audioLink"),
             Accompanist: data.get("Accompanist"),
             ReferralID: data.get("ReferralID"),
+            Genre: selectedOptions,
           },
         ],
       };
-      // console.log("r = ", teamObj);
       const officialUrl = "https://srijan-prod.onrender.com/api/event/register";
       const demo =
         "https://srijanlocalmonogodbbackend.onrender.com/api/event/register";
@@ -433,23 +478,34 @@ export const RegisterTheEvents = () => {
 
   // if (loading) return <Loader />; // Not working
 
-  const [displayForm,setDisplayForm] = useState(false);
+  const [displayForm, setDisplayForm] = useState(false);
 
-  
   // useEffect(() => {
   //   fetchUser();
   // }, []);
-  const {category} = useParams();
-  if(category == "cinematography" || category == "comedy") {
-    return <Soon />
+  if (maxSiz == 0) {
+    return (
+      <>
+        <Navbar />
+        <body
+          className="flex items-center justify-center min-h-[400px]  max-w-screen"
+          style={{ backgroundImage: `url(${image})` }}
+        >
+          <h1 className="text-4xl text-[#dad3a5] floating  font-bold">
+            No registration required
+          </h1>
+        </body>
+        <FooterT />
+      </>
+    );
   }
-  return (
-    // <Loading />
-    
-      loading ? (
-      <Loading />
-    ):(
-      <div style={{ backgroundColor: "black", height: "100%" }}>
+  // if(category == "cinematography") {
+  //   return <Soon />
+  // }
+  return loading ? (
+    <Loading />
+  ) : (
+    <div style={{ backgroundColor: "black", height: "100%" }}>
       <Wrapper>
         {/* <Navbar className="navbar-with-high-z-index" /> */}
         <div id="canvas_container2" className="min-h-screen">
@@ -608,6 +664,54 @@ export const RegisterTheEvents = () => {
                         </div>
                       </div>
                     )}
+                    {teamStructure.Genre && (
+                      <InputDefault1
+                        InputDefault1
+                        className="glass-morphism"
+                        fullWidth
+                      >
+                        <InputLabel
+                          id="demo-simple-select-label"
+                          style={{ color: "white", borderColor: "white" }}
+                        >
+                          Select the genres you incorporated in your video
+                        </InputLabel>
+                        <Select
+                          labelId="demo-simple-select-label"
+                          id="demo-simple-select"
+                          multiple
+                          value={selectedOptions}
+                          // value={age}
+                          onChange={handleOptionChange}
+                          style={{ color: "white" }}
+                          label="Events Participating Name of the event(s)  you have registered for if any."
+                          renderValue={(selected) => (
+                            <Grid style={{ color: "white" }}>
+                              {selected.join(",  ")}
+                            </Grid>
+                          )}
+                          MenuProps={{
+                            PaperProps: {
+                              style: {
+                                maxHeight: "400px",
+                                maxWidth: "150px",
+                              },
+                            },
+                          }}
+                        >
+                          {options.map((option, index) => (
+                            <MenuItem key={index} value={option}>
+                              <input
+                                type="checkbox"
+                                checked={selectedOptions.indexOf(option) > -1}
+                                style={{ width: "15px", height: "15px" }}
+                              />
+                              <span style={{ fontSize: "1em" }}>{option}</span>
+                            </MenuItem>
+                          ))}
+                        </Select>
+                      </InputDefault1>
+                    )}
 
                     {teamStructure.audioLink && (
                       <div className="my-5" style={responsiveColumn}>
@@ -630,22 +734,22 @@ export const RegisterTheEvents = () => {
                       </div>
                     )}
                     <div className="my-5" style={responsiveColumn}>
-                        <InputDefault
-                          size="small"
-                          label="Referral ID (Optional) "
-                          placeholder="Refferral Id"
-                          type="text"
-                          name="ReferralID"
-                          fullWidth
-                          InputProps={{
-                            startAdornment: (
-                              <InputAdornment position="start">
-                                {/* <DesignServicesIcon fontSize="small" /> */}
-                              </InputAdornment>
-                            ),
-                          }}
-                        />
-                      </div>
+                      <InputDefault
+                        size="small"
+                        label="Referral ID (Optional) "
+                        placeholder="Refferral Id"
+                        type="text"
+                        name="ReferralID"
+                        fullWidth
+                        InputProps={{
+                          startAdornment: (
+                            <InputAdornment position="start">
+                              {/* <DesignServicesIcon fontSize="small" /> */}
+                            </InputAdornment>
+                          ),
+                        }}
+                      />
+                    </div>
                     {teamStructure.Accompanist && (
                       <div className="my-5">
                         <div className="grid grid-cols-2 m-7">
@@ -736,9 +840,6 @@ export const RegisterTheEvents = () => {
         />
         <FooterT />
       </Wrapper>
-      </div>
-    )
-  )
-    
-    
+    </div>
+  );
 };

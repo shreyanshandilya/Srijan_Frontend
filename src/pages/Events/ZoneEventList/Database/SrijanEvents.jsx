@@ -2,7 +2,8 @@ const events = [
   {
     EventName: "SRIJANTHROUGH MYLENS",
     Zone: "CINEMATOGRAPHY",
-    Poster: "https://res.cloudinary.com/ds6u0jd3x/image/upload/v1705859917/srijan_through_lens-min_nzrvxc.png",
+    Poster:
+      "https://res.cloudinary.com/ds6u0jd3x/image/upload/v1705859917/srijan_through_lens-min_nzrvxc.png",
     miniDescription:
       "An Online Event where participants need to capture photos related to Srijan and post it through their Instagram Story tagging handles of FotoFreaks as well as Srijan.",
     Description:
@@ -23,13 +24,20 @@ const events = [
     ],
     RuleBookLink:
       "https://docs.google.com/document/d/1DDIU3Igy40YjuwJmuSkZLz0ZCqe-ilv4DVe5N6Ly6vM/edit?usp=drive_link",
-    Minimummembers: 1,
-    Maximummembers: 1,
+    Minimummembers: 0,
+    Maximummembers: 0,
+    teamName: true,
+    sponsor: false,
+    audio: false,
+    instrument: false,
+    accompanist: false,
+    genre: true,
   },
   {
     EventName: "MANIPULATION WARS",
     Zone: "CINEMATOGRAPHY",
-    Poster: "https://res.cloudinary.com/ds6u0jd3x/image/upload/v1705858458/Manipulation_wars_faqwfk.png",
+    Poster:
+      "https://res.cloudinary.com/ds6u0jd3x/image/upload/v1705858458/Manipulation_wars_faqwfk.png",
     miniDescription:
       "A Live Photo Manipulation Contest on Adobe Photoshop where each team will be given a few stock images. The participants will have to make a composite image using these images. They can use any number of images from the given lot, however no external image is allowed.",
     Description:
@@ -55,11 +63,18 @@ const events = [
 
     Minimummembers: 1,
     Maximummembers: 2,
+    teamName: false,
+    sponsor: false,
+    audio: false,
+    instrument: false,
+    accompanist: false,
+    genre: false,
   },
   {
     EventName: "GENRE-O-MANIA",
     Zone: "CINEMATOGRAPHY",
-    Poster: "https://res.cloudinary.com/ds6u0jd3x/image/upload/v1705858466/GOM_aqcrcu.png",
+    Poster:
+      "https://res.cloudinary.com/ds6u0jd3x/image/upload/v1705858466/GOM_aqcrcu.png",
     miniDescription:
       "Love watching Reels?? Then you must have seen some of the extraordinary edits which makes us all in awe. So now is your time to showcase your video-making skills!!\nLightsCameraISM invite you to showcase your cinematic prowess in our thrilling event, GENRE-O-MANIA.",
     Description:
@@ -86,12 +101,13 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
-    genre: true
+    genre: true,
   },
   {
     EventName: "VLOGSTRAVAGANZA!",
     Zone: "CINEMATOGRAPHY",
-    Poster: "https://res.cloudinary.com/ds6u0jd3x/image/upload/v1705858457/Vlogstravaganza_ddawat.png",
+    Poster:
+      "https://res.cloudinary.com/ds6u0jd3x/image/upload/v1705858457/Vlogstravaganza_ddawat.png",
     miniDescription:
       "Participants are tasked with crafting a crazy vlog that captures every ounce of excitement, joy, and pure hilarity experienced during the event. Your mission is to create a vlog of 4-5 minutes filled with laughter, some of the performances you did, or just revelling in the festivities of Srijan and take this as a chance to\ncreate long-lasting memories.",
     Description:
@@ -112,7 +128,7 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
-    genre: false
+    genre: false,
   },
   {
     EventName: "Let's Get Quizzical!",
@@ -148,7 +164,7 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
-    genre:false
+    genre: false,
   },
   {
     EventName: "The Usual Fundas",
@@ -184,7 +200,7 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
-    genre:false
+    genre: false,
   },
   {
     EventName: "QUEER TRIVIA",
@@ -208,7 +224,7 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
-    genre:false
+    genre: false,
   },
   {
     EventName: "GPT QUIZ",
@@ -243,7 +259,7 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
-    genre: false
+    genre: false,
   },
   {
     EventName: "STREET RELOADED",
@@ -282,7 +298,7 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
-    genre: false
+    genre: false,
   },
   {
     EventName: "STREET BEATS",
@@ -318,7 +334,7 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
-    genre: false
+    genre: false,
   },
   {
     EventName: "REFLECTION",
@@ -352,7 +368,7 @@ const events = [
     audio: true,
     instrument: false,
     accompanist: false,
-    genre: false
+    genre: false,
   },
   {
     EventName: "FOOTLOOSE",
@@ -387,7 +403,7 @@ const events = [
     audio: true,
     instrument: false,
     accompanist: false,
-    genre: false
+    genre: false,
   },
   {
     EventName: "HUSTLE HERD",
@@ -421,7 +437,7 @@ const events = [
     audio: true,
     instrument: false,
     accompanist: false,
-    genre: false
+    genre: false,
   },
   {
     EventName: "HARMONY",
@@ -452,7 +468,7 @@ const events = [
     audio: false,
     instrument: true,
     accompanist: false,
-    genre: false
+    genre: false,
   },
   {
     EventName: "AAROH",
@@ -484,18 +500,23 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: true,
-    genre: false
+    genre: false,
   },
   {
     EventName: "YOU LAUGH YOU LOSE",
     Zone: "Comedy",
-    Poster:"https://res.cloudinary.com/dvlxqrbjm/image/upload/v1705903965/fwwb9leikdsodgdnrnu6.png",
-    miniDescription: "God gives their toughest battles to their funniest soldiers!",
+    Poster:
+      "https://res.cloudinary.com/dvlxqrbjm/image/upload/v1705903965/fwwb9leikdsodgdnrnu6.png",
+    miniDescription:
+      "God gives their toughest battles to their funniest soldiers!",
     Description:
       'Get ready for the grand showdown of laughter and comedic chaos at the Comedy Clubs "You Laugh, You Lose" challenge!". Teams will battle it out in the ultimate face-off, armed with water-filled mouths and a mission to keep a straight face while the opponents throw their comedic grenades at them. This is straight up war! Soldiers, remember to keep those lips sealed tight with the toughest poker face, or risk a waterlogged exit – its comedy or dampness!',
     Venue: "NLHC",
     Fees: 0,
-    Contactdetails: [{ name: "Riyal Patel", phone: "+91-7567180580" },{ name: "Ritwik Singh", phone: "+91-6307039194" }],
+    Contactdetails: [
+      { name: "Riyal Patel", phone: "+91-7567180580" },
+      { name: "Ritwik Singh", phone: "+91-6307039194" },
+    ],
     Rules: [
       "This event will be a knockout tournament, where 2 teams of 4 will face each other at one time",
       "Teams compete in single-elimination matches. A loss results in immediate elimination from the tournament and Winners advance to the next round. The last remaining team is declared the overall tournament champion.      ",
@@ -519,18 +540,23 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
-    genre: false
+    genre: false,
   },
   {
     EventName: "SAANP TANK",
     Zone: "Comedy",
-    Poster:"https://res.cloudinary.com/dvlxqrbjm/image/upload/v1705904258/ve02rewaaqbrmtyeqjsz.png",
-    miniDescription: "Dive into the entrepreneurial waters at our Saanp Tank . Expect laughter, creativity, and a splash of business brilliance. Join us for a funtastic event – where ideas swim or sink!",
+    Poster:
+      "https://res.cloudinary.com/dvlxqrbjm/image/upload/v1705904258/ve02rewaaqbrmtyeqjsz.png",
+    miniDescription:
+      "Dive into the entrepreneurial waters at our Saanp Tank . Expect laughter, creativity, and a splash of business brilliance. Join us for a funtastic event – where ideas swim or sink!",
     Description:
       'We are delighted to introduce "Saamp Tank," a comedic adaptation inspired by the esteemed original Shark Tank. Teams armed with wit, humor and innovation, pitch their unique products to our panel of judges. The twist lies in the selection of these products—each one deliberately crafted to be outlandishly bizarre and practically impossible to present with a straight face.',
     Venue: "NLHC",
     Fees: 0,
-    Contactdetails: [{ name: "Shubham Soni", phone: "+91-9589985495" },{ name: "Payal Prajapati", phone: "+91-8279711662" }],
+    Contactdetails: [
+      { name: "Shubham Soni", phone: "+91-9589985495" },
+      { name: "Payal Prajapati", phone: "+91-8279711662" },
+    ],
     Rules: [
       "Teams of 1-4 have to present a pitch to sell an unique item. The item will be out of the blue weird and unusual.      ",
       "The product to be pitched will be given 3-4 days prior to the event and teams have to use their creativity to try to woo the judges.",
@@ -550,9 +576,106 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
-    genre: false
+    genre: false,
   },
-  
+  {
+    EventName: "Live Art",
+    Zone: "FineArts",
+    Poster:
+      "https://res.cloudinary.com/ds6u0jd3x/image/upload/v1705858453/live_art_yvuysl.png",
+    miniDescription:
+      "The members of the club will be creating a live, on-the-spot art piece with an audience present. ",
+    Description:
+      "Artfreaks is set to mesmerise audiences as its members embark on  live, on-the-spot art creation. While we often appreciate the beauty of complete artworks at various festivals in our college, Artfreaks is now offering a unique glimpse into the creative process. This provides spectators with an exclusive opportunity to witness the magic of artistic expression unfolding in real-time. Join in to experience the captivating synergy of paintbrushes, canvas and creativity.",
+    Venue: "NLHC",
+    Fees: 0,
+    Contactdetails: [
+      { name: "Tanisha Agarwal", phone: "7400217122" },
+      { name: "Supreeth", phone: "8121213156" },
+    ],
+    Rules: ["This Event doesnot need any registrations."],
+    RuleBookLink:
+      "https://docs.google.com/document/d/1iUO91fdA7ss3eBUIjSSr9gjqWp7dR-dDbv_Nke1vF1w/edit",
+
+    Minimummembers: 0,
+    Maximummembers: 0,
+    teamName: false,
+    sponsor: false,
+    audio: false,
+    instrument: false,
+    accompanist: false,
+    genre: false,
+  },
+  {
+    EventName: "Character Design",
+    Zone: "FineArts",
+    Poster:
+      "https://res.cloudinary.com/ds6u0jd3x/image/upload/v1705858349/characterdesign_ig4khk.png",
+    miniDescription:
+      "Creating a character design using materials provided by us.",
+    Description:
+      "This live event encourages artists to ignite their imagination using an assorted mix of on-the-spot materials. Picture yourself navigating through the challenge of diverse artistic mediums,crafting characters that surpass expectations. Witness your creations breathe life and soar to new heights on ArtFreaks' official Instagram and Facebook pages.",
+    Venue: "OAT",
+    Fees: 0,
+    Contactdetails: [
+      { name: "Viraj", phone: "6299754820" },
+      { name: "Ojayit Mehta", phone: "7018801368" },
+    ],
+    Rules: [
+      "Participants will receive three themes for both their character and    the background of their artwork.In the artwork.",
+      "Participants are required to incorporate one theme provided for the character and another theme provided for the background into their artwork.",
+      "Only one entry is allowed per person.",
+      "The decision by ArtFreaks judgement team will be final and binding.",
+      "Results will be announced on our social media handles.",
+    ],
+    RuleBookLink:
+      "https://docs.google.com/document/d/1eufdM4IuckgObtnL4aG3mvieG5an4IQ0Ef9J8jN4JK8/edit",
+
+    Minimummembers: 1,
+    Maximummembers: 1,
+    teamName: false,
+    sponsor: false,
+    audio: false,
+    instrument: false,
+    accompanist: false,
+    genre: false,
+  },
+  {
+    EventName: "Face Painting",
+    Zone: "FineArts",
+    Poster:
+      "https://res.cloudinary.com/ds6u0jd3x/image/upload/v1705858606/FACE_PAINTING_gutrpv.png",
+    miniDescription:
+      "It is a competition for a team of two, where one of the participants needs to paint on the face of the other participant.",
+    Description:
+      "Join the Face Painting Competition, a dynamic challenge for teams of two! In this, one team member showcases their artistic flair by painting on the face of their partner. With a theme revealed on the spot, imagination knows no bounds. Teams can bring their materials- “But what shall we do if we do not have our own materials?” No worries! as all the essentials like colours, paintbrushes, cups and tissue papers, will be provided. Let your creativity and originality shine in this lively and colourful competition.",
+    Venue: "OAT",
+    Fees: 0,
+    Contactdetails: [
+      { name: "Raghav Kansal", phone: "7589450517" },
+      { name: "Suryam Agrawal", phone: "7489774296" },
+    ],
+    Rules: [
+      "Theme: Will be provided on the spot.",
+      "Team Size is 2 members.",
+      "Participants may use their own materials.",
+      "Participants can paint their hair and neck as well.",
+      "Participants will be provided colours, paint brushes, cups and tissue paper",
+      "The decision of the Art Freaks Judgement Team will be final and binding.",
+    ],
+    RuleBookLink:
+      "https://docs.google.com/document/d/1JsyEdqHJIjhS8p-Ol44jouQa6NyduK3paMWeFv_LKew/edit",
+
+    Minimummembers: 2,
+    Maximummembers: 2,
+    teamName: true,
+    sponsor: false,
+    audio: false,
+    instrument: false,
+    accompanist: false,
+    genre: false,
+  },
+
   // {
   //   EventName: "Things the Brits Ruined(debate)",
   //   Zone: " Literary",
