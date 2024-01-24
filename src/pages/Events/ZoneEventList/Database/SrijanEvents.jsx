@@ -32,6 +32,7 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: true,
   },
   {
@@ -69,17 +70,18 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
   },
   {
-    EventName: "GENRE-O-MANIA",
+    EventName: "Genre-O-MANIA",
     Zone: "CINEMATOGRAPHY",
     Poster:
       "https://res.cloudinary.com/ds6u0jd3x/image/upload/v1705858466/GOM_aqcrcu.png",
     miniDescription:
-      "Love watching Reels?? Then you must have seen some of the extraordinary edits which makes us all in awe. So now is your time to showcase your video-making skills!!\nLightsCameraISM invite you to showcase your cinematic prowess in our thrilling event, GENRE-O-MANIA.",
+      "Love watching Reels?? Then you must have seen some of the extraordinary edits which makes us all in awe. So now is your time to showcase your video-making skills!!\nLightsCameraISM invite you to showcase your cinematic prowess in our thrilling event, genre-O-MANIA.",
     Description:
-      "If you love watching reels, you must have seen some of the extraordinary edits, which make us all in awe. So now is your time to showcase your video-making skills in Genre-O-Mania, a cinematic challenge where participants create a short video incorporating various genres of videography like Hyperlapse Magic, Paper Cutout Delight, Double Trouble Drama, or Smooth Transitions Elegance. Unleash your creativity and seize the chance to win big in this exciting cinematic showcase.",
+      "If you love watching reels, you must have seen some of the extraordinary edits, which make us all in awe. So now is your time to showcase your video-making skills in genre-O-Mania, a cinematic challenge where participants create a short video incorporating various genres of videography like Hyperlapse Magic, Paper Cutout Delight, Double Trouble Drama, or Smooth Transitions Elegance. Unleash your creativity and seize the chance to win big in this exciting cinematic showcase.",
     Venue: "Online",
     Fees: 0,
     Contactdetails: [],
@@ -102,6 +104,7 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: true,
   },
   {
@@ -129,6 +132,50 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: false,
+    genre: false,
+  },
+  {
+    EventName: "FRAME BY VERSE!",
+    Zone: "CINEMATOGRAPHY",
+    Poster:
+      "https://res.cloudinary.com/dcch8l9k2/image/upload/v1706079981/jknnkgbtjb8t2peevska.png",
+    miniDescription:
+      "“So, are you ready to grab your pen, unleash your inner bard, and join the adventure? Lights,camera, scribbles!",
+    Description:
+      "Imagine a room buzzing with the electricity of ideas. Laptops glow like miniature suns, casting warm patches of light on focused faces. Fingers fly across keyboards, weaving tales of heroes and villains, worlds of wonder and heartbreak. It's the Srijan’s Scriptwriting Competition ”Frame By Verse”, a platform for budding storytellers to unleash their creativity and showcase their vision in the form of compelling scripts.",
+    Venue: "Online",
+    Fees: 0,
+    Contactdetails: [
+      { name: "Payal", phone: "8279711662" },
+      { name: "Vishanki", phone: "7505263768" }
+    ],
+    Rules: [
+      "Team Size- Individual(Solo Participation).",
+      "Theme for the will be released 2-3 days prior to the competition.",
+      "Genre: Any genre is allowed, including drama, comedy, thriller, animation, etc.",
+      "Scripts must be original and unpublished.",
+      "Scripts should be written in English with Font: Times New Roman, Size: 12.",
+      "Word Limit allowed is 1500-2500 words.",
+      "Scripts should be submitted in PDF format only.",
+      "Submission date is 5th february 2024.",
+      "Plagiarism will lead to immediate disqualification.",
+      "Organizers reserve the right to disqualify any entry that violates the rules or contains offensive content.",
+      "Judges' decisions are final and binding.",
+      "Organizers reserve the right to publish winning entries (with author's consent) for promotional purposes.",
+      "Genre: Any genre is allowed, including drama, comedy, thriller, animation, etc."
+    ],
+    RuleBookLink:
+      "https://drive.google.com/file/d/1V7a5OnkD81IE4aylybcPClwPtyrmDHKi/view?usp=sharing",
+
+    Minimummembers: 1,
+    Maximummembers: 1,
+    teamName: false,
+    sponsor: false,
+    audio: false,
+    instrument: false,
+    accompanist: false,
+    r1p: false,
     genre: false,
   },
   /********************** Quiz Events *************************8 */
@@ -166,6 +213,7 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
   },
   {
@@ -202,6 +250,7 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
   },
   {
@@ -226,6 +275,7 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
   },
   {
@@ -261,6 +311,7 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
   },
   /*********************** Dance Events ******************************** */
@@ -301,6 +352,7 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
   },
   {
@@ -337,6 +389,7 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
   },
   {
@@ -371,6 +424,7 @@ const events = [
     audio: true,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
   },
   {
@@ -406,6 +460,7 @@ const events = [
     audio: true,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
   },
   {
@@ -440,6 +495,7 @@ const events = [
     audio: true,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
   },
   /*********************Music Events********************** */
@@ -472,6 +528,7 @@ const events = [
     audio: false,
     instrument: true,
     accompanist: false,
+    r1p: false,
     genre: false,
   },
   {
@@ -504,6 +561,7 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: true,
+    r1p: false,
     genre: false,
   },
   /******************** Comedy Events **************************** */
@@ -545,6 +603,7 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
   },
   {
@@ -581,6 +640,7 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
   },
   /******************* FINE ARTS ************************* */
@@ -610,6 +670,7 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
   },
   {
@@ -644,6 +705,7 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
   },
   {
@@ -679,6 +741,7 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
   },
 
@@ -718,6 +781,7 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
   },
   {
@@ -757,6 +821,7 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
   },
 
@@ -870,6 +935,7 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
   },
   {
@@ -903,21 +969,22 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
   },
   {
     EventName: "Folktwist",
     Zone: "Literary",
     Poster:
-      "https://res.cloudinary.com/dcch8l9k2/image/upload/v1706027446/flepwyrbahmg9vpnrptt.png",
+      "https://res.cloudinary.com/dcch8l9k2/image/upload/v1706078643/qdw70qazpr0qu2dwcml7.png",
     miniDescription: "Literary",
     Description:
       "An event where your imagination takes the director's chair! Ever felt a movie's ending could've been better? Here, we'll rewrite those endings together. This engaging event lets you reimagine and reshape cinematic narratives in a fun, interactive session. Come together with fellow movie enthusiasts and let your creative juices flow, ultimately leading to cinematic reinvention at 'Folk Twist.' Let's twist those tales together!",
     Venue: "GJLT",
     Fees: 0,
     Contactdetails: [
-      { name: "Harsh Kumar Singh", phone: "7974105757" },
-      { name: "Abipsa", phone: "9353245937" },
+      { name: "Shambhavi", phone: "7678450912" },
+      { name: "Suneet", phone: "9322988762" },
     ],
     Rules: [
       "There will be 3 rounds.",
@@ -928,7 +995,7 @@ const events = [
       "One can participate individually or in a team (maximum 3 members).",
     ],
     RuleBookLink:
-      "https://docs.google.com/document/d/1AuzYGZF2SP8O3EmRIijrYUVzm6IdXTw8THLLsSz81YE/edit?usp=drive_link",
+      "https://docs.google.com/document/d/1jGKvxbSYopHNmxNVFTV5X4RdEGvite3TtwvU1Vo9k3o/edit",
 
     Minimummembers: 1,
     Maximummembers: 3,
@@ -937,6 +1004,7 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: true,
     genre: false,
   },
   {
@@ -964,13 +1032,14 @@ const events = [
     RuleBookLink:
       "https://drive.google.com/file/d/1PICZf1ztZvjyX1d0L2fIEDNCNf7D8P1s/view?usp=drive_link",
 
-    Minimummembers: 1,
-    Maximummembers: 1,
+    Minimummembers: 2,
+    Maximummembers: 2,
     teamName: false,
     sponsor: false,
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
   },
   {
@@ -1010,6 +1079,7 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
   },
   {
@@ -1040,6 +1110,7 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
   },
 ];

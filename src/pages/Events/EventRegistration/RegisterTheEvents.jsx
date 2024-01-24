@@ -299,6 +299,7 @@ export const RegisterTheEvents = () => {
         LeaderName: resp[0].teamName,
         Instrument: resp[0].instrument,
         Genre: resp[0].genre,
+        R1p:resp[0].r1p,
       });
     } catch (e) {
       toast.error("Something went wrong! ");
@@ -407,6 +408,7 @@ export const RegisterTheEvents = () => {
             Accompanist: data.get("Accompanist"),
             ReferralID: data.get("ReferralID"),
             Genre: selectedOptions,
+            Round1Preference: data.get("Round1Preference"),
           },
         ],
       };
@@ -721,6 +723,26 @@ export const RegisterTheEvents = () => {
                           placeholder="XYZ"
                           type="text"
                           name="audioLink"
+                          fullWidth
+                          required
+                          InputProps={{
+                            startAdornment: (
+                              <InputAdornment position="start">
+                                {/* <DesignServicesIcon fontSize="small" /> */}
+                              </InputAdornment>
+                            ),
+                          }}
+                        />
+                      </div>
+                    )}
+                    {teamStructure.R1p && (
+                      <div className="my-5" style={responsiveColumn}>
+                        <InputDefault
+                          size="small"
+                          label="Topic for Round 1(Refer Rulebook for further information)"
+                          placeholder="XYZ"
+                          type="text"
+                          name="Round1Preference"
                           fullWidth
                           required
                           InputProps={{
