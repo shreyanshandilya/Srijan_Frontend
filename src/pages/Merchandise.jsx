@@ -24,6 +24,8 @@ function Merchandise() {
     // token: "",
     // outsider: false,
     tshirtSize: "S",
+    hoodieSize:"S",
+
     address: "",
     quantity: 0,
     type: "Hoodie",
@@ -222,6 +224,7 @@ function Merchandise() {
     e.preventDefault();
     setData({
       tshirtSize: "S",
+      hoodieSize: "S",
       address: "",
       quantity: 0,
       type: "Hoodie",
@@ -306,8 +309,19 @@ function Merchandise() {
             Merchandise
           </h1>
           <h1 className="my-4 text-md font-semibold tracking-tight leading-none text-[#efede0] md:text-xl lg:text-2xl ">
-            <br /> INR 399 / T-Shirt <br /><br /> INR 799 / Hoodie
+          <br /> 
+INR 399 / T-Shirt 
+<br /><br /> 
+INR 799 / Hoodie 
+<br /><br /> 
+<div class="text-indigo-500">Special Republic Day Offer</div>
+<div class="text-white">(T-Shirt + Hoodie) for INR <s class="text-orange-600">1199</s> <span class="text-green-500">1099</span> Only</div>
+<br />
+Get Rs 100 off on the combo!
           </h1>
+
+
+
 
           <div className="flex flex-col space-y-4 my-10 sm:flex-row sm:justify-center sm:space-y-0">
             {localStorage.getItem("token") == null ||
@@ -338,7 +352,27 @@ function Merchandise() {
                 </div>
               </div>
             ) : (
-              <motion.div
+              <div>
+                   {!open&& <motion.div
+              whileHover={{ y: -10 }}
+              className="inline-flex justify-center items-center py-3 px-5 text-xl font-medium text-center text-[#090d06] rounded-lg bg-[#dad3a5] hover:drop-shadow-md focus:ring-4 focus:ring-blue-300 cursor-pointer mb-4"
+              onClick={(e) => {
+                e.preventDefault();
+                   setOpen(!open);
+                   setData({
+                    tshirtSize: "S",
+                    hoodieSize:"S",
+                    address: "",
+                    quantity: 1,
+                    type: "Tshirt + Hoodie Combo",
+                  });
+              }}
+            >
+              Buy Combo
+            
+            </motion.div>} 
+            <br/>
+            <motion.div
                 whileHover={{ y: -10 }}
                 className="inline-flex justify-center items-center py-3 px-5 text-xl font-medium text-center text-[#090d06] rounded-lg bg-[#dad3a5] hover:drop-shadow-md focus:ring-4 focus:ring-blue-300 cursor-pointer"
                 onClick={handleClick}
@@ -360,6 +394,7 @@ function Merchandise() {
                   />
                 </svg>
               </motion.div>
+          </div>
             )}
           </div>
         </motion.div>
@@ -503,6 +538,7 @@ function Merchandise() {
               >
                 <option value="Hoodie">Hoodie</option>
                 <option value="Tshirt">Tshirt</option>
+                <option value="Tshirt + Hoodie Combo">Tshirt + Hoodie Combo</option>
               </select>
             </div>
             <div className="mb-4">
@@ -547,6 +583,29 @@ function Merchandise() {
                 <option value="XXL">XXL</option>
               </select>
             </div>
+           {beta.type=='Tshirt + Hoodie Combo'&&<div className="mb-4">
+              <label
+                htmlFor="hoodieSize"
+                className="block mb-2 text-sm font-medium text-gray-900"
+              >
+                Select your size
+              </label>
+              <select
+                id="hoodieSize"
+                onChange={handleChangeInput}
+                value={beta.hoodieSize}
+                placeholder="Eg. S, M"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0d0c06] focus:border-[#0d0c06] block w-full p-2.5"
+                required
+              >
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+              </select>
+            </div>}
             {/* <div className="mb-1">
                 <label
                   htmlFor="hostel"
