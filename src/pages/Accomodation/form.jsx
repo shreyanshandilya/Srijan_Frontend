@@ -34,7 +34,6 @@ function Merchandise() {
     Idproof:"",
     address:"",
     Gender: "Male",
-    
   });
   useEffect(() => {
     scroll.scrollToTop({ duration: 1000 });
