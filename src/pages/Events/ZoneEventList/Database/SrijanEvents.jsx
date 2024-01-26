@@ -564,6 +564,38 @@ const events = [
     r1p: false,
     genre: false,
   },
+  {
+    EventName: "AVALANCHE",
+    Zone: "Music",
+    Poster:
+      "https://res.cloudinary.com/dcch8l9k2/image/upload/v1706262353/t7ijnqrd5rj7darsen8h.png",
+    miniDescription: "A group music event where participants of the band perform in synchrony with various instruments and vocal artists in multiple genres. ",
+    Description:'Our stage is set to be a canvas where diverse genres converge, creating musical brilliance. Dont miss the chance to be part of the magic as bands unite in synchrony, infusing the space with an unparalleled vibrancy. 🎶✨ Tune in and experience every note🎼 resonate with passion and every beat echo the heartbeat of artistic expression. 🎸 🌟 🎼 Mark your calendars for Avalanche, and let the fun begin 🔥',
+    Venue: "OAT",
+    Fees: 0,
+    Contactdetails: [{ name: "Prakalp Thakur ", phone: "8368395519" }],
+    Rules: [
+      "There is no constraint on the genre of songs. Suitable judges will be called to judge Eastern as well as Western Music. However, variety will be appreciated.",
+      "The number of people on the stage should at least be three and no more than 15 during the performance. ",
+      "At least two instruments are always required on stage. All participants are advised to keep a 10ft distance from the stage before and after their performance slot",
+      "It is advised that apart from the performing group, an extra person guides the audio engineer for the off-stage mix",
+      "In the case of Instrument Players, a physical instrument has to be used to generate sound on the stage. The usage of virtual instruments to generate the sound is prohibited",
+      "For Instruments, usage of virtual amps/plugins to modify the sound is allowed.",
+      "Maximum of 20 minutes + 5 minutes (for setup) + 5 minutes of extra time in case the band has a left-handed drummer. The schedule will be notified to Contingent Leaders. "
+    ],
+    RuleBookLink:
+      "https://docs.google.com/document/d/1ev7fSuOAntUVG7fd26u9EmiM_KTtJa-3/edit?usp=sharing&ouid=106370131359421911922&rtpof=true&sd=true",
+
+    Minimummembers: 3,
+    Maximummembers: 8,
+    teamName: false,
+    sponsor: false,
+    audio: false,
+    instrument: false,
+    accompanist: true,
+    r1p: false,
+    genre: false,
+  },
   /******************** Comedy Events **************************** */
   {
     EventName: "YOU LAUGH YOU LOSE",
