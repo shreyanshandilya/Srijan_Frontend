@@ -319,6 +319,12 @@ export const RegisterTheEvents = () => {
       navigate("/login");
     }
   }, [minSiz]);
+  useEffect(() => {
+    if (eventId === 'AVALANCHE') {
+      console.log("aa");
+      window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSeNCdbr7q9sbErkVIjKKlbur_0Yt8lc02Pgk0DfBzQwnQ4g_w/viewform";
+    }
+  }, []);
   const getEventData = () => {
     try {
       const resp = eventList.filter(
