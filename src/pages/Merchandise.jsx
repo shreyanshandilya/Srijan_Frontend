@@ -184,7 +184,7 @@ function Merchandise() {
               }}
             />
             <img
-              src="https://res.cloudinary.com/ds6u0jd3x/image/upload/v1705477984/HoMan/subemislrjntbvxc3omj.jpg"
+              src="https://res.cloudinary.com/dqwln5hhs/image/upload/v1706258511/WhatsApp_Image_2024-01-25_at_09.18.15_1_nfgk1u.jpg"
               alt="..."
               style={{
                 maxHeight: "100%",
@@ -192,7 +192,7 @@ function Merchandise() {
               }}
             />
             <img
-              src="https://res.cloudinary.com/ds6u0jd3x/image/upload/v1705477951/HoMan/mbtrx9mzmp1xppy1jnkp.jpg"
+              src="https://res.cloudinary.com/dqwln5hhs/image/upload/v1706258526/WhatsApp_Image_2024-01-25_at_09.18.15_hoaxwu.jpg"
               alt="..."
               style={{
                 maxHeight: "100%",
