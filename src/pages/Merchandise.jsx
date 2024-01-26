@@ -138,13 +138,7 @@ function Merchandise() {
     rzp1.open();
     setLoading(false);
     e.preventDefault();
-    setData({
-      tshirtSize: "S",
-      hoodieSize: "S",
-      address: "",
-      quantity: 0,
-      type: "Hoodie",
-    });
+    
   };
 
   return (
@@ -403,7 +397,7 @@ function Merchandise() {
                 htmlFor="tshirtSize"
                 className="block mb-2 text-sm font-medium text-gray-900"
               >
-                Select your size (Tshirt)
+                Select your size {beta.type=="Tshirt + Hoodie Combo"&&"(Tshirt)"}
               </label>
               <select
                 id="tshirtSize"
