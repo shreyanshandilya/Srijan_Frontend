@@ -665,7 +665,7 @@ const events = [
       "Teams are advised to refrain from excessive vulgarity. Profanity is allowed but not encouraged.",
     ],
     RuleBookLink:
-      "https://docs.google.com/document/d/1TqojGPVUxTuY7kvG-F3JhNfom7gk1SEY3hKGQiIMfuE/edit",
+      "https://docs.google.com/document/d/1czY8QAzQHWMX1HyDHnlejlOkEil7USdf_tkpSv0mNeE/edit",
 
     Minimummembers: 1,
     Maximummembers: 4,
@@ -943,7 +943,7 @@ const events = [
       "Please note that organisers of the event could amend the rules during the time of the event.",
     ],
     RuleBookLink:
-      "https://docs.google.com/document/d/1X0vAO2_Bw8jZiectgXd4M4Ab72Ylf5j9K5lzxtWrpeY/edit",
+      "https://docs.google.com/document/d/1gbLqbXzGglPgtYtRePfDvnvkjk0M5nY_/edit",
     Minimummembers: 2,
     Maximummembers: 4,
     teamName: true,
