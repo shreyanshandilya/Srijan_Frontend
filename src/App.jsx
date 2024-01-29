@@ -2,27 +2,22 @@ import { useState } from "react";
 import "./App.css";
 import Landing from "./pages/Landing";
 import Merchandise from "./pages/Merchandise";
+import Merchandise2 from "./pages/Merchandise2";
 import Team from "./components/Teams/Team";
 import About from "./pages/About";
-
 import EventZone from "./pages/Events/Zone/EventsZone";
 import EventList from "./pages/Events/ZoneEventList/ZoneEventList";
-// import { RegisterForEvents } from "./pages/RegisterForEvents";
-// import { Profile } from "./pages/Profile";
 import PurchaseListPage from "./pages/PurcahseListPage";
 import EventDetails from "./pages/Events/EventDescription/EventDetails";
-// import Event from "./pages/Event";
 import {
   createHashRouter,
   RouterProvider,
 } from "react-router-dom";
-// import { RegisterTheEvents } from "./pages/Events/EventRegistration/RegisterTheEvents";
 import Login from "./components/Login";
 import { Register } from "./pages/Register";
 import { PackSelectionPage } from "./pages/PackSelectionPage";
 import Profile from "./pages/Profile";
 import BgVideo from "./components/BgVideo";
-// import { EventRegister } from "./pages/EventRegister";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import { RegisterTheEvents } from "./pages/Events/EventRegistration/RegisterTheEvents";
 import TermsAndConditions from "./pages/TermsAndConditions";
@@ -46,6 +41,10 @@ function App() {
       element: <Merchandise />,
     },
     {
+      path: "merchant/offer",
+      element: <Merchandise2 />,
+    },
+    {
       path: "event",
       element: <EventZone />,
     },
@@ -53,10 +52,6 @@ function App() {
       path: "profile",
       element: <Profile />,
     },
-    // {
-    //   path: "accomodation",
-    //   element: <Accomodation />,
-    // },
     {
       path: "/accomodation/:type",
       element: <Accomodation />,
@@ -81,10 +76,6 @@ function App() {
       path: "/event/:category/:eventId/register",
       element: <RegisterTheEvents />,
     },
-    // {
-    //   path: "/profile",
-    //   element: <Frm />,
-    // },
     {
       path: "team",
       element: <Team />,
@@ -131,20 +122,5 @@ function App() {
 
 export default App;
 
-// ReactDOM.createRoot(document.getElementById("root")).render(
 
-// );
 
-{
-  /* <>
-        <Routes path="/">
-          <Route exact path="/" element={<Landing />} />
-          <Route exact path="/merchant" element={<Merchandise />} />
-          <Route exact path="/event" element={<Event />} />
-          <Route exact path="/profile" element={<Frm />} />
-          <Route exact path="/team" element={<Team />} />
-          <Route exact path="/about" element={<About />} />
-          <Route exact path="/admin" element={<PurchaseListPage />} />
-        </Routes>
-      </> */
-}

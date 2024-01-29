@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { motion, useAnimate } from "framer-motion";
 import Nav from "../components/Navbar/navbar";
 import { useNavigate } from "react-router-dom";
-// import axios from "axios";
 import "react-toastify/dist/ReactToastify.css";
 import Footer from "../components/Footer.jsx";
 import { Carousel } from "flowbite-react";
@@ -12,15 +11,15 @@ import AlertDialog from "./Alert.jsx";
 import useRazorpay from "react-razorpay";
 import Srijanmage from "../assets/SrijanLogo.png";
 import FooterT from "../components/Footer.jsx";
-
+import { Link } from "react-router-dom";
 function Merchandise() {
   const navigate = useNavigate();
   const [Razorpay] = useRazorpay();
-
+  const [loading, setLoading] = useState(false);
+  const [token, setToken] = useState("");
+  const [outside, setOutside] = useState(false);
   const [beta, setData] = useState({
- 
     tshirtSize: "S",
-    hoodieSize: "S",
     address: "",
     quantity: 0,
     type: "Hoodie",
@@ -28,10 +27,6 @@ function Merchandise() {
   useEffect(() => {
     scroll.scrollToTop({ duration: 1000 });
   }, []);
-  const [loading, setLoading] = useState(false);
-
-  const [token, setToken] = useState("");
-  const [outside, setOutside] = useState(false);
   const handleChangeInput = (event) => {
     setData({ ...beta, [event.target.id]: event.target.value });
   };
@@ -47,9 +42,7 @@ function Merchandise() {
     e.preventDefault();
     if (loading) return;
     setLoading(true);
-    // const amount = beta.quantity * (beta.type === "Hoodie" ? 799 : beta.type === "Tshirt + Hoodie Combo" ? 1099 :399) * 100;
-    // const amount = 100;
-    const amount = 100;
+    const amount = beta.quantity * (beta.type === "Hoodie" ? 799 : 399) * 100;
     const response = await toast.promise(
       fetch("https://srijan-prod.onrender.com/api/order", {
         method: "POST",
@@ -77,16 +70,13 @@ function Merchandise() {
       return;
     }
     const order = await response.json();
-
-    // console.log(order);
-
     var options = {
       key: "rzp_live_hCIa25zbx0icRX",
       amount,
       currency,
       name: "Srijan",
       description: "Merchandise Payment",
-      image: Srijanmage, 
+      image: Srijanmage,
       order_id: order.id,
       handler: async function (response) {
         const body = {
@@ -100,7 +90,6 @@ function Merchandise() {
             mode: "cors",
             body: JSON.stringify({
               ...body,
-              hoodieSize: beta.hoodieSize,
               tshirtSize: beta.tshirtSize,
               quantity: beta.quantity,
               addresss: beta.address,
@@ -126,7 +115,6 @@ function Merchandise() {
       toast.success("Order Placed", {
         position: toast.POSITION.BOTTOM_RIGHT,
       });
-      // console.log("Payment success event:", response);
     });
 
     rzp1.on("payment.failed", function (response) {
@@ -134,12 +122,10 @@ function Merchandise() {
         position: toast.POSITION.BOTTOM_RIGHT,
       });
     });
-    // console.log(rzp1);
 
     rzp1.open();
     setLoading(false);
     e.preventDefault();
-    
   };
 
   return (
@@ -167,7 +153,6 @@ function Merchandise() {
                 maxWidth: "100%",
               }}
             />
-
             <img
               src="https://res.cloudinary.com/dkdratnao/image/upload/v1705303857/Slide_16_9_-_3_ijz7nd.jpg"
               alt="..."
@@ -200,10 +185,6 @@ function Merchandise() {
                 maxWidth: "100%",
               }}
             />
-            {/* <img
-            src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967509/fotofreaks_iitism_1675676767_3032118946798465237_5457821429_qldckp.jpg"
-            alt="..."
-          /> */}
           </Carousel>
         </div>
       </center>
@@ -227,14 +208,16 @@ function Merchandise() {
             INR 799 / Hoodie
             <br />
             <br />
-            <div class="text-indigo-500">Special Republic Day Offer</div>
-            <div class="text-white">
-              (T-Shirt + Hoodie) for INR <s class="text-orange-600">1199</s>{" "}
-              <span class="text-green-500">1099</span> Only
-            </div>
-            <br />
-            Get Rs 100 off on the combo!
           </h1>
+          <div className="text-white font-bold text-2xl">
+            <div className="my-5">Special Offer</div>
+            <div>
+              2 Hoodies at <span className="text-blue-400">1498</span>
+            </div>
+            <div>
+              4 T-Shirts at <span className="text-blue-400">1396</span>
+            </div>
+          </div>
 
           <div className="flex flex-col space-y-4 my-10 sm:flex-row sm:justify-center sm:space-y-0">
             {localStorage.getItem("token") == null ||
@@ -267,7 +250,7 @@ function Merchandise() {
             ) : (
               <div>
                 {!open && (
-                  <motion.div
+                  <motion.button
                     whileHover={{ y: -10 }}
                     className="inline-flex justify-center items-center py-3 px-5 text-xl font-medium text-center text-[#090d06] rounded-lg bg-[#dad3a5] hover:drop-shadow-md focus:ring-4 focus:ring-blue-300 cursor-pointer mb-4"
                     onClick={(e) => {
@@ -275,15 +258,14 @@ function Merchandise() {
                       setOpen(!open);
                       setData({
                         tshirtSize: "S",
-                        hoodieSize: "S",
                         address: "",
                         quantity: 1,
                         type: "Tshirt + Hoodie Combo",
                       });
                     }}
                   >
-                    Buy Combo
-                  </motion.div>
+                    <Link to="/merchant/offer">Buy Offer</Link>
+                  </motion.button>
                 )}
                 <br />
                 <motion.div
@@ -369,9 +351,6 @@ function Merchandise() {
               >
                 <option value="Hoodie">Hoodie</option>
                 <option value="Tshirt">Tshirt</option>
-                <option value="Tshirt + Hoodie Combo">
-                  Tshirt + Hoodie Combo
-                </option>
               </select>
             </div>
             <div className="mb-4">
@@ -398,7 +377,8 @@ function Merchandise() {
                 htmlFor="tshirtSize"
                 className="block mb-2 text-sm font-medium text-gray-900"
               >
-                Select your size {beta.type=="Tshirt + Hoodie Combo"&&"(Tshirt)"}
+                Select your size{" "}
+                {beta.type == "Tshirt + Hoodie Combo" && "(Tshirt)"}
               </label>
               <select
                 id="tshirtSize"
@@ -416,31 +396,6 @@ function Merchandise() {
                 <option value="XXL">XXL</option>
               </select>
             </div>
-            {beta.type == "Tshirt + Hoodie Combo" && (
-              <div className="mb-4">
-                <label
-                  htmlFor="hoodieSize"
-                  className="block mb-2 text-sm font-medium text-gray-900"
-                >
-                  Select your size (Hoodie)
-                </label>
-                <select
-                  id="hoodieSize"
-                  onChange={handleChangeInput}
-                  value={beta.hoodieSize}
-                  placeholder="Eg. S, M"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0d0c06] focus:border-[#0d0c06] block w-full p-2.5"
-                  required
-                >
-                  <option value="XS">XS</option>
-                  <option value="S">S</option>
-                  <option value="M">M</option>
-                  <option value="L">L</option>
-                  <option value="XL">XL</option>
-                  <option value="XXL">XXL</option>
-                </select>
-              </div>
-            )}
 
             <div className="max-w-lg mx-auto mb-2">
               <strong>
@@ -448,7 +403,7 @@ function Merchandise() {
                   Payable Amount: INR{" "}
                   {beta.type === "Hoodie"
                     ? 799 * beta.quantity
-                    : beta.type === "Tshirt + Hoodie Combo" ? 1099*beta.quantity : 399*beta.quantity}
+                    : 399 * beta.quantity}
                 </div>
               </strong>
               (For delivery outside IIT ISM, optimal delivery charges will be
