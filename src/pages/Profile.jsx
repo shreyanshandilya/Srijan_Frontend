@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback, useState } from "react";
+import { useEffect, useCallback, useState } from "react";
 import { Link } from "react-router-dom";
 import { IoMdMail } from "react-icons/io";
 import { FaPhone } from "react-icons/fa6";
@@ -21,7 +21,11 @@ function Profile() {
   }, [localStorage.getItem("token")]);
 
   const [details, setDetails] = useState([]);
-  const url = "https://srijan2024.onrender.com/api/getUser";
+  const [accomodations, setAccomodations] = useState([]);
+  const url = "https://srijan-prod.onrender.com/api/getUser";
+  const urlEvents =
+    "https://srijan-prod.onrender.com/api/profile/eventsRegistered";
+    
   const fetchUser = useCallback(async () => {
     const response = await toast
       .promise(
@@ -36,22 +40,39 @@ function Profile() {
         {
           position: toast.POSITION.BOTTOM_RIGHT,
           pending: "Loading Profile",
-
           error: "Something wrong occured",
         }
       )
 
       .then(async (res) => {
         const data = await res.json();
-        console.log(data);
+        // console.log(data);
         setDetails(data);
         // console.log(ans);
         // console.log(res.json());
       })
       .catch((err) => console.log(err));
   }, []);
+  const urlAccomodation =
+    "https://srijan-prod.onrender.com/api/profile/userAccomodation";
+  const fetchAccomodation = useCallback(async () => {
+    const response = await fetch(urlAccomodation, {
+          method: "GET",
+          mode: "cors",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${localStorage["token"]}`,
+          },
+        }).then(async (res) => {
+        const data = await res.json();
+        // console.log(data);
+        setAccomodations(data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
   useEffect(() => {
     fetchUser();
+    fetchAccomodation();
   }, [fetchUser]);
   return (
     <>
@@ -143,6 +164,70 @@ function Profile() {
                   })}
               </div>
             </div>
+            {!localStorage["email"].endsWith("@iitism.ac.in") && (
+              <div className="mt-12 flex flex-col justify-center">
+                {/* <p className="text-gray-600 text-center font-light lg:px-16">
+              An artist of considerable range, Ryan — the name taken by
+              Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
+              and records all of his own music, giving it a warm, intimate feel
+              with a solid groove structure. An artist of considerable range.
+            </p>
+            <button className="text-indigo-500 py-2 px-4  font-medium mt-4">
+              Show more
+            </button> */}
+                <h1 style={{ textAlign: "center", fontSize: "150%" }}>
+                  <strong>Accomodations</strong>
+                </h1>
+                <p>
+                  <center>
+                    If you have purchased any package, it will be displayed here, <br/> further If you are facing any issue kindly mail us at srijan@iitism.ac.in with your transaction
+                  details.{" "}
+                  </center>
+                </p>
+                <br></br>
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+                  {accomodations != undefined &&
+                    accomodations.length > 0 &&
+                    accomodations.map((item, index) => {
+                      return (
+                        <>
+                          <div className="max-w-sm p-6 bg-[#3c3708] backdrop-blur-xl bg-opacity-70 rounded-lg shadow">
+                            <a href="#">
+                              <h5 className="mb-2 text-2xl font-bold flex justify-center tracking-tight text-[#dad3a5]">
+                                {`Details`}
+                              </h5>
+                            </a>
+                            <p className="mb-3 font-normal text-[#efede0]">
+                              <strong>Email :</strong> {item.Email}
+                            </p>
+                            <p className="mb-3 font-normal text-[#efede0]">
+                              <strong>Gender :</strong> {item.Gender}
+                            </p>
+                            <p className="mb-3 font-normal text-[#efede0]">
+                              <strong>Hostel Name :</strong> {item.HostelName}
+                            </p>
+                            <p className="mb-3 font-normal text-[#efede0]">
+                              <strong>Id Proof :</strong> {item.Idproof}
+                            </p>
+                            <p className="mb-3 font-normal text-[#efede0]">
+                              <strong>Accomodation :</strong> {item.isAccomodation}
+                            </p>
+                            <p className="mb-3 font-normal text-[#efede0]">
+                              <strong>Order Id :</strong> {item.OrderId}
+                            </p>
+                            <p className="mb-3 font-normal text-[#efede0]">
+                              <strong>Package :</strong> {item.Pacakage.toUpperCase()}
+                            </p>
+                            <p className="mb-3 font-normal text-[#efede0]">
+                              <strong>Payment Id :</strong> {item.PaymentId}
+                            </p>
+                          </div>
+                        </>
+                      );
+                    })}
+                </div>
+              </div>
+            )}
           </div>
         </div>
         <ToastContainer

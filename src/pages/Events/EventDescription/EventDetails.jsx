@@ -1,0 +1,211 @@
+import React, { useState, useCallback, useEffect } from "react";
+import Navbar from "../../../components/Navbar/navbar";
+import FooterT from "../../../components/Footer";
+import { Accordion, Footer } from "flowbite-react";
+import { motion } from "framer-motion";
+import axios from "axios";
+import { duration } from "@mui/material";
+import { useParams } from "react-router-dom";
+import { animateScroll as scroll } from "react-scroll";
+import { Link } from "react-router-dom";
+import bgsvg from "../../../assets/Images_for_events/large-triangles.png";
+import EventArr from "../ZoneEventList/Database/SrijanEvents";
+// import { motion } from "framer-motion";
+
+function EventDetails(props) {
+  useEffect(() => {
+    scroll.scrollToTop({ duration: 1000 });
+  }, []);
+
+  const { category, name } = useParams();
+  // console.log(category);
+  // console.log(name);
+  const eventArr = EventArr.filter((e) => {
+    return e.EventName == name;
+  });
+  // const Eventurl = `https://srijan-prod.onrender.com/api/showEvents/${id}`;
+  const [details, setDetails] = useState([]);
+  //   const [img, setImg] = useState(null);
+  //   const [name, setName] = useState(null);
+  //   const [org, setOrg] = useState(null);
+  //   const [general, setGeneral] = useState(null);
+  //   const [img, setImg] = useState(null);
+  // const fetchAllEvents = useCallback(async () => {
+  //   // const res = await fetch(allEvents);
+  //   const res = await axios.get(Eventurl);
+  //   console.log(res.data);
+  //   setDetails(res.data[0]);
+  // }, [Eventurl]);
+  useEffect(() => {
+    // scroll.scrollToTop({ duration: 1000 });
+    // fetchAllEvents();
+    // const rules = [];
+    // details.rules.forEach((rule) => {
+    //   rules.push(<div>{rule}</div>);
+    // });
+    // const stages = [];
+    // details.stages.forEach((stage) => {
+    //   //   console.log(details.contacts);
+    //   stages.push(<div>{stage.description}</div>);
+    // });
+    // const contacts = [];
+    // details.contacts.forEach((contact) => {
+    //   //   console.log(contact);
+    //   contacts.push(
+    //     <div className="flex-col">
+    //       <div>{contact.name}</div>
+    //       <div>{contact.phoneNumber}</div>
+    //     </div>
+    //   );
+    // });
+  }, []);
+
+  return (
+    <>
+      <div
+        className="bg-[#0d0c06] max-w-screen pt-[70px] overflow-y-scroll"
+        style={{ backgroundImage: `url(${bgsvg})`, objectFit: "cover" }}
+      >
+        <Navbar />
+        <img
+          src={eventArr[0].Poster}
+          alt=""
+          className="max-h-[70vh] w-screen object-cover"
+        />
+        <div className="mx-10 mt-6 mb-4 font-bold text-7xl text-[#dad3a5] titleHeading">
+          {" "}
+          {eventArr[0].EventName}
+        </div>
+        <div className="mx-10 my-3 underline text-xl text-[#c9bc57]">
+          {" "}
+          <a
+            href={`${eventArr[0].RuleBookLink}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {" "}
+            Rulebook Doc
+          </a>
+        </div>
+        <div className="mx-10 mt-10">
+          <Link to="register">
+            <motion.button
+              layout
+              whileHover={{ y: -10, scale: 1.1 }}
+              type="button"
+              className="text-white border-yellow-200 border-dashed border-2 px-10 py-2 bg-black"
+            >
+              Register
+            </motion.button>
+          </Link>
+        </div>
+        <Accordion
+          collapseAll
+          className="px-10 pt-8 pb-10 border-none bg-opacity-70 backdrop-blur-lg"
+        >
+          <Accordion.Panel>
+            <Accordion.Title className="text-xl text-[#efede0] bg-[#0d0c06] hover:bg-[#dad3a5] hover:text-[#0d0c06] focus:text-[#0d0c06] focus:bg-[#dad3a5] focus:ring-2 focus:ring-[#c9bc57]">
+              Description
+            </Accordion.Title>
+            <Accordion.Content>
+              <p className="mb-2 text-[#efede0]">
+                {eventArr[0].miniDescription}
+              </p>
+              <p className="mb-2 text-[#efede0]">{eventArr[0].Description}</p>
+            </Accordion.Content>
+          </Accordion.Panel>
+          <Accordion.Panel>
+            <Accordion.Title className="text-xl text-[#efede0] bg-[#0d0c06] hover:bg-[#dad3a5] hover:text-[#0d0c06] focus:text-[#0d0c06] focus:bg-[#dad3a5] focus:ring-2 focus:ring-[#c9bc57]">
+              Rules
+            </Accordion.Title>
+            <Accordion.Content>
+              <ul className="mb-2 text-[#efede0] list-disc">
+                {eventArr[0].Rules &&
+                  eventArr[0].Rules.map((rule, index) => {
+                    return <li key={index}> {rule}</li>;
+                  })}
+              </ul>
+            </Accordion.Content>
+          </Accordion.Panel>
+          {/* <Accordion.Panel>
+            <Accordion.Title className="text-xl text-[#efede0] bg-[#0d0c06] hover:bg-[#dad3a5] hover:text-[#0d0c06] focus:text-[#0d0c06] focus:bg-[#dad3a5] focus:ring-2 focus:ring-[#c9bc57]">
+              Stages
+            </Accordion.Title>
+            <Accordion.Content>
+              <p className="mb-2 text-[#efede0]">
+                {details.stages &&
+                  details.stages.map((stage, index) => {
+                    return <p key={index}> {stage.description}</p>;
+                  })}
+              </p>
+            </Accordion.Content>
+          </Accordion.Panel> */}
+          <Accordion.Panel>
+            <Accordion.Title className="text-xl text-[#efede0] bg-[#0d0c06] hover:bg-[#dad3a5] hover:text-[#0d0c06] focus:text-[#0d0c06] focus:bg-[#dad3a5] focus:ring-2 focus:ring-[#c9bc57]">
+              Coordinators
+            </Accordion.Title>
+            <Accordion.Content>
+              <p className="mb-2 text-[#efede0] flex justify-around items-center">
+                {eventArr[0].Contactdetails &&
+                  eventArr[0].Contactdetails.map((contact, index) => {
+                    return (
+                      <div className="flex-col" key={index}>
+                        <div className="font-semibold">{contact.name}</div>
+                        <div>{contact.phone}</div>{" "}
+                      </div>
+                    );
+                  })}
+              </p>
+            </Accordion.Content>
+          </Accordion.Panel>
+          <Accordion.Panel>
+            <Accordion.Title className="text-xl text-[#efede0] bg-[#0d0c06] hover:bg-[#dad3a5] hover:text-[#0d0c06] focus:text-[#0d0c06] focus:bg-[#dad3a5] focus:ring-2 focus:ring-[#c9bc57]">
+              Members
+            </Accordion.Title>
+            <Accordion.Content>
+              {/* <p className="mb-2 text-[#efede0]">{eventArr[0].Venue}</p>
+               */}
+              {eventArr[0].Minimummembers == eventArr[0].Maximummembers ? (
+                <>
+                  <p className="mb-2 text-lg text-[#efede0]">
+                    Members:{" "}
+                    <span className="font-semibold">
+                      {eventArr[0].Maximummembers}
+                    </span>
+                  </p>
+                </>
+              ) : (
+                <>
+                  <p className="mb-2 text-lg text-[#efede0]">
+                    Maximum Members :
+                    <span className="font-semibold">
+                      {eventArr[0].Maximummembers}
+                    </span>
+                  </p>
+                  <p className="mb-2 text-lg text-[#efede0]">
+                    Minimum Members :
+                    <span className="font-semibold">
+                      {eventArr[0].Minimummembers}
+                    </span>
+                  </p>
+                </>
+              )}
+            </Accordion.Content>
+          </Accordion.Panel>
+        </Accordion>
+        {/* <div className="flex justify-center items-center">
+          <motion.button
+            whileHover={{ scale: 1.1, y: -10 }}
+            className="text-[#efede0] bg-[#514c08]/60 hover:bg-[#efede0] hover:text-[#514c08] focus:ring-2 focus:outline-none focus:ring-[#514c08] font-medium rounded-lg text-xl w-full sm:w-auto px-12 py-3.5 text-center my-5"
+          >
+            Register
+          </motion.button>
+        </div> */}
+      </div>
+      <FooterT />
+
+    </>
+  );
+}
+
+export default EventDetails;

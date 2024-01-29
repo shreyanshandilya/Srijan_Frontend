@@ -1,33 +1,29 @@
-import * as React from "react";
 import { useState } from "react";
-import * as ReactDOM from "react-dom";
 import "./App.css";
 import Landing from "./pages/Landing";
 import Merchandise from "./pages/Merchandise";
+import Merchandise2 from "./pages/Merchandise2";
 import Team from "./components/Teams/Team";
 import About from "./pages/About";
-import Frm from "./components/Profile/form";
-// import { Profile } from "./pages/Profile";
+import EventZone from "./pages/Events/Zone/EventsZone";
+import EventList from "./pages/Events/ZoneEventList/ZoneEventList";
 import PurchaseListPage from "./pages/PurcahseListPage";
-import EventDetails from "./pages/EventDetails";
-import Event from "./pages/Event";
+import EventDetails from "./pages/Events/EventDescription/EventDetails";
 import {
   createHashRouter,
   RouterProvider,
-  useLocation,
 } from "react-router-dom";
-import { animateScroll as scroll } from "react-scroll";
-import { EventRegister } from "./pages/EventRegister";
 import Login from "./components/Login";
 import { Register } from "./pages/Register";
 import { PackSelectionPage } from "./pages/PackSelectionPage";
-import Merchandise2 from "./pages/Merchandise2";
 import Profile from "./pages/Profile";
 import BgVideo from "./components/BgVideo";
-
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import { RegisterTheEvents } from "./pages/Events/EventRegistration/RegisterTheEvents";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import ReturnsAndRefundsPolicy from "./pages/ReturnsAndRefundsPolicy";
+import PackagePage from "./pages/Accomodation/Package";
+import Accomodation from "./pages/Accomodation/form";
 
 function App() {
   const [load, setLoader] = useState(true);
@@ -45,21 +41,41 @@ function App() {
       element: <Merchandise />,
     },
     {
+      path: "merchant/offer",
+      element: <Merchandise2 />,
+    },
+    {
       path: "event",
-      element: <Event />,
+      element: <EventZone />,
     },
     {
       path: "profile",
       element: <Profile />,
     },
     {
-      path: "/event/event-details/:id",
+      path: "/accomodation/:type",
+      element: <Accomodation />,
+    },
+    {
+      path: "packages/:msg",
+      element: <PackagePage />,
+    },
+    {
+      path: "packages/",
+      element: <PackagePage />,
+    },
+    {
+      path: "/event/:category",
+      element: <EventList />,
+    },
+    {
+      path: "/event/:category/:name",
       element: <EventDetails />,
     },
-    // {
-    //   path: "/profile",
-    //   element: <Frm />,
-    // },
+    {
+      path: "/event/:category/:eventId/register",
+      element: <RegisterTheEvents />,
+    },
     {
       path: "team",
       element: <Team />,
@@ -85,8 +101,8 @@ function App() {
       element: <Register />,
     },
     {
-      path: "/event/event-details/eventRegister/:id",
-      element: <EventRegister />,
+      path: "/event-register/:id",
+      element: <RegisterTheEvents />,
     },
     {
       path: "privacy-policy",
@@ -106,20 +122,5 @@ function App() {
 
 export default App;
 
-// ReactDOM.createRoot(document.getElementById("root")).render(
 
-// );
 
-{
-  /* <>
-        <Routes path="/">
-          <Route exact path="/" element={<Landing />} />
-          <Route exact path="/merchant" element={<Merchandise />} />
-          <Route exact path="/event" element={<Event />} />
-          <Route exact path="/profile" element={<Frm />} />
-          <Route exact path="/team" element={<Team />} />
-          <Route exact path="/about" element={<About />} />
-          <Route exact path="/admin" element={<PurchaseListPage />} />
-        </Routes>
-      </> */
-}
