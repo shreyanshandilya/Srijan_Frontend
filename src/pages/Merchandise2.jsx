@@ -47,9 +47,9 @@ function Merchandise2() {
     if (loading) return;
     setLoading(true);
     // console.log(beta.quantity);
-    const amount = ((beta.type === "Hoodie" )? (1498) : (1396)) * 100;
+    //const amount = ((beta.type === "Hoodie" )? (1498) : (1396)) * 100;
     // console.log(beta);
-    // const amount = 100;
+    const amount = 100;
     const response = await toast.promise(
       fetch("https://srijan-prod.onrender.com/api/order", {
         method: "POST",
