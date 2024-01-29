@@ -93,7 +93,7 @@ function Merchandise2() {
         };
 
         var validateRes = await fetch(
-          "http://localhost:2000/api/order/offer/validate",
+          "https://srijan-prod.onrender.com/api/order/offer/validate",
           {
             method: "POST",
             mode: "cors",
