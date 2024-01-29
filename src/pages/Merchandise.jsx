@@ -129,7 +129,7 @@ function Merchandise() {
     if (loading) return;
 
     setLoading(true);
-    const amount = beta.quantity * (beta.type === "Hoodie" ? 799 : 399) * 100;
+    const amount = beta.quantity * (beta.type === "Hoodie" ? 1 : 1) * 100;
 
     console.log(amount);
     const response = await toast.promise(
@@ -243,7 +243,7 @@ function Merchandise() {
               style={{
                 maxHeight: "100%",
                 maxWidth: "100%",
-              }}
+              }}   
             />
             <img
               src="https://res.cloudinary.com/dkdratnao/image/upload/v1705303858/Slide_16_9_-_2_efjkce.jpg"
