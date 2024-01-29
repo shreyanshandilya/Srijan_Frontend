@@ -936,11 +936,11 @@ const events = [
     Rules: [
       "Each team is required to prepare, cook, and plate at most two dishes in 90 minutes.",
       "Bonus marks will be awarded for the second dish.",
-      "Exact copying of scenes will be considered plagiarism, and the penalisation will be left to the judge's discretion.",
       "Participants can bring their choice of ingredients.",
-      "A common ingredient list will be provided to the registered teams one week before the event, which will comprise basic ingredients found in any household.",
-      "This will be an induction-stove-based cooking event. Each team will be provided with one induction stove and basic cutlery.Teams have to bring their costumes.",
-      "Please note that organisers of the event could amend the rules during the time of the event.",
+      "This will be an induction-stove-based cooking event. Each team will be provided with one induction stove and basic cutlery.      ",
+      "A maximum of 8 teams are allowed to participate",
+      "The common ingredients provided are: - Oil, Salt, Chilli powder, Turmeric powder, Pepper, Sugar, Ginger garlic paste, Garam masala.",
+      "Please note that organisers of the event could amend the rules during the time of the event.      ",
     ],
     RuleBookLink:
       "https://docs.google.com/document/d/1gbLqbXzGglPgtYtRePfDvnvkjk0M5nY_/edit",
