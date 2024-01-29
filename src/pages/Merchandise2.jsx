@@ -46,7 +46,9 @@ function Merchandise2() {
     e.preventDefault();
     if (loading) return;
     setLoading(true);
-    const amount = beta.quantity * (beta.type === "Hoodie" ? 1499 : 1399) * 100;
+    // const amount = beta.quantity * (beta.type === "Hoodie" ? 1499 : 1399) * 100;
+    console.log(beta);
+    const amount = 100;
     const response = await toast.promise(
       fetch("https://srijan-prod.onrender.com/api/order", {
         method: "POST",
@@ -97,14 +99,14 @@ function Merchandise2() {
             mode: "cors",
             body: JSON.stringify({
               ...body,
-              tshirtSize1: req.beta.tshirtSize1,
-              tshirtSize2: req.beta.tshirtSize2,
-              tshirtSize3: req.body.tshirtSize3,
-              tshirtSize4: req.body.tshirtSize4,
-              hoodieSize1: req.body.hoodieSize1,
-              hoodieSize2: req.body.hoodieSize2,
-              address: req.body.address,
-              type: req.body.type,
+              tshirtSize1:  beta.tshirtSize1,
+              tshirtSize2:  beta.tshirtSize2,
+              tshirtSize3:  beta.tshirtSize3,
+              tshirtSize4: beta.tshirtSize4,
+              hoodieSize1: beta.hoodieSize1,
+              hoodieSize2: beta.hoodieSize2,
+              address: beta.address,
+              type: beta.type,
             }),
             headers: {
               "Content-Type": "application/json",
@@ -251,7 +253,7 @@ function Merchandise2() {
               </div>
             ) : (
               <div>
-                {!open && (
+                {/* {!open && (
                   <motion.div
                     whileHover={{ y: -10 }}
                     className="inline-flex justify-center items-center py-3 px-5 text-xl font-medium text-center text-[#090d06] rounded-lg bg-[#dad3a5] hover:drop-shadow-md focus:ring-4 focus:ring-blue-300 cursor-pointer mb-4"
@@ -273,14 +275,14 @@ function Merchandise2() {
                   >
                     Buy Combo
                   </motion.div>
-                )}
+                )} */}
                 <br />
                 <motion.div
                   whileHover={{ y: -10 }}
                   className="inline-flex justify-center items-center py-3 px-5 text-xl font-medium text-center text-[#090d06] rounded-lg bg-[#dad3a5] hover:drop-shadow-md focus:ring-4 focus:ring-blue-300 cursor-pointer"
                   onClick={handleClick}
                 >
-                  {open ? "Close" : "Buy!"}
+                  {open ? "Close" : "Buy Offer!"}
                   <svg
                     className="w-3.5 h-3.5 ms-2 rtl:rotate-180"
                     aria-hidden="true"

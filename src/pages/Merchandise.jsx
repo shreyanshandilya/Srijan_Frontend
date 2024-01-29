@@ -11,7 +11,7 @@ import AlertDialog from "./Alert.jsx";
 import useRazorpay from "react-razorpay";
 import Srijanmage from "../assets/SrijanLogo.png";
 import FooterT from "../components/Footer.jsx";
-
+import { Link } from "react-router-dom";
 function Merchandise() {
   const navigate = useNavigate();
   const [Razorpay] = useRazorpay();
@@ -209,6 +209,15 @@ function Merchandise() {
             <br />
             <br />
           </h1>
+          <div className="text-white font-bold text-2xl">
+            <div className="my-5">Special Offer</div>
+            <div>
+              2 Hoodies at <span className="text-blue-400">1498</span>
+            </div>
+            <div>
+              4 T-Shirts at <span className="text-blue-400">1396</span>
+            </div>
+          </div>
 
           <div className="flex flex-col space-y-4 my-10 sm:flex-row sm:justify-center sm:space-y-0">
             {localStorage.getItem("token") == null ||
@@ -241,7 +250,7 @@ function Merchandise() {
             ) : (
               <div>
                 {!open && (
-                  <motion.div
+                  <motion.button
                     whileHover={{ y: -10 }}
                     className="inline-flex justify-center items-center py-3 px-5 text-xl font-medium text-center text-[#090d06] rounded-lg bg-[#dad3a5] hover:drop-shadow-md focus:ring-4 focus:ring-blue-300 cursor-pointer mb-4"
                     onClick={(e) => {
@@ -255,8 +264,8 @@ function Merchandise() {
                       });
                     }}
                   >
-                    Buy Combo
-                  </motion.div>
+                    <Link to="/merchant/offer">Buy Offer</Link>
+                  </motion.button>
                 )}
                 <br />
                 <motion.div
@@ -342,7 +351,6 @@ function Merchandise() {
               >
                 <option value="Hoodie">Hoodie</option>
                 <option value="Tshirt">Tshirt</option>
-            
               </select>
             </div>
             <div className="mb-4">
