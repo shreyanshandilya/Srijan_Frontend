@@ -46,7 +46,8 @@ function Merchandise2() {
     e.preventDefault();
     if (loading) return;
     setLoading(true);
-    const amount = beta.quantity * (beta.type === "Hoodie" ? 1498 : 1396) * 100;
+    // console.log(beta.quantity);
+    const amount = ((beta.type === "Hoodie" )? (1498) : (1396)) * 100;
     // console.log(beta);
     // const amount = 100;
     const response = await toast.promise(
