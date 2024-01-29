@@ -148,7 +148,7 @@ const events = [
     Fees: 0,
     Contactdetails: [
       { name: "Payal", phone: "8279711662" },
-      { name: "Vishanki", phone: "7505263768" }
+      { name: "Vishanki", phone: "7505263768" },
     ],
     Rules: [
       "Team Size- Individual(Solo Participation).",
@@ -163,7 +163,7 @@ const events = [
       "Organizers reserve the right to disqualify any entry that violates the rules or contains offensive content.",
       "Judges' decisions are final and binding.",
       "Organizers reserve the right to publish winning entries (with author's consent) for promotional purposes.",
-      "Genre: Any genre is allowed, including drama, comedy, thriller, animation, etc."
+      "Genre: Any genre is allowed, including drama, comedy, thriller, animation, etc.",
     ],
     RuleBookLink:
       "https://drive.google.com/file/d/1V7a5OnkD81IE4aylybcPClwPtyrmDHKi/view?usp=sharing",
@@ -569,8 +569,10 @@ const events = [
     Zone: "Music",
     Poster:
       "https://res.cloudinary.com/dcch8l9k2/image/upload/v1706262353/t7ijnqrd5rj7darsen8h.png",
-    miniDescription: "A group music event where participants of the band perform in synchrony with various instruments and vocal artists in multiple genres. ",
-    Description:'Our stage is set to be a canvas where diverse genres converge, creating musical brilliance. Dont miss the chance to be part of the magic as bands unite in synchrony, infusing the space with an unparalleled vibrancy. 🎶✨ Tune in and experience every note🎼 resonate with passion and every beat echo the heartbeat of artistic expression. 🎸 🌟 🎼 Mark your calendars for Avalanche, and let the fun begin 🔥',
+    miniDescription:
+      "A group music event where participants of the band perform in synchrony with various instruments and vocal artists in multiple genres. ",
+    Description:
+      "Our stage is set to be a canvas where diverse genres converge, creating musical brilliance. Dont miss the chance to be part of the magic as bands unite in synchrony, infusing the space with an unparalleled vibrancy. 🎶✨ Tune in and experience every note🎼 resonate with passion and every beat echo the heartbeat of artistic expression. 🎸 🌟 🎼 Mark your calendars for Avalanche, and let the fun begin 🔥",
     Venue: "OAT",
     Fees: 0,
     Contactdetails: [{ name: "Prakalp Thakur ", phone: "8368395519" }],
@@ -581,7 +583,7 @@ const events = [
       "It is advised that apart from the performing group, an extra person guides the audio engineer for the off-stage mix",
       "In the case of Instrument Players, a physical instrument has to be used to generate sound on the stage. The usage of virtual instruments to generate the sound is prohibited",
       "For Instruments, usage of virtual amps/plugins to modify the sound is allowed.",
-      "Maximum of 20 minutes + 5 minutes (for setup) + 5 minutes of extra time in case the band has a left-handed drummer. The schedule will be notified to Contingent Leaders. "
+      "Maximum of 20 minutes + 5 minutes (for setup) + 5 minutes of extra time in case the band has a left-handed drummer. The schedule will be notified to Contingent Leaders. ",
     ],
     RuleBookLink:
       "https://docs.google.com/document/d/1ev7fSuOAntUVG7fd26u9EmiM_KTtJa-3/edit?usp=sharing&ouid=106370131359421911922&rtpof=true&sd=true",
@@ -911,28 +913,47 @@ const events = [
 
   /********************** CULINARY EVENTS ************************* */
 
-  //   {
-  //     EventName: "Flavours of the Globe",
-  //     Zone: "Culinary",
-  //     Poster: "",
-  //     miniDescription: "Culinary Event",
-  //     Description: "A 90-minute culinary challenge for 2-4 member teams to create up to two dishes using induction stoves and a mix of chosen and provided ingredients, judged on taste, presentation, and creativity.",
-  //     Venue: "Offline",
-  //     Fees: 0,
-  //     Contactdetails: [],
-  //     Rules: ["Each team is required to prepare, cook, and plate at most two dishes in 90 minutes.",
-  //         "Bonus marks will be awarded for the second dish.",
-  //         "Exact copying of scenes will be considered plagiarism, and the penalisation will be left to the judge's discretion.",
-  //         "Participants can bring their choice of ingredients.",
-  //         "A common ingredient list will be provided to the registered teams one week before the event, which will comprise basic ingredients found in any household.",
-  //         "This will be an induction-stove-based cooking event. Each team will be provided with one induction stove and basic cutlery.Teams have to bring their costumes.",
-  //         "Please note that organisers of the event could amend the rules during the time of the event."
-  //     ],
-  //     RuleBookLink: "https://docs.google.com/document/d/1X0vAO2_Bw8jZiectgXd4M4Ab72Ylf5j9K5lzxtWrpeY/edit",
+  {
+    EventName: "Flavours of the Globe",
+    Zone: "Culinary",
+    Poster: "https://res.cloudinary.com/dcch8l9k2/image/upload/v1706446924/d1pvzowjn1rcfdzesovy.png",
+    miniDescription: "Culinary Event",
+    Description:
+      "A 90-minute culinary challenge for 2-4 member teams to create up to two dishes using induction stoves and a mix of chosen and provided ingredients, judged on taste, presentation, and creativity.",
+    Venue: "In Front of Library",
+    Fees: 0,
+    Contactdetails: [
+      {
+        name: "Harsh Mishra",
+        phone: "6386697779",
+      },
+      {
+        name: "Pelapudi Vashishta",
+        phone: "9391255584",
+      },
 
-  //     Minimummembers: 2,
-  //     Maximummembers: 4
-  // },
+    ],
+    Rules: [
+      "Each team is required to prepare, cook, and plate at most two dishes in 90 minutes.",
+      "Bonus marks will be awarded for the second dish.",
+      "Exact copying of scenes will be considered plagiarism, and the penalisation will be left to the judge's discretion.",
+      "Participants can bring their choice of ingredients.",
+      "A common ingredient list will be provided to the registered teams one week before the event, which will comprise basic ingredients found in any household.",
+      "This will be an induction-stove-based cooking event. Each team will be provided with one induction stove and basic cutlery.Teams have to bring their costumes.",
+      "Please note that organisers of the event could amend the rules during the time of the event.",
+    ],
+    RuleBookLink:
+      "https://docs.google.com/document/d/1X0vAO2_Bw8jZiectgXd4M4Ab72Ylf5j9K5lzxtWrpeY/edit",
+    Minimummembers: 2,
+    Maximummembers: 4,
+    teamName: true,
+    sponsor: false,
+    audio: false,
+    instrument: false,
+    accompanist: false,
+    r1p: false,
+    genre: false,
+  },
 
   /********************** LITERARY EVENTS ************************* */
 
