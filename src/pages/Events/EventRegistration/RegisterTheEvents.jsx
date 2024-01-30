@@ -300,6 +300,7 @@ export const RegisterTheEvents = () => {
         Instrument: resp[0].instrument,
         Genre: resp[0].genre,
         R1p:resp[0].r1p,
+        ageProof:resp[0].ageProof,
       });
     } catch (e) {
       toast.error("Something went wrong! ");
@@ -415,6 +416,7 @@ export const RegisterTheEvents = () => {
             ReferralID: data.get("ReferralID"),
             Genre: selectedOptions,
             Round1Preference: data.get("Round1Preference"),
+            ageProof: data.get("ageProof"),
           },
         ],
       };
@@ -729,6 +731,26 @@ export const RegisterTheEvents = () => {
                           placeholder="XYZ"
                           type="text"
                           name="audioLink"
+                          fullWidth
+                          required
+                          InputProps={{
+                            startAdornment: (
+                              <InputAdornment position="start">
+                                {/* <DesignServicesIcon fontSize="small" /> */}
+                              </InputAdornment>
+                            ),
+                          }}
+                        />
+                      </div>
+                    )}
+                    {teamStructure.ageProof && (
+                      <div className="my-5" style={responsiveColumn}>
+                        <InputDefault
+                          size="small"
+                          label="Age Proof Link"
+                          placeholder="Paste the drive link with view access* ( Aadhar Card , Pan Card , 10th Marsksheet ) "
+                          type="text"
+                          name="ageProof"
                           fullWidth
                           required
                           InputProps={{
