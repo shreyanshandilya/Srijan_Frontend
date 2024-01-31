@@ -40,10 +40,10 @@ function App() {
       path: "merchant",
       element: <Merchandise />,
     },
-    {
-      path: "merchant/offer",
-      element: <Merchandise2 />,
-    },
+    // {
+    //   path: "merchant/offer",
+    //   element: <Merchandise2 />,
+    // },
     {
       path: "event",
       element: <EventZone />,
