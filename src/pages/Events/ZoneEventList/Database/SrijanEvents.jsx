@@ -72,6 +72,7 @@ const events = [
     accompanist: false,
     r1p: false,
     genre: false,
+    ageProof: false,
   },
   {
     EventName: "Genre-O-MANIA",
@@ -134,6 +135,7 @@ const events = [
     accompanist: false,
     r1p: false,
     genre: false,
+    ageProof: false,
   },
   {
     EventName: "FRAME BY VERSE!",
@@ -177,6 +179,7 @@ const events = [
     accompanist: false,
     r1p: false,
     genre: false,
+    ageProof: false,
   },
   /********************** Quiz Events *************************8 */
   {
@@ -215,6 +218,7 @@ const events = [
     accompanist: false,
     r1p: false,
     genre: false,
+    ageProof: false,
   },
   {
     EventName: "The Usual Fundas",
@@ -252,6 +256,7 @@ const events = [
     accompanist: false,
     r1p: false,
     genre: false,
+    ageProof: false,
   },
   {
     EventName: "QUEER TRIVIA",
@@ -277,6 +282,7 @@ const events = [
     accompanist: false,
     r1p: false,
     genre: false,
+    ageProof: false,
   },
   {
     EventName: "GPT QUIZ",
@@ -313,6 +319,7 @@ const events = [
     accompanist: false,
     r1p: false,
     genre: false,
+    ageProof: false,
   },
   /*********************** Dance Events ******************************** */
   {
@@ -354,6 +361,7 @@ const events = [
     accompanist: false,
     r1p: false,
     genre: false,
+    ageProof: false,
   },
   {
     EventName: "STREET BEATS",
@@ -391,6 +399,7 @@ const events = [
     accompanist: false,
     r1p: false,
     genre: false,
+    ageProof: false,
   },
   {
     EventName: "REFLECTION",
@@ -426,6 +435,7 @@ const events = [
     accompanist: false,
     r1p: false,
     genre: false,
+    ageProof: false,
   },
   {
     EventName: "FOOTLOOSE",
@@ -462,6 +472,7 @@ const events = [
     accompanist: false,
     r1p: false,
     genre: false,
+    ageProof: false,
   },
   {
     EventName: "HUSTLE HERD",
@@ -497,6 +508,7 @@ const events = [
     accompanist: false,
     r1p: false,
     genre: false,
+    ageProof: false,
   },
   /*********************Music Events********************** */
   {
@@ -530,6 +542,7 @@ const events = [
     accompanist: false,
     r1p: false,
     genre: false,
+    ageProof: false,
   },
   {
     EventName: "AAROH",
@@ -563,6 +576,7 @@ const events = [
     accompanist: true,
     r1p: false,
     genre: false,
+    ageProof: false,
   },
   {
     EventName: "AVALANCHE",
@@ -597,6 +611,7 @@ const events = [
     accompanist: true,
     r1p: false,
     genre: false,
+    ageProof: false,
   },
   /******************** Comedy Events **************************** */
   {
@@ -639,6 +654,7 @@ const events = [
     accompanist: false,
     r1p: false,
     genre: false,
+    ageProof: false,
   },
   {
     EventName: "SAANP TANK",
@@ -676,6 +692,7 @@ const events = [
     accompanist: false,
     r1p: false,
     genre: false,
+    ageProof: false,
   },
   /******************* FINE ARTS ************************* */
   {
@@ -706,6 +723,7 @@ const events = [
     accompanist: false,
     r1p: false,
     genre: false,
+    ageProof: false,
   },
   {
     EventName: "Character Design",
@@ -741,6 +759,7 @@ const events = [
     accompanist: false,
     r1p: false,
     genre: false,
+    ageProof: false,
   },
   {
     EventName: "Face Painting",
@@ -777,6 +796,7 @@ const events = [
     accompanist: false,
     r1p: false,
     genre: false,
+    ageProof: false,
   },
 
   /********************* DRAMATICS EVENTS ***************************** */
@@ -817,6 +837,7 @@ const events = [
     accompanist: false,
     r1p: false,
     genre: false,
+    ageProof: false,
   },
   {
     EventName: "MonoAct",
@@ -857,66 +878,93 @@ const events = [
     accompanist: false,
     r1p: false,
     genre: false,
+    ageProof: false,
   },
 
   /********************** FASHION EVENTS **************************** */
 
-  //   {
-  //     EventName: "Paridhaan",
-  //     Zone: "Fashion",
-  //     Poster: "",
-  //     miniDescription: "Showcase of talent, creativity, and glamor.",
-  //     Description: "Paridhan welcomes everyone to unleash their creativity, where imagination takes the spotlight. Teams are tasked to express themselves within a chosen theme, divulged to organisers pre event, with inspiring unique costumes and performances. In the grand finale 'Beauty & Geeks', we witness the intriguing contrast between glamour and intellect.Participants let their imaginations run wild and bring the captivating theme to life. ",
-  //     Venue: "Offline",
-  //     Fees: 0,
-  //     Contactdetails: [],
-  //     Rules: ["There will be one preliminary round and a final round.",
-  //         "Five teams will be selected for the final round.",
-  //         "Each team must occupy the stage for a minimum of 5 minutes and a maximum of 9 minutes, with a grace time of 1 minute.",
-  //         "Teams should consist of a minimum of 3 members and a maximum of 10 members.", "Teams must submit three background tracks on a CD one hour before their performance.",
-  //         "The organizers are not responsible if the track does not work in the system.",
-  //         "Background videos are also welcomed.",
-  //         "A makeup team will be provided upon request.",
-  //         "Teams will be penalized for not adhering to the given time limit.",
-  //         "The decision of the judges will be final."
-  //     ],
-  //     RuleBookLink: "https://docs.google.com/document/d/1SEB2M2KTJK17QwRiTjiPxoEaMRIlz-5XNwIGzIZNfPw/edit",
+  {
+    EventName: "Paridhaan",
+    Zone: "Fashion",
+    Poster:
+      "https://res.cloudinary.com/dcch8l9k2/image/upload/v1706642206/r8hssec8ayor2ykcy8ap.png",
+    miniDescription: " Unleash Your Style",
+    Description:
+      "PARIDHAAN is back, bigger and bolder! Brace yourself for an extravagant showcase of talent, creativity, and glamour.",
+    Venue: "Gymkhana Ground",
+    Fees: 0,
+    Contactdetails: [{ name: "Prachi", phone: "8100151569" }],
+    Rules: [
+      "There will be one preliminary round and a final round.",
+      "Five teams will be selected for the final round.",
+      "Each team must occupy the stage for a minimum of 5 minutes and a maximum of 9 minutes, with a grace time of 1 minute.",
+      "Teams should consist of a minimum of 3 members and a maximum of 10 members.",
+      "Teams must submit three background tracks on a CD one hour before their performance. The background track should continue during their entire performance.          ",
+      "The organizers are not responsible if the track does not work in the system.",
+      "Background videos are also welcomed.",
+      "The team leaders must also submit a note on their concept to introduce them to the audience.",
+      "A makeup team will be provided upon request.",
+      "Teams will be penalized for not adhering to the given time limit.",
+      "The decision of the judges will be final.",
+    ],
+    RuleBookLink:
+      "https://docs.google.com/document/d/13yxyLqoAmgvIyb09uWSb0f31ZvJGlXW9om-tlbq8DrI/edit?usp=drivesdk",
+    Minimummembers: 3,
+    Maximummembers: 10,
+    teamName: true,
+    sponsor: false,
+    audio: false,
+    instrument: false,
+    accompanist: false,
+    r1p: false,
+    genre: false,
+    ageProof: false,
+  },
+  {
+    EventName: "Mr & Ms Srijan'24",
+    Zone: "Fashion",
+    Poster:
+      "https://res.cloudinary.com/dcch8l9k2/image/upload/v1706642996/ghwiys2ejs0q5dhrzf8b.png",
+    miniDescription: "Mr&Ms srijan'24 these are both separate events.",
+    Description:
+      "Step into the spotlight and let your charisma shine in our thrilling Personality Hunt Competition! Showcase your unique charm, wit, and talent as you engage in a series of exciting challenges that celebrate individuality and confidence.",
+    Venue: "Gymkhana Ground",
+    Fees: 0,
+    Contactdetails: [{ name: "Chakradhar", phone: "9346154957" }],
+    Rules: [
+      "Nationality: Indian Passport Holder",
+      "Relationship Status: Unmarried",
+      "Dress Code: Preferably Black cocktail dress (mid length) and stilettos (minimum of 4 inch) for the ramp walk..",
+      "The contestant must agree to abide by all the rules and regulations set by the Organizers.",
+      "The applicant should be between 18 - 25 years of age as of December 31, 2023.",
+      "The applicant will be required to produce their age proof.",
+      "Bring your own jewellery, make-up etc.",
+      "The organizers are not responsible for any delays of the pageant.",
+      "Exceeding the time limit will cause deduction of 5 marks per 10 seconds.",
+      "Any incorrect information will result in disqualification whether discovered prior to, during, or after the finals.",
+    ],
+    RuleBookLink:
+      "https://docs.google.com/document/d/1pjbccoVRm7VPhXg8oDErccx90xBNSoiH9b8tfcx8i9k/edit#heading=h.xasyumwqbfqf",
 
-  //     Minimummembers: 3,
-  //     Maximummembers: 10
-  // },
-  // {
-  //     EventName: "Campus Princess",
-  //     Zone: "Fashion",
-  //     Poster: "",
-  //     miniDescription: "Showcase of talent, creativity, and glamor.",
-  //     Description: "Step into the spotlight and let your charisma shine in our thrilling Personality Hunt Competition! Showcase your unique charm, wit, and talent as you engage in a series of exciting challenges that celebrate individuality and confidence.",
-  //     Venue: "Offline",
-  //     Fees: 0,
-  //     Contactdetails: [],
-  //     Rules: ["Nationality: Indian Passport Holder",
-  //         "Relationship Status: Unmarried",
-  //         "Dress Code: Preferably Black cocktail dress (mid length) and stilettos (minimum of 4 inch) for the ramp walk..",
-  //         "The contestant must agree to abide by all the rules and regulations set by the Organizers.",
-  //         "The applicant should be between 18 - 25 years of age as of December 31, 2023.",
-  //         "The applicant will be required to produce their age proof.",
-  //         "Bring your own jewellery, make-up etc.",
-  //         "The organizers are not responsible for any delays of the pageant.",
-  //         "Exceeding the time limit will cause deduction of 5 marks per 10 seconds.",
-  //         "Any incorrect information will result in disqualification whether discovered prior to, during, or after the finals."
-  //     ],
-  //     RuleBookLink: "https://docs.google.com/document/d/1t8Pg0eBsGvXkRrHX8922mcs5PZbQRm5ReR3vIFdq_ro/edit",
-
-  //     Minimummembers: 1,
-  //     Maximummembers: 1
-  // },
+    Minimummembers: 1,
+    Maximummembers: 1,
+    teamName: true,
+    sponsor: false,
+    audio: false,
+    instrument: false,
+    accompanist: false,
+    r1p: false,
+    genre: false,
+    ageProof: true,
+  },
 
   /********************** CULINARY EVENTS ************************* */
 
   {
     EventName: "Flavours of the Globe",
     Zone: "Culinary",
-    Poster: "https://res.cloudinary.com/dcch8l9k2/image/upload/v1706446924/d1pvzowjn1rcfdzesovy.png",
+    Poster:
+      "https://res.cloudinary.com/dcch8l9k2/image/upload/v1706446924/d1pvzowjn1rcfdzesovy.png",
     miniDescription: "Culinary Event",
     Description:
       "A 90-minute culinary challenge for 2-4 member teams to create up to two dishes using induction stoves and a mix of chosen and provided ingredients, judged on taste, presentation, and creativity.",
@@ -931,7 +979,6 @@ const events = [
         name: "Pelapudi Vashishta",
         phone: "9391255584",
       },
-
     ],
     Rules: [
       "Each team is required to prepare, cook, and plate at most two dishes in 90 minutes.",
@@ -953,6 +1000,7 @@ const events = [
     accompanist: false,
     r1p: false,
     genre: false,
+    ageProof: false,
   },
 
   /********************** LITERARY EVENTS ************************* */
@@ -990,6 +1038,7 @@ const events = [
     accompanist: false,
     r1p: false,
     genre: false,
+    ageProof: false,
   },
   {
     EventName: "The Quill Switch",
@@ -1024,6 +1073,7 @@ const events = [
     accompanist: false,
     r1p: false,
     genre: false,
+    ageProof: false,
   },
   {
     EventName: "Folktwist",
@@ -1059,6 +1109,7 @@ const events = [
     accompanist: false,
     r1p: true,
     genre: false,
+    ageProof: false,
   },
   {
     EventName: "Adaptation Showcase",
@@ -1094,6 +1145,7 @@ const events = [
     accompanist: false,
     r1p: false,
     genre: false,
+    ageProof: false,
   },
   {
     EventName: "Podfest",
@@ -1134,6 +1186,7 @@ const events = [
     accompanist: false,
     r1p: false,
     genre: false,
+    ageProof: false,
   },
   {
     EventName: "साहित्य मेला",
@@ -1147,14 +1200,14 @@ const events = [
     Fees: 0,
     Contactdetails: [
       { name: "Hrushikesh", phone: "7386361812" },
-      { name: "Gangan Sharma", phone: "8510892332" },
+      { name: "Gagan Sharma", phone: "8510892332" },
     ],
     Rules: [
       "Eligibility Criteria:-Should be a University Student above 17 years of age.",
       "Every team should submit their cellphones to the organisers of the event before the beginning of every round.",
     ],
     RuleBookLink:
-      "https://docs.google.com/document/d/1X4a9gORtvr-olsysWWjjWAVhk_ngMzRFIDkKWJCqLrg/edit",
+      "https://docs.google.com/document/d/10p0aXgimz5vbBEqhowuV54c4QEr7Rpv04SVJWiCiR9M/edit?usp=drivesdk",
 
     Minimummembers: 1,
     Maximummembers: 1,
@@ -1165,6 +1218,7 @@ const events = [
     accompanist: false,
     r1p: false,
     genre: false,
+    ageProof: false,
   },
 ];
 export default events;
