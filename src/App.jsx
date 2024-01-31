@@ -88,10 +88,10 @@ function App() {
       path: "about",
       element: <About />,
     },
-    {
-      path: "admin",
-      element: <PurchaseListPage />,
-    },
+    // {
+    //   path: "admin",
+    //   element: <PurchaseListPage />,
+    // },
     {
       path: "packselection",
       element: <PackSelectionPage />,
