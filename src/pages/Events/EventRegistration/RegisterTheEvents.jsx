@@ -509,9 +509,9 @@ export const RegisterTheEvents = () => {
       </>
     );
   }
-  // if(category == "cinematography") {
-  //   return <Soon />
-  // }
+  if(category == "culinary") {
+    return <Soon />
+  }
   return loading ? (
     <Loading />
   ) : (
