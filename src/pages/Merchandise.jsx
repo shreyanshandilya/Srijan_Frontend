@@ -278,7 +278,7 @@ function Merchandise() {
                         </p>
                       </motion.button>
                     </motion.a>
-                    {/* <motion.button
+                    <motion.button
                       whileHover={{ y: -10 }}
                       className="inline-flex justify-center items-center py-3 px-5 text-xl font-medium text-center text-[#090d06] rounded-lg bg-[#dad3a5] hover:drop-shadow-md focus:ring-4 focus:ring-blue-300 cursor-pointer mb-4"
                       onClick={(e) => {
@@ -293,11 +293,11 @@ function Merchandise() {
                       }}
                     >
                       <Link to="/merchant/offer">Buy Offer</Link>
-                    </motion.button> */}
+                    </motion.button>
                   </>
                 )}
                 <br />
-                {/* <motion.div
+                <motion.div
                   whileHover={{ y: -10 }}
                   className="inline-flex justify-center items-center py-3 px-5 text-xl font-medium text-center text-[#090d06] rounded-lg bg-[#dad3a5] hover:drop-shadow-md focus:ring-4 focus:ring-blue-300 cursor-pointer"
                   onClick={handleClick}
@@ -318,7 +318,7 @@ function Merchandise() {
                       d="M1 5h12m0 0L9 1m4 4L9 9"
                     />
                   </svg>
-                </motion.div> */}
+                </motion.div>
               </div>
             )}
           </div>
