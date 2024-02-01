@@ -47,7 +47,7 @@ function Merchandise2() {
     if (loading) return;
     setLoading(true);
     // console.log(beta.quantity);
-    const amount = ((beta.type === "Hoodie" )? (1498) : (1396)) * 100;
+    const amount = (beta.type === "Hoodie" ? 1498 : 1396) * 100;
     // console.log(beta);
     //const amount = 100;
     const response = await toast.promise(
@@ -100,9 +100,9 @@ function Merchandise2() {
             mode: "cors",
             body: JSON.stringify({
               ...body,
-              tshirtSize1:  beta.tshirtSize1,
-              tshirtSize2:  beta.tshirtSize2,
-              tshirtSize3:  beta.tshirtSize3,
+              tshirtSize1: beta.tshirtSize1,
+              tshirtSize2: beta.tshirtSize2,
+              tshirtSize3: beta.tshirtSize3,
               tshirtSize4: beta.tshirtSize4,
               hoodieSize1: beta.hoodieSize1,
               hoodieSize2: beta.hoodieSize2,
@@ -324,6 +324,10 @@ function Merchandise2() {
                   Do not reload or go back to the page when payment is in
                   progress.
                 </li>
+                <li>
+                  Note that you will get the merchandise after the fest if you
+                  order now.
+                </li>
               </ul>
               <br></br>
             </p>
@@ -371,8 +375,7 @@ function Merchandise2() {
                     htmlFor="tshirtSize1"
                     className="block mb-2 text-sm font-medium text-gray-900"
                   >
-                    Select your size{" "}
-                    {"Tshirt"}
+                    Select your size {"Tshirt"}
                   </label>
                   <select
                     id="tshirtSize1"
@@ -395,8 +398,7 @@ function Merchandise2() {
                     htmlFor="tshirtSize2"
                     className="block mb-2 text-sm font-medium text-gray-900"
                   >
-                    Select your size{" "}
-                    {"Tshirt"}
+                    Select your size {"Tshirt"}
                   </label>
                   <select
                     id="tshirtSize2"
@@ -419,8 +421,7 @@ function Merchandise2() {
                     htmlFor="tshirtSize3"
                     className="block mb-2 text-sm font-medium text-gray-900"
                   >
-                    Select your size{" "}
-                    {"Tshirt"}
+                    Select your size {"Tshirt"}
                   </label>
                   <select
                     id="tshirtSize3"
@@ -443,8 +444,7 @@ function Merchandise2() {
                     htmlFor="tshirtSize4"
                     className="block mb-2 text-sm font-medium text-gray-900"
                   >
-                    Select your size{" "}
-                    {"Tshirt"}
+                    Select your size {"Tshirt"}
                   </label>
                   <select
                     id="tshirtSize4"
@@ -471,8 +471,7 @@ function Merchandise2() {
                     htmlFor="hoodieSize1"
                     className="block mb-2 text-sm font-medium text-gray-900"
                   >
-                    Select your size{" "}
-                    { "Hoodie"}
+                    Select your size {"Hoodie"}
                   </label>
                   <select
                     id="hoodietSize1"
@@ -495,8 +494,7 @@ function Merchandise2() {
                     htmlFor="hoodieSize2"
                     className="block mb-2 text-sm font-medium text-gray-900"
                   >
-                    Select your size{" "}
-                    {"Hoodie"}
+                    Select your size {"Hoodie"}
                   </label>
                   <select
                     id="hoodieSize2"
