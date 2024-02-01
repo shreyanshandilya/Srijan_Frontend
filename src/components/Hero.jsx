@@ -41,7 +41,7 @@ function Hero() {
   //   target: container,
   //   offset: [""],
   // });
-  const scrollSponsor = () => { };
+  const scrollSponsor = () => {};
   const bgAnimate = {
     hidden: {
       clipPath: "polygon(21% 27%, 77% 26%, 77% 77%, 21% 77%)",
@@ -132,9 +132,10 @@ function Hero() {
                 variants={textAnimate2}
                 initial="hidden"
                 animate="show"
-                className="h-22 overflow-x-hidden text-base font-normal text-gray-300 lg:text-lg sm:px-16 lg:px-48"
+                className="h-22 font-bold overflow-x-hidden glow lg:text-4xl text-[#fbe10e] sm:px-16 lg:px-48"
               >
-                <Countdown />
+                {/* <Countdown /> */}
+                Srijan is On !!!
               </motion.p>
               <motion.span
                 variants={textAnimate2}
@@ -575,9 +576,9 @@ function Hero() {
             </div>
           </div> */}
 
-        <motion.div className="md:text-8xl text-4xl font-bold bg-[#090d06] flex justify-center items-center py-10 text-[#dad3a5]">
+        {/* <motion.div className="md:text-8xl text-4xl font-bold bg-[#090d06] flex justify-center items-center py-10 text-[#dad3a5]">
           Coming Soon!
-        </motion.div>
+        </motion.div> */}
         <Element name="sponsor">
           <div
             id="sponsor"
