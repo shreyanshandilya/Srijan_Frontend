@@ -220,9 +220,8 @@ function Merchandise() {
           </div>
 
           <div className="flex flex-col space-y-4 my-10 sm:flex-row sm:justify-center sm:space-y-0">
-            {/* localStorage.getItem("token") == null || */}
-            {/* localStorage.getItem("token") == undefined ?  */}
-            { false ? (
+            {localStorage.getItem("token") == null ||
+            localStorage.getItem("token") == undefined ? (
               <div>
                 <h1 className="mb-4 text-2xl font-semibold tracking-tight leading-none text-[#dad3a5] md:text-3xl lg:text-4xl ">
                   Kindly register or login to buy merchandise.
