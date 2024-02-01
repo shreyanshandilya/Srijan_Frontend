@@ -52,18 +52,18 @@ function App() {
       path: "profile",
       element: <Profile />,
     },
-    {
-      path: "/accomodation/:type",
-      element: <Accomodation />,
-    },
-    {
-      path: "packages/:msg",
-      element: <PackagePage />,
-    },
-    {
-      path: "packages/",
-      element: <PackagePage />,
-    },
+    // {
+    //   path: "/accomodation/:type",
+    //   element: <Accomodation />,
+    // },
+    // {
+    //   path: "packages/:msg",
+    //   element: <PackagePage />,
+    // },
+    // {
+    //   path: "packages/",
+    //   element: <PackagePage />,
+    // },
     {
       path: "/event/:category",
       element: <EventList />,
@@ -88,13 +88,13 @@ function App() {
       path: "about",
       element: <About />,
     },
+    // {
+    //   path: "admin",
+    //   element: <PurchaseListPage />,
+    // },
     {
-      path: "admin",
-      element: <PurchaseListPage />,
-    },
-    {
-      path: "packselection",
-      element: <PackSelectionPage />,
+      path: "accomodation",
+      element: <Accomodation />,
     },
     {
       path: "register",

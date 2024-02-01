@@ -250,22 +250,51 @@ function Merchandise() {
             ) : (
               <div>
                 {!open && (
-                  <motion.button
-                    whileHover={{ y: -10 }}
-                    className="inline-flex justify-center items-center py-3 px-5 text-xl font-medium text-center text-[#090d06] rounded-lg bg-[#dad3a5] hover:drop-shadow-md focus:ring-4 focus:ring-blue-300 cursor-pointer mb-4"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setOpen(!open);
-                      setData({
-                        tshirtSize: "S",
-                        address: "",
-                        quantity: 1,
-                        type: "Tshirt + Hoodie Combo",
-                      });
-                    }}
-                  >
-                    <Link to="/merchant/offer">Buy Offer</Link>
-                  </motion.button>
+                  <>
+                    <motion.a
+                      href="https://forms.gle/VUK1fWcdLyXqNyxa9"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex justify-center items-center my-4"
+                    >
+                      <motion.button
+                        whileHover={{ y: -5 }}
+                        type="button"
+                        className="  backdrop-blur-lg bg-[#dad3a5] hover:bg-transparent font-medium rounded-lg text-sm px-3 text-center inline-flex items-center  text-[#090d06] hover:text-[#c9bc57] me-2 my-2"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-card-list"
+                          viewBox="0 0 16 16"
+                        >
+                          <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z" />
+                          <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8m0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0M4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0" />
+                        </svg>
+                        <p className="p-3 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.1)]">
+                          Buy Via Google Form
+                        </p>
+                      </motion.button>
+                    </motion.a>
+                    <motion.button
+                      whileHover={{ y: -10 }}
+                      className="inline-flex justify-center items-center py-3 px-5 text-xl font-medium text-center text-[#090d06] rounded-lg bg-[#dad3a5] hover:drop-shadow-md focus:ring-4 focus:ring-blue-300 cursor-pointer mb-4"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setOpen(!open);
+                        setData({
+                          tshirtSize: "S",
+                          address: "",
+                          quantity: 1,
+                          type: "Tshirt + Hoodie Combo",
+                        });
+                      }}
+                    >
+                      <Link to="/merchant/offer">Buy Offer</Link>
+                    </motion.button>
+                  </>
                 )}
                 <br />
                 <motion.div
