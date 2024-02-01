@@ -246,6 +246,7 @@ function Merchandise() {
             </motion.button>
           </motion.a>
 
+          <div className="text-2xl font-sans font-bold">or</div>
           <div className="flex flex-col space-y-4 my-10 sm:flex-row sm:justify-center sm:space-y-0">
             {localStorage.getItem("token") == null ||
             localStorage.getItem("token") == undefined ? (
