@@ -132,7 +132,7 @@ function Hero() {
                 variants={textAnimate2}
                 initial="hidden"
                 animate="show"
-                className="h-22 font-bold overflow-x-hidden glow lg:text-4xl text-[#fbe10e] sm:px-16 lg:px-48"
+                className="h-22 font-bold overflow-x-hidden glow lg:text-4xl text-4xl text-[#fbe10e] sm:px-16 lg:px-48"
               >
                 {/* <Countdown /> */}
                 Srijan is On !!!
