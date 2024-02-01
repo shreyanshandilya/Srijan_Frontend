@@ -343,6 +343,10 @@ function Merchandise() {
                   Do not reload or go back to the page when payment is in
                   progress.
                 </li>
+                <li>
+                  Note that you will get the merchandise after the fest if you
+                  order now.
+                </li>
               </ul>
               <br></br>
             </p>
