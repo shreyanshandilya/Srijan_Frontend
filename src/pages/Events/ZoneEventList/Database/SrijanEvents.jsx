@@ -1,5 +1,6 @@
 const events = [
   {
+    /****************     Cinematography ********************** */
     EventName: "SRIJANTHROUGH MYLENS",
     Zone: "CINEMATOGRAPHY",
     Poster:
@@ -31,6 +32,7 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: true,
   },
   {
@@ -68,17 +70,19 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
+    ageProof: false,
   },
   {
-    EventName: "GENRE-O-MANIA",
+    EventName: "Genre-O-MANIA",
     Zone: "CINEMATOGRAPHY",
     Poster:
       "https://res.cloudinary.com/ds6u0jd3x/image/upload/v1705858466/GOM_aqcrcu.png",
     miniDescription:
-      "Love watching Reels?? Then you must have seen some of the extraordinary edits which makes us all in awe. So now is your time to showcase your video-making skills!!\nLightsCameraISM invite you to showcase your cinematic prowess in our thrilling event, GENRE-O-MANIA.",
+      "Love watching Reels?? Then you must have seen some of the extraordinary edits which makes us all in awe. So now is your time to showcase your video-making skills!!\nLightsCameraISM invite you to showcase your cinematic prowess in our thrilling event, genre-O-MANIA.",
     Description:
-      "If you love watching reels, you must have seen some of the extraordinary edits, which make us all in awe. So now is your time to showcase your video-making skills in Genre-O-Mania, a cinematic challenge where participants create a short video incorporating various genres of videography like Hyperlapse Magic, Paper Cutout Delight, Double Trouble Drama, or Smooth Transitions Elegance. Unleash your creativity and seize the chance to win big in this exciting cinematic showcase.",
+      "If you love watching reels, you must have seen some of the extraordinary edits, which make us all in awe. So now is your time to showcase your video-making skills in genre-O-Mania, a cinematic challenge where participants create a short video incorporating various genres of videography like Hyperlapse Magic, Paper Cutout Delight, Double Trouble Drama, or Smooth Transitions Elegance. Unleash your creativity and seize the chance to win big in this exciting cinematic showcase.",
     Venue: "Online",
     Fees: 0,
     Contactdetails: [],
@@ -101,6 +105,7 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: true,
   },
   {
@@ -128,8 +133,55 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
+    ageProof: false,
   },
+  {
+    EventName: "FRAME BY VERSE!",
+    Zone: "CINEMATOGRAPHY",
+    Poster:
+      "https://res.cloudinary.com/dcch8l9k2/image/upload/v1706079981/jknnkgbtjb8t2peevska.png",
+    miniDescription:
+      "“So, are you ready to grab your pen, unleash your inner bard, and join the adventure? Lights,camera, scribbles!",
+    Description:
+      "Imagine a room buzzing with the electricity of ideas. Laptops glow like miniature suns, casting warm patches of light on focused faces. Fingers fly across keyboards, weaving tales of heroes and villains, worlds of wonder and heartbreak. It's the Srijan’s Scriptwriting Competition ”Frame By Verse”, a platform for budding storytellers to unleash their creativity and showcase their vision in the form of compelling scripts.",
+    Venue: "Online",
+    Fees: 0,
+    Contactdetails: [
+      { name: "Payal", phone: "8279711662" },
+      { name: "Vishanki", phone: "7505263768" },
+    ],
+    Rules: [
+      "Team Size- Individual(Solo Participation).",
+      "Theme for the will be released 2-3 days prior to the competition.",
+      "Genre: Any genre is allowed, including drama, comedy, thriller, animation, etc.",
+      "Scripts must be original and unpublished.",
+      "Scripts should be written in English with Font: Times New Roman, Size: 12.",
+      "Word Limit allowed is 1500-2500 words.",
+      "Scripts should be submitted in PDF format only.",
+      "Submission date is 5th february 2024.",
+      "Plagiarism will lead to immediate disqualification.",
+      "Organizers reserve the right to disqualify any entry that violates the rules or contains offensive content.",
+      "Judges' decisions are final and binding.",
+      "Organizers reserve the right to publish winning entries (with author's consent) for promotional purposes.",
+      "Genre: Any genre is allowed, including drama, comedy, thriller, animation, etc.",
+    ],
+    RuleBookLink:
+      "https://drive.google.com/file/d/1V7a5OnkD81IE4aylybcPClwPtyrmDHKi/view?usp=sharing",
+
+    Minimummembers: 1,
+    Maximummembers: 1,
+    teamName: false,
+    sponsor: false,
+    audio: false,
+    instrument: false,
+    accompanist: false,
+    r1p: false,
+    genre: false,
+    ageProof: false,
+  },
+  /********************** Quiz Events *************************8 */
   {
     EventName: "Let's Get Quizzical!",
     Zone: "Quiz",
@@ -164,7 +216,9 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
+    ageProof: false,
   },
   {
     EventName: "The Usual Fundas",
@@ -200,7 +254,9 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
+    ageProof: false,
   },
   {
     EventName: "QUEER TRIVIA",
@@ -224,7 +280,9 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
+    ageProof: false,
   },
   {
     EventName: "GPT QUIZ",
@@ -259,8 +317,11 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
+    ageProof: false,
   },
+  /*********************** Dance Events ******************************** */
   {
     EventName: "STREET RELOADED",
     Zone: "Dance",
@@ -298,7 +359,9 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
+    ageProof: false,
   },
   {
     EventName: "STREET BEATS",
@@ -334,7 +397,9 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
+    ageProof: false,
   },
   {
     EventName: "REFLECTION",
@@ -368,7 +433,9 @@ const events = [
     audio: true,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
+    ageProof: false,
   },
   {
     EventName: "FOOTLOOSE",
@@ -403,7 +470,9 @@ const events = [
     audio: true,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
+    ageProof: false,
   },
   {
     EventName: "HUSTLE HERD",
@@ -437,8 +506,11 @@ const events = [
     audio: true,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
+    ageProof: false,
   },
+  /*********************Music Events********************** */
   {
     EventName: "HARMONY",
     Zone: "Music",
@@ -468,7 +540,9 @@ const events = [
     audio: false,
     instrument: true,
     accompanist: false,
+    r1p: false,
     genre: false,
+    ageProof: false,
   },
   {
     EventName: "AAROH",
@@ -500,8 +574,46 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: true,
+    r1p: false,
     genre: false,
+    ageProof: false,
   },
+  {
+    EventName: "AVALANCHE",
+    Zone: "Music",
+    Poster:
+      "https://res.cloudinary.com/dcch8l9k2/image/upload/v1706262353/t7ijnqrd5rj7darsen8h.png",
+    miniDescription:
+      "A group music event where participants of the band perform in synchrony with various instruments and vocal artists in multiple genres. ",
+    Description:
+      "Our stage is set to be a canvas where diverse genres converge, creating musical brilliance. Dont miss the chance to be part of the magic as bands unite in synchrony, infusing the space with an unparalleled vibrancy. 🎶✨ Tune in and experience every note🎼 resonate with passion and every beat echo the heartbeat of artistic expression. 🎸 🌟 🎼 Mark your calendars for Avalanche, and let the fun begin 🔥",
+    Venue: "OAT",
+    Fees: 0,
+    Contactdetails: [{ name: "Prakalp Thakur ", phone: "8368395519" }],
+    Rules: [
+      "There is no constraint on the genre of songs. Suitable judges will be called to judge Eastern as well as Western Music. However, variety will be appreciated.",
+      "The number of people on the stage should at least be three and no more than 15 during the performance. ",
+      "At least two instruments are always required on stage. All participants are advised to keep a 10ft distance from the stage before and after their performance slot",
+      "It is advised that apart from the performing group, an extra person guides the audio engineer for the off-stage mix",
+      "In the case of Instrument Players, a physical instrument has to be used to generate sound on the stage. The usage of virtual instruments to generate the sound is prohibited",
+      "For Instruments, usage of virtual amps/plugins to modify the sound is allowed.",
+      "Maximum of 20 minutes + 5 minutes (for setup) + 5 minutes of extra time in case the band has a left-handed drummer. The schedule will be notified to Contingent Leaders. ",
+    ],
+    RuleBookLink:
+      "https://docs.google.com/document/d/1ev7fSuOAntUVG7fd26u9EmiM_KTtJa-3/edit?usp=sharing&ouid=106370131359421911922&rtpof=true&sd=true",
+
+    Minimummembers: 3,
+    Maximummembers: 8,
+    teamName: false,
+    sponsor: false,
+    audio: false,
+    instrument: false,
+    accompanist: true,
+    r1p: false,
+    genre: false,
+    ageProof: false,
+  },
+  /******************** Comedy Events **************************** */
   {
     EventName: "YOU LAUGH YOU LOSE",
     Zone: "Comedy",
@@ -540,7 +652,9 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
+    ageProof: false,
   },
   {
     EventName: "SAANP TANK",
@@ -567,7 +681,7 @@ const events = [
       "Teams are advised to refrain from excessive vulgarity. Profanity is allowed but not encouraged.",
     ],
     RuleBookLink:
-      "https://docs.google.com/document/d/1TqojGPVUxTuY7kvG-F3JhNfom7gk1SEY3hKGQiIMfuE/edit",
+      "https://docs.google.com/document/d/1czY8QAzQHWMX1HyDHnlejlOkEil7USdf_tkpSv0mNeE/edit",
 
     Minimummembers: 1,
     Maximummembers: 4,
@@ -576,8 +690,11 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
+    ageProof: false,
   },
+  /******************* FINE ARTS ************************* */
   {
     EventName: "Live Art",
     Zone: "FineArts",
@@ -604,7 +721,9 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
+    ageProof: false,
   },
   {
     EventName: "Character Design",
@@ -638,7 +757,9 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
+    ageProof: false,
   },
   {
     EventName: "Face Painting",
@@ -673,134 +794,431 @@ const events = [
     audio: false,
     instrument: false,
     accompanist: false,
+    r1p: false,
     genre: false,
+    ageProof: false,
   },
 
-  // {
-  //   EventName: "Things the Brits Ruined(debate)",
-  //   Zone: " Literary",
-  //   Poster: "",
-  //   miniDescription: "Debate Duels",
-  //   Description:
-  //     "Where Words Collide! Gather your debate partner and join the intellectual fray. In teams of two, go head-to-head on intriguing motions. Dive into rounds of riveting discussions, armed with your perspective and passion. Prepare, present, and conquer without revealing your strategy. Score points, ascend the ranks, and aim for the thrilling knockout rounds. Be Ready to turn your words into victories.",
-  //   Venue: "",
-  //   Fees: 0,
-  //   Contactdetails: [],
-  //   Rules: [],
-  //   RuleBookLink:
-  //     "https://docs.google.com/document/d/1f-BIk04mjMWzuo1-aLUHQ7t4bWE1UhaFQSK8GVy2X_U/edit?usp=drive_link",
+  /********************* DRAMATICS EVENTS ***************************** */
 
-  //   Minimummembers: 2,
-  //   Maximummembers: 2,
-  // teamName: true,
-  //   sponsor: false,
-  //   audio: false,
-  //   instrument: false,
-  //   accompanist: false,
-  //   genre: false
-  // },
-  // {
-  //   EventName: "The Quill Switch",
-  //   Zone: " Literary",
-  //   Poster: "",
-  //   miniDescription: " Literary",
-  //   Description:
-  //     'Switch to a literary journey in pairs for "The Quill Switch." Form teams, pick a theme, and weave a cohesive story together. But here\'s the twist - every 15 mins, pass your creation to your teammate. With a minimum of 4 and a maximum of 8 exchanges, communicate solely through the written word. Silence is golden; let your story speak. Ready to switch pens and perspectives?',
-  //   Venue: "",
-  //   Fees: 0,
-  //   Contactdetails: [],
-  //   Rules: [],
-  //   RuleBookLink:
-  //     "https://docs.google.com/document/d/1tX0kYFnn7-vS-h-W3ULsxMrxnBwPXZTPCclOJJDiojU/edit",
+  {
+    EventName: "Goonj",
+    Zone: "dramatics",
+    Poster:
+      "https://res.cloudinary.com/ds6u0jd3x/image/upload/v1706002368/street_play_vj8yky.png",
+    miniDescription:
+      "Nukkad Natak (Give the details of only two members of your team (team leaders)) ",
+    Description:
+      "Experience the street come alive with our Street Play Showcase better known as Nukkad Natak at SRIJAN'24! All the talented performers engage the crowd with compelling narratives, social messages and raw emotions which then leads them to be the winner of prizes worth a whopping 25K.",
+    Venue: "In front of Library",
+    Fees: 0,
+    Contactdetail: [
+      { name: "Rachit Shrivastav", phone: "7376413120" },
+      { name: "Siddela Keerthi", phone: "7095397497" },
+    ],
+    Rules: [
+      "The act can be in Hindi or English or both.",
+      "The time extended due to the applause interruption will not be added to the playtime.",
+      "Exact copying of scenes will be considered plagiarism, and the penalisation will be left to the judge's discretion.",
+      "Modification and adaptation of other plays(with proper credits) are allowed.",
+      "Use of fire and water are not allowed",
+      "Teams have to bring their costumes.",
+      "Obscenity is left to the judge's discretion.",
+      "Penalty: Deduction of 5 marks per minute after the 30th minute. After the 35th minute, the team will be asked to leave the stage with a penalty of 30 marks.",
+    ],
+    RuleBookLink:
+      "https://docs.google.com/document/d/1UQw5yqJ-8MFUQoA7W1_zvOqG-W0ZSmmIHHfytT4BfTE/edit",
+    Minimummembers: 2,
+    Maximummembers: 2,
+    teamName: true,
+    sponsor: false,
+    audio: false,
+    instrument: false,
+    accompanist: false,
+    r1p: false,
+    genre: false,
+    ageProof: false,
+  },
+  {
+    EventName: "MonoAct",
+    Zone: "Dramatics",
+    Poster:
+      "https://res.cloudinary.com/ds6u0jd3x/image/upload/v1706002373/Monoact_u5edkt.png",
+    miniDescription:
+      "Viewers get to witness solo performers captivate audiences with their emotional depth, humour and versatility.",
+    Description:
+      "Step into the spotlight with our Monoact marvels event! Viewers get to witness solo performers captivate audiences with their emotional depth, humour and versatility. From intense monologues to comedic brilliance, from having your ownassistants to bringing your own props, one can immerse themselves in a showcase of individual talent and storytelling prowess that's bound to leave a lasting impression.",
+    Venue: "GJLT",
+    Fees: 0,
+    Contactdetails: [
+      { name: "Rachit Shrivastav", phone: "7376413120" },
+      { name: "Siddela Keerthi", phone: "7095397497" },
+    ],
+    Rules: [
+      "Members per team: 1 performer + 2 assistants (if required)",
+      "Props provided: 2 Tables, 2 Chairs, Music system, 2 Feet mic, 2 Hanging mic, Stage lights",
+      "This is an individual event and will take place in 1 round.",
+      "The act can be in Hindi or English or both.",
+      "Props and costumes are to be arranged by the participants themselves and will carry no extra weightage.",
+      "Obscenity is left to the judge's discretion.",
+      "Use of fire, smoke and water are not allowed.",
+      "The participants are expected to bring their music on a pendrive.",
+      "Live music is not allowed. All required instruments must be brought by the participants.",
+      "Time Constraints: Performance time: 5 minutes + Stage set-up time: 2 minutes.5 marks will be deducted after every additional minute. After the 8th minute, the participant will be asked to clear the stage with an overall penalty of 15 marks.",
+    ],
+    RuleBookLink:
+      "https://docs.google.com/document/d/1wTFKOAvcq6qtezXe1dsDD7C7ela7BEJ0ZVwRfGRxASQ/edit",
 
-  //   Minimummembers: 2,
-  //   Maximummembers: 2,
-  //   teamName: true,
-  //   sponsor: false,
-  //   audio: false,
-  //   instrument: false,
-  //   accompanist: false,
-  //   genre: false
-  // },
-  // {
-  //   EventName: "Folktwist",
-  //   Zone: " Literary",
-  //   Poster: "",
-  //   miniDescription: " Literary",
-  //   Description:
-  //     "An event where your imagination takes the director's chair! Ever felt a movie's ending could've been better? Here, we'll rewrite those endings together. This engaging event lets you reimagine and reshape cinematic narratives in a fun, interactive session. Come together with fellow movie enthusiasts and let your creative juices flow, ultimately leading to cinematic reinvention at 'Folk Twist.' Let's twist those tales together!",
-  //   Venue: "",
-  //   Fees: 0,
-  //   Contactdetails: [],
-  //   Rules: [
-  //     "There will be 3 rounds.",
-  //     "Humor and props may be used to support or illustrate the speech.",
-  //     "Only the English language is allowed.",
-  //     "The judges’ decision will be final and binding.",
-  //     "The organizers have the right to disqualify any team at any time due to misbehavior on/off stage.",
-  //     "One can participate individually or in a team (maximum 3 members).",
-  //   ],
-  //   RuleBookLink:
-  //     "https://docs.google.com/document/d/1AuzYGZF2SP8O3EmRIijrYUVzm6IdXTw8THLLsSz81YE/edit?usp=drive_link",
+    Minimummembers: 1,
+    Maximummembers: 3,
+    teamName: true,
+    sponsor: false,
+    audio: false,
+    instrument: false,
+    accompanist: false,
+    r1p: false,
+    genre: false,
+    ageProof: false,
+  },
 
-  //   Minimummembers: 1,
-  //   Maximummembers: 3,
-  // },
-  // {
-  //   EventName: "Adaptation Showcase",
-  //   Zone: " Literary",
-  //   Poster: "",
-  //   miniDescription: " Literary",
-  //   Description:
-  //     "The Adaptation Showcase, organised by BOOKCLUB IIT ISM for Srijan'24, invites participants to explore their favourite adaptations in media! Be it a book turned into a movie or a manga turned into an anime, come to the stage and talk about how good or horribly wrong the adaptation was—crack jokes, praise creative decisions and explore the limitations and strengths of various forms of media. The Adaptation Showcase will judge your speaking skills, creative thought and argumentative skills all while making you laugh! We look forward to your participation.",
-  //   Venue: "",
-  //   Fees: 0,
-  //   Contactdetails: [],
-  //   Rules: [
-  //     "Each participant will have a maximum of 10 minutes to present their chosen adaptation",
-  //     "Overtime may result in point deductions or disqualification.",
-  //     "During panel discussions and participant showcases, audience members can participate in Q&A sessions.",
-  //     "Entries will be judged based on creativity,depth of analysis, presentation skills, and overall engagement with the audience.",
-  //     "Google Form will be circulated in whichyou have to write about your basic adaptation type before main showcase.",
-  //     "Date and time will be announced till then Have fun!",
-  //   ],
-  //   RuleBookLink:
-  //     "https://drive.google.com/file/d/1PICZf1ztZvjyX1d0L2fIEDNCNf7D8P1s/view?usp=drive_link",
+  /********************** FASHION EVENTS **************************** */
 
-  //   Minimummembers: 1,
-  //   Maximummembers: 1,
-  // },
-  // {
-  //   EventName: "Podfest",
-  //   Zone: " Literary",
-  //   Poster: "",
-  //   miniDescription: " Literary",
-  //   Description:
-  //     "Experience the thrill of showcasing your quick thinking and captivating podcasting skills at PodFest, SRIJAN 2024, presented by LiveTalksISM. This event provides a platform for overcoming impromptu challenges, conquering your fears, and shining on stage, offering an enthralling experience for the audience. Join the Cultural Caravan and let your words become the wind, carrying the essence of diverse cultures to captivate the audience. Seize the opportunity to win fantastic prizes and make your mark in this exciting competition",
-  //   Venue: "GJLT(Golden Jubilee Lecture Theatre)",
-  //   Fees: 0,
-  //   Contactdetails: [
-  //     { name: "Harshita Mahbubani", phone: "9460682441" },
-  //     { name: "Prajesh Anand", phone: "8503086164" },
-  //   ],
-  //   Rules: [
-  //     "Props that will be provided: 2 tables, 5 chairs, 3 Microphones.",
-  //     "No kind of absurd language or misbehaviour in the name of the character will be tolerated.",
-  //     "Any team indulging in any such discrepancy will be disqualified straight away.",
-  //     "The podcasts should be conducted in either English or Hindi, or both.",
-  //     "You can come with a team of 2 to 4 members or come solo, and we will try to team you up with other solo participants.",
-  //     "For the first round, teams will be called up randomly. Participants have the flexibility to select any theme that interests them, ranging from comedy and history to crime stories or any other topic, for their role-playing or discussion activities. They can play characters to talk related to the theme or just discuss themselves related to the genre. They will be given 5 minutes to discuss among themselves, after which each pair will conduct a podcast for 5 minutes each.",
-  //     "For fun elements, each audience member will have the opportunity to ask three questions to the guests during the podcast.",
-  //     "After the first round, the top 5 teams will advance to the second round.",
-  //     "In the second round, you will be given themes/genres by us, and you have to act on them as a story-telling podcast. Teams will have 10 minutes to prepare for the given theme and 7 minutes to conduct the podcast.",
-  //     "Penalty: 10 marks will be deducted for every additional minute. After the 12th minute, the participants will be asked to clear the stage with an overall penalty of 40 marks. The participants will be able to view a timer countdown for 5 minutes at all times. In addition, they will be given a warning when 1 minute is left on the clock.",
-  //     "All the pairs would be judged on the following parameters by considering the cumulative performance of the guest and host.",
-  //   ],
-  //   RuleBookLink:
-  //     "https://docs.google.com/document/d/1kdBTZdk7DvYNWZhc7uedtMYovMGnPrIila-ijiEksIE/edit?usp=drive_link",
+  {
+    EventName: "Paridhaan",
+    Zone: "Fashion",
+    Poster:
+      "https://res.cloudinary.com/dcch8l9k2/image/upload/v1706642206/r8hssec8ayor2ykcy8ap.png",
+    miniDescription: " Unleash Your Style",
+    Description:
+      "PARIDHAAN is back, bigger and bolder! Brace yourself for an extravagant showcase of talent, creativity, and glamour.",
+    Venue: "Gymkhana Ground",
+    Fees: 0,
+    Contactdetails: [{ name: "Prachi", phone: "8100151569" }],
+    Rules: [
+      "There will be one preliminary round and a final round.",
+      "Five teams will be selected for the final round.",
+      "Each team must occupy the stage for a minimum of 5 minutes and a maximum of 9 minutes, with a grace time of 1 minute.",
+      "Teams should consist of a minimum of 3 members and a maximum of 10 members.",
+      "Teams must submit three background tracks on a CD one hour before their performance. The background track should continue during their entire performance.          ",
+      "The organizers are not responsible if the track does not work in the system.",
+      "Background videos are also welcomed.",
+      "The team leaders must also submit a note on their concept to introduce them to the audience.",
+      "A makeup team will be provided upon request.",
+      "Teams will be penalized for not adhering to the given time limit.",
+      "The decision of the judges will be final.",
+    ],
+    RuleBookLink:
+      "https://docs.google.com/document/d/13yxyLqoAmgvIyb09uWSb0f31ZvJGlXW9om-tlbq8DrI/edit?usp=drivesdk",
+    Minimummembers: 3,
+    Maximummembers: 10,
+    teamName: true,
+    sponsor: false,
+    audio: false,
+    instrument: false,
+    accompanist: false,
+    r1p: false,
+    genre: false,
+    ageProof: false,
+  },
+  {
+    EventName: "Mr & Ms Srijan'24",
+    Zone: "Fashion",
+    Poster:
+      "https://res.cloudinary.com/dcch8l9k2/image/upload/v1706642996/ghwiys2ejs0q5dhrzf8b.png",
+    miniDescription: "Mr&Ms srijan'24 these are both separate events.",
+    Description:
+      "Step into the spotlight and let your charisma shine in our thrilling Personality Hunt Competition! Showcase your unique charm, wit, and talent as you engage in a series of exciting challenges that celebrate individuality and confidence.",
+    Venue: "Gymkhana Ground",
+    Fees: 0,
+    Contactdetails: [{ name: "Chakradhar", phone: "9346154957" }],
+    Rules: [
+      "Nationality: Indian Passport Holder",
+      "Relationship Status: Unmarried",
+      "Dress Code: Preferably Black cocktail dress (mid length) and stilettos (minimum of 4 inch) for the ramp walk..",
+      "The contestant must agree to abide by all the rules and regulations set by the Organizers.",
+      "The applicant should be between 18 - 25 years of age as of December 31, 2023.",
+      "The applicant will be required to produce their age proof.",
+      "Bring your own jewellery, make-up etc.",
+      "The organizers are not responsible for any delays of the pageant.",
+      "Exceeding the time limit will cause deduction of 5 marks per 10 seconds.",
+      "Any incorrect information will result in disqualification whether discovered prior to, during, or after the finals.",
+    ],
+    RuleBookLink:
+      "https://docs.google.com/document/d/1pjbccoVRm7VPhXg8oDErccx90xBNSoiH9b8tfcx8i9k/edit#heading=h.xasyumwqbfqf",
 
-  //   Minimummembers: 2,
-  //   Maximummembers: 4,
-  // },
+    Minimummembers: 1,
+    Maximummembers: 1,
+    teamName: true,
+    sponsor: false,
+    audio: false,
+    instrument: false,
+    accompanist: false,
+    r1p: false,
+    genre: false,
+    ageProof: true,
+  },
+
+  /********************** CULINARY EVENTS ************************* */
+
+  {
+    EventName: "Flavours of the Globe",
+    Zone: "Culinary",
+    Poster:
+      "https://res.cloudinary.com/dcch8l9k2/image/upload/v1706446924/d1pvzowjn1rcfdzesovy.png",
+    miniDescription: "Culinary Event",
+    Description:
+      "A 90-minute culinary challenge for 2-4 member teams to create up to two dishes using induction stoves and a mix of chosen and provided ingredients, judged on taste, presentation, and creativity.",
+    Venue: "In Front of Library",
+    Fees: 0,
+    Contactdetails: [
+      {
+        name: "Harsh Mishra",
+        phone: "6386697779",
+      },
+      {
+        name: "Pelapudi Vashishta",
+        phone: "9391255584",
+      },
+    ],
+    Rules: [
+      "Each team is required to prepare, cook, and plate at most two dishes in 90 minutes.",
+      "Bonus marks will be awarded for the second dish.",
+      "Participants can bring their choice of ingredients.",
+      "This will be an induction-stove-based cooking event. Each team will be provided with one induction stove and basic cutlery.      ",
+      "A maximum of 8 teams are allowed to participate",
+      "The common ingredients provided are: - Oil, Salt, Chilli powder, Turmeric powder, Pepper, Sugar, Ginger garlic paste, Garam masala.",
+      "Please note that organisers of the event could amend the rules during the time of the event.      ",
+    ],
+    RuleBookLink:
+      "https://docs.google.com/document/d/1gbLqbXzGglPgtYtRePfDvnvkjk0M5nY_/edit",
+    Minimummembers: 2,
+    Maximummembers: 4,
+    teamName: true,
+    sponsor: false,
+    audio: false,
+    instrument: false,
+    accompanist: false,
+    r1p: false,
+    genre: false,
+    ageProof: false,
+  },
+
+  /********************** LITERARY EVENTS ************************* */
+
+  {
+    EventName: "Things the Brits Ruined(debate)",
+    Zone: "Literary",
+    Poster:
+      "https://res.cloudinary.com/dcch8l9k2/image/upload/v1706027172/pexoroxk4t3nbrrpwwol.png",
+    miniDescription: "Debate Duels",
+    Description:
+      "Where Words Collide! Gather your debate partner and join the intellectual fray. In teams of two, go head-to-head on intriguing motions. Dive into rounds of riveting discussions, armed with your perspective and passion. Prepare, present, and conquer without revealing your strategy. Score points, ascend the ranks, and aim for the thrilling knockout rounds. Be Ready to turn your words into victories.",
+    Venue: "NLHC",
+    Fees: 0,
+    Contactdetails: [
+      { name: "Rupika Sinha", phone: "7488514338" },
+      { name: "Nandini", phone: "8850515611" },
+    ],
+    Rules: [
+      "Participants will take part in teams of 2.",
+      "Each debate will contain four teams",
+      "Two teams will be speaking in favor of the motion. Two teams will be speaking against the motion.",
+      "In order to win, each team must rebut their opponent's case as well as be better than the team that is on the same side of the motion as them.",
+      "Each team will get 10 mins of prep time before each round.",
+    ],
+    RuleBookLink:
+      "https://docs.google.com/document/d/1f-BIk04mjMWzuo1-aLUHQ7t4bWE1UhaFQSK8GVy2X_U/edit?usp=drive_link",
+
+    Minimummembers: 2,
+    Maximummembers: 2,
+    teamName: true,
+    sponsor: false,
+    audio: false,
+    instrument: false,
+    accompanist: false,
+    r1p: false,
+    genre: false,
+    ageProof: false,
+  },
+  {
+    EventName: "The Quill Switch",
+    Zone: "Literary",
+    Poster:
+      "https://res.cloudinary.com/dcch8l9k2/image/upload/v1706027768/xb8kjqfcrm65o24g2uft.png",
+    miniDescription: " Literary",
+    Description:
+      'Switch to a literary journey in pairs for "The Quill Switch." Form teams, pick a theme, and weave a cohesive story together. But here\'s the twist - every 15 mins, pass your creation to your teammate. With a minimum of 4 and a maximum of 8 exchanges, communicate solely through the written word. Silence is golden; let your story speak. Ready to switch pens and perspectives?',
+    Venue: "",
+    Fees: 0,
+    Contactdetails: [
+      { name: "Parth Kumar", phone: "7091720594" },
+      { name: "Rupika Sinha", phone: "7488514338" },
+    ],
+    Rules: [
+      "1.Participants need to form teams of 2.",
+      "2.Each team will have to choose from a list of themes and come up with a coherent story around it.",
+      "3.Participants need to pass on their work to their teammate every 15 mins.",
+      "4.Every team needs to complete a minimum of 4 exchanges and a maximum of 8. ",
+      "5.Teams must refrain from discussing their work throughout the event, relying solely on written exchanges for communication.",
+    ],
+    RuleBookLink:
+      "https://docs.google.com/document/d/1tX0kYFnn7-vS-h-W3ULsxMrxnBwPXZTPCclOJJDiojU/edit",
+
+    Minimummembers: 2,
+    Maximummembers: 2,
+    teamName: true,
+    sponsor: false,
+    audio: false,
+    instrument: false,
+    accompanist: false,
+    r1p: false,
+    genre: false,
+    ageProof: false,
+  },
+  {
+    EventName: "Folktwist",
+    Zone: "Literary",
+    Poster:
+      "https://res.cloudinary.com/dcch8l9k2/image/upload/v1706078643/qdw70qazpr0qu2dwcml7.png",
+    miniDescription: "Literary",
+    Description:
+      "An event where your imagination takes the director's chair! Ever felt a movie's ending could've been better? Here, we'll rewrite those endings together. This engaging event lets you reimagine and reshape cinematic narratives in a fun, interactive session. Come together with fellow movie enthusiasts and let your creative juices flow, ultimately leading to cinematic reinvention at 'Folk Twist.' Let's twist those tales together!",
+    Venue: "GJLT",
+    Fees: 0,
+    Contactdetails: [
+      { name: "Shambhavi", phone: "7678450912" },
+      { name: "Suneet", phone: "9322988762" },
+    ],
+    Rules: [
+      "There will be 3 rounds.",
+      "Humor and props may be used to support or illustrate the speech.",
+      "Only the English language is allowed.",
+      "The judges’ decision will be final and binding.",
+      "The organizers have the right to disqualify any team at any time due to misbehavior on/off stage.",
+      "One can participate individually or in a team (maximum 3 members).",
+    ],
+    RuleBookLink:
+      "https://docs.google.com/document/d/1jGKvxbSYopHNmxNVFTV5X4RdEGvite3TtwvU1Vo9k3o/edit",
+
+    Minimummembers: 1,
+    Maximummembers: 3,
+    teamName: true,
+    sponsor: false,
+    audio: false,
+    instrument: false,
+    accompanist: false,
+    r1p: true,
+    genre: false,
+    ageProof: false,
+  },
+  {
+    EventName: "Adaptation Showcase",
+    Zone: "Literary",
+    Poster:
+      "https://res.cloudinary.com/dvlxqrbjm/image/upload/v1706026698/z3tmcoaobuf03p13q68e.png",
+    miniDescription: " Literary",
+    Description:
+      "The Adaptation Showcase, organised by BOOKCLUB IIT ISM for Srijan'24, invites participants to explore their favourite adaptations in media! Be it a book turned into a movie or a manga turned into an anime, come to the stage and talk about how good or horribly wrong the adaptation was—crack jokes, praise creative decisions and explore the limitations and strengths of various forms of media. The Adaptation Showcase will judge your speaking skills, creative thought and argumentative skills all while making you laugh! We look forward to your participation.",
+    Venue: "NLHC",
+    Fees: 0,
+    Contactdetails: [
+      { name: "Harshit", phone: "8619845748" },
+      { name: "Owaish", phone: "8112263839" },
+    ],
+    Rules: [
+      "Each participant will have a maximum of 10 minutes to present their chosen adaptation",
+      "Overtime may result in point deductions or disqualification.",
+      "During panel discussions and participant showcases, audience members can participate in Q&A sessions.",
+      "Entries will be judged based on creativity,depth of analysis, presentation skills, and overall engagement with the audience.",
+      "Google Form will be circulated in whichyou have to write about your basic adaptation type before main showcase.",
+      "Date and time will be announced till then Have fun!",
+    ],
+    RuleBookLink:
+      "https://drive.google.com/file/d/1PICZf1ztZvjyX1d0L2fIEDNCNf7D8P1s/view?usp=drive_link",
+
+    Minimummembers: 2,
+    Maximummembers: 2,
+    teamName: false,
+    sponsor: false,
+    audio: false,
+    instrument: false,
+    accompanist: false,
+    r1p: false,
+    genre: false,
+    ageProof: false,
+  },
+  {
+    EventName: "Podfest",
+    Zone: "Literary",
+    Poster:
+      "https://res.cloudinary.com/dcch8l9k2/image/upload/v1706028880/nwgyrp4z0vwaqdartlwl.png",
+    miniDescription: " Literary",
+    Description:
+      "Experience the thrill of showcasing your quick thinking and captivating podcasting skills at PodFest, SRIJAN 2024, presented by LiveTalksISM. This event provides a platform for overcoming impromptu challenges, conquering your fears, and shining on stage, offering an enthralling experience for the audience. Join the Cultural Caravan and let your words become the wind, carrying the essence of diverse cultures to captivate the audience. Seize the opportunity to win fantastic prizes and make your mark in this exciting competition",
+    Venue: "GJLT(Golden Jubilee Lecture Theatre)",
+    Fees: 0,
+    Contactdetails: [
+      { name: "Harshita Mahbubani", phone: "9460682441" },
+      { name: "Prajesh Anand", phone: "8503086164" },
+    ],
+    Rules: [
+      "Props that will be provided: 2 tables, 5 chairs, 3 Microphones.",
+      "No kind of absurd language or misbehaviour in the name of the character will be tolerated.",
+      "Any team indulging in any such discrepancy will be disqualified straight away.",
+      "The podcasts should be conducted in either English or Hindi, or both.",
+      "You can come with a team of 2 to 4 members or come solo, and we will try to team you up with other solo participants.",
+      "For the first round, teams will be called up randomly. Participants have the flexibility to select any theme that interests them, ranging from comedy and history to crime stories or any other topic, for their role-playing or discussion activities. They can play characters to talk related to the theme or just discuss themselves related to the genre. They will be given 5 minutes to discuss among themselves, after which each pair will conduct a podcast for 5 minutes each.",
+      "For fun elements, each audience member will have the opportunity to ask three questions to the guests during the podcast.",
+      "After the first round, the top 5 teams will advance to the second round.",
+      "In the second round, you will be given themes/genres by us, and you have to act on them as a story-telling podcast. Teams will have 10 minutes to prepare for the given theme and 7 minutes to conduct the podcast.",
+      "Penalty: 10 marks will be deducted for every additional minute. After the 12th minute, the participants will be asked to clear the stage with an overall penalty of 40 marks. The participants will be able to view a timer countdown for 5 minutes at all times. In addition, they will be given a warning when 1 minute is left on the clock.",
+      "All the pairs would be judged on the following parameters by considering the cumulative performance of the guest and host.",
+    ],
+    RuleBookLink:
+      "https://docs.google.com/document/d/1kdBTZdk7DvYNWZhc7uedtMYovMGnPrIila-ijiEksIE/edit?usp=drive_link",
+
+    Minimummembers: 2,
+    Maximummembers: 4,
+    teamName: true,
+    sponsor: false,
+    audio: false,
+    instrument: false,
+    accompanist: false,
+    r1p: false,
+    genre: false,
+    ageProof: false,
+  },
+  {
+    EventName: "साहित्य मेला",
+    Zone: "Literary",
+    Poster:
+      "https://res.cloudinary.com/dcch8l9k2/image/upload/v1706028100/dyw6vkn26llejcamhuek.png",
+    miniDescription: " Literary",
+    Description:
+      "एक नई कश्मकश, अपने साहित्य के प्रति प्रेम और ज्ञान को आज़माइए और उलझनों का लुत्फ उठा इए। इस प्रतियोगिता में तीन चरण हैं : चरण 1 : श्रुती लेखन - इस चरण मे आयोजक कुछ शब्द पढकर सुनाएंगे वो प्रतियोगियों को बिना देखे लिखना होगा । चरण 2 : अफरा -तफ़री -इस चरण मे प्रतियोगियों को समूह मे बांट दिया जाएगा, फिर बजर राउंड मे पहेलियाँ पुछी जा एगी । ज्यादातर सही जवाब जल्द देने वाले समूह अगले पडाव मे शामिल होंगे। चरण 3: कटघरा -ए-काव्य - इस चरण मे प्रतियोगियों को आयोजकों द्वारा दिये गए किसी विषय/परिस्थिति पर गद्य लिखकर पढनी भी होगी ।",
+    Venue: "",
+    Fees: 0,
+    Contactdetails: [
+      { name: "Hrushikesh", phone: "7386361812" },
+      { name: "Gagan Sharma", phone: "8510892332" },
+    ],
+    Rules: [
+      "Eligibility Criteria:-Should be a University Student above 17 years of age.",
+      "Every team should submit their cellphones to the organisers of the event before the beginning of every round.",
+    ],
+    RuleBookLink:
+      "https://docs.google.com/document/d/10p0aXgimz5vbBEqhowuV54c4QEr7Rpv04SVJWiCiR9M/edit?usp=drivesdk",
+
+    Minimummembers: 1,
+    Maximummembers: 1,
+    teamName: false,
+    sponsor: false,
+    audio: false,
+    instrument: false,
+    accompanist: false,
+    r1p: false,
+    genre: false,
+    ageProof: false,
+  },
 ];
 export default events;

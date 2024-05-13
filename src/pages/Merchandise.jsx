@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { motion, useAnimate } from "framer-motion";
 import Nav from "../components/Navbar/navbar";
 import { useNavigate } from "react-router-dom";
-// import axios from "axios";
 import "react-toastify/dist/ReactToastify.css";
 import Footer from "../components/Footer.jsx";
 import { Carousel } from "flowbite-react";
@@ -12,15 +11,15 @@ import AlertDialog from "./Alert.jsx";
 import useRazorpay from "react-razorpay";
 import Srijanmage from "../assets/SrijanLogo.png";
 import FooterT from "../components/Footer.jsx";
-
+import { Link } from "react-router-dom";
 function Merchandise() {
   const navigate = useNavigate();
   const [Razorpay] = useRazorpay();
-
+  const [loading, setLoading] = useState(false);
+  const [token, setToken] = useState("");
+  const [outside, setOutside] = useState(false);
   const [beta, setData] = useState({
- 
     tshirtSize: "S",
-    hoodieSize: "S",
     address: "",
     quantity: 0,
     type: "Hoodie",
@@ -28,10 +27,6 @@ function Merchandise() {
   useEffect(() => {
     scroll.scrollToTop({ duration: 1000 });
   }, []);
-  const [loading, setLoading] = useState(false);
-
-  const [token, setToken] = useState("");
-  const [outside, setOutside] = useState(false);
   const handleChangeInput = (event) => {
     setData({ ...beta, [event.target.id]: event.target.value });
   };
@@ -47,8 +42,7 @@ function Merchandise() {
     e.preventDefault();
     if (loading) return;
     setLoading(true);
-    const amount = beta.quantity * (beta.type === "Hoodie" ? 799 : beta.type === "Tshirt + Hoodie Combo" ? 1099 :399) * 100;
-    // const amount = 100;
+    const amount = beta.quantity * (beta.type === "Hoodie" ? 799 : 399) * 100;
     const response = await toast.promise(
       fetch("https://srijan-prod.onrender.com/api/order", {
         method: "POST",
@@ -76,16 +70,13 @@ function Merchandise() {
       return;
     }
     const order = await response.json();
-
-    // console.log(order);
-
     var options = {
       key: "rzp_live_hCIa25zbx0icRX",
       amount,
       currency,
       name: "Srijan",
       description: "Merchandise Payment",
-      image: Srijanmage, 
+      image: Srijanmage,
       order_id: order.id,
       handler: async function (response) {
         const body = {
@@ -93,13 +84,12 @@ function Merchandise() {
         };
 
         var validateRes = await fetch(
-          "http://srijan-prod.onrender.com/api/order/validate",
+          "https://srijan-prod.onrender.com/api/order/validate",
           {
             method: "POST",
             mode: "cors",
             body: JSON.stringify({
               ...body,
-              hoodieSize: beta.hoodieSize,
               tshirtSize: beta.tshirtSize,
               quantity: beta.quantity,
               addresss: beta.address,
@@ -125,7 +115,6 @@ function Merchandise() {
       toast.success("Order Placed", {
         position: toast.POSITION.BOTTOM_RIGHT,
       });
-      // console.log("Payment success event:", response);
     });
 
     rzp1.on("payment.failed", function (response) {
@@ -133,18 +122,10 @@ function Merchandise() {
         position: toast.POSITION.BOTTOM_RIGHT,
       });
     });
-    // console.log(rzp1);
 
     rzp1.open();
     setLoading(false);
     e.preventDefault();
-    setData({
-      tshirtSize: "S",
-      hoodieSize: "S",
-      address: "",
-      quantity: 0,
-      type: "Hoodie",
-    });
   };
 
   return (
@@ -172,7 +153,6 @@ function Merchandise() {
                 maxWidth: "100%",
               }}
             />
-
             <img
               src="https://res.cloudinary.com/dkdratnao/image/upload/v1705303857/Slide_16_9_-_3_ijz7nd.jpg"
               alt="..."
@@ -190,7 +170,7 @@ function Merchandise() {
               }}
             />
             <img
-              src="https://res.cloudinary.com/ds6u0jd3x/image/upload/v1705477984/HoMan/subemislrjntbvxc3omj.jpg"
+              src="https://res.cloudinary.com/dqwln5hhs/image/upload/v1706258511/WhatsApp_Image_2024-01-25_at_09.18.15_1_nfgk1u.jpg"
               alt="..."
               style={{
                 maxHeight: "100%",
@@ -198,17 +178,13 @@ function Merchandise() {
               }}
             />
             <img
-              src="https://res.cloudinary.com/ds6u0jd3x/image/upload/v1705477951/HoMan/mbtrx9mzmp1xppy1jnkp.jpg"
+              src="https://res.cloudinary.com/dqwln5hhs/image/upload/v1706258526/WhatsApp_Image_2024-01-25_at_09.18.15_hoaxwu.jpg"
               alt="..."
               style={{
                 maxHeight: "100%",
                 maxWidth: "100%",
               }}
             />
-            {/* <img
-            src="https://res.cloudinary.com/dol5ar3iv/image/upload/v1702967509/fotofreaks_iitism_1675676767_3032118946798465237_5457821429_qldckp.jpg"
-            alt="..."
-          /> */}
           </Carousel>
         </div>
       </center>
@@ -232,15 +208,45 @@ function Merchandise() {
             INR 799 / Hoodie
             <br />
             <br />
-            <div class="text-indigo-500">Special Republic Day Offer</div>
-            <div class="text-white">
-              (T-Shirt + Hoodie) for INR <s class="text-orange-600">1199</s>{" "}
-              <span class="text-green-500">1099</span> Only
-            </div>
-            <br />
-            Get Rs 100 off on the combo!
           </h1>
+          <div className="text-white font-bold text-2xl">
+            <div className="my-5">Special Offer</div>
+            <div>
+              2 Hoodies at <span className="text-blue-400">1498</span>
+            </div>
+            <div>
+              4 T-Shirts at <span className="text-blue-400">1396</span>
+            </div>
+          </div>
+          <motion.a
+            href="https://forms.gle/VUK1fWcdLyXqNyxa9"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex justify-center items-center my-4"
+          >
+            <motion.button
+              whileHover={{ y: -5 }}
+              type="button"
+              className="  backdrop-blur-lg bg-[#dad3a5] hover:bg-transparent font-medium rounded-lg text-sm px-3 text-center inline-flex items-center  text-[#090d06] hover:text-[#c9bc57] me-2 my-2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-card-list"
+                viewBox="0 0 16 16"
+              >
+                <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z" />
+                <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8m0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0M4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0" />
+              </svg>
+              <p className="p-3 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.1)]">
+                Buy Via Google Form
+              </p>
+            </motion.button>
+          </motion.a>
 
+          <div className="text-2xl font-sans font-bold">or</div>
           <div className="flex flex-col space-y-4 my-10 sm:flex-row sm:justify-center sm:space-y-0">
             {localStorage.getItem("token") == null ||
             localStorage.getItem("token") == undefined ? (
@@ -272,23 +278,24 @@ function Merchandise() {
             ) : (
               <div>
                 {!open && (
-                  <motion.div
-                    whileHover={{ y: -10 }}
-                    className="inline-flex justify-center items-center py-3 px-5 text-xl font-medium text-center text-[#090d06] rounded-lg bg-[#dad3a5] hover:drop-shadow-md focus:ring-4 focus:ring-blue-300 cursor-pointer mb-4"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setOpen(!open);
-                      setData({
-                        tshirtSize: "S",
-                        hoodieSize: "S",
-                        address: "",
-                        quantity: 1,
-                        type: "Tshirt + Hoodie Combo",
-                      });
-                    }}
-                  >
-                    Buy Combo
-                  </motion.div>
+                  <>
+                    <motion.button
+                      whileHover={{ y: -10 }}
+                      className="inline-flex justify-center items-center py-3 px-5 text-xl font-medium text-center text-[#090d06] rounded-lg bg-[#dad3a5] hover:drop-shadow-md focus:ring-4 focus:ring-blue-300 cursor-pointer mb-4"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setOpen(!open);
+                        setData({
+                          tshirtSize: "S",
+                          address: "",
+                          quantity: 1,
+                          type: "Tshirt + Hoodie Combo",
+                        });
+                      }}
+                    >
+                      <Link to="/merchant/offer">Buy Offer</Link>
+                    </motion.button>
+                  </>
                 )}
                 <br />
                 <motion.div
@@ -337,6 +344,10 @@ function Merchandise() {
                   Do not reload or go back to the page when payment is in
                   progress.
                 </li>
+                <li>
+                  Note that you will get the merchandise after the fest if you
+                  order now.
+                </li>
               </ul>
               <br></br>
             </p>
@@ -374,9 +385,6 @@ function Merchandise() {
               >
                 <option value="Hoodie">Hoodie</option>
                 <option value="Tshirt">Tshirt</option>
-                <option value="Tshirt + Hoodie Combo">
-                  Tshirt + Hoodie Combo
-                </option>
               </select>
             </div>
             <div className="mb-4">
@@ -403,7 +411,8 @@ function Merchandise() {
                 htmlFor="tshirtSize"
                 className="block mb-2 text-sm font-medium text-gray-900"
               >
-                Select your size (Tshirt)
+                Select your size{" "}
+                {beta.type == "Tshirt + Hoodie Combo" && "(Tshirt)"}
               </label>
               <select
                 id="tshirtSize"
@@ -421,31 +430,6 @@ function Merchandise() {
                 <option value="XXL">XXL</option>
               </select>
             </div>
-            {beta.type == "Tshirt + Hoodie Combo" && (
-              <div className="mb-4">
-                <label
-                  htmlFor="hoodieSize"
-                  className="block mb-2 text-sm font-medium text-gray-900"
-                >
-                  Select your size (Hoodie)
-                </label>
-                <select
-                  id="hoodieSize"
-                  onChange={handleChangeInput}
-                  value={beta.hoodieSize}
-                  placeholder="Eg. S, M"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#0d0c06] focus:border-[#0d0c06] block w-full p-2.5"
-                  required
-                >
-                  <option value="XS">XS</option>
-                  <option value="S">S</option>
-                  <option value="M">M</option>
-                  <option value="L">L</option>
-                  <option value="XL">XL</option>
-                  <option value="XXL">XXL</option>
-                </select>
-              </div>
-            )}
 
             <div className="max-w-lg mx-auto mb-2">
               <strong>
@@ -453,7 +437,7 @@ function Merchandise() {
                   Payable Amount: INR{" "}
                   {beta.type === "Hoodie"
                     ? 799 * beta.quantity
-                    : beta.type === "Tshirt + Hoodie Combo" ? 1099*beta.quantity : 399*beta.quantity}
+                    : 399 * beta.quantity}
                 </div>
               </strong>
               (For delivery outside IIT ISM, optimal delivery charges will be
