@@ -22,9 +22,9 @@ function Profile() {
 
   const [details, setDetails] = useState([]);
   const [accomodations, setAccomodations] = useState([]);
-  const url = "https://srijan-prod.onrender.com/api/getUser";
+  const url = "https://srijan24-backend-mu.vercel.app/api/getUser";
   const urlEvents =
-    "https://srijan-prod.onrender.com/api/profile/eventsRegistered";
+    "https://srijan24-backend-mu.vercel.app/api/profile/eventsRegistered";
     
   const fetchUser = useCallback(async () => {
     const response = await toast
@@ -54,7 +54,7 @@ function Profile() {
       .catch((err) => console.log(err));
   }, []);
   const urlAccomodation =
-    "https://srijan-prod.onrender.com/api/profile/userAccomodation";
+    "https://srijan24-backend-mu.vercel.app/api/profile/userAccomodation";
   const fetchAccomodation = useCallback(async () => {
     const response = await fetch(urlAccomodation, {
           method: "GET",

@@ -70,7 +70,7 @@ function Merchandise() {
 
     // console.log(amount);
     const response = await toast.promise(
-      fetch("https://srijan-prod.onrender.com/api/order", {
+      fetch("https://srijan24-backend-mu.vercel.app/api/order", {
         method: "POST",
         mode: "cors",
         body: JSON.stringify({
@@ -113,7 +113,7 @@ function Merchandise() {
         };
 
         var validateRes = await fetch(
-          "https://srijan-prod.onrender.com/api/user/package",
+          "https://srijan24-backend-mu.vercel.app/api/user/package",
           {
             method: "POST",
             mode: "cors",

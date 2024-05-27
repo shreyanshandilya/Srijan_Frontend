@@ -85,7 +85,7 @@ function Merchandise() {
   //       };
   //       console.log(data);
   //       const response = await toast.promise(
-  //         fetch("https://srijan-prod.onrender.com/api/purchase", {
+  //         fetch("https://srijan24-backend-mu.vercel.app/api/purchase", {
   //           method: "POST",
   //           mode: "cors",
   //           headers: {
@@ -131,11 +131,11 @@ function Merchandise() {
     if (loading) return;
 
     setLoading(true);
-    const amount = beta.quantity * (beta.type === "Hoodie" ? 799 : 399) * 100;
+    const amount = beta.quantity * (beta.type === "Hoodie" ? 799 : beta.type === "Tshirt + Hoodie Combo" ? 1099 : 399) * 100;
 
     // console.log(amount);
     const response = await toast.promise(
-      fetch("https://srijan-prod.onrender.com/api/order", {
+      fetch("https://srijan24-backend-mu.vercel.app/api/order", {
         method: "POST",
         mode: "cors",
         body: JSON.stringify({
@@ -178,7 +178,7 @@ function Merchandise() {
         };
 
         var validateRes = await fetch(
-          "https://srijan-prod.onrender.com/api/order/validate",
+          "https://srijan24-backend-mu.vercel.app/api/order/validate",
           {
             method: "POST",
             mode: "cors",
@@ -666,7 +666,7 @@ Get Rs 100 off on the combo!
               <strong>
                 <div className="mt-4">
                   Payable Amount: INR{" "}
-                  {beta.type === "Hoodie" ? (799 * beta.quantity) : (399 * beta.quantity)}
+                  {beta.type === "Hoodie" ? (799 * beta.quantity) : beta.type === "Tshirt + Hoodie Combo" ? (1099*beta.quantity) : (399 * beta.quantity)}
                 </div>
               </strong>
               (For delivery outside IIT ISM, optimal delivery charges will be taken at the time of delivery)

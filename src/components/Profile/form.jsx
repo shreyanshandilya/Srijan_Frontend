@@ -97,7 +97,7 @@ const Dashboard = () => {
     try {
       const response = await toast.promise(
         fetch(
-          `https://srijan-prod.onrender.com/api/getOrder/${phoneNumber}/${Email}`,
+          `https://srijan24-backend-mu.vercel.app/api/getOrder/${phoneNumber}/${Email}`,
           {
             method: "POST",
           }),

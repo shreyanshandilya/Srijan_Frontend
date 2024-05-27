@@ -30,7 +30,7 @@ export const RegisterForEvents = (props) => {
       return;
     }
     const response = await toast.promise(
-      fetch("https://srijan-prod.onrender.com/api/signup", {
+      fetch("https://srijan24-backend-mu.vercel.app/api/signup", {
         method: "post",
         headers: {
           "Content-Type": "application/json", // Set the content type to JSON
@@ -67,7 +67,7 @@ export const RegisterForEvents = (props) => {
     };
     try {
       const response = await toast.promise(
-        fetch("https://srijan-prod.onrender.com/api/signup/verify", {
+        fetch("https://srijan24-backend-mu.vercel.app/api/signup/verify", {
           method: "post",
           headers: {
             "Content-Type": "application/json", // Set the content type to JSON
