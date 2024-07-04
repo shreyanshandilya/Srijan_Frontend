@@ -9,6 +9,7 @@ import EventZone from "./pages/Events/Zone/EventsZone";
 import EventList from "./pages/Events/ZoneEventList/ZoneEventList";
 import PurchaseListPage from "./pages/PurcahseListPage";
 import EventDetails from "./pages/Events/EventDescription/EventDetails";
+
 import {
   createHashRouter,
   RouterProvider,
