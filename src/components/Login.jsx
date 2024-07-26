@@ -49,7 +49,8 @@ function Login() {
       setTimeout(() => {
         navigate("/");
       }, 1000);
-    } else {
+    } else 
+    {
       toast.error("Invalid credential", {
         position: toast.POSITION.BOTTOM_RIGHT,
       });
