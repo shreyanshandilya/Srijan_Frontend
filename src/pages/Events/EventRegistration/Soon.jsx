@@ -11,7 +11,7 @@ const Soon=()=> {
     <>
       <Navbar/>
       <body className="flex items-center justify-center min-h-[400px]  max-w-screen" style={{ backgroundImage: `url(${image})`}}>
-        <h1 className="text-4xl text-[#dad3a5] floating  font-bold">Registrations will be live soon ....</h1>
+        <h1 className="text-4xl text-[#dad3a5] floating  font-bold">Registrations are closed</h1>
       </body>
       <FooterT />
     </>

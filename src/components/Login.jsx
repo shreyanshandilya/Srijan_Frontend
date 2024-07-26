@@ -40,8 +40,10 @@ function Login() {
     
     const abcd = await response.json();
     // console.log(abcd);
-   if(abcd.Token!=undefined){ localStorage["token"] = abcd.Token;
-    localStorage["email"] = data.Email;}
+    if (abcd.Token != undefined) {
+      localStorage["token"] = abcd.Token;
+      localStorage["email"] = data.Email;
+    }
     if (abcd.Token) {
       toast.success("Login Successful !!!", {
         position: toast.POSITION.BOTTOM_RIGHT,
@@ -113,6 +115,15 @@ function Login() {
               required
             />
           </div>
+          <p className="text-sm mb-2">
+            Don't have an account?{""}
+            <motion.div
+              className="italic inline underline cursor-pointer"
+              onClick={() => navigate("/register")}
+            >
+              Sign Up
+            </motion.div>
+          </p>
 
           <motion.button
             whileHover={{ scale: 1.1 }}
@@ -123,7 +134,7 @@ function Login() {
           </motion.button>
         </motion.form>
         <ToastContainer
-        position="bottom-right"
+          position="bottom-right"
           autoClose={5000}
           hideProgressBar={false}
           newestOnTop={false}
