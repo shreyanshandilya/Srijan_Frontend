@@ -9,7 +9,7 @@ function PurchaseList() {
     async function getListIems() {
       let response;
       try {
-        response = await fetch("https://srijan-prod.onrender.com/api/allOrders");
+        response = await fetch("https://srijan24-backend-mu.vercel.app/api/allOrders");
         if (!response.ok) {
           throw new Error("error occured in fetching");
         }
@@ -25,7 +25,7 @@ function PurchaseList() {
     let response;
     try {
       response = await fetch(
-        `https://srijan-prod.onrender.com/api/changeApproved/${orderId}`,
+        `https://srijan24-backend-mu.vercel.app/api/changeApproved/${orderId}`,
         {
           method: "PUT",
         }
@@ -47,7 +47,7 @@ function PurchaseList() {
     }
     try {
       response = await fetch(
-        `https://srijan-prod.onrender.com/api/getOrder/get/${e.target.value}`,
+        `https://srijan24-backend-mu.vercel.app/api/getOrder/get/${e.target.value}`,
         {
           method: "POST",
         }

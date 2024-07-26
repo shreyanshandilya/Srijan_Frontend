@@ -29,7 +29,77 @@ function Merchandise() {
   }, []);
   const handleChangeInput = (event) => {
     setData({ ...beta, [event.target.id]: event.target.value });
+    // console.log(beta);
   };
+  // const handleImg = (event) => {
+  //   setImg(event.target.files[0]);
+  // };
+
+  // const handleMerchantSubmit = async (e) => {
+  //   e.preventDefault();
+  //   if (loading) {
+  //     return;
+  //   }
+  //   if (
+  //     localStorage.getItem("token") == null ||
+  //     localStorage.getItem("token") == undefined
+  //   ) {
+  //     toast.warning("Register or Sign-in to order merchandise", {
+  //       position: toast.POSITION.BOTTOM_RIGHT,
+  //     });
+  //     setTimeout(() => {
+  //       navigate("/register");
+  //     }, 3000);
+  //     return;
+  //   }
+  //   setLoading(true);
+  //   const body = new FormData();
+  //   body.append("file", img);
+  //   body.append("upload_preset", "windsanctuary");
+
+  //   await fetch("https://api.cloudinary.com/v1_1/dkdratnao/image/upload", {
+  //     method: "post",
+  //     body: body,
+  //   })
+  //     .then((res) => res.json())
+  //     .then(async (body) => {
+  //       const data = {
+  //         imageURL: body.secure_url,
+  //         tshirtSize: beta.tshirtSize[0],
+  //         address: beta.address[0],
+  //         quantity: beta.quantity[0],
+  //         // token: token,
+  //       };
+  //       console.log(data);
+  //       const response = await toast.promise(
+  //         fetch("https://srijan24-backend-mu.vercel.app/api/purchase", {
+  //           method: "POST",
+  //           mode: "cors",
+  //           headers: {
+  //             "Content-Type": "application/json",
+  //             Authorization: `Bearer ${localStorage["token"]}`,
+  //           },
+  //           body: JSON.stringify(data),
+  //         }),
+  //         {
+  //           position: toast.POSITION.BOTTOM_RIGHT,
+  //           pending: "Placing Order",
+  //           success: "Order Placed",
+  //           error: "Order failed to process please try again",
+  //         }
+  //       );
+  //     })
+
+  //     .catch((err) => {
+  //       console.log(err);
+  //       toast.error("Probelem in uploading image", {
+  //         position: toast.POSITION.BOTTOM_RIGHT,
+  //       });
+  //     });
+
+  //   setLoading(false);
+  //   setData({ tshirtSize: "", address: "", quantity: "" });
+  // };
 
   const [scope, animate] = useAnimate();
   const [open, setOpen] = useState(false);
@@ -42,9 +112,11 @@ function Merchandise() {
     e.preventDefault();
     if (loading) return;
     setLoading(true);
-    const amount = beta.quantity * (beta.type === "Hoodie" ? 799 : 399) * 100;
+    const amount = beta.quantity * (beta.type === "Hoodie" ? 799 : beta.type === "Tshirt + Hoodie Combo" ? 1099 : 399) * 100;
+
+    // console.log(amount);
     const response = await toast.promise(
-      fetch("https://srijan-prod.onrender.com/api/order", {
+      fetch("https://srijan24-backend-mu.vercel.app/api/order", {
         method: "POST",
         mode: "cors",
         body: JSON.stringify({
@@ -84,7 +156,7 @@ function Merchandise() {
         };
 
         var validateRes = await fetch(
-          "https://srijan-prod.onrender.com/api/order/validate",
+          "https://srijan24-backend-mu.vercel.app/api/order/validate",
           {
             method: "POST",
             mode: "cors",
@@ -435,9 +507,7 @@ function Merchandise() {
               <strong>
                 <div className="mt-4">
                   Payable Amount: INR{" "}
-                  {beta.type === "Hoodie"
-                    ? 799 * beta.quantity
-                    : 399 * beta.quantity}
+                  {beta.type === "Hoodie" ? (799 * beta.quantity) : beta.type === "Tshirt + Hoodie Combo" ? (1099*beta.quantity) : (399 * beta.quantity)}
                 </div>
               </strong>
               (For delivery outside IIT ISM, optimal delivery charges will be

@@ -341,7 +341,7 @@ export const RegisterTheEvents = () => {
       toast.error("Something went wrong! ");
     }
   };
-  const url = "https://srijan-prod.onrender.com/api/getUser";
+  const url = "https://srijan24-backend-mu.vercel.app/api/getUser";
   const fetchUser = async () => {
     // console.log("aa");
     setLoading(true);
@@ -420,12 +420,12 @@ export const RegisterTheEvents = () => {
           },
         ],
       };
-      const officialUrl = "https://srijan-prod.onrender.com/api/event/register";
+      const officialUrl = "https://srijan24-backend-mu.vercel.app/api/event/register";
       const demo =
         "https://srijanlocalmonogodbbackend.onrender.com/api/event/register";
       try {
         const response = await toast.promise(
-          fetch("https://srijan-prod.onrender.com/api/event/register", {
+          fetch("https://srijan24-backend-mu.vercel.app/api/event/register", {
             method: "post",
             headers: {
               "Content-Type": "application/json", // Set the content type to JSON

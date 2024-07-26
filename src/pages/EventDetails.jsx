@@ -18,7 +18,7 @@ function EventDetails(props) {
 
   const { id } = useParams();
   // console.log(id);
-  const Eventurl = `https://srijan-prod.onrender.com/api/showEvents/${id}`;
+  const Eventurl = `https://srijan24-backend-mu.vercel.app/api/showEvents/${id}`;
   const [details, setDetails] = useState([]);
   //   const [img, setImg] = useState(null);
   //   const [name, setName] = useState(null);
