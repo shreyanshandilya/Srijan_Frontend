@@ -57,7 +57,7 @@ function Merchandise2() {
         };
 
         const validateRes = await fetch(
-          "http://localhost:5000/order/validate",
+          "http://srijan-prod.onrender.com/order/validate",
           {
             method: "POST",
             body: JSON.stringify(body),
